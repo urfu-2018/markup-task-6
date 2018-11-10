@@ -292,7 +292,7 @@ footer
 
     .cat-box
     {
-        display: block;
+        display: block !important;
     }
 
     .cat-box img
