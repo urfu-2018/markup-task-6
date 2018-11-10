@@ -8,8 +8,8 @@
 {
     display: grid;
     grid-template: 'header header' 80px
-        'main filters' auto    
-        'footer footer' 60px
+        'main filters' 1fr  
+        'footer footer' 40px
         / 4fr 1fr;
     grid-gap: 20px;
 }
@@ -29,16 +29,43 @@
 .site-footer
 {
     grid-area: footer;
-    display: none;
+    background: white;
+    box-shadow: 0 -3px 15px rgba(0,0,0,.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: gray;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.site-footer a
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.footer-left-part
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.footer-left-part p,
+.footer-right-part p
+{
+    margin: 11px 15px 0 10px;
 }
 
 .main-part
 {
+    width: 100%;
     grid-area: main;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: flex-start;
+    min-height: calc(100vh - 160px);
 }
 
 .cats-filters
@@ -89,9 +116,15 @@
     color: gray;
 }
 
+.age-range-text
+{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
 .input-cat-age
 {
-    height: 50px;
+    height: 40px;
     padding-top: 10px;
 }
 
@@ -264,13 +297,30 @@
         display: grid;
         grid-template: 'header' 80px
             'main' auto    
-            'footer' 60px;
+            'footer' 70px;
         grid-gap: 20px;
     }
-    
+
     .main-part
     {
         align-items: stretch;
+        min-height: calc(100vh - 190px);
+    }
+
+    .footer-left-part
+    {
+        flex-flow: column nowrap;
+        margin-top: 3px;
+    }
+
+    .footer-right-part
+    {
+        margin-top: 35px;
+    }
+
+    .footer-left-part p
+    {
+        margin: 2px 20px;
     }
 
     .article-about-cat
@@ -314,13 +364,29 @@
         display: grid;
         grid-template: 'header' 80px
             'main' auto    
-            'footer' 60px;
+            'footer' 100px;
         grid-gap: 25px;
     }
 
-    .main-part
+    .footer-left-part
     {
-        align-items: stretch;
+        flex-flow: column nowrap;
+        margin-top: 3px;
+    }
+
+    .footer-left-part p
+    {
+        margin: 2px 20px;
+    }
+    
+    .footer-right-part p
+    {
+        margin: 0 20px 10px;
+    }
+
+    .site-footer
+    {
+        flex-flow: column nowrap;
     }
 
     .article-about-cat
@@ -333,9 +399,11 @@
 
     .main-part
     {
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
+        min-height: calc(100vh - 160px);
         justify-content: space-around;
         align-content: space-around;
+        align-items: stretch;
     }
 
     .additional-information
