@@ -9,13 +9,20 @@
 
 <body>
     <header class="cat-header sticky">Мурмаркет</header>
+    <input type="radio" name="breed" id="sphynx" class="sphynx">
+    <input type="radio" name="breed" id="siam" class="siam">
+    <input type="radio" name="breed" id="sweet" class="sweet">
+    <input type="radio" name="breed" id="little" class="little">
+    <input type="radio" name="breed" id="none" class="none">
+    <input type="radio" name="breed" id="all" class="all" checked>
     <main>
-        <section class="card">
+        <section class="card" cat-breed="little">
             <img class="cat-img" title="Боня" alt="Боня" src="cats/1.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Бонифаций</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 11 месяцев</li>
                 <li class="cat-info-item">Болезни: здоров, как бык</li>
+                <li class="cat-info-item">Порода: нет</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -26,7 +33,7 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="sphynx">
             <img class="cat-img" title="Самый Лучший Кот В Мире" alt="Самый Лучший Кот В Мире"
                 src="cats/2.jpg">
             <h6 class="cat-name cat-info-item">
@@ -35,6 +42,7 @@
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 4 месяца</li>
                 <li class="cat-info-item">Особые приметы: хвост трубой</li>
+                <li class="cat-info-item">Порода: сфинкс</li>
                 <li class="cat-info-item">Статус: ищет друга</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -43,12 +51,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="none">
             <img class="cat-img" title="Мурзик" alt="Мурзик" src="cats/3.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Мурзик</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 19 месяцев</li>
                 <li class="cat-info-item">Болезни: никаких</li>
+                <li class="cat-info-item">Порода: нет</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -57,12 +66,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="siam">
             <img class="cat-img" title="Буся" alt="Буся" src="cats/4.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Буся</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 10 месяцев</li>
                 <li class="cat-info-item">Болезни: здоров, как бык</li>
+                <li class="cat-info-item">Порода: сиамская</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -71,12 +81,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="sweet">
             <img class="cat-img" title="Мурка" alt="Мурка" src="cats/5.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Мурка</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 11 месяцев</li>
                 <li class="cat-info-item">Цвет глаз: голубой</li>
+                <li class="cat-info-item">Порода: милая</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -85,12 +96,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="none">
             <img class="cat-img" title="Василий Иванович" alt="Василий Иванович" src="cats/6.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Василий Иванович</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 7 месяцев</li>
                 <li class="cat-info-item">Прививки: все есть</li>
+                <li class="cat-info-item">Порода: нет</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -99,12 +111,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="siam">
             <img class="cat-img" title="Степашка" alt="Степашка" src="cats/7.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Степашка</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 11 месяцев</li>
                 <li class="cat-info-item">Вес: 600 грамм</li>
+                <li class="cat-info-item">Порода: сиамская</li>
                 <li class="cat-info-item">Статус: свободен</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -113,12 +126,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="little">
             <img class="cat-img" title="Рекс" alt="Рекс" src="cats/8.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Рекс</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 11 месяцев</li>
                 <li class="cat-info-item">Болезни: здоров, как бык</li>
+                <li class="cat-info-item">Порода: маленькая</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -127,12 +141,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="little">
             <img class="cat-img" title="Боб" alt="Боб" src="cats/9.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Боб</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 11 месяцев</li>
                 <li class="cat-info-item">Болезни: здоров, как бык</li>
+                <li class="cat-info-item">Порода: маленькая</li>
                 <li class="cat-info-item">Статус: ищет хозяина</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -141,12 +156,13 @@
                 Все прививки поставлены
             </p>
         </section>
-        <section class="card">
+        <section class="card" cat-breed="sweet">
             <img class="cat-img" title="Алиса" alt="Алиса" src="cats/10.jpg">
             <h6 class="cat-name cat-info-item"><a href="#" class="cat-name-link">Алиса</a></h6>
             <ul class="cat-info cat-info-short">
                 <li class="cat-info-item">Возраст: 3 месяца</li>
                 <li class="cat-info-item">Особые приметы: лапушка</li>
+                <li class="cat-info-item">Порода: милая</li>
                 <li class="cat-info-item">Статус: в активном поиске</li>
             </ul>
             <p class="cat-info cat-info-full">
@@ -158,12 +174,23 @@
     </main>
     <aside>
         <section class="sticky range-slider">
-            <h3>Возраст</h3>            
+            <h1>Возраст</h1>
             <div class="range-slider-wrapper">
                 <input value="5" min="0" max="35" step="1" type="range">
                 <input value="30" min="0" max="35" step="1" type="range">
             </div>
             <div class="range-values">От 0 до 35 месяцев</div>
+        </section>
+        <section class="sticky breed-selectors">
+            <h1>Порода</h1>
+            <ul class="breed-labels">
+                <li class="sphynx"><label for="sphynx">сфинкс</label></li>
+                <li class="siam"><label for="siam">сиамская</label></li>
+                <li class="sweet"><label for="sweet">милая</label></li>
+                <li class="little"><label for="little">крошечная</label></li>
+                <li class="none"><label for="none">нет</label></li>
+                <li class="all"><label for="all">все</label></li>
+            </ul>
         </section>
     </aside>
     <footer class="cat-footer">

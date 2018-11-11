@@ -13,6 +13,11 @@ main
     grid-area: bm;
 }
 
+input[name='breed']
+{
+    display: none;
+}
+
 .card:hover
 {
     box-shadow: 0 0 10px;
@@ -213,6 +218,11 @@ aside
 
 @media screen and (min-width: 1200px)
 {
+    body
+    {
+        grid-template: 'bh bh' auto 'bm ba' auto 'bf bf' auto / auto 420px;
+    }
+
     .card
     {
         width: auto;
@@ -285,16 +295,17 @@ aside
     .copyright
     {
         grid-area: ©;
-        text-align: right;
-        padding-right: 0;
-        margin: auto;
+        align-self: center;
     }
 
     aside
     {
-        width: 300px;
+        width: 400px;
         grid-area: ba;
         display: block;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 20px;
     }
 
     .range-slider.sticky
@@ -313,7 +324,7 @@ aside
         margin-left: auto;
         margin-top: auto;
         height: 18px;
-        width: 210px;
+        width: 317px;
     }
     
     input[type='range'] 
@@ -347,6 +358,94 @@ aside
     .range-values
     {
         margin-top: 65px;
+    }
+
+    .breed-selectors
+    {
+        text-align: center;
+    }
+   
+    .breed-selectors.sticky
+    {
+        top: 198px;
+    }
+
+    .breed-labels
+    {
+        text-align: center;
+        padding-inline-start: 0;
+    }
+
+    .breed-labels li
+    {
+        list-style: none;
+    }
+
+    .breed-labels label
+    {
+        cursor: pointer;
+    }
+
+    input.none:checked ~ main .card[cat-breed='sphynx'],
+    input.none:checked ~ main .card[cat-breed='siam'],
+    input.none:checked ~ main .card[cat-breed='sweet'],
+    input.none:checked ~ main .card[cat-breed='little']
+    {
+        display: none;
+    }
+
+    input.sphynx:checked ~ main .card[cat-breed='none'],
+    input.sphynx:checked ~ main .card[cat-breed='siam'],
+    input.sphynx:checked ~ main .card[cat-breed='sweet'],
+    input.sphynx:checked ~ main .card[cat-breed='little']
+    {
+        display: none;
+    }
+
+    input.siam:checked ~ main .card[cat-breed='none'],
+    input.siam:checked ~ main .card[cat-breed='sphynx'],
+    input.siam:checked ~ main .card[cat-breed='sweet'],
+    input.siam:checked ~ main .card[cat-breed='little']
+    {
+        display: none;
+    }
+
+    input.sweet:checked ~ main .card[cat-breed='none'],
+    input.sweet:checked ~ main .card[cat-breed='siam'],
+    input.sweet:checked ~ main .card[cat-breed='sphynx'],
+    input.sweet:checked ~ main .card[cat-breed='little']
+    {
+        display: none;
+    }
+
+    input.little:checked ~ main .card[cat-breed='none'],
+    input.little:checked ~ main .card[cat-breed='siam'],
+    input.little:checked ~ main .card[cat-breed='sweet'],
+    input.little:checked ~ main .card[cat-breed='sphynx']
+    {
+        display: none;
+    }
+
+    .breed-labels li.none,
+    .breed-labels li.all,
+    .breed-labels li.little,
+    .breed-labels li.siam,
+    .breed-labels li.sweet,
+    .breed-labels li.sphynx
+    {
+        height: 20px;
+        background-color: white;
+        border: 1px solid rgba(150, 145, 145, .29);
+    }
+
+    input.none:checked ~ aside .breed-labels li.none,
+    input.all:checked ~ aside .breed-labels li.all,
+    input.little:checked ~ aside .breed-labels li.little,
+    input.siam:checked ~ aside .breed-labels li.siam,
+    input.sweet:checked ~ aside .breed-labels li.sweet,
+    input.sphynx:checked ~ aside .breed-labels li.sphynx
+    {
+        background-color: lightgreen;
     }
 
 }
