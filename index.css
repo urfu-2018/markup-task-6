@@ -140,8 +140,8 @@ main
     padding: 10px;
     display: grid;
     grid-template: 'image' 250px
-    'description' auto
-            / auto;
+        'description' auto
+        / auto;
 }
 
 @media (min-width: 375px) and (max-width: 730px)
