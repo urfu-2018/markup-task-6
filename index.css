@@ -64,11 +64,6 @@ main
     display: flex;
 }
 
-.cat-flag
-{
-    /*display: none;*/
-}
-
 .cat-container
 {
     flex: 1;
