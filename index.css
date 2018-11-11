@@ -1,0 +1,517 @@
+@media screen and (min-width: 1200px)
+{
+    html,
+    body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper
+    {
+        display: grid;
+
+        grid-template-rows: 70px 1fr 50px;
+        grid-template-columns: 80% 20%;
+    }
+
+    .article-title
+    {
+        font-size: 2em;
+
+        position: fixed;
+
+        width: 100%;
+        padding: 10px;
+
+        text-align: center;
+
+        border-bottom: 2px solid lightgray;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+
+        grid-row: 1 start;
+        grid-column: span 2;
+    }
+
+    .article-title:first-letter
+    {
+        color: #f00;
+    }
+
+    .cat-site
+    {
+        display: flex;
+
+        grid-row: 2;
+        grid-column: 1;
+        flex-wrap: wrap;
+    }
+
+    .side-menu
+    {
+        position: fixed;
+        top: 70px;
+        right: 1.2em;
+
+        width: 20%;
+
+        text-align: center;
+
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .side-menu > p
+    {
+        font-size: 16px;
+
+        margin: 0;
+    }
+
+    .side-menu > h2
+    {
+        font-size: 20px;
+
+        margin-bottom: 0;
+    }
+
+    .side-menu > a
+    {
+        text-decoration: none;
+    }
+
+    .side-menu > a > button
+    {
+        display: block;
+
+        width: 90%;
+        height: 2em;
+        margin: 20px;
+
+        cursor: pointer;
+
+        border: 2px solid lightgray;
+        background: white;
+    }
+
+    .target-item-1:target ~ :not(.item1),
+    .target-item-3:target ~ :not(.item3),
+    .target-item-5:target ~ :not(.item5),
+    .target-item-7:target ~ :not(.item7)
+    {
+        display: none;
+    }
+
+    .without-breed-button:target ~ .cardboard
+    {
+        display: block;
+    }
+
+    .without-breed-button:target ~ .item1,
+    .without-breed-button:target ~ .item3,
+    .without-breed-button:target ~ .item5,
+    .without-breed-button:target ~ .item7
+    {
+        display: none;
+    }
+
+    .side-menu > img
+    {
+        padding-left: 10px;
+    }
+
+    .cardboard
+    {
+        width: 45%;
+        margin: 20px;
+
+        border: 2px solid lightgray;
+    }
+
+    .cardboard:hover
+    {
+        box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, .5);
+    }
+
+    .koto-photo
+    {
+        width: 100%;
+    }
+
+    .cat-name
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .cardboard > ul
+    {
+        margin: 1.5em .5em;
+    }
+
+    .cardboard > p
+    {
+        margin: .5em 1em;
+    }
+
+    .contact-us
+    {
+        display: flex;
+
+        border-top: 2px solid lightgray;
+    }
+
+    .contact-us > a,
+    .contact-us > .footer-title
+    {
+        margin: 20px 10px;
+
+        text-decoration: none;
+    }
+
+    .footer-title
+    {
+        width: 50%;
+    }
+
+    .contact-us > .company-info
+    {
+        width: 40%;
+        margin: 20px 10px;
+
+        text-align: right;
+    }
+
+    .company-info > a
+    {
+        text-decoration: none;
+    }
+
+    .contact-link-1
+    {
+        padding-left: 5px;
+    }
+
+    .contact-link-2:before
+    {
+        padding: 20px 20px 20px 0;
+
+        content: '\2022';
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px)
+{
+    html,
+    body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper
+    {
+        display: grid;
+
+        flex: 1 0 auto;
+        grid-template-rows: 70px 1fr;
+    }
+
+    .article-title
+    {
+        font-size: 2em;
+
+        position: fixed;
+
+        width: 100%;
+        padding: 10px;
+
+        text-align: center;
+
+        border-bottom: 2px solid lightgray;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+
+        grid-row: 1 start;
+    }
+
+    .article-title:first-letter
+    {
+        color: #f00;
+    }
+
+    .cat-site
+    {
+        display: flex;
+
+        width: 100%;
+        margin: auto;
+
+        grid-row: 2;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .cardboard
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 31%;
+        margin: 10px auto;
+
+        border: 2px solid lightgray;
+    }
+
+    .koto-photo
+    {
+        width: 100%;
+    }
+
+    .cat-name
+    {
+        font-weight: initial;
+
+        margin: 1em .5em;
+
+        text-align: center;
+    }
+
+    .cardboard > ul
+    {
+        margin: 1em .5em;
+
+        align-content: center;
+    }
+
+    .contact-us
+    {
+        font-size: 14px;
+
+        display: grid;
+
+        margin: 10px;
+        padding-top: .5em;
+        padding-left: .3em;
+
+        text-decoration: none;
+
+        border-top: 2px solid lightgray;
+
+        flex: 0 0 auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-us > .footer-title
+    {
+        padding-bottom: 10px;
+
+        color: gray;
+
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
+    .contact-us > .contact-link-1
+    {
+        display: block;
+
+        width: fit-content;
+
+        grid-row: 2;
+        grid-column: span 2;
+    }
+
+    .contact-us > .company-info
+    {
+        width: 100%;
+
+        text-align: right;
+
+        color: black;
+    }
+
+    .cardboard > p
+    {
+        display: none;
+    }
+
+    .contact-link-1:before,
+    .contact-link-2:before
+    {
+        content: '\2709';
+    }
+
+    .side-menu
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    html
+    {
+        height: 100%;
+    }
+
+    body
+    {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+    }
+
+    .wrapper
+    {
+        display: grid;
+
+        flex: 1 0 auto;
+        grid-template-rows: 70px 1fr;
+    }
+
+    .article-title
+    {
+        font-size: 2em;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        padding: .3em;
+
+        text-align: center;
+
+        border-bottom: 2px solid lightgray;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+
+        grid-row: 1 start;
+    }
+
+    .article-title:first-letter
+    {
+        color: #f00;
+    }
+
+    .cat-site
+    {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 100%;
+        min-height: 100%;
+        margin-top: 10px;
+
+        grid-row: 2;
+        align-content: space-around;
+    }
+
+    .cardboard
+    {
+        margin: 1em;
+
+        border: 2px solid lightgray;
+    }
+
+    .cardboard > p
+    {
+        display: none;
+    }
+
+    .koto-photo
+    {
+        width: 100%;
+    }
+
+    .cat-name
+    {
+        font-size: 2em;
+        font-weight: initial;
+
+        margin: .5em 1em 0;
+
+        text-align: center;
+    }
+
+    .cardboard > ul
+    {
+        margin: 1em;
+    }
+
+    .cardboard > ul > li
+    {
+        font-size: 1.1em;
+
+        padding: 5px;
+    }
+
+    .contact-us
+    {
+        font-size: 14px;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-left: -7px;
+        padding-top: .5em;
+        padding-left: .5em;
+
+        border-top: 2px solid lightgray;
+
+        flex: 0 0 auto;
+        align-content: space-around;
+    }
+
+    .contact-us > .footer-title
+    {
+        padding-bottom: 10px;
+
+        color: gray;
+    }
+
+    .contact-us > a
+    {
+        padding: 0 5px 5px;
+    }
+
+    .contact-us > .company-info
+    {
+        margin-top: 2em;
+        margin-bottom: .5em;
+
+        color: black;
+    }
+
+    .contact-link-1:before,
+    .contact-link-2:before
+    {
+        content: '\2709';
+    }
+
+    .side-menu
+    {
+        display: none;
+    }
+}
