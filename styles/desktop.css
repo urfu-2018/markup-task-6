@@ -1,0 +1,230 @@
+body
+{
+    grid-template: 'bh bh' auto 'bm ba' auto 'bf bf' auto / auto 420px;
+}
+
+.card
+{
+    width: auto;
+    display: grid;
+    grid-template: 'i n' 50px 'i s' 160px 'f f' auto / 300px 250px;
+}
+
+.cat-img
+{
+    width: 100%;
+    grid-area: i;
+}
+
+.cat-name
+{
+    grid-area: n;
+}
+
+.card .cat-info.cat-info-short
+{
+    grid-area: s;
+    margin-left: 10px;
+}
+
+.cat-info-full
+{
+    grid-area: f;
+    border-top: 1px solid rgba(150, 145, 145, .29);
+    padding-top: 14px;
+}
+
+.cat-footer
+{
+    font: 14px Arial;
+    margin-left: 10px;
+
+    grid-template: 'h m ©' / auto auto 2fr;
+   
+}
+
+.mail-bullet
+{
+    display: inline-block;
+}
+
+.mail-bullet::before
+{
+    content: '';
+}
+
+.cat-footer h6::before
+{
+    content: '\02709';
+}
+
+.contacts-mail .mail-bullet:nth-child(2)::before
+{
+    content: '\2022';
+}
+
+.contacts-mail
+{
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    padding-bottom: 17px;
+}
+
+.copyright
+{
+    grid-area: ©;
+    align-self: center;
+}
+
+aside
+{
+    width: 400px;
+    grid-area: ba;
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.range-slider.sticky
+{
+    top: 70px;
+}
+
+.range-slider
+{
+    text-align: center;
+}
+
+.range-slider-wrapper
+{
+    position: absolute;
+    margin-left: auto;
+    margin-top: auto;
+    height: 18px;
+    width: 317px;
+}
+
+input[type='range']
+{
+    position: absolute;
+    left: 45px;
+    top: 15px;
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb
+{
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(162, 245, 165);
+    cursor: pointer;
+}
+
+.range-values
+{
+    margin-top: 65px;
+}
+
+.breed-selectors
+{
+    text-align: center;
+}
+
+.breed-selectors.sticky
+{
+    top: 208px;
+}
+
+.breed-labels
+{
+    text-align: center;
+    padding-inline-start: 0;
+}
+
+.breed-labels li
+{
+    list-style: none;
+}
+
+.breed-labels label
+{
+    cursor: pointer;
+    vertical-align: sub;
+}
+
+input.none:checked ~ main .card.cat-breed-sphynx,
+input.none:checked ~ main .card.cat-breed-siam,
+input.none:checked ~ main .card.cat-breed-sweet,
+input.none:checked ~ main .card.cat-breed-little
+{
+    display: none;
+}
+
+input.sphynx:checked ~ main .card.cat-breed-none,
+input.sphynx:checked ~ main .card.cat-breed-siam,
+input.sphynx:checked ~ main .card.cat-breed-sweet,
+input.sphynx:checked ~ main .card.cat-breed-little
+{
+    display: none;
+}
+
+input.siam:checked ~ main .card.cat-breed-none,
+input.siam:checked ~ main .card.cat-breed-sphynx,
+input.siam:checked ~ main .card.cat-breed-sweet,
+input.siam:checked ~ main .card.cat-breed-little
+{
+    display: none;
+}
+
+input.sweet:checked ~ main .card.cat-breed-none,
+input.sweet:checked ~ main .card.cat-breed-siam,
+input.sweet:checked ~ main .card.cat-breed-sphynx,
+input.sweet:checked ~ main .card.cat-breed-little
+{
+    display: none;
+}
+
+input.little:checked ~ main .card.cat-breed-none,
+input.little:checked ~ main .card.cat-breed-siam,
+input.little:checked ~ main .card.cat-breed-sweet,
+input.little:checked ~ main .card.cat-breed-sphynx
+{
+    display: none;
+}
+
+.breed-labels li.none,
+.breed-labels li.all,
+.breed-labels li.little,
+.breed-labels li.siam,
+.breed-labels li.sweet,
+.breed-labels li.sphynx
+{
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgba(150, 145, 145, .29);
+}
+
+input.none:checked ~ aside .breed-labels li.none,
+input.all:checked ~ aside .breed-labels li.all,
+input.little:checked ~ aside .breed-labels li.little,
+input.siam:checked ~ aside .breed-labels li.siam,
+input.sweet:checked ~ aside .breed-labels li.sweet,
+input.sphynx:checked ~ aside .breed-labels li.sphynx
+{
+    background-color: rgb(162, 245, 165);
+}

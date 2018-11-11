@@ -1,0 +1,164 @@
+
+body
+{
+    display: grid;
+    min-width: 375px;
+    grid-template: 'bh bh' auto 'bm ba' auto 'bf bf' auto;
+}
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: bm;
+}
+
+input[name='breed']
+{
+    display: none;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 10px;
+    color: #1b1a1a;
+}
+
+.card 
+{
+    vertical-align: top;
+    border: 1px solid rgba(150, 145, 145, .29);
+    margin: 5px;
+}
+
+.cat-img
+{
+    margin: 15px auto 0;
+    display: block;
+    width: 100%;
+}
+
+.cat-img:hover
+{
+    box-shadow: 0 0 5px;
+    color: #472c2c;
+}
+
+.cat-info-item
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cat-info-item:hover:not(.cat-name)
+{
+    font-size: 102%;
+}
+
+.cat-info-short
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card .cat-info
+{
+    text-align: justify;
+    margin: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cat-name
+{
+    font-size: 110%;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: left;
+    max-width: 40%;
+    white-space: nowrap;
+}
+
+.cat-name-link:hover,
+.cat-name-link:visited,
+.cat-name-link:link,
+.cat-name-link:active
+{
+    text-decoration: none;
+    color: black;
+}
+
+.cat-header
+{
+    font: 32px PT SansNarrow;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 2px -2px;
+    color: #1b1a1ac7;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    grid-area: bh;
+}
+
+.cat-header::first-letter
+{
+    color: red;
+}
+
+.sticky
+{
+    position: sticky;
+    top: 0;
+}
+
+.cat-footer
+{
+    font: 14px Arial;
+
+    width: auto;
+    display: grid;
+    grid-template: 'h h' 63px 'm ©' auto;
+    grid-area: bf;
+}
+
+.cat-footer h6
+{
+    font: 14px Arial;
+    grid-area: h;
+}
+
+.cat-footer-link
+{
+    color: #4c4cd8;
+}
+
+.contacts-mail
+{
+    text-align: left;
+    margin: 0;
+    grid-area: m;
+}
+
+.copyright
+{
+    grid-area: ©;
+    text-align: right;
+    padding-right: 90px;
+}
+
+.mail-bullet
+{
+    list-style: none;
+}
+
+.mail-bullet::before
+{
+    content: '\02709';
+    padding-right: 5px;
+}
+
+aside
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+}
