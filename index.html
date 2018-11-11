@@ -2,8 +2,456 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">МурМаркет</div>
+    </header>
+
+    <!-- Выбор возраста -->
+    <input type="radio" name="age_from" value="0" id="ageFrom0" checked="checked">
+    <input type="radio" name="age_from" value="1" id="ageFrom1">
+    <input type="radio" name="age_from" value="2" id="ageFrom2">
+    <input type="radio" name="age_to" value="3" id="ageTo3">
+    <input type="radio" name="age_to" value="4" id="ageTo4">
+    <input type="radio" name="age_to" value="5" id="ageTo5" checked="checked">
+
+    <!-- Выбор пород -->
+    <input type="checkbox" name="breed" value="breed1" id="breed1">
+    <input type="checkbox" name="breed" value="breed2" id="breed2">
+    <input type="checkbox" name="breed" value="breed3" id="breed3">
+    <input type="checkbox" name="breed" value="breed4" id="breed4">
+    <input type="checkbox" name="breed" value="breed5" id="breed5">
+    <input type="checkbox" name="breed" value="breed6" id="breed6">
+    <input type="checkbox" name="breed" value="breed7" id="breed7">
+    <input type="checkbox" name="breed" value="breed8" id="breed8">
+    <input type="checkbox" name="breed" value="breed9" id="breed9">
+
+    <!-- Контент сайта -->
+    <main class="main container">
+
+        <div class="main__content">
+
+            <div class="card card_age-1 card_breed-1">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-1.jpg" alt="Британская шиншилла">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Снежок</a>
+                    </div>
+                    <div class="card__param">Порода: <span>британская шиншилла</span></div>
+                    <div class="card__param">Возраст: <span>~ год</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Об&shy;ла&shy;да&shy;ет мяг&shy;ким, спо&shy;кой&shy;ным
+                        ха&shy;рак&shy;те&shy;ром.
+                    </p>
+                    <p>
+                        Из-за сход&shy;ства со зна&shy;ме&shy;ни&shy;тым зверь&shy;ком
+                        по&shy;ро&shy;ду ко&shy;шек ино&shy;гда име&shy;ну&shy;ют про&shy;сто
+                        шин&shy;шил&shy;ла&shy;ми. Изыс&shy;кан&shy;ный
+                        пред&shy;ста&shy;ви&shy;тель ко&shy;ша&shy;чьих тре&shy;бу&shy;ет
+                        мно&shy;го вни&shy;ма&shy;ния и тща&shy;тель&shy;но&shy;го ухо&shy;да.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-5 card_breed-2">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-2.jpg" alt="Австралийская дымчатая">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Леопольд</a>
+                    </div>
+                    <div class="card__param">Порода: <span>австралийская дымчатая</span></div>
+                    <div class="card__param">Возраст: <span>5 лет</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        У сам&shy;цов и са&shy;мок чёт&shy;кие чер&shy;ты ли&shy;ца,
+                        вы&shy;ра&shy;же&shy;ние мор&shy;доч&shy;ки от&shy;кры&shy;тое.
+                    </p>
+                    <p>
+                        Окон&shy;ча&shy;тель&shy;ное
+                        физи&shy;че&shy;ское со&shy;зре&shy;ва&shy;ние,
+                        фор&shy;ми&shy;ро&shy;ва&shy;ние цве&shy;та глаз, окра&shy;са и
+                        тек&shy;сту&shy;ры шер&shy;сти за&shy;кан&shy;чи&shy;ва&shy;ет&shy;ся к
+                        двух&shy;лет&shy;не&shy;му воз&shy;рас&shy;ту.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-0 card_breed-3">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-3.jpg" alt="Шотландская вислоухая">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Пончик</a>
+                    </div>
+                    <div class="card__param">Порода: <span>шотландская вислоухая</span></div>
+                    <div class="card__param">Возраст: <span>полгода</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Об&shy;ла&shy;да&shy;ет хо&shy;ро&shy;шим
+                        тем&shy;пе&shy;ра&shy;мен&shy;том.
+                    </p>
+                    <p>
+                        Шот&shy;ланд&shy;ские, или как их так&shy;же на&shy;зы&shy;ва&shy;ют
+                        бри&shy;тан&shy;ские вис&shy;ло&shy;ухие кош&shy;ки, тре&shy;бу&shy;ют
+                        ми&shy;ни&shy;маль&shy;но&shy;го ухо&shy;да и мо&shy;гут быть
+                        на&shy;сто&shy;я&shy;щим со&shy;кро&shy;ви&shy;щем в ва&shy;шем до&shy;ме.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-2 card_breed-1">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-4.jpg" alt="Британская короткошёрстная">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Анжело</a>
+                    </div>
+                    <div class="card__param">Порода: <span>британская короткошёрстная</span></div>
+                    <div class="card__param">Возраст: <span>2 года</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Хвост тол&shy;стый у ос&shy;но&shy;ва&shy;ния с
+                        за&shy;круг&shy;лён&shy;ным кон&shy;чи&shy;ком. Круг&shy;лая
+                        го&shy;ло&shy;ва, круг&shy;лые щё&shy;ки, креп&shy;кий
+                        под&shy;бо&shy;ро&shy;док, ши&shy;ро&shy;кий сред&shy;не&shy;го
+                        раз&shy;ме&shy;ра нос. Уши сред&shy;не&shy;го раз&shy;ме&shy;ра
+                        ши&shy;ро&shy;ко рас&shy;став&shy;ле&shy;ны. Гла&shy;за боль&shy;шие и
+                        круг&shy;лые, ши&shy;ро&shy;ко от&shy;кры&shy;тые.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-0 card_breed-4">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-5.jpg" alt="Бенгальская">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Варвара</a>
+                    </div>
+                    <div class="card__param">Порода: <span>бенгальская</span></div>
+                    <div class="card__param">Возраст: <span>11 месяцев</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Очень ми&shy;лое и ум&shy;ное до&shy;маш&shy;нее жи&shy;вот&shy;ное.
+                    </p>
+                    <p>
+                        Она со&shy;вер&shy;шен&shy;но не агрес&shy;сив&shy;на и не
+                        кон&shy;фликт&shy;на и мо&shy;жет до&shy;воль&shy;но лег&shy;ко
+                        ужить&shy;ся с дру&shy;ги&shy;ми ва&shy;ши&shy;ми
+                        пи&shy;том&shy;ца&shy;ми.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-1 card_breed-5">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-6.jpg" alt="Невская маскарадная">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Веня</a>
+                    </div>
+                    <div class="card__param">Порода: <span>невская маскарадная</span></div>
+                    <div class="card__param">Возраст: <span>год и 2 месяца</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Нев&shy;ская мас&shy;ка&shy;рад&shy;ная кош&shy;ка – это
+                        пред&shy;ста&shy;ви&shy;тель&shy;ни&shy;ца од&shy;ной из са&shy;мых
+                        кра&shy;си&shy;вых и за&shy;га&shy;доч&shy;ных по&shy;род,
+                        ко&shy;то&shy;ра&shy;я за&shy;во&shy;е&shy;ва&shy;ла лю&shy;бовь и
+                        при&shy;зна&shy;ние не толь&shy;ко в Рос&shy;сии, но и за
+                        ру&shy;бе&shy;жом.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-3 card_breed-6">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-7.jpg" alt="Азиатская дымчатая">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Еврасик</a>
+                    </div>
+                    <div class="card__param">Порода: <span>азиатская дымчатая</span></div>
+                    <div class="card__param">Возраст: <span>3 года</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Нуж&shy;да&shy;ет&shy;ся в по&shy;сто&shy;ян&shy;ном вни&shy;ма&shy;нии и
+                        лас&shy;ке.
+                    </p>
+                    <p>
+                        Ази&shy;ат&shy;ская дым&shy;ча&shy;тая не станет
+                        пре&shy;тен&shy;до&shy;вать на ли&shy;дер&shy;ство, и го&shy;то&shy;ва
+                        пол&shy;но&shy;стью Вам под&shy;чи&shy;нять&shy;ся, по&shy;это&shy;му и
+                        не до&shy;став&shy;ля&shy;ет мно&shy;го хло&shy;пот
+                        хо&shy;зя&shy;и&shy;ну.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-0 card_breed-7">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-8.jpg" alt="Мейн-кун">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Дебби</a>
+                    </div>
+                    <div class="card__param">Порода: <span>мейн-кун</span></div>
+                    <div class="card__param">Возраст: <span>4 месяца</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Очень иг&shy;ри&shy;ва, от&shy;ли&shy;ча&shy;ет&shy;ся
+                        пре&shy;крас&shy;ной па&shy;мя&shy;тью и доб&shy;рым на&shy;стро&shy;ем.
+                    </p>
+                    <p>
+                        Кош&shy;ки мей&shy;нов изоби&shy;лу&shy;ют раз&shy;лич&shy;ны&shy;ми
+                        окра&shy;са&shy;ми, сре&shy;ди ко&shy;то&shy;рых в
+                        про&shy;фес&shy;сио&shy;наль&shy;ной сре&shy;де ос&shy;нов&shy;ным
+                        счи&shy;та&shy;ет&shy;ся «ди&shy;кий» или «чер&shy;ный таб&shy;би».
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-4 card_breed-8">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-9.jpg" alt="Смешанная">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Изабель</a>
+                    </div>
+                    <div class="card__param">Порода: <span>смешанная</span></div>
+                    <div class="card__param">Возраст: <span>4 года</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Но ко&shy;ша&shy;чьи ари&shy;сто&shy;кра&shy;ты ни&shy;ко&shy;гда не
+                        бу&shy;дут об&shy;ла&shy;дать те&shy;ми
+                        ис&shy;клю&shy;чи&shy;тель&shy;ны&shy;ми ка&shy;че&shy;ства&shy;ми,
+                        ко&shy;то&shy;ры&shy;ми при&shy;ро&shy;да щед&shy;ро
+                        на&shy;де&shy;ли&shy;ла сме&shy;шан&shy;ную по&shy;ро&shy;ду.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-3 card_breed-1">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-10.jpg" alt="Британская">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Карамелька</a>
+                    </div>
+                    <div class="card__param">Порода: <span>британская золотая</span></div>
+                    <div class="card__param">Возраст: <span>3 года и 1 месяц</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Име&shy;ет очень гу&shy;стой се&shy;рый мех сред&shy;ней дли&shy;ны.
+                    </p>
+                    <p>
+                        Бри&shy;тан&shy;ская зо&shy;ло&shy;тая шин&shy;шил&shy;ла
+                        по&shy;яви&shy;лась в Ве&shy;ли&shy;ко&shy;бри&shy;та&shy;нии в
+                        ре&shy;зуль&shy;та&shy;те скре&shy;щи&shy;ва&shy;ний дру&shy;гих
+                        по&shy;род ко&shy;шек, име&shy;ю&shy;щих же&shy;ла&shy;е&shy;мые для
+                        ре&shy;зуль&shy;та&shy;та ка&shy;че&shy;ства.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-4 card_breed-3">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-11.jpg" alt="Шотландская вислоухая">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Лакки</a>
+                    </div>
+                    <div class="card__param">Порода: <span>шотландская вислоухая</span></div>
+                    <div class="card__param">Возраст: <span>4 года и 5 месяцев</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        По&shy;сколь&shy;ку по&shy;ро&shy;да вы&shy;во&shy;дит&shy;ся все&shy;го
+                        око&shy;ло 50 лет, раз&shy;ные меж&shy;ду&shy;на&shy;род&shy;ные
+                        ор&shy;га&shy;ни&shy;за&shy;ции несколь&shy;ко по-раз&shy;но&shy;му
+                        опи&shy;сы&shy;ва&shy;ют ее иде&shy;аль&shy;но&shy;го
+                        пред&shy;ста&shy;ви&shy;те&shy;ля.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+            <div class="card card_age-3 card_breed-9">
+                <div class="card__info clearfix">
+                    <div class="card__image">
+                        <img src="./img/image-12.jpg" alt="Сиамская">
+                    </div>
+                    <div class="card__name">
+                        <a href="#">Дуся</a>
+                    </div>
+                    <div class="card__param">Порода: <span>сиамская</span></div>
+                    <div class="card__param">Возраст: <span>3 года и 4 месяца</span></div>
+                    <div class="card__param">Болезни: <span>нет</span></div>
+                    <div class="card__status">Статус: ищет хозяина</div>
+                </div>
+                <div class="card__anons">
+                    <p>
+                        Про&shy;сто оча&shy;ру&shy;ет вас сво&shy;ей лю&shy;бо&shy;вью.
+                    </p>
+                    <p>
+                        Дол&shy;гое вре&shy;мя си&shy;ам&shy;ских ко&shy;шек счи&shy;та&shy;ли
+                        мсти&shy;тель&shy;ны&shy;ми, злоб&shy;ны&shy;ми и
+                        эго&shy;и&shy;стич&shy;ны&shy;ми. По&shy;это&shy;му за&shy;во&shy;дить
+                        та&shy;ких пи&shy;том&shy;цев осо&shy;бо не стре&shy;ми&shy;лись.
+                    </p>
+                </div>
+                <div class="card__buttons clearfix">
+                    <a href="#" class="button">Подробнее</a>
+                    <button type="button" class="button_red">В закладки</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main__side">
+            <div class="block">
+                <div class="block__header">Возраст</div>
+                <div class="slider">
+                    <label class="slider__label" for="ageFrom0"></label>
+                    <label class="slider__label" for="ageFrom1"></label>
+                    <label class="slider__label" for="ageFrom2"></label>
+                    <label class="slider__label" for="ageTo3"></label>
+                    <label class="slider__label" for="ageTo4"></label>
+                    <label class="slider__label" for="ageTo5"></label>
+                    <span class="slider__control"></span>
+                </div>
+                <div class="slider-to slider-to_3">До 3 лет</div>
+                <div class="slider-to slider-to_4">До 4 лет</div>
+                <div class="slider-to slider-to_5">До 5 лет и старше</div>
+                <div class="slider-from slider-from_0">От месяца</div>
+                <div class="slider-from slider-from_1">От года</div>
+                <div class="slider-from slider-from_2">От 2 лет</div>
+            </div>
+            <div class="block block_primary">
+                <div class="block__header">Порода</div>
+                <label class="checkbox" for="breed1">Британская</label>
+                <label class="checkbox" for="breed2">Австралийская</label>
+                <label class="checkbox" for="breed3">Шотландская</label>
+                <label class="checkbox" for="breed4">Бенгальская</label>
+                <label class="checkbox" for="breed5">Невская</label>
+                <label class="checkbox" for="breed6">Азиатская</label>
+                <label class="checkbox" for="breed7">Мейн-кун</label>
+                <label class="checkbox" for="breed8">Смешанная</label>
+                <label class="checkbox" for="breed9">Сиамская</label>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__left ic ic_email">
+                <p>Напишите нам:</p>
+                <p class="ic ic_email">
+                    <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+                </p>
+                <p class="ic ic_email">
+                    <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+                </p>
+            </div><div class="footer__right">
+            <p>&copy; 2018 ООО &laquo;<a href="#">Бабушкины котятки</a>&raquo;</p>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
