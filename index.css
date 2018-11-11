@@ -86,19 +86,16 @@
 
     .side-menu > a
     {
-        text-decoration: none;
-    }
-
-    .side-menu > a > button
-    {
         display: block;
 
         width: 90%;
-        height: 2em;
+        height: 1.3em;
         margin: 20px;
 
         cursor: pointer;
+        text-decoration: none;
 
+        color: #000;
         border: 2px solid lightgray;
         background: white;
     }
