@@ -3,12 +3,14 @@ body
 {
     display: grid;
     min-width: 375px;
+    grid-template: 'bh bh' auto 'bm ba' auto 'bf bf' auto;
 }
 
 main
 {
     display: flex;
     flex-wrap: wrap;
+    grid-area: bm;
 }
 
 .card:hover
@@ -89,6 +91,7 @@ main
     color: #1b1a1ac7;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    grid-area: bh;
 }
 
 .cat-header::first-letter
@@ -108,9 +111,8 @@ main
 
     width: auto;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: 'h h' 63px
-        'm ©' auto;
+    grid-template: 'h h' 63px 'm ©' auto;
+    grid-area: bf;
 }
 
 .cat-footer h6
@@ -149,6 +151,11 @@ main
     padding-right: 5px;
 }
 
+aside
+{
+    display: none;
+}
+
 @media screen and (min-width: 375px) and (max-width: 730px)
 {
     .card
@@ -169,12 +176,7 @@ main
     .cat-footer
     {
         font: 14px Arial;
-
-        grid-template-columns: auto;
-
-        grid-template-areas: 'h' 55px
-            'm' 50px
-            '©' auto;
+        grid-template: 'h' 55px 'm' 50px '©' auto;
     }
 
     .contacts-mail
@@ -215,11 +217,7 @@ main
     {
         width: auto;
         display: grid;
-
-        grid-template-columns: 300px 250px;
-        grid-template-areas: 'i n' 50px
-            'i s' auto
-            'f f' auto;
+        grid-template: 'i n' 50px 'i s' auto 'f f' auto / 300px 250px;
     }
 
     .cat-img
@@ -251,8 +249,7 @@ main
         font: 14px Arial;
         margin-left: 10px;
 
-        grid-template-columns: auto auto 2fr;
-        grid-template-areas: 'h m ©' auto;
+        grid-template: 'h m ©' / auto auto 2fr;
        
     }
 
@@ -291,6 +288,65 @@ main
         text-align: right;
         padding-right: 0;
         margin: auto;
+    }
+
+    aside
+    {
+        width: 300px;
+        grid-area: ba;
+        display: block;
+    }
+
+    .range-slider.sticky
+    {
+        top: 70px;
+    }
+
+    .range-slider
+    {
+        text-align: center;
+    }
+
+    .range-slider-wrapper
+    {
+        position: absolute;
+        margin-left: auto;
+        margin-top: auto;
+        height: 18px;
+        width: 210px;
+    }
+    
+    input[type='range'] 
+    {
+        position: absolute;
+        left: 45px;
+        top: 15px;
+        width: 100%;
+        height: 5px;
+        margin: 0;
+        padding: 0;
+        -webkit-appearance: none;
+        background: #d3d3d3;
+        outline: none;
+    }
+    
+    input[type='range']::-webkit-slider-thumb
+    {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: rgb(162, 245, 165);
+        cursor: pointer;
+    }
+
+    .range-values
+    {
+        margin-top: 65px;
     }
 
 }
