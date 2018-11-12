@@ -484,7 +484,7 @@ p
         width: 350px;
         height: 350px;
         grid-template: 200px 150px / 1fr;
-        margin: 10px
+        margin: 10px;
     }
 
     .image-container,
