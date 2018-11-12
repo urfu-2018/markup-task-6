@@ -3,7 +3,292 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 <body>
+    <input class="breed-selector br-empty" id="empty" type="radio" value="empty" name="breed" checked>
+    <input class="breed-selector br-no" id="no" type="radio" value="no" name="breed">
+    <input class="breed-selector br-sphynx" id="sphynx" type="radio" value="sphynx" name="breed">
+    <input class="breed-selector br-fox" id="fox" type="radio" value="fox" name="breed">
+    <input class="breed-selector br-ascii" id="ascii" type="radio" value="ascii" name="breed">
+    <input class="breed-selector br-pers" id="persian" type="radio" value="persian" name="breed">
+    <input class="breed-selector br-snowy" id="snowy" type="radio" value="snowy" name="breed">
+    <input class="breed-selector br-coal" id="coal" type="radio" value="coal" name="breed">
+    <input class="breed-selector br-fold" id="fold" type="radio" value="fold" name="breed">
+    <input class="breed-selector br-maine-coon" id="maine-coon" type="radio" value="maine-coon" name="breed">
+    <input class="breed-selector br-munchkin" id="munchkin" type="radio" value="munchkin" name="breed">
+    <input class="breed-selector br-somali" id="somali" type="radio" value="somali" name="breed">
+
+    <section class="meowmarket">
+        <header class="header">
+            <h1>Мурмаркет</h1>
+        </header>
+        <div class="cat-container">
+            <a href="#" class="cat-card breed no">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/richard.jpg" alt="richard">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Ричард</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Дружелюбный, ласковый.</p>
+                    <p>Любит лениться, спать и валяться в ногах.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed fox">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/blueberry.jpg" alt="blueberry">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Голубика</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: серый лис</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Любит смотреть на птичек.</p>
+                    <p>Очень активная, энергичная, всегда требует внимания.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed pers">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/gentleman.jpg" alt="gentleman">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Джентльмен</h3>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: перс</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Фотогеничный кот-романтик, принц на белом коне.</p>
+                    <p>
+                        Джентльмен готов скрасить любой одинокий вечер.
+                        В его объятиях таят даже самые брутальные.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed no">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/skoda.jpg" alt="skoda">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Шкода</h3>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Трудный кот-шалун.</p>
+                    <p>
+                        Очень активный, готов устроить хаос и беспорядок всего за несколько минут.
+                        В минуты усталости бывает очень нежным.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed snowy">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/bodybuilder.jpg" alt="bodybuilder">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Бодибилдер</h3>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: снежок</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Его кошачьи бицепсы всё говорят за себя.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed coal">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/blacky.jpg" alt="blacky">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Уголёк</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: угольный кот</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Скромный, тихий кот.</p>
+                    <p>Немного боится людей, хорошо ладит с другими животными.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed ascii">
+                <pre>
+               *     ,MMMMM8           *
+                    MMMM88   .
+                   MMMM88
+       *           MMM88
+                   MMM88
+                   'MMM88
+                     'MMMMM8'      *
+            |\___/|
+           =) ^Y^ (=            .              '
+            \  ^  /
+             )=*=(       *
+            /     \
+            |     |
+           /| | | |\
+           \| | |_|/\
+    jgs_/\_//_// ___/\_/\_/\_/\_/\_/\_/\_/\_/\_
+    |  |  |  | \_) |  |  |  |  |  |  |  |  |  |
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+                </pre>
+                <div class="description short-description ascii-description">
+                    <div>
+                        <h3 class="cat-name">Ascii Кот</h3>
+                        <p>Возраст: 120 лет</p>
+                        <p>Порода: ascii-графика</p>
+                        <p>Болезни: излишняя пикселявость</p>
+                        <p class="cat-status">Статус: скопируется к любому желающему здесь и сейчас</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed maine-coon">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/stranger.jpg" alt="stranger">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Бродяга</h3>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: мейн-кун</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Любит гулять на свежем воздухе, составит компанию на время утренней пробежки.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed fold">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/felix.jpg" alt="felix">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Феликс</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: вислоухий</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Начинающий черепаший наездник.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed munchkin">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/sausage.jpg" alt="sausage">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Баварская Длинношерстная Сосиска</h3>
+                    <p>Возраст: 7 месяцев</p>
+                    <p>Порода: манчкин</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Веселая и дружелюбная</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed sphynx">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/grace.jpg" alt="grace">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Грация</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: сфинкс</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Плохо ладит с другими животными, любит быть в центре внимания.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed somali">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/squirrel.jpg" alt="squirrel">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Белочка</h3>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: сомали</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Юркая, энергичная, обожает забираться на полочки и шкафы.</p>
+                </div>
+            </a>
+            <a href="#" class="cat-card breed pers">
+                <div class="image-container">
+                    <img class="cat-image" src="cats/flat-face.jpg" alt="flat">
+                </div>
+                <div class="description short-description">
+                    <h3 class="cat-name">Мистер Флэт Фэйс</h3>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: перс</p>
+                    <p>Болезни: нет</p>
+                    <p class="cat-status">Статус: ищет хозяина</p>
+                </div>
+                <div class="description full-description">
+                    <p>Несмотря на свою серьезность, любит всё и вся.</p>
+                </div>
+            </a>
+        </div>
+        <div class="controls">
+            <section class="age">
+                <h4 class="controls-heading">Возраст</h4>
+                <div class="age">
+                    <div class="bar">
+                        <div class="blue-bar"></div>
+                        <span class="slider left"></span>
+                        <span class="slider right"></span>
+                    </div>
+                    <span>от 2 до 4 лет</span>
+                </div>
+            </section>
+            <section class="breeds">
+                <h4 class="controls-heading">Порода</h4>
+                <div class="breeds-control">
+                    <label class="breed-label br-l-empty" for="empty">не выбрано</label>
+                    <label class="breed-label br-l-no" for="no">без породы</label>
+                    <label class="breed-label br-l-sphynx" for="sphynx">сфинкс</label>
+                    <label class="breed-label br-l-fox" for="fox">серый лис</label>
+                    <label class="breed-label br-l-ascii" for="ascii">ASCII</label>
+                    <label class="breed-label br-l-pers" for="persian">перс</label>
+                    <label class="breed-label br-l-snowy" for="snowy">снежок</label>
+                    <label class="breed-label br-l-coal" for="coal">угольный кот</label>
+                    <label class="breed-label br-l-fold" for="fold">вислоухий</label>
+                    <label class="breed-label br-l-maine-coon" for="maine-coon">мейн-кун</label>
+                    <label class="breed-label br-l-munchkin" for="munchkin">манчкин</label>
+                    <label class="breed-label br-l-somali" for="somali">сомали</label>
+                </div>
+            </section>
+        </div>
+        <footer class="footer contacts">
+            <span class="contact-us">Напишите нам:</span>
+            <a class="contact-item" href="#">grand-ma@yandex.ru</a>
+            <a class="contact-item" href="#">grand-ma@gmail.com</a>
+            <span class="corporation">
+                &copy; 2018 ООО <a href="#" class="signature-a">Котятки-Студио</a>
+            </span>
+        </footer>
+    </section>
 </body>
 </html>

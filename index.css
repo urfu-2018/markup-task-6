@@ -1,0 +1,506 @@
+html,
+body
+{
+    height: 100%;
+}
+
+.meowmarket
+{
+    height: 100%;
+    display: grid;
+    grid-template: 51px auto 51px / 1fr 16%;
+    grid-template-areas: 'header header'
+        'cats controls'
+        'footer footer';
+    font-family: 'Comfortaa', cursive;
+}
+
+.header
+{
+    grid-area: header;
+    text-align: center;
+    font-family: PT SansNarrow, serif;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.header h1
+{
+    font-size: 32px;
+    margin: auto 0;
+    font-weight: normal;
+}
+
+.header::first-letter
+{
+    color: red;
+}
+
+.footer
+{
+    grid-area: footer;
+    font-size: 15px;
+    font-family: Arial, serif;
+    margin: auto 0;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid lightgray;
+}
+
+.footer a
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.contacts
+{
+    display: inline-flex;
+    width: 100%;
+}
+
+.contact-item
+{
+    padding: 0 10px 5px 0;
+}
+
+.contact-us
+{
+    padding-right: 10px;
+}
+
+.footer .contact-item::after
+{
+    padding-left: 10px;
+    content: '\1F534';
+    font-size: 12px;
+}
+
+.footer .contact-item:nth-child(3)::after
+{
+    padding-left: 15px;
+    content: '';
+}
+
+.corporation
+{
+    margin-left: auto;
+}
+
+.cat-container
+{
+    grid-area: cats;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.cat-card
+{
+    position: relative;
+    width: 47%;
+    margin: 1%;
+    height: 340px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid lightgray;
+}
+
+.cat-card
+{
+    opacity: .3;
+    cursor: default;
+}
+
+.cat-card::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 4px 1px rgb(170, 170, 170);
+    opacity: 0;
+    /* Отображаем тень под котиком, только если его порода выбрана */
+    z-index: -1;
+    display: none;
+}
+
+.cat-card:hover::after
+{
+    opacity: 1;
+}
+
+.cat-card
+{
+    display: grid;
+    grid-template: 192px 110px / 300px 1fr;
+}
+
+.cat-name
+{
+    margin: 0 0 10px;
+}
+
+.image-container
+{
+    width: 260px;
+    height: 172px;
+    padding: 20px 20px 0;
+    overflow: hidden;
+}
+
+.description
+{
+    padding: 20px;
+    overflow: hidden;
+}
+
+.short-description
+{
+    padding-left: 0;
+}
+
+.cat-image
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+.full-description
+{
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+    grid-column: 1 / 3;
+}
+
+p
+{
+    margin: 0;
+}
+
+.cat-card.ascii
+{
+    grid-template: 342px / 50% 1fr;
+    display: none;
+}
+
+.cat-card.ascii .short-description
+{
+    display: flex;
+    margin: auto;
+}
+
+.ascii-description
+{
+    text-align: right;
+}
+
+.controls
+{
+    display: grid;
+    grid-template: 180px auto / 1fr;
+    grid-template-areas: 'age'
+        'breed';
+}
+
+.controls-heading
+{
+    font-weight: normal;
+    font-size: 20px;
+    color: darkslateblue;
+    text-align: center;
+}
+
+.age
+{
+    height: 60px;
+}
+
+.bar
+{
+    position: relative;
+    height: 1px;
+    background-color: rgb(220, 220, 220);
+    margin: 5px 10px 40px;
+}
+
+.blue-bar
+{
+    position: relative;
+    height: 1px;
+    left: 25%;
+    width: 39%;
+    background-color: #70caff;
+
+}
+
+.slider
+{
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 26px;
+    background-color: white;
+    top: -13px;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+.left
+{
+    left: calc(25% - 13px); /* тютилька в тютильку */
+}
+
+.right
+{
+    left: calc(25% - 13px + 39%);
+}
+
+.breeds-control
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.breed-selector
+{
+    display: none;
+}
+
+.breed-label
+{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin: 6px 0;
+    padding: 10px 15px;
+    border: 1px solid darkslategray;
+    border-radius: 3px;
+    width: 80%;
+    font-family: Comic Sans MS, serif;
+}
+
+.breed-label::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 5px 0 10px 1px rgb(170, 170, 170);
+    opacity: 0;
+    z-index: -1;
+}
+
+.br-no:checked ~ .meowmarket .br-l-no,
+.br-empty:checked ~ .meowmarket .br-l-empty,
+.br-sphynx:checked ~ .meowmarket .br-l-sphynx,
+.br-fox:checked ~ .meowmarket .br-l-fox,
+.br-ascii:checked ~ .meowmarket .br-l-ascii,
+.br-pers:checked ~ .meowmarket .br-l-pers,
+.br-snowy:checked ~ .meowmarket .br-l-snowy,
+.br-coal:checked ~ .meowmarket .br-l-coal,
+.br-fold:checked ~ .meowmarket .br-l-fold,
+.br-maine-coon:checked ~ .meowmarket .br-l-maine-coon,
+.br-munchkin:checked ~ .meowmarket .br-l-munchkin,
+.br-somali:checked ~ .meowmarket .br-l-somali
+{
+    background-color: #e9ffd0;
+    border-color: #92ff60;
+    left: -3%;
+}
+
+.br-no:checked ~ .meowmarket .br-l-no::after,
+.br-empty:checked ~ .meowmarket .br-l-empty::after,
+.br-sphynx:checked ~ .meowmarket .br-l-sphynx::after,
+.br-fox:checked ~ .meowmarket .br-l-fox::after,
+.br-ascii:checked ~ .meowmarket .br-l-ascii::after,
+.br-pers:checked ~ .meowmarket .br-l-pers::after,
+.br-snowy:checked ~ .meowmarket .br-l-snowy::after,
+.br-coal:checked ~ .meowmarket .br-l-coal::after,
+.br-fold:checked ~ .meowmarket .br-l-fold::after,
+.br-maine-coon:checked ~ .meowmarket .br-l-maine-coon::after,
+.br-munchkin:checked ~ .meowmarket .br-l-munchkin::after,
+.br-somali:checked ~ .meowmarket .br-l-somali::after
+{
+    opacity: 1; /* Отобразим тень под лейблом */
+}
+
+.br-no:checked ~ .meowmarket .breed.no,
+.br-empty:checked ~ .meowmarket .breed,
+.br-sphynx:checked ~ .meowmarket .breed.sphynx,
+.br-fox:checked ~ .meowmarket .breed.fox,
+.br-ascii:checked ~ .meowmarket .breed.ascii,
+.br-pers:checked ~ .meowmarket .breed.pers,
+.br-snowy:checked ~ .meowmarket .breed.snowy,
+.br-coal:checked ~ .meowmarket .breed.coal,
+.br-fold:checked ~ .meowmarket .breed.fold,
+.br-maine-coon:checked ~ .meowmarket .breed.maine-coon,
+.br-munchkin:checked ~ .meowmarket .breed.munchkin,
+.br-somali:checked ~ .meowmarket .breed.somali
+{
+    order: -1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.br-ascii:checked ~ .meowmarket .breed.ascii
+{
+    display: grid;
+}
+
+.br-no:checked ~ .meowmarket .breed.no::after,
+.br-empty:checked ~ .meowmarket .breed::after,
+.br-sphynx:checked ~ .meowmarket .breed.sphynx::after,
+.br-fox:checked ~ .meowmarket .breed.fox::after,
+.br-ascii:checked ~ .meowmarket .breed.ascii::after,
+.br-pers:checked ~ .meowmarket .breed.pers::after,
+.br-snowy:checked ~ .meowmarket .breed.snowy::after,
+.br-coal:checked ~ .meowmarket .breed.coal::after,
+.br-fold:checked ~ .meowmarket .breed.fold::after,
+.br-maine-coon:checked ~ .meowmarket .breed.maine-coon::after,
+.br-munchkin:checked ~ .meowmarket .breed.munchkin::after,
+.br-somali:checked ~ .meowmarket .breed.somali::after
+{
+    /* Отображаем тень под котиком, только если его порода выбрана */
+    display: block;
+}
+
+@media (max-width: 1200px)
+{
+    .footer .contact-item::after
+    {
+        padding-left: 15px;
+        content: '';
+    }
+
+    .controls
+    {
+        display: none;
+    }
+
+    .meowmarket
+    {
+        grid-template: 51px auto 90px / 1fr;
+    }
+
+    .cat-card
+    { /* сбросить фильтр по породе */
+        order: 0;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .full-description
+    {
+        display: none;
+    }
+
+    .image-container,
+    .cat-image
+    {
+        padding: 0;
+        height: 140px;
+        width: 200px;
+    }
+
+    .cat-card
+    {
+        margin: 10px;
+        width: 200px;
+        height: 310px;
+        grid-template: 140px 170px / 1fr;
+    }
+
+    .short-description
+    {
+        padding: 20px 10px;
+    }
+
+    .cat-name
+    {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .cat-status
+    {
+        margin-top: 10px;
+    }
+
+    .cat-container
+    {
+        justify-content: center;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .contact-item
+    {
+        padding: 3px 0;
+    }
+
+    .contact-item::before
+    {
+        content: '\2709  ';
+        color: black;
+        font-size: 15px;
+    }
+
+    .corporation
+    {
+        margin-top: auto;
+    }
+
+}
+
+@media (max-width: 730px)
+{
+    .meowmarket
+    {
+        grid-template: 51px auto 130px / 1fr;
+    }
+
+    .cat-container
+    {
+        flex-direction: column;
+    }
+
+    .cat-card
+    {
+        width: 350px;
+        height: 350px;
+        grid-template: 200px 150px / 1fr;
+        margin: 10px
+    }
+
+    .image-container,
+    .cat-image
+    {
+        height: 200px;
+        width: 350px;
+    }
+
+    .contacts
+    {
+        flex-wrap: nowrap;
+    }
+
+    .corporation
+    {
+        margin: auto 0 0;
+    }
+}
