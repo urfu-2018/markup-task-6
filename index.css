@@ -1,0 +1,298 @@
+html
+{
+    margin: 0;
+    height: 100%;
+}
+
+header
+{
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(189, 189, 189, 1);
+}
+
+header:first-letter
+{
+    color: rgba(255, 0, 0, 1);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cat-shop
+{
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.cat-items
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+}
+
+.cat-item
+{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    height: 320px;
+    border: 1px solid rgba(189, 189, 189, 1);
+    box-sizing: border-box;
+    margin: 5px;
+    max-width: 442px;
+}
+
+.cat-item:hover
+{
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.cat-params
+{
+    display: flex;
+    padding: 10px;
+    height: 177px;
+}
+
+.cat-picture,
+.card
+{
+    flex-basis: 50%;
+    height: 100%;
+}
+
+.card
+{
+    margin-left: 10px;
+}
+
+.list-information
+{
+    border-top: 1px solid rgba(189, 189, 189, 1);
+    margin: 0;
+    height: 110px;
+    padding: 10px;
+}
+
+footer
+{
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 14px Arial;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(189, 189, 189, 1);
+}
+
+.contact-name
+{
+    display: flex;
+}
+
+.mail-block
+{
+    display: flex;
+}
+
+.mail-block p:before
+{
+    content: '\2709  ';
+}
+
+.mail:nth-child(2):after
+{
+    content: '\2003\2003\2022';
+}
+
+.contact-name-item,
+.mail
+{
+    display: flex;
+    text-decoration: none;
+    color: rgba(76, 76, 216, 1);
+}
+
+.mail,
+.contact-name
+{
+    padding: 15px;
+}
+
+.filters
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.breed-radio
+{
+    display: none;
+}
+
+.breed-label
+{
+    display: flex;
+    height: 30px;
+    border: 1px solid rgba(189, 189, 189, 1);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+input[id='no']:checked ~ .filters .breed label[for='no'],
+input[id='no-filter']:checked ~ .filters .breed label[for='no-filter'],
+input[id='mainkyhn']:checked ~ .filters .breed label[for='mainkyhn'],
+input[id='nevskaya']:checked ~ .filters .breed label[for='nevskaya']
+{
+    background: rgba(135, 245, 168, 1);
+    border: 1px solid rgba(4, 181, 57, 1);
+}
+
+input[id='no']:checked ~ .cat-items .breed-mainkyhn,
+input[id='no']:checked ~ .cat-items .breed-nevskaya
+{
+    display: none;
+}
+
+input[id='mainkyhn']:checked ~ .cat-items .breed-no,
+input[id='mainkyhn']:checked ~ .cat-items .breed-nevskaya
+{
+    display: none;
+}
+
+input[id='nevskaya']:checked ~ .cat-items .breed-no,
+input[id='nevskaya']:checked ~ .cat-items .breed-mainkyhn
+{
+    display: none;
+}
+
+input[type='range']
+{
+    height: 27px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type='range']:focus
+{
+    outline: none;
+}
+
+input[type='range']::-moz-range-track
+{
+    width: 98%;
+    height: 1px;
+    cursor: pointer;
+    background: rgba(4, 181, 57, 1);
+}
+
+input[type='range']::-moz-range-thumb
+{
+    height: 20px;
+    width: 21px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px)
+{
+    .filters,
+    .list-information
+    {
+        display: none;
+    }
+
+    .cat-params
+    {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .cat-item
+    {
+        max-width: 250px;
+        height: 370px;
+    }
+
+    .mail-block
+    {
+        flex-direction: column;
+    }
+
+    .mail-block p:before
+    {
+        content: none;
+    }
+
+    .mail:nth-child(2):after
+    {
+        content: none;
+    }
+
+    .mail:before
+    {
+        content: '\2709  ';
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .mail
+    {
+        padding: 0;
+    }
+
+    input[id='nevskaya']:checked ~ .cat-items .breed-no,
+    input[id='nevskaya']:checked ~ .cat-items .breed-mainkyhn,
+    input[id='mainkyhn']:checked ~ .cat-items .breed-no,
+    input[id='mainkyhn']:checked ~ .cat-items .breed-nevskaya,
+    input[id='no']:checked ~ .cat-items .breed-mainkyhn,
+    input[id='no']:checked ~ .cat-items .breed-nevskaya
+    {
+        display: flex;
+    }
+
+    @media screen and (max-width: 730px)
+    {
+        footer
+        {
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .mail-block
+        {
+            margin: 5px;
+        }
+
+        .contact-name
+        {
+            padding: 5px;
+        }
+
+        .cat-items
+        {
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cat-item
+        {
+            max-width: 370px;
+            height: 430px;
+            margin: 5px 55px;
+        }
+    }
+}
