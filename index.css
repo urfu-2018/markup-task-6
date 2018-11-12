@@ -684,6 +684,8 @@ button::before,
 
     .main__content
     {
+        -webkit-align-self: flex-start;
+        align-self: flex-start;
         display: grid;
         -webkit-flex-grow: 3; /* не слапываем по ширине при скрытых карточках */
         flex-grow: 3;
@@ -693,6 +695,8 @@ button::before,
 
     .main__side
     {
+        -webkit-align-self: flex-start;
+        align-self: flex-start;
         display: block;
         -webkit-flex-basis: 280px;
         flex-basis: 280px;
@@ -994,7 +998,7 @@ button::before,
     input[value='breed8']:checked ~ .main .card_breed-8,
     input[value='breed9']:checked ~ .main .card_breed-9
     {
-        display: block;
+        display: grid;
     }
 
     input[value='breed1']:checked ~ .main label[for='breed1']::before,
