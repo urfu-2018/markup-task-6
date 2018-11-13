@@ -1,0 +1,214 @@
+/*common settings*/
+
+.radio
+{
+    display: none;
+}
+
+label:hover
+{
+    cursor: pointer;
+}
+
+main
+{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+}
+
+footer
+{
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: aquamarine;
+    box-shadow: 0 0 15px #000;
+}
+
+header
+{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: aquamarine;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px #000;
+    z-index: 1000;
+}
+
+.cat-photo
+{
+    height: 262px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.aside
+{
+    display: none;
+    overflow-y: scroll;
+    position: fixed;
+    top: 115px;
+    left: 80%;
+    right: 5px;
+    max-height: calc(100% - 48px);
+    border-radius: 15px;
+    border: solid black;
+}
+
+.cat-info:hover
+{
+    box-shadow: 0 0 15px #000;
+    transform: scale(1.05);
+    transition: transform .4s ease-in-out;
+}
+
+.name
+{
+    font-size: 35px;
+}
+
+section
+{
+    text-align: center;
+    top: 100px;
+}
+
+/*for desktop screen size*/
+
+@media only screen and ( min-width: 1200px)
+{
+    input:checked[id='first-filter'] ~ main .content .cat-info-1,
+    input:checked[id='first-filter'] ~ main .content .cat-info-3,
+    input:checked[id='first-filter'] ~ main .content .cat-info-2
+    {
+        display: none;
+    }
+
+    input:checked[id='second-filter'] ~ main .content .cat-info-4,
+    input:checked[id='second-filter'] ~ main .content .cat-info-5,
+    input:checked[id='second-filter'] ~ main .content .cat-info-6
+    {
+        display: none;
+    }
+
+    input:checked[id='third-filter'] ~ main .content .cat-info-7,
+    input:checked[id='third-filter'] ~ main .content .cat-info-8,
+    input:checked[id='third-filter'] ~ main .content .cat-info-9,
+    input:checked[id='third-filter'] ~ main .content .cat-info-10
+    {
+        display: none;
+    }
+
+    .aside
+    {
+        display: inline-block;
+        transition: transform .4s ease-in-out;
+    }
+
+    .content
+    {
+        width: 80%;
+    }
+
+    .cat-info
+    {
+        border: solid #616161 5px;
+        width: 350px;
+        height: 500px;
+        display: inline-block;
+        padding: 0;
+        margin: 15px;
+        white-space: normal;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: all .5s ease-in-out;
+        font-size: 20px;
+        zoom: .9;
+    }
+
+    .content .cat-info .information
+    {
+        white-space: normal;
+        overflow-y: scroll;
+    }
+
+    .information
+    {
+        text-align: left;
+        hyphens: auto;
+        width: 350px;
+        height: 230px;
+    }
+
+}
+
+/*for tablet screen size*/
+@media only screen and ( max-width: 1200px)
+{
+    .cat-info
+    {
+        border: solid #616161 5px;
+        width: 350px;
+        height: 500px;
+        display: inline-block;
+        padding: 0;
+        margin: 15px;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: all .5s ease-in-out;
+        font-size: 20px;
+    }
+
+    .content .cat-info .information
+    {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .information
+    {
+        text-align: left;
+        hyphens: auto;
+        width: 350px;
+        height: 230px;
+    }
+}
+
+/*for phone screen size*/
+
+@media only screen and ( max-width: 730px)
+{
+    .cat-info
+    {
+        text-align: center;
+        border: solid #616161 5px;
+        width: 350px;
+        height: 500px;
+        display: inline-block;
+        padding: 0;
+        margin: 15px 50px;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: all .5s ease-in-out;
+        font-size: 20px;
+    }
+
+    .content .cat-info .information
+    {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .information
+    {
+        white-space: nowrap;
+        width: 350px;
+        height: 230px;
+        overflow: hidden;
+    }
+}

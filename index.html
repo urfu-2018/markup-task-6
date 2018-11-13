@@ -3,7 +3,197 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link type="text/css" rel="stylesheet"  href="index.css">
 </head>
 <body>
+
+    <header>
+        <h1>
+            Murmarket 2.0
+        </h1>
+    </header>
+
+    <input class="radio" type="radio" name="filters" id="no-filters" checked>
+    <input class="radio" type="radio" name="filters" id="first-filter">
+    <input class="radio" type="radio" name="filters" id="second-filter">
+    <input class="radio" type="radio" name="filters" id="third-filter">
+    <main>
+
+        <section class="aside">
+            <h1>Фильтры</h1>
+            <hr>
+            <label>Возраст
+                <input type="range" min="0" max="10" step="0.5" value="5">
+            </label>
+            <hr>
+            <div>
+                <label for="no-filters">
+                    Без фильтров
+                </label>
+            </div>
+            <hr>
+            <div>
+                <label for="first-filter">
+                    Первый фильтр
+                </label>
+            </div>
+            <hr>
+            <div>
+                <label for="second-filter">
+                    Второй фитр
+                </label>
+            </div>
+            <hr>
+            <div>
+                <label for="third-filter">
+                    Третий фильтр
+                </label>
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <div class="cat-info cat-info-1">
+                <img class="cat-photo" src="https://bit.ly/2yIg9m5" alt="sad_cat">
+                <div class="information">
+                    <h2 class="name">Грустный котик((9</h2>
+                    <ul>
+                        <li class="age">Возраст: Он был слишком молод для такого кода</li>
+                        <li  class="breed">Порода: Грустный</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Он случайно увидел мой код</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-2">
+                <img class="cat-photo" src="https://bit.ly/2ABFJdC" alt="fat_cat">
+                <div class="information">
+                    <h2 class="name">Толстый котик</h2>
+                    <ul>
+                        <li class="age">Возраст: 1 год</li>
+                        <li class="breed">Порода: ---</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Кот съевший все баги из моего кода</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-3">
+                <img class="cat-photo" src="https://clck.ru/EdFsp" alt="cat_in_paper">
+                <div class="information">
+                    <h2 class="name">Котик в бумаге</h2>
+                    <ul>
+                        <li class="age">Возраст: 2 года</li>
+                        <li class="breed">Порода: Обычный</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Просто завернутый в бумагу кот</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-4">
+                <img class="cat-photo" src="https://clck.ru/EdFtY" alt="morning_cat">
+                <div class="information">
+                    <h2 class="name">Утренний котик</h2>
+                    <ul>
+                        <li class="age">Возраст: 1.5 года</li>
+                        <li class="breed">Порода: Сонный</li>
+                        <li class="diseases">Болезни: Сонливость</li>
+                    </ul>
+                    <p class="description">Кот случайно открыл глаза в 7 утра</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-5">
+                <img class="cat-photo" src="https://clck.ru/EdFuJ" alt="waking_up_cat">
+                <div class="information">
+                    <h2 class="name">Потягивающийся котик</h2>
+                    <ul>
+                        <li class="age">Возраст: 1.4 года</li>
+                        <li class="breed">Порода: ---</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Только проснулся</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-6">
+                <img class="cat-photo" src="https://clck.ru/EdFv6" alt="beautiful_cat">
+                <div class="information">
+                    <h2 class="name">Красивый котик</h2>
+                    <ul>
+                        <li class="age">Возраст: Очень красивый</li>
+                        <li class="breed">Порода: Красивый</li>
+                        <li class="diseases">Болезни: Красота</li>
+                    </ul>
+                    <p class="description">Невероятно красив</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-7">
+                <img class="cat-photo" src="https://clck.ru/EdFwT" alt="embarrassed_cat">
+                <div class="information">
+                    <h2 class="name">Смущенный котик</h2>
+                    <ul>
+                        <li class="age">Возраст: 0.5 года</li>
+                        <li class="breed">Порода: Обычный</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Засмущали</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-8">
+                <img class="cat-photo" src="https://clck.ru/EdFyS" alt="matroskin_cat">
+                <div class="information">
+                    <h2 class="name">Котик работяга (Матроскин)</h2>
+                    <ul>
+                        <li class="age">Возраст: ---</li>
+                        <li class="breed">Порода: ---</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">
+                        Говорящий кот. Склонен к рациональному мышлению: предпочитает из всего извлекать
+                        материальную выгоду. Периодически напоминает о том, что его кличка — это «фамилие
+                        такое» (ранее носил разные имена, среди которых: Барсик, Пушок, Оболтус и Кис Кисыч).
+                    </p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-9">
+                <img class="cat-photo" src="https://clck.ru/EdG3e" alt="cheshire_cat">
+                <div class="information">
+                    <h2 class="name">Чеширский котик</h2>
+                    <ul>
+                        <li class="age">Возраст: Неизвестно</li>
+                        <li class="breed">Порода: Неизвестно</li>
+                        <li class="diseases">Болезни: Неизвестно</li>
+                    </ul>
+                    <p class="description">Добродушный Чеширский кот постоянно улыбается и может исчезать,
+                        оставляя на рассмотрение только свою широкую улыбку. Кот - философ, он может толкнуть
+                        не одну речь. Кот свободно перемещается по воздуху и телепортируется. Считает себя
+                        сумасшедшим. Он виляет своим хвостиком когда злой и когда довольный.</p>
+                </div>
+            </div>
+
+            <div class="cat-info cat-info-10">
+                <img class="cat-photo" src="https://clck.ru/EdG5h" alt="big_cat">
+                <div class="information">
+                    <h2 class="name">Очень большой котик</h2>
+                    <ul>
+                        <li class="age">Возраст: 4 года</li>
+                        <li class="breed">Порода: Лев</li>
+                        <li class="diseases">Болезни: ---</li>
+                    </ul>
+                    <p class="description">Не очень любит быть голодным</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Contact information: <a href="mailto:cfgi@yandex.ru">cfgi@yandex.ru</a>.</p>
+        </footer>
+    </main>
 </body>
+
 </html>
