@@ -32,14 +32,54 @@ main
     overflow: hidden;
 }
 
-/* main */
-
-main
+@media only screen /* all screen sizes */
 {
-    padding-top: 60px;
+    /* main */
+
+    main
+    {
+        padding-top: 60px;
+    }
+
+    /* footer */
+
+    footer
+    {
+        font: 14px Arial;
+        width: 100%;
+    }
+
+    a
+    {
+        color: #4c4cd8;
+        text-decoration: none;
+    }
+
+    .footer-left
+    {
+        display: block;
+        text-align: left;
+    }
+
+    .write-us
+    {
+        margin-top: 0;
+    }
+
+    .write-us-list
+    {
+        list-style: none;
+        margin: 2px;
+        padding: 0;
+    }
+
+    .write-us-list-item
+    {
+        margin: 2px;
+    }
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 730px)
+@media only screen and (max-width: 1200px)  /* mobile and tablet */
 {
     .cat-box
     {
@@ -52,17 +92,10 @@ main
         vertical-align: bottom;
     }
 
-    .cat-box:hover
-    {
-        box-shadow: 2px 2px 4px 2px #444;
-    }
-
     .cat-photo-section
     {
         text-align: center;
         width: 100%;
-        height: 50%;
-
     }
 
     .cat-photo
@@ -98,37 +131,10 @@ main
 
     /* footer */
 
-    footer
-    {
-        display: table;
-        table-layout: fixed;
-        font: 14px Arial;
-        width: 100%;
-    }
-
-    a
-    {
-        color: #4c4cd8;
-        text-decoration: none;
-    }
-
     .footer-left,
     .footer-right
     {
         padding: 5px;
-    }
-
-    .footer-left
-    {
-        display: table-cell;
-        text-align: left;
-    }
-
-    .write-us-list
-    {
-        list-style: none;
-        margin: 2px;
-        padding: 0;
     }
 
     .write-us-list-item
@@ -140,8 +146,151 @@ main
 
     .footer-right
     {
+        vertical-align: bottom;
+    }
+}
+
+@media only screen and (max-width: 729px)  /* mobile */
+{
+    /* main */
+
+    .cat-box
+    {
+        margin: 10px 6vh;
+        width: 85vw;
+        height: 80vh;
+    }
+
+    .cat-photo-section
+    {
+        height: 65%;
+    }
+}
+
+@media only screen and (min-width: 730px) /* table and desktop */
+{
+    /* footer */
+
+    footer
+    {
+        display: table;
+        table-layout: fixed;
+    }
+
+    .footer-right
+    {
         display: table-cell;
         text-align: right;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 730px) /* tablet */
+{
+    /* main */
+
+    .cat-box
+    {
+        width: 300px;
+        height: 350px;
+    }
+
+    .cat-box:hover
+    {
+        box-shadow: 2px 2px 4px 2px #444;
+    }
+
+    .cat-photo-section
+    {
+        height: 50%;
+    }
+
+    /* footer */
+
+    .footer-right
+    {
         vertical-align: bottom;
+    }
+}
+
+@media only screen and (min-width: 1200px) /* desktop */
+{
+    .cat-box
+    {
+        border: 2px solid #888;
+        margin: 10px;
+        text-align: left;
+        width: 500px;
+        height: 300px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+    .cat-photo-section
+    {
+        text-align: center;
+        width: 100%;
+    }
+
+    .cat-photo
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .cat-name
+    {
+        display: block;
+        overflow: hidden;
+        color: #111;
+        font-size: 32px;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cat-long-info,
+    .cat-short-info,
+    .cat-name
+    {
+        margin: 10px;
+    }
+
+    .cat-long-info
+    {
+        display: none;
+    }
+
+    /* footer */
+
+    .footer-left,
+    .footer-right
+    {
+        padding: 10px;
+    }
+
+    .write-us
+    {
+        display: inline;
+        background: url(src/icons/mail.png) left center no-repeat;
+        padding-left: 24px;
+    }
+
+    .write-us-list
+    {
+        display: inline-block;
+    }
+
+    .write-us-list-item
+    {
+        display: inline;
+    }
+
+    .write-us-list-item:nth-child(2)::before
+    {
+        content: '\2022';
+        font-size: 16px;
+        padding-right: 5px;
     }
 }
