@@ -1,0 +1,190 @@
+
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/pt-sans-narrow.ttf') format('truetype');
+}
+
+html,
+body,
+.container
+{
+    min-height: 100vh;
+    flex: 1;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    background: white;
+}
+
+header h1
+{
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+header h1::first-letter
+{
+    color: red;
+}
+
+footer
+{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5em;
+    color: #333;
+    background: white;
+    border-top: 1px solid #ccc;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+footer .contacts
+{
+    float: left;
+    padding-right: 10px;
+}
+
+footer .copyright
+{
+    text-align: right;
+}
+
+footer .contacts ul
+{
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .contacts li::before
+{
+    content: '\2709 ';
+    font-size: 1.5em;
+    padding-right: 2px;
+    padding-top: 100px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container .wrapper
+{
+    height: 100%;
+    max-width: 1200px;
+}
+
+/* ITEMS */
+
+.item
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+.item:hover
+{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .1), 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.item h2
+{
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+
+.item h2:hover
+{
+    text-decoration: underline;
+}
+
+.item h2 a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.item img
+{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+}
+
+.item img:hover
+{
+    width: 330px;
+    height: 230px;
+    margin: -15px;
+}
+
+.item .description
+{
+    padding: 0 15px 15px;
+}
+
+.item .description li
+{
+    list-style-type: none;
+}
+
+.item .description ul
+{
+    padding: 0;
+    margin: 0;
+}
+
+.item .full-description
+{
+    
+}
