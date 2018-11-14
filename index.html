@@ -3,7 +3,229 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<div class="header-wrapper">
+    <header class="main-header">
+        <h1>Мурмаркет</h1>
+    </header>
+</div>
+
+<section class="cat-list">
+
+    <input type="radio" checked id="none-filter" class="none-filter" name="filter">
+    <input type="radio" id="grumpy-filter" class="grumpy-filter" name="filter">
+    <input type="radio" id="odd-eyed-filter" class="odd-eyed-filter" name="filter">
+    <input type="radio" id="european-filter" class="european-filter" name="filter">
+    <input type="radio" id="british-filter" class="british-filter" name="filter">
+    <input type="radio" id="red-filter" class="red-filter" name="filter">
+    <input type="radio" id="exotic-filter" class="exotic-filter" name="filter">
+
+    <article class="cat-list-item" data-breed="Grumpy">
+        <img class="image" src="images/grumpy-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Борис">Борис</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 4 года</li>
+            <li>Порода: Grumpy</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Милый, ласковый, общительный. Возраст - 4 года. Любит смотреть чужой код
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="Odd Eyed">
+        <img class="image" src="images/odd-eyed-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Анабелла">Анабелла</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 2 года</li>
+            <li>Порода: Odd Eyed</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="note">Примечание: находится на передержке</article>
+
+        <article class="long-description">
+            Возраст ~ 2 года. Любит ловить мышей
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="European">
+        <img class="image" src="images/pablo-picasso.jpeg" alt="Cat">
+        <h6 class="name"><a href="#" title="Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин Криспиано де ла Сантисима Тринидад Руиз и Пикассо">
+            Пабло Диего Хозе Франциско де Паула Хуан
+            Непомукено Криспин Криспиано де ла Сантисима Тринидад Руиз и Пикассо</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 5 лет</li>
+            <li>Порода: Европейская Короткошерстная</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Общительный, умный кот. Любит играть с веревочкой. Возраст 5 лет
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="none">
+        <img class="image" src="images/fat-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Обжорка">Обжорка</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 7 лет</li>
+            <li>Порода: нет</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Возраст - 7 лет. Не против немного перекусить
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="British">
+        <img class="image" src="images/purring-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Мурзик">Мурзик</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 3 года</li>
+            <li>Порода: Британская Короткошерстная</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Очень ласковый, общительный кот. Любит, когда его гладят. Возраст ~ 3 года
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="none">
+        <img class="image" src="images/surprised-cat.jpeg" alt="Cat">
+        <h6 class="name"><a href="#" title="Сэм">Сэм</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 4.5 года</li>
+            <li>Порода: нет</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            (=^ ◡ ^=)
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="Red">
+        <img class="image" src="images/red-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Рыжик">Рыжик</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 2 года</li>
+            <li>Порода: рыжие</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Просто рыжий кот
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="Exotic">
+        <img class="image" src="images/barsik.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Барсик">Барсик</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 4 года</li>
+            <li>Порода: Экзотическая короткошерстная</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Серый пушистый кот. Возраст - 5 лет
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="none">
+        <img class="image" src="images/white-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Пушистик">Пушистик</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 3 года</li>
+            <li>Порода: нет</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Возраст &lt; 1 года
+        </article>
+    </article>
+
+    <article class="cat-list-item" data-breed="none">
+        <img class="image" src="images/licked-cat.jpg" alt="Cat">
+        <h6 class="name"><a href="#" title="Сильвестр">Сильвестр</a></h6>
+        <ul class="short-description">
+            <li>Возраст: 2 года</li>
+            <li>Порода: нет</li>
+            <li>Болезни: нет</li>
+        </ul>
+
+        <article class="status">Статус: ищет хозяина</article>
+
+        <article class="long-description">
+            Очень любит свежее молоко. Возраст - 3 года
+        </article>
+    </article>
+
+    <section class="filter">
+        <section class="age">
+            <h1 class="age-header">Возраст:</h1>
+            <div class="age-input">
+                <div class="first-range"></div>
+                <div class="blue-line"></div>
+                <div class="second-range"></div>
+            </div>
+            <article class="age-description">от 2 до 4 лет</article>
+        </section>
+
+        <section class="breed">
+            <h1 class="breed-header">Порода</h1>
+            <label class="label grumpy-label" for="grumpy-filter">Grumpy</label>
+            <label class="label odd-eyed-label" for="odd-eyed-filter">Odd Eyed</label>
+            <label class="label european-label" for="european-filter">Европейская короткошерстная</label>
+            <label class="label british-label" for="british-filter">Британская короткошерстная</label>
+            <label class="label red-label" for="red-filter">Рыжие</label>
+            <label class="label exotic-label" for="exotic-filter">Экзотическая короткошерстная</label>
+            <label class="label none-label" for="none-filter">Нет</label>
+        </section>
+
+    </section>
+
+</section>
+
+<div class="footer-wrapper">
+    <footer class="main-footer">
+        <article class="write-us">Напишите нам:</article>
+
+        <a href="#" class="mail-link">cats@babuli.ru</a>
+        <div class="dot"></div>
+        <a href="#" class="mail-link">vnuchek@babuli.ru</a>
+        <article class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</article>
+
+    </footer>
+</div>
+
 </body>
 </html>
