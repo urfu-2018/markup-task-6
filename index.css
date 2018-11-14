@@ -1,0 +1,91 @@
+.main-block
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.cat-card
+{
+    width: 400px;
+    height: 400px;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    margin: auto;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 10px 3px #000;
+    border-radius: 3px;
+}
+
+.inner-block
+{
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: 100%;
+    margin: 5% auto;
+}
+
+.inner-block img
+{
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.inner-block img:hover
+{
+    border-radius: 15px;
+    border: 2px solid black;
+    filter: initial;
+    -webkit-filter: initial;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.cat-name
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cat-name a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.cat-name a:hover
+{
+    color: red;
+    text-decoration: initial;
+}
+
+.short
+{
+    display: none;
+}
+
+.long
+{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.long:hover
+{
+    overflow: auto;
+    -webkit-box-orient: initial;
+}
+
+
