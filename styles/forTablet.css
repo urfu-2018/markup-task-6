@@ -1,0 +1,5 @@
+footer a.email::before
+{
+    content: url('../images/envelope.png');
+    margin-right: 5px;
+}

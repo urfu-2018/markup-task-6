@@ -1,0 +1,64 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v9/BngRUXNadjH0qYEzV7ab-oWlsbCCwR26eg.woff2) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face
+{
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0aExdGM.woff2) format('woff2');
+}
+
+body
+{
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header > h1
+{
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px; /*возможно надо делать %*/
+    margin: 0;
+    padding: 5px;
+}
+
+header > h1::first-letter
+{
+    color: red;
+}
+
+header
+{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 5px;
+}
+
+a.name-link
+{
+    color: black;
+    text-decoration: none;
+}
+
+footer
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    border-top: 2px solid lightgray;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}

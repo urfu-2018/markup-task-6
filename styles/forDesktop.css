@@ -1,0 +1,169 @@
+footer
+{
+    display: flex;
+    align-items: center;
+}
+
+footer p
+{
+    margin: 10px;
+}
+
+footer .copyright
+{
+    margin-left: auto;
+}
+
+footer .contacts::before
+{
+    content: url('../images/envelope.png');
+    padding: 10px;
+}
+
+footer a:not(:first-of-type)::before
+{
+    content: url('../images/dot.jpg');
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.cat-card
+{
+    padding: 10px;
+    border: 2px solid lightgrey;
+    display: grid;
+    grid-template: 'photo info' 170px
+        'description description' 90px
+        / 250px auto;
+    grid-gap: 10px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+.cat-card img
+{
+    grid-area: photo;
+    width: 100%;
+}
+
+.cat-card > .info
+{
+    grid-area: info;
+    padding: 10px;
+}
+
+.cat-card > .info > p
+{
+    margin: 0;
+}
+
+.cat-card > .info h2
+{
+    margin: 0 0 10px;
+}
+
+.cat-card .description
+{
+    grid-area: description;
+    border-top: 1px solid lightgrey;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.cards
+{
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
+    grid-gap: 15px;
+}
+
+.filter
+{
+    padding: 0 20px;
+    grid-column: 3;
+    grid-row: 1 / 6;
+}
+
+input[name='breed']
+{
+    display: none;
+}
+
+.filter label:not([for='age-slider'])
+{
+    display: block;
+    text-align: center;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin: 5px;
+}
+
+input.british-filter:checked ~ main .filter label[for='british']
+{
+    background: #d6ebf2;
+}
+
+input.persian-filter:checked ~ main .filter label[for='persian']
+{
+    background: #d6ebf2;
+}
+
+input.calico-filter:checked ~ main .filter label[for='calico-cat']
+{
+    background: #d6ebf2;
+}
+
+input.maine-coon-filter:checked ~ main .filter label[for='maine-coon']
+{
+    background: #d6ebf2;
+}
+
+input.none-filter:checked ~ main .filter label[for='none']
+{
+    background: #d6ebf2;
+}
+
+input.british-filter:checked ~ main article.none-breed,
+input.british-filter:checked ~ main article.calico-breed,
+input.british-filter:checked ~ main article.persian-breed,
+input.british-filter:checked ~ main article.maine-coon-breed
+{
+    display: none;
+}
+
+input.persian-filter:checked ~ main article.none-breed,
+input.persian-filter:checked ~ main article.calico-breed,
+input.persian-filter:checked ~ main article.british-breed,
+input.persian-filter:checked ~ main article.maine-coon-breed
+{
+    display: none;
+}
+
+input.calico-filter:checked ~ main article.none-breed,
+input.calico-filter:checked ~ main article.persian-breed,
+input.calico-filter:checked ~ main article.british-breed,
+input.calico-filter:checked ~ main article.maine-coon-breed
+{
+    display: none;
+}
+
+input.maine-coon-filter:checked ~ main article.none-breed,
+input.maine-coon-filter:checked ~ main article.persian-breed,
+input.maine-coon-filter:checked ~ main article.british-breed,
+input.maine-coon-filter:checked ~ main article.calico-breed
+{
+    display: none;
+}
+
+input.none-filter:checked ~ main article.maine-coon-breed,
+input.none-filter:checked ~ main article.persian-breed,
+input.none-filter:checked ~ main article.british-breed,
+input.none-filter:checked ~ main article.calico-breed
+{
+    display: none;
+}

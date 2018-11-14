@@ -3,7 +3,194 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 730px)" href="styles/forMobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 730px) and (max-width: 1200px)" href="styles/forTablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="styles/forDesktop.css">
 </head>
 <body>
+<header>
+    <h1>Мурмаркет</h1>
+</header>
+<input type="radio" name="breed" id="british" class="british-filter">
+<input type="radio" name="breed" id="persian" class="persian-filter">
+<input type="radio" name="breed" id="calico-cat" class="calico-filter">
+<input type="radio" name="breed" id="maine-coon" class="maine-coon-filter">
+<input type="radio" name="breed" id="none" class="none-filter">
+<input type="radio" name="breed" id="reset" class="reset-filter">
+<main>
+    <div class="cards">
+        <div class="filter">
+            <label for="age-slider">
+                <h3>Возраст</h3>
+            </label><br>
+            <input id="age-slider" type="range" min="0.5" max="5" step="0.5" value="1.5">
+            <p>от 1,5 до 2 лет</p>
+
+            <h3>Порода</h3>
+            <label for="british">британская</label>
+            <label for="persian">персидская</label>
+            <label for="calico-cat">трёхцветная</label>
+            <label for="maine-coon">мейн-кун</label>
+            <label for="none">нет</label>
+            <label for="reset" class="reset-filter">сбросить</label>
+        </div>
+        <article class="cat-card none-breed">
+            <img src="images/cats/duk.jpg" alt="Дюк">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Дюк</a></h2>
+                <p class="age">Возраст: 1 год</p>
+                <p class="breed">Порода: не известна</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Уравновешенный и харизматичный кот. Прошел ветеринарный осмотр. Здоров,
+                брутален, игрив и серьезно намерен найти в скором времени себе новый дом.
+                Был найден Бабуленькой на улице - вот так в его судьбе сошлись звезды
+                и кот вытянул счастливый билет в новую жизнь.
+            </p>
+        </article>
+        <article class="cat-card calico-breed">
+            <img src="images/cats/monro.jpg" alt="Монро">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Монро</a></h2>
+                <p class="age">Возраст: 3,5 года</p>
+                <p class="breed">Порода: Трёхцветная</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Одна из самых волшебных и особенных кошек, с густой плюшевой шубкой, ярким
+                окрасом и невероятным выражением лица. Королевские манеры делают ее
+                утонченно-женственной. Ищется человек, готовый заботится о нашем сокровище,
+                который сможет дать самое лучшее для Монро.
+            </p>
+        </article>
+        <article class="cat-card none-breed">
+            <img src="images/cats/mio.jpg" alt="Мио">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Мио</a></h2>
+                <p class="age">Возраст: 4 года</p>
+                <p class="breed">Порода: не известна</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Мио, наш розовощекий любимец. Аквамариновые глаза, кремовая шубка,
+                замечательный характер и манеры джентльмена выделяют его из многих котов.
+                Мио в самом расцвете сил, с опытом за плечами. Кастрирован. Мудрый, спокойный,
+                кот средних лет. Здоров, можно вторым питомцем.
+            </p>
+        </article>
+        <article class="cat-card british-breed">
+            <img src="images/cats/lavanda.jpg" alt="Лаванда">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Лаванда</a></h2>
+                <p class="age">Возраст: 1,5 года</p>
+                <p class="breed">Порода: Британская</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Бархатная, кругленькая, невероятно приятная кошечка с красивыми глазами.
+                И доброй душой! Очень любит поиграть, идеальная Кошка для чьей-то семьи.
+                Торопись, таких не каждый день встретишь! Была найдена на улице беременной,
+                сейчас привита и стерилизована.
+            </p>
+        </article>
+        <article class="cat-card persian-breed">
+            <img src="images/cats/koko.jpg" alt="Коко">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Коко</a></h2>
+                <p class="age">Возраст: 1 год</p>
+                <p class="breed">Порода: Персидская</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Обещаем, ваша жизнь никогда не станет прежней, если вы выберете Коко.
+                Легкое и незамысловатое имя полностью отражает натуру этой кошки. Немного
+                оторвана от земной жизни, может витать в облаках, совершенно не обращая
+                внимания на окружающих. Нежная, ласковая и дружелюбная.
+            </p>
+        </article>
+        <article class="cat-card maine-coon-breed">
+            <img src="images/cats/gera.jpg" alt="Гера">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Гера</a></h2>
+                <p class="age">Возраст: неизвестен</p>
+                <p class="breed">Порода: Мейн-Кун</p>
+                <p class="status">Статус: нашла дом</p>
+            </div>
+            <p class="description">
+                Невероятной красоты кошка! Насколько она красивая, настолько она и не ручная.
+                Не любит фамильярностей, может в исключительных случаях просто посидеть
+                рядышком. Возраст неизвестен, Гера была найдена Бабуленькой. Стерилизована.
+                Любит общение с другими кошками.
+            </p>
+        </article>
+        <article class="cat-card none-breed">
+            <img src="images/cats/mamba.jpg" alt="Мамба">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Мамба</a></h2>
+                <p class="age">Возраст: 2 года</p>
+                <p class="breed">Порода: не известна</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Мамба - круглое полосатое сокровище с шелковистой шубкой и веселым нравом.
+                Обожает зажигательные игры и скачки с мячиками и махалками. Не откажется
+                и поваляться с вами рядышком, отдыхая от дневных игр.
+            </p>
+        </article>
+        <article class="cat-card maine-coon-breed">
+            <img src="images/cats/nochka.jpg" alt="Ночка">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Ночка</a></h2>
+                <p class="age">Возраст: полгода</p>
+                <p class="breed">Порода: Мейн-Кун</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Чудесная кошечка, спокойная, для домашнего уюта и посиделок. Не так давно
+                Ночка попала к Бабуленьке. Вполне может жить единственной кошечкой, а может
+                и в компании других котиков. Она дружелюбна и открыта к новым впечатлениям!
+                Стерилизована, привита, к лотоку приучена.
+            </p>
+        </article>
+        <article class="cat-card persian-breed">
+            <img src="images/cats/amani.jpg" alt="Амани">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Амани (Аманилла)</a></h2>
+                <p class="age">Возраст: 2 года</p>
+                <p class="breed">Порода: Персидская</p>
+                <p class="status">Статус: ищет хозяина</p>
+            </div>
+            <p class="description">
+                Амани ищет любителя и знатока таких кошек как она, требующих ласки,
+                самодостаточных. После стрижки обрастает приятной шубкой, которая в будущем
+                будет требовать несложного ухода - своевременное расчесывание. К другими
+                питомцам относится ровно. Привита, стерилизована.
+            </p>
+        </article>
+        <article class="cat-card calico-breed">
+            <img src="images/cats/сamilla.jpg" alt="Камилла">
+            <div class="info">
+                <h2 class="name"><a class="name-link" href="#">Камилла</a></h2>
+                <p class="age">Возраст: 1,5 года</p>
+                <p class="breed">Порода: Трёхцветная</p>
+                <p class="status">Статус: нашла дом</p>
+            </div>
+            <p class="description">
+                Камилла - котодама, заслуживающая лучшего человека. Толста, умна, ласкова
+                и обворожительно преданна. Что еще нужно для того, чтобы очаровать хозяина?
+                Ах да, еще у нее яркие пятнышки по всей спинке, говорят этот окрас приносит
+                удачу в дому. Не переносит других кошек на своей территории.
+            </p>
+        </article>
+    </div>
+</main>
+<footer>
+    <p class="contacts">Напишите нам:</p>
+    <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+    <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+    <p class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</p>
+</footer>
 </body>
 </html>
