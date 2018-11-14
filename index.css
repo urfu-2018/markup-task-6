@@ -1,0 +1,150 @@
+body,
+html
+{
+    margin: 0;
+    height: 100%;
+}
+
+.wrapper
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title
+{
+    border-bottom: solid lightgray 1px;
+    font: normal 32px 'PT Sans Narrow', sans-serif;
+    text-align: center;
+
+    height: 40px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.title:first-letter
+{
+    color: red;
+}
+
+.main
+{
+    width: 100%;
+    flex: 1;
+}
+
+.footer
+{
+    background: white;
+    font: normal 14px Arial, serif;
+
+    display: flex;
+    padding: 0 25px;
+
+    border-top: solid lightgray 1px;
+}
+
+.footer p
+{
+    color: gray;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+/*min: 375px*/
+@media (max-width: 730px)
+{
+    .footer
+    {
+        justify-content: space-between;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+
+    .contacts
+    {
+        margin-bottom: 20px;
+    }
+
+    .contacts .mail
+    {
+        margin-left: 5px;
+        display: block;
+    }
+
+    .contacts .mail:before
+    {
+        content: url('icons/mail.png');
+        position: relative;
+        right: 5px;
+    }
+}
+
+@media (min-width: 730px) and (max-width: 1200px)
+{
+    .footer
+    {
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 15px;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts .mail
+    {
+        margin-left: 5px;
+    }
+
+    .contacts .mail:before
+    {
+        content: url('icons/mail.png');
+        position: relative;
+        right: 5px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .footer
+    {
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .contacts p,
+    .contacts a
+    {
+        margin-right: 15px;
+    }
+
+    .contacts p:before
+    {
+        content: url('icons/mail.png');
+        position: relative;
+        right: 10px;
+    }
+
+    .contacts a:not(:last-child):after
+    {
+        content: '●';
+        color: darkgray;
+        position: relative;
+        left: 8px;
+    }
+}
