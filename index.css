@@ -46,6 +46,36 @@ main
         display: none;
     }
 
+    .cat-box
+    {
+        border: 2px solid #888;
+        margin: 10px;
+        text-align: left;
+        vertical-align: bottom;
+    }
+
+    .cat-photo-section
+    {
+        text-align: center;
+    }
+
+    .cat-photo
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cat-name
+    {
+        display: block;
+        overflow: hidden;
+        color: #111;
+        font-size: 32px;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     /* footer */
 
     footer
@@ -88,38 +118,20 @@ main
 {
     .cat-box
     {
-        border: 2px solid #888;
-        margin: 10px;
-        text-align: left;
         width: 300px;
         height: 350px;
         display: inline-block;
-        vertical-align: bottom;
     }
 
     .cat-photo-section
     {
-        text-align: center;
         width: 100%;
     }
 
     .cat-photo
     {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
         overflow: hidden;
-    }
-
-    .cat-name
-    {
-        display: block;
-        overflow: hidden;
-        color: #111;
-        font-size: 32px;
-        text-decoration: none;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 
     .cat-long-info,
@@ -231,12 +243,8 @@ main
 
     .cat-box
     {
-        border: 2px solid #888;
-        margin: 10px;
-        text-align: left;
         width: 35vw;
         height: 40vh;
-        vertical-align: bottom;
         display: inline-grid;
         grid-template: 'cat-photo-section cat-name' 20%
             'cat-photo-section cat-short-info' 40%
@@ -251,28 +259,14 @@ main
     .cat-photo-section
     {
         grid-area: cat-photo-section;
-        text-align: center;
         margin: 10px;
         overflow: hidden;
         object-fit: none;
     }
 
-    .cat-photo
-    {
-        width: 100%;
-        height: 100%;
-    }
-
     .cat-name
     {
         grid-area: cat-name;
-        display: block;
-        overflow: hidden;
-        color: #111;
-        font-size: 32px;
-        text-decoration: none;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 
     .cat-long-info,
@@ -352,17 +346,6 @@ main
     {
         border-color: #9e9;
         color: #9e9;
-    }
-
-    /*input[id='no-filter']:checked ~ aside label:not([for='no-filter']),*/
-    /*input[id='no-breed']:checked ~ aside label:not([for='no-breed']),*/
-    /*input[id='angora']:checked ~ aside label:not([for='angora']),*/
-    /*input[id='maine-coon']:checked ~ aside label:not([for='maine-coon']),*/
-    /*input[id*='wirehair']:checked ~ aside label:not([for*='wirehair']),*/
-    /*input[id='siberian']:checked ~ aside label:not([for='siberian'])*/
-    {
-        border-color: #888;
-        color: #444;
     }
 
     /* footer */
