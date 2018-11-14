@@ -39,7 +39,7 @@ main
     display: inline-block;
     /*text-align: left;*/
     overflow: hidden;
-    margin: 20px;
+    margin: 5px;
 }
 
 .titleCat
@@ -79,7 +79,7 @@ main
 
 .description > p
 {
-    margin: 5px;
+    margin: 10px;
     font-size: 17px;
 }
 
@@ -88,11 +88,7 @@ main
 .catContent
 {
     display: flex;
-}
-
-.allCats
-{
-    justify-self: start;
+    justify-content: space-around;
 }
 
 /*САЙДБАР || ИНПУТ*/
@@ -138,8 +134,7 @@ a[href]
     .sideBar
     {
         margin-top: 70px;
-        margin-right: 10px;
-        justify-self: end;
+        margin-right: auto;
     }
 
     .scroll
@@ -243,9 +238,9 @@ a[href]
     .blockCat
     {
         width: 520px;
-        height: 490px;
+        height: 590px;
         display: block;
-        text-align: center;
+        text-align: left;
 
     }
 
@@ -272,8 +267,9 @@ a[href]
 
     footer
     {
-        height: 50px;
-        display: block;
+        height: 70px;
+        align-items: start;
+        flex-direction: column;
     }
 
     footer .footer_left
@@ -282,13 +278,13 @@ a[href]
         flex-direction: column;
     }
 
-    footer .footer_right
-    {
-        margin-left: 15px;
-    }
-
     .stick
     {
-        display: block;
+        display: none;
+    }
+
+    .sideBar
+    {
+        display: none;
     }
 }
