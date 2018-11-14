@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'),
+         url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff2') format('woff2'),
+         url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff') format('woff');
+}
+
+body
+{
+    background-color: rgb(250, 250, 250);
+    font-family: 'Segoe UI Light';
+    margin: 0;
+}
+
+.header
+{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.main
+{
+    padding-top: 52px;
+    display: flex;
+}
+
+.title
+{
+    font: 36px 'PT Sans Narrow';
+    text-align: center;
+
+    padding: 0 0 6px;
+    margin: 0;
+}
+
+.title::first-letter
+{
+    color: #f00;
+}
+
+.grid
+{
+    flex: 4;
+    display: grid;
+
+    padding: 10px;
+    margin: auto;
+}
+
+.card
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    margin: 10px;
+
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+}
+
+.image
+{
+    width: 100%;
+}
+
+.short_info
+{
+    margin: 16px;
+    overflow: hidden;
+}
+
+.more_info
+{
+    grid-column: 1 / 3;
+    display: none;
+
+    margin: 16px;
+
+    border-top: 1px solid #eee;
+}
+
+.name
+{
+    font: 32px 'PT Sans Narrow';
+    line-height: 1;
+    margin: 0;
+}
+
+.trunc
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text
+{
+    margin: 6px 0;
+    color: #777;
+}
+
+.sidebar
+{
+    flex: 1;
+    display: none;
+    padding: 20px 0 0;
+}
+
+.age::before
+{
+    content: "Возраст: ";
+    color: #000;
+}
+
+.breed::before
+{
+    content: "Порода: ";
+    color: #000;
+}
+
+.ill::before
+{
+    content: "Болезни: ";
+    color: #000;
+}
+
+.footer
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+
+    padding: 10px 0;
+
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+
+    display: grid;
+    grid-template: 'emails' 1fr
+                   'email1' 1fr
+                   'email2' 2fr
+                   'copy' auto
+                   / auto;
+}
+
+.padding
+{
+    padding-left: 20px;
+    margin: 0;
+}
+
+.emails
+{
+    grid-area: emails;
+}
+
+.email1
+{
+    grid-area: email1;
+}
+
+.email2
+{
+    grid-area: email2;
+}
+
+.email1,
+.email2,
+.copy
+{
+    text-decoration: none;
+}
+
+
+.email1::before,
+.email2::before
+{
+    content: '✉ ';
+}
+
+.copy
+{
+    grid-area: copy;
+}
+
+@media only screen and (min-width: 731px) and (max-width: 1200px)
+{
+    .grid
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer
+    {
+        grid-template: 'emails .' auto
+                       'email1 .' auto 
+                       'email2 copy' auto
+                       / auto 1fr;
+    }
+
+    .right
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1201px)
+{
+    .grid,
+    .card
+    {
+        grid-template-columns: 50% 50%;
+    }
+
+    .sidebar,
+    .more_info
+    {
+        display: block;
+    }
+
+    .image
+    {
+        width: calc(100% - 20px);
+        padding: 20px 0 0 20px;
+    }
+
+    .footer
+    {
+        grid-template: 'emails email1 email2 copy' auto / auto auto auto 1fr;
+    }
+
+    .emails::before
+    {
+        content: '✉ ';
+    }
+
+    .email1::before,
+    .email2::before
+    {
+        content: '';
+    }
+
+    .right
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+}
