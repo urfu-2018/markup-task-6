@@ -24,8 +24,8 @@ ul
 {
     display: grid;
     grid-template: 'header header' 60px
-    'card-container filter-container' auto
-    'footer footer' auto
+        'card-container filter-container' auto
+        'footer footer' auto
         / auto 20%;
 }
 
@@ -264,7 +264,6 @@ ul
     display: none;
 }
 
-
 input:checked[id='breed-1'] ~ main aside label[for='breed-1'],
 input:checked[id='all-breed'] ~ main aside label[for='all-breed'],
 input:checked[id='no-breed'] ~ main aside label[for='no-breed']
@@ -284,9 +283,9 @@ input:checked[id='no-breed'] ~ main section > article:not(.no-breed)
     .market
     {
         grid-template: 'header header' 60px
-        'card-container card-container' auto
-        'footer footer' auto
-        / auto 0;
+            'card-container card-container' auto
+            'footer footer' auto
+            / auto 0;
     }
 
     .cat-card
@@ -319,16 +318,21 @@ input:checked[id='no-breed'] ~ main section > article:not(.no-breed)
     {
         display: none;
     }
+
     .cat-description
     {
         display: none;
     }
 }
 
-@media screen and (min-width: 730px) and (max-width: 1200px) {
-    .market {
-        grid-template: 'header header' 60px 'card-container card-container' 100% 'footer footer' auto
-        / auto 0;
+@media screen and (min-width: 730px) and (max-width: 1200px)
+{
+    .market
+    {
+        grid-template: 'header header' 60px
+            'card-container card-container' 100%
+            'footer footer' auto
+            / auto 0;
     }
 
     .cat-card
