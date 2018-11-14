@@ -15,20 +15,111 @@ body
 {
     border-bottom: 1px solid #d3d3d3;
     width: 100%;
-    text-align: center;
     background-color: #fff;
+    display: flex;
 }
 
 .header .store-name
 {
-    margin: 0;
-    padding: 10px 0;
+    margin: auto;
+    padding: 5px 0;
     font: 32px 'PT Sans Narrow', sans-serif;
 }
 
 .header .store-name::first-letter
 {
     color: #f00;
+}
+
+.cats
+{
+    margin: 20px 0;
+}
+.cat
+{
+    border: 1px solid #d3d3d3;
+    margin: 20px 3%;
+}
+
+.cat-img
+{
+    display: block;
+    width: 100%;
+}
+
+.cat-info
+{
+    margin: 3% 5%;
+}
+
+.cat-name
+{
+    margin: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-name a
+{
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+.info-font
+{
+    font: 15px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+}
+
+.short-info 
+{
+    padding: 0;
+    margin: 2%;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.short-info li
+{
+    list-style-type: none;
+}
+
+.full-info
+{
+    display: none;
+}
+
+.footer
+{
+    border-top: 1px solid #d3d3d3;
+    width: 100%;
+    font: 14px Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-element
+{
+    margin: 10px 20px 15px;
+}
+
+.footer .footer-element a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.footer .footer-element .email::before
+{
+    content: '';
+    display: inline-block;
+    background-image: url(imgs/mail-img.png);
+    background-size: cover;
+    width: 13px;
+    height: 13px;
 }
 
 @media screen and (min-width: 730px)    
