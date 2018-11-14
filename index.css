@@ -13,6 +13,13 @@ input
     display: none;
 }
 
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .market
 {
     display: grid;
@@ -47,7 +54,6 @@ input
     grid-area: card-container;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
     margin: 30px 0;
 }
 
@@ -103,7 +109,7 @@ input
 .cat-info span:nth-child(5),
 .cat-info span:last-child
 {
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 10px 10px;
 }
 
 .cat-passport
@@ -205,15 +211,6 @@ input
     flex-direction: column;
 }
 
-
-
-.contact-us
-{
-    border-top: 1px solid #e7e7e7;
-    grid-area: footer;
-    height: 60px;
-}
-
 .filter-breed label
 {
     border: 1px solid #e7e7e7;
@@ -230,30 +227,196 @@ input
     cursor: pointer;
 }
 
+.contact-us
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 20px;
+    border-top: 1px solid #e7e7e7;
+    grid-area: footer;
+}
+
+.contact-us a
+{
+    color: #77a4f1;
+    text-decoration: none;
+}
+
+.contacts .far
+{
+    margin-right: 5px;
+}
+
+.contacts-title
+{
+    color: #808080;
+}
+
+.contacts-copy
+{
+    display: block;
+}
+
+.contacts .contacts-title .far
+{
+    color: #000;
+    display: none;
+}
+
+
 input:checked[id='breed-1'] ~ main aside label[for='breed-1'],
 input:checked[id='all-breed'] ~ main aside label[for='all-breed'],
 input:checked[id='no-breed'] ~ main aside label[for='no-breed']
 {
-    background: #E9FFD0;
+    background: #e9fff0;
 }
 
 input:checked[id='breed-1'] ~ main section > article:not(.breed-1),
 input:checked[id='no-breed'] ~ main section > article:not(.no-breed)
 {
-    display: none;
+    opacity: .3;
+    transition: .5s;
 }
 
 @media screen and (min-width: 375px) and (max-width: 730px)
 {
+    .market
+    {
+        grid-template: 'header header' 60px
+        'card-container card-container' auto
+        'footer footer' auto
+        / auto 0;
+    }
+
+    .cat-card
+    {
+        justify-items: center;
+        grid-template-columns: 100%;
+    }
+
+    .card
+    {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .cat-info
+    {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .cat-info img
+    {
+        margin: 0;
+        width: 100%;
+    }
+
     .filter
+    {
+        display: none;
+    }
+    .cat-description
     {
         display: none;
     }
 }
 
-@media screen and (min-width: 730px) and (max-width: 1200px)
-{
+@media screen and (min-width: 730px) and (max-width: 1200px) {
+    .market {
+        grid-template: 'header header' 60px 'card-container card-container' 100% 'footer footer' auto
+        / auto 0;
+    }
+
+    .cat-card
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cat-info
+    {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .cat-info img
+    {
+        margin: 0;
+        width: 100%;
+    }
+
     .filter
+    {
+        display: none;
+    }
+
+    .cat-description
+    {
+        display: none;
+    }
+
+    .contact-us
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contacts-copy
+    {
+        align-self: flex-end;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .contact-us
+    {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contacts li
+    {
+        margin-right: 25px;
+    }
+
+    .contacts-copy
+    {
+        margin-left: auto;
+    }
+
+    .contacts li:nth-child(3)
+    {
+        list-style-type: disc;
+    }
+
+    .contacts .contacts-title
+    {
+        display: flex;
+    }
+
+    .contacts .contacts-title .far
+    {
+        display: block;
+    }
+
+    .contacts li .far
     {
         display: none;
     }
