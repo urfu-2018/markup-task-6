@@ -3,7 +3,290 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <main class="general-layout">
+
+        <header class="header">
+            <div class="header-title">
+                    Мурмаркет
+            </div>
+        </header>
+
+        <input type="radio" id="female" name="choice" class="choice">
+        <input type="radio" id="male" name="choice" class="choice">
+        <input type="radio" id="all" name="choice" class="choice" checked>
+
+        <article class="filter">
+            <div>
+                <div class="category">Возраст:</div>
+                <input type="range" id="age" name="age"
+                min="0" max="10" value="3" step="1">
+                <label for="age"></label>
+                <div>от 0 до 10 лет</div>
+                <div class="category">Пол:</div>
+                <label for="all" class="choice-label">
+                        Все
+                </label>
+                <label for="female" class="choice-label">
+                    Кошки
+                </label>
+                <label for="male" class="choice-label">
+                    Коты
+                </label>
+            </div>
+        </article>
+
+        <article class="main">
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/ДемиМурка.jpg"
+                            alt="Кошка Деми Мурка" title="Кошка Деми Мурка">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Деми Мурка</h2>
+                        <p>Возраст: 5 месяцев</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Деми Мурка - весенний котенок. Несмотря на то, что Деми Мурка
+                        прожила всю жизнь на улице, у нее чудесный характер,
+                        она обожает людей, мурлыкает даже во сне.
+                        Придя в приют вы обязательно обратите на неё внимание,
+                        она сама будет к вам тянуться.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Ева.jpg" alt="Кошка Ева" title="Кошка Ева">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Ева</h2>
+                        <p>Возраст: 5 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Ева обычная мягкая мурлыка, хозяйка дивана и компаньонка
+                        в делах и отдыхе. Хотите, чтобы Ева жила рядом с вами?
+                        Без проблем, приезжайте, знакомьтесь и приглашайте в свой дом!
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Куки.jpg" alt="Кошка Куки" title="Кошка Куки">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Куки</h2>
+                        <p>Возраст: 2,5 месяца</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Куки чистенький, маленький и беззащитный ребенок.
+                        До этого он и не знал, что такое человеческая ласка и любовь,
+                        на ручках он сидит тихо, как мышка.
+                        Малыш дома будет чудесным непривередливым котиком,
+                        всегда благодарным за спасение с улицы.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper female">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Лисичка.jpg"
+                             alt="Кошка Лисичка" title="Кошка Лисичка">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Лисичка</h2>
+                        <p>Возраст: 2 месяца</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Лисичка маленькая, озорная девочка, которая уж точно не даст вам заскучать.
+                        Любит играть с мячиками и мышками, также будет
+                        не против, если вы составите ей компанию для игр.
+                        Ее энергии хватит на всех.
+                        Она не боится людей, а наоборот идет ко всем с большим интересом.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card male">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Миша.jpg" alt="Кот Миша" title="Кот Миша">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Миша</h2>
+                        <p>Возраст: 5 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Миша тяжело пережил смерть своего хозяина, с которым прожил всю жизнь
+                        и сейчас нуждается в заботе и ласке. У Миши золотой спокойный характер,
+                        он простой и добродушный кот, с которым случилось несчастье.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Муза.jpg" alt="Кошка Муза" title="Кошка Муза">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Муза</h2>
+                        <p>Возраст: 10 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Муза на редкость неприхотливое создание, кушает
+                        любую пищу, вещи не портит, ходит в лоточек.
+                        Если у вас уже есть кошка, то Муза будет приятным
+                        дополнением к ней и составит ей компанию.
+                        Ведь Муза очень скромна и дружелюбна.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Рубби.jpg"
+                             alt="Кошка Рубби" title="Кошка Рубби">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Рубби</h2>
+                        <p>Возраст: 3,5 месяца</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Рубби привлекает внимание не только своей яркой необычной
+                        внешностью, но и громким мурчанием. Это доказывает, что
+                        девочка станет преданной своему хозяину.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card male">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Сникерс.jpg"
+                            alt="Кот Сникерс" title="Кот Сникерс">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Сникерс</h2>
+                        <p>Возраст: 9 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Очень добрый и милый кот Сникерс ждёт свою семью
+                        Нежный, умный, чистоплотный, компанейский - и это лишь часть его достоинств!
+                        Сникерс счастлив быть рядом с людьми. Он согреет вас своим теплом
+                        или поднимет настроение в любой жизненной ситуации
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Стрелка.jpg"
+                             alt="Кошка Стрелка" title="Кошка Стрелка">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Стрелка</h2>
+                        <p>Возраст: 3 года</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Спокойная и тихая кошечка Стрелка ищет Друга,
+                        который не предаст и не оставит, поделится теплом и поможет забыть
+                        все ужасы прошлого.
+                    </div>
+                </div>
+            </section>
+
+            <section class="cat-card female">
+                <div class="cat-card-wrapper">
+                    <div class="cat-img-wrapper">
+                        <div class="img-wrapper">
+                            <img class="cat-img" src="./img/Фрося.jpg" alt="Кошка Фрося" title="Кошка Фрося">
+                        </div>
+                    </div>
+                    <div class="short-information">
+                        <h2 class="name">Фрося</h2>
+                        <p>Возраст: 1,5 года</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-information">
+                        Фрося умна не по годам, деликатна и воспитана. Ждет самого доброго хозяина,
+                        который сможет дать ей любовь и ласку. В ответ она готова подарить
+                        ему все тепло своего маленького сердечка.
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <p class="email-to">Напишите нам:</p>
+                <p class="email"><a href="#">cats@babuli.ru</a></p>
+                <p class="email"><a href="#">vnuchek@babuli.ru</a></p>
+            </div>
+            <div class="footer-right">
+                <p>© 2018 ООО «<a href="#">Бабушкины котятки</a>»</p>
+            </div>
+        </footer>
+
+    </main>
 </body>
 </html>
