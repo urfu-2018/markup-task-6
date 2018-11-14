@@ -1,0 +1,396 @@
+html,
+body
+{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: 'header  header'
+        'content sidebar'
+        'footer  footer';
+    background-color: #fff;
+}
+
+/*Стили для хедера*/
+
+header
+{
+    grid-area: header;
+    text-align: center;
+    font-family: 'PT Sans Narrow', arial, sans-serif;
+    font-size: 32px;
+    z-index: 5;
+}
+
+header > h3
+{
+    margin: 0;
+}
+
+header > h3::first-letter
+{
+    color: red;
+}
+
+/*Стили для контента*/
+
+main
+{
+    grid-area: content;
+    position: relative;
+    background: rgb(236, 235, 235);
+    min-height: calc(100vh - 40px);
+}
+
+.content
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.radio
+{
+    display: none;
+}
+
+.cat-photo
+{
+    max-width: 500px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+.cat-card
+{
+    border: solid #616161 5px;
+    max-width: 440px;
+    padding: 0;
+    margin: 15px;
+    white-space: normal;
+    overflow: hidden;
+    border-radius: 5px;
+    font-size: 15px;
+    zoom: .9;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 15px #000;
+}
+
+.name
+{
+    font-size: 35px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.cat-card > .layout
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.cat-card > .layout > .cat-photo
+{
+    justify-self: flex-start;
+}
+
+input:checked[id='british'] ~ main .content .cat-card-2,
+input:checked[id='british'] ~ main .content .cat-card-3,
+input:checked[id='british'] ~ main .content .cat-card-4,
+input:checked[id='british'] ~ main .content .cat-card-5,
+input:checked[id='british'] ~ main .content .cat-card-6
+{
+    display: none;
+}
+
+input:checked[id='china'] ~ main .content .cat-card-1,
+input:checked[id='china'] ~ main .content .cat-card-2,
+input:checked[id='china'] ~ main .content .cat-card-3,
+input:checked[id='china'] ~ main .content .cat-card-5
+{
+    display: none;
+}
+
+input:checked[id='russian'] ~ main .content .cat-card-1,
+input:checked[id='russian'] ~ main .content .cat-card-3,
+input:checked[id='russian'] ~ main .content .cat-card-4,
+input:checked[id='russian'] ~ main .content .cat-card-5,
+input:checked[id='russian'] ~ main .content .cat-card-6
+{
+    display: none;
+}
+
+input:checked[id='breedless'] ~ main .content .cat-card-1,
+input:checked[id='breedless'] ~ main .content .cat-card-2,
+input:checked[id='breedless'] ~ main .content .cat-card-4,
+input:checked[id='breedless'] ~ main .content .cat-card-6
+{
+    display: none;
+}
+
+/*Стили для сайдбара*/
+
+aside
+{
+    grid-area: sidebar;
+    border: 2px solid gray;
+    position: fixed;
+    top: 48px;
+    right: 5px;
+    bottom: 40px;
+    width: 287px;
+}
+
+.sidebar-container
+{
+    position: relative;
+    width: 100%;
+}
+
+.sidebar-container > div > p
+{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+/* Стили для фильтра возраста */
+
+.range-filter
+{
+    padding-top: 10px;
+    width: 240px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.range-filter .range-controls
+{
+    position: relative;
+    height: 80px;
+    margin-bottom: 15px;
+    padding: 0 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.scale
+{
+    margin-top: 39px;
+    height: 2px;
+    background: #d7dcde;
+}
+
+.bar
+{
+    height: 2px;
+    background: #00ca74;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.toggle.min-toggle
+{
+    left: 40px;
+}
+
+.toggle.max-toggle
+{
+    left: 180px;
+}
+
+.toggle
+{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid grey;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.age-controls > input
+{
+    width: 1em;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+    color: #283136;
+    border-radius: 5px;
+}
+
+/*Стили для выбора породы*/
+
+.search-breed
+{
+    border-top: 3px double gray;
+}
+
+.bread
+{
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px 20px;
+}
+
+label[for]
+{
+    cursor: pointer;
+}
+
+input:checked[id='british'] ~ aside .search-breed .british,
+input:checked[id='china'] ~ aside .search-breed .china,
+input:checked[id='russian'] ~ aside .search-breed .russian,
+input:checked[id='breedless'] ~ aside .search-breed .breedless,
+input:checked[id='no'] ~ aside .search-breed .no
+{
+    background: lightgreen;
+}
+
+/*Стили для футера*/
+
+footer
+{
+    grid-area: footer;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.flex-container
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.contacts > p
+{
+    margin: 0;
+    display: inline;
+}
+
+.contacts > p::before
+{
+    content: '\2709  ';
+}
+
+.contacts > .contact-item::before
+{
+    content: '';
+}
+
+.company > p
+{
+    margin: 0;
+}
+
+@media screen and ( min-width: 1280px)
+{
+    .contacts > .contact-item:last-child::before
+    {
+        content: '\25bc  ';
+    }
+}
+@media screen and ( max-width: 1279px)
+{
+    .container
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header'
+            'content'
+            'footer';
+        background-color: #fff;
+    }
+
+    .description,
+    aside
+    {
+        display: none;
+    }
+
+    .content
+    {
+        justify-content: space-around;
+    }
+
+    .cat-card > .layout
+    {
+        flex-direction: column;
+    }
+
+    .contacts > p
+    {
+        display: block;
+    }
+
+    .contacts > p::before
+    {
+        content: '';
+    }
+    
+    .contacts > a
+    {
+        display: block;
+    }
+
+    .contacts > .contact-item::before
+    {
+        content: '\2709  ';
+        font-size: 20px;
+    }
+
+    .company
+    {
+        align-self: flex-end;
+    }
+}
+
+@media screen and ( max-width: 768px)
+{
+    .content
+    {
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .flex-container
+    {
+        flex-direction: column;
+        align-content: flex-end;
+        align-items: center;
+    }
+
+    .company
+    {
+        align-self: inherit;
+    }
+
+    .ggg
+    {
+        height: 20px;
+    }
+}
