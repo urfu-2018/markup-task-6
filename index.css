@@ -41,6 +41,11 @@ main
         padding-top: 60px;
     }
 
+    input[name='breed-input']
+    {
+        display: none;
+    }
+
     /* footer */
 
     footer
@@ -124,7 +129,8 @@ main
         margin: 10px;
     }
 
-    .cat-long-info
+    .cat-long-info,
+    .sidebar
     {
         display: none;
     }
@@ -214,13 +220,22 @@ main
 
 @media only screen and (min-width: 1200px) /* desktop */
 {
+
+    /* main */
+
+    main
+    {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
     .cat-box
     {
         border: 2px solid #888;
         margin: 10px;
         text-align: left;
-        width: 500px;
-        height: 300px;
+        width: 35vw;
+        height: 40vh;
         display: inline-block;
         vertical-align: bottom;
     }
@@ -260,6 +275,76 @@ main
     .cat-long-info
     {
         display: none;
+    }
+
+    /* sidebar */
+
+    .sidebar
+    {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .sidebar-title
+    {
+        line-height: .5rem;
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .age-slider > input
+    {
+        width: 80%;
+        -webkit-appearance: none;
+    }
+
+    .age-slider label
+    {
+        padding: 20px 0 ;
+        display: block;
+    }
+
+    .breed-picker > label
+    {
+        display: grid;
+        font-size: 18px;
+        height: 30px;
+        width: 90%;
+        border: 2px solid #888;
+        border-radius: 2px;
+        padding: 1em .7em .7em .4em;
+        margin: 10px 0;
+    }
+
+    input:checked[id='no-breed'] ~ article .cat-box:not([class*='no-breed']),
+    input:checked[id='angora'] ~ article .cat-box:not([class*='angora']),
+    input:checked[id*='maine'] ~ article .cat-box:not([class*='maine']),
+    input:checked[id*='wirehair'] ~ article .cat-box:not([class*='wirehair']),
+    input:checked[id='siberian'] ~ article .cat-box:not([class*='siberian'])
+    {
+        display: none;
+    }
+
+    input[id='no-filter']:checked ~ aside label[for='no-filter'],
+    input[id='no-breed']:checked ~ aside label[for='no-breed'],
+    input[id='angora']:checked ~ aside label[for='angora'],
+    input[id='maine-coon']:checked ~ aside label[for='maine-coon'],
+    input[id*='wirehair']:checked ~ aside label[for*='wirehair'],
+    input[id='siberian']:checked ~ aside label[for='siberian']
+    {
+        border-color: #9e9;
+        color: #9e9;
+    }
+
+    /*input[id='no-filter']:checked ~ aside label:not([for='no-filter']),*/
+    /*input[id='no-breed']:checked ~ aside label:not([for='no-breed']),*/
+    /*input[id='angora']:checked ~ aside label:not([for='angora']),*/
+    /*input[id='maine-coon']:checked ~ aside label:not([for='maine-coon']),*/
+    /*input[id*='wirehair']:checked ~ aside label:not([for*='wirehair']),*/
+    /*input[id='siberian']:checked ~ aside label:not([for='siberian'])*/
+    {
+        border-color: #888;
+        color: #444;
     }
 
     /* footer */
