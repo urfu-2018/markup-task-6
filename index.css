@@ -9,6 +9,7 @@ html,
 body
 {
     margin: 0;
+    /* background-color: red; */
 }
 
 .header
@@ -24,6 +25,12 @@ body
     margin: auto;
     padding: 5px 0;
     font: 32px 'PT Sans Narrow', sans-serif;
+}
+
+.header-spacer
+{
+    height: 53px;
+    display: none;
 }
 
 .header .store-name::first-letter
@@ -77,8 +84,6 @@ body
     padding: 0;
     margin: 2%;
     line-height: 17px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .short-info li
@@ -122,10 +127,54 @@ body
     height: 13px;
 }
 
+.footer-spacer
+{
+    display: none;
+    height: 76px;
+}
+
 @media screen and (min-width: 730px)    
 {
+    /* html,
     body
     {
-        background: red;
+        background-color: yellow;
+    } */
+    .header
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    .header-spacer
+    {
+        display: block;
+    }
+
+    .footer
+    {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end; 
+    }
+
+    .cat
+    {
+        margin: 10px 10px;
+    }
+    .cats
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-spacer
+    {
+        display: block;
     }
 }
