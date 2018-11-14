@@ -1,0 +1,72 @@
+.panel
+{
+    display: none;
+}
+
+.letter-1,
+.dot-icon
+{
+    display: none;
+}
+
+.letter-2,
+.letter-3
+{
+    position: absolute;
+    display: block;
+}
+
+.letter-2
+{
+    margin-top: 22px;
+}
+
+.letter-3
+{
+    margin-top: 43px;
+}
+
+.email
+{
+    padding: 0 0 0 20px;
+}
+
+.contacts
+{
+    flex-flow: column;
+}
+
+.footer
+{
+    align-items: flex-end;
+}
+
+.entries
+{
+    display: block;
+}
+
+.entry-description
+{
+    display: none;
+}
+
+.entry-photo
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 25%;
+}
+
+.entry
+{
+    margin: 0;
+}
+
+.entries
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}

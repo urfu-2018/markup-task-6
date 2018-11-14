@@ -1,0 +1,26 @@
+.entry
+{
+    margin: 0;
+}
+
+.entries
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.entry-photo
+{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    object-position: 0 25%;
+}
+
+.entry-summary
+{
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+}
