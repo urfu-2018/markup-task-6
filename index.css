@@ -1,0 +1,341 @@
+header
+{
+    font-size: 32px;
+    font-family: PT Sans Narrow;
+    text-align: center;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 7px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+}
+
+header::first-letter
+{
+    color: #f00;
+}
+
+.card
+{
+    background: #f3dee2;
+    border: 1px solid #808080;
+    height: 450px;
+    width: 250px;
+    display: inline-block;
+    margin: 7px;
+    font-size: 20px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 4px black;
+}
+
+.name
+{
+    font-size: 1.7em;
+    margin: 15px 10px;
+    width: 100%;
+}
+
+.cat-image
+{
+    width: 100%;
+}
+
+.short-info
+{
+    margin: 15px 10px;
+}
+
+.long-info
+{
+    display: none;
+    margin: 10px;
+    color: #808080;
+}
+
+footer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 20%;
+
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px solid #d8d8d8;
+}
+
+a[href^='mailto']
+{
+    color: #4c4cd8;
+}
+
+.mail-icon
+{
+    width: 15px;
+    height: 15px;
+}
+
+.mail-column
+{
+    margin: 7px 7px 0;
+}
+
+.mail-column > span
+{
+    display: block;
+}
+
+.copyright-column
+{
+    grid-column: 4;
+    justify-self: end;
+    align-self: end;
+}
+
+.cat-filter
+{
+    display: none;
+    margin: 5px 0;
+}
+
+.catFilter > div
+{
+    display: block;
+}
+
+.breed-radio
+{
+    display: none;
+}
+
+.breeds
+{
+    width: 100%;
+}
+
+.breed
+{
+    width: 90%;
+    height: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 5px;
+}
+
+.mail-icon-desktop
+{
+    display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    .cards
+    {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .card
+    {
+        width: 100%;
+        margin: 5px auto;
+        height: 100%;
+    }
+
+    footer
+    {
+        display: block;
+    }
+
+    .copyright-column
+    {
+        margin: 7px;
+    }
+
+}
+
+@media screen and (min-width: 731px) and (max-width: 1200px)
+{
+    .cards
+    {
+        width: 100%;
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card
+    {
+        width: 30%;
+    }
+}
+
+.card-layout
+{
+    height: 100%;
+    width: 100%;
+
+}
+
+.dot
+{
+    display: none;
+}
+@media screen and (min-width: 1201px)
+{
+    .cards
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card
+    {
+        margin: 5px;
+        width: 48%;
+
+    }
+
+    .card-layout
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 35% 45%;
+    }
+
+    .cat-image
+    {
+        width: 90%;
+        margin: 5%;
+        grid-row: 1;
+        grid-column: 1 / span 1;
+
+    }
+
+    .short-info
+    {
+        grid-column: 2;
+        margin: 0;
+    }
+
+    .name
+    {
+        margin: 0;
+        align-self: center;
+        width: 100%;
+    }
+
+    .long-info
+    {
+        margin: 5px 10px;
+        display: block;
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        color: black;
+        border-top: 1px solid black;
+    }
+
+    .content-layout
+    {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 80% 20%;
+    }
+
+    .cat-filter
+    {
+        display: block;
+    }
+
+    .breed-radio[value='british']:checked ~ .cards .british .card-layout,
+    .breed-radio[value='asian']:checked ~ .cards .asian .card-layout,
+    .breed-radio[value='street']:checked ~ .cards .street .card-layout,
+    .breed-radio[value='none']:checked ~ .cards .none .card-layout
+    {
+        display: grid;
+    }
+
+    .breed-radio[value='british']:checked ~ .cat-filter .british-label,
+    .breed-radio[value='asian']:checked ~ .cat-filter .asian-label,
+    .breed-radio[value='street']:checked ~ .cat-filter .street-label,
+    .breed-radio[value='none']:checked ~ .cat-filter .none-label
+    {
+        background: green;
+    }
+
+    .breed-radio[value='british']:checked ~ .cards section:not(.british),
+    .breed-radio[value='asian']:checked ~ .cards section:not(.asian),
+    .breed-radio[value='street']:checked ~ .cards section:not(.street),
+    .breed-radio[value='none']:checked ~ .cards section:not(.none)
+    {
+        display: none;
+    }
+
+    .sliders
+    {
+        height: 20px;
+        position: relative;
+
+    }
+
+    .sliders input
+    {
+        position: absolute;
+        border: none;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 20px;
+        overflow: hidden;
+    }
+
+    .mail-column > span
+    {
+        display: inline-block;
+    }
+
+    .cat-filter > div
+    {
+        margin: 10px 5px;
+        font-size: 20px;
+    }
+
+    .mail-icon-desktop
+    {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+    }
+
+    .mail-icon
+    {
+        display: none;
+    }
+
+    .dot
+    {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+    }
+
+    .mail-column
+    {
+        grid-column: 1/3;
+    }
+
+    .copyright-column
+    {
+        align-self: center;
+    }
+}
