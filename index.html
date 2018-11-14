@@ -3,7 +3,260 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
+    <header>
+        Мурмаркет
+    </header>    
+
+    <div class="indentation"></div>
+
+    <main>
+        <input type="radio" name="filter" class="filter_radio" id="чистая">
+        <input type="radio" name="filter" class="filter_radio" id="бродячая">
+        <input type="radio" name="filter" class="filter_radio" id="экзотическая">
+        <input type="radio" name="filter" class="filter_radio" id="все" checked>
+
+        <section>
+            <article class="cat_article" id="pardino">
+                <img src="cats_images/pardino.jpg" alt="cat" class="cat_img">
+                <a href="#pardino" class="cat_name">Маурицио</a>
+                <p class="main_info">
+                    <span>Возраст:</span> точно не известно<br>
+                    <span>Порода:</span> бродячая<br>
+                    <span>Пол:</span> прекрасный<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> грустит без хозяина<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> никто не знает почему, но 
+                    эта кошка очень сильно привязалась
+                    к Дону Корлеоне, и он тоже, что достаточно странно и 
+                    вступает в резкий контраст с 
+                    его образом главы мафиозного клана. Ей достаточно 
+                    тяжело переживать смерть хозяина, но
+                    ей необходим новый хозяин, потому что Маурицио 
+                    очень нежная и ласковая, но помните, что
+                    она может мурлыкать так, что будет заглушать 
+                    вашу речь, слишком уж громко у неё это получается.
+                    Относитесь к ней с уважением, иначе она не 
+                    побрезгует вцепиться вам в самое больное место и тогда
+                    вам не поздоровиться.
+                </p>
+                <p class="price">10000000000000$</p>
+            </article>
+            <article class="cat_article" id="Mudrez">
+                <img src="cats_images/scottish_fold.jpg" alt="cat" class="cat_img">
+                <a href="#Mudrez" class="cat_name">Мудрец</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 3 года и 3 месяца<br>
+                    <span>Порода:</span> скоттиш-фолд<br>
+                    <span>Пол:</span> сильный<br>
+                    <span>Болезни:</span> не замечено<br>
+                    <br>
+                    <span>Статус:</span> думает о хозяине<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> вдумчивый кот, 
+                    который понимает или пытается 
+                    понять своё предназначение в этом мире. Не бывает агрессивен, но любит 
+                    поточить коготочки о свои игрушки.
+                </p>
+                <p class="price">Отдадим в добрые руки</p>
+            </article>  
+            <article class="cat_article" id="Billy">
+                <img src="cats_images/Billy.jpg" alt="cat" class="cat_img">
+                <a href="#Billy" class="cat_name" title="Билли, который 
+                подружился с мальчиком-аутистом">Билли, который 
+                    подружился с мальчиком-аутистом</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 1 год<br>
+                    <span>Порода:</span> бродячая<br>
+                    <span>Пол:</span> кот<br>
+                    <span>Болезни:</span> отсутствуют<br>
+                    <br>
+                    <span>Статус:</span> в полном порядке<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> Билли всегда рядом с мальчиком – 
+                    он успокаивает и подбадривает его. 
+                    Если кот чувствует, что Фразер чем-то расстроен, 
+                    то начинает мурлыкать или просит взять его на руки.
+                </p>
+                <p class="price">Не продаётся</p>
+            </article>
+            <article class="cat_article" id="Mr.Eyes">
+                <img src="cats_images/Mr.Eyes.jpg" alt="cat" class="cat_img">
+                <a href="#Mr.Eyes" class="cat_name">Мистер Айс</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 10 месяцев<br>
+                    <span>Порода:</span> экзотическая<br>
+                    <span>Пол:</span> кот<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> ищет хозяина<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> глазастый, заметит вас с 10 километров, 
+                    но очень плохо видит вблизи, приходится использовать обоняние. Полюбит
+                    всех и каждого
+                </p>
+                <p class="price">499 руб.</p>
+            </article>
+            <article class="cat_article" id="Tard">
+                <img src="cats_images/Tard.jpg" alt="cat" class="cat_img">
+                <a href="#Tard" class="cat_name">Тард</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 6 лет<br>
+                    <span>Порода:</span> чистая<br>
+                    <span>Пол:</span> женский<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> ищет хозяина<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> очень сердитая кошка(grumpy cat), но
+                    только снаружи, изнутри Тард жизнерадостна и счастлива.
+                </p>
+                <p class="price">Не продаётся</p>
+            </article>
+            <article class="cat_article" id="Kuril">
+                <img src="cats_images/Kuril.jpg" alt="cat" class="cat_img">
+                <a href="#Kuril" class="cat_name">Курил</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 5 лет<br>
+                    <span>Порода:</span> курильский-бобтейл<br>
+                    <span>Пол:</span> кот<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> ищет хозяина<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> имя для кота было придумано не случайно:
+                    предыдущий хозяин очень часто курил у себя дома, а кот вместо того,
+                    чтобы убегать от дыма сигарет, садился рядом к хозяину и 
+                    поддерживал его своим присутствием.
+                </p>
+                <p class="price">999 руб.</p>
+            </article>
+            <article class="cat_article" id="Kotya">
+                <img src="cats_images/Kotya.jpg" alt="cat" class="cat_img">
+                <a href="#Kotya" class="cat_name">Котя</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 3 курс<br>
+                    <span>Порода:</span> бродячая<br>
+                    <span>Пол:</span> горячий<br>
+                    <span>Болезни:</span> недосып<br>
+                    <br>
+                    <span>Статус:</span> ищет человека
+                    для сдачи задач по Яндексу<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> Прилежный малый. Может сидеть до поздна
+                    за домашним заданием по Яндексу. Очень надеется сдать все экзамены
+                    и не стать кошкой на матмехе.
+                </p>
+                <p class="price">Бесценный</p>
+            </article>
+            <article class="cat_article" id="Hikky">
+                <img src="cats_images/Hikky.jpg" alt="cat" class="cat_img">
+                <a href="#Hikky" class="cat_name">Хикки</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 4 года<br>
+                    <span>Порода:</span> турецкая<br>
+                    <span>Пол:</span> кошка<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> ищет уединение<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> Хикки крайне сильно привязывается к своему
+                    дому, поэтому может находиться только там. Ещё она очень сильно любит находиться
+                    внутри различных вещей, и у неё это получается феерически, в силу её кошачьей
+                    природы. Ей необходим трепетный уход, ласка, поэтому если вы занятой человек,
+                    ей будет тяжело без вашего постоянного присутствия с ней.
+                </p>
+                <p class="price">3999 руб.</p>
+            </article>
+            <article class="cat_article" id="Meowtrix">
+                <img src="cats_images/Meowtrix.jpg" alt="cat" class="cat_img">
+                <a href="#Meowtrix" class="cat_name">Миутрикс</a>
+                <p class="main_info">
+                    <span>Возраст:</span> 3 года, 3 месяца, 3 недели, 3 дня<br>
+                    <span>Порода:</span> чистая<br>
+                    <span>Пол:</span> кот<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> ищет реальный мир<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> Миутрикс сомневается, что мы живём в
+                    настоящем мире, поэтому он пытается противостоять системе и выйти из
+                    "матрицы", возможно, именно Миутрикс является избранным, который сможет
+                    вывести нас всех в настоящий мир и выяснит правду.
+                </p>
+                <p class="price">4999 руб.</p>
+            </article>
+            <article class="cat_article" id="Krut">
+                <img src="cats_images/Krut.jpg" alt="cat" class="cat_img">
+                <a href="#Krut" class="cat_name">Крут</a>
+                <p class="main_info">
+                    <span>Возраст:</span> вечно молодой<br>
+                    <span>Порода:</span> чистая<br>
+                    <span>Пол:</span> кот<br>
+                    <span>Болезни:</span> нет<br>
+                    <br>
+                    <span>Статус:</span> гедонист<br>
+                </p>
+                <p class="extended_info">
+                    <span>Важно знать:</span> этот кот будет очень прихотливым, он требует многого,
+                    а отдаёт ничего, такой уж он себялюбивый. Но если вы любитель тусовок и различных
+                    активностей, вам будет интересно вместе.
+                </p>
+                <p class="price">Пожизненный запас пачки Whiskas</p>
+            </article>
+        </section>
+
+        <nav class="sidebar">
+            <section>
+                <h3>Возраст</h3>
+                <input type="range" min="0.5" max="6" step="0.5" value="2">
+                <input type="range" min="0.5" max="6" step="0.5" value="4">
+                <br>
+                <p>От 2 до 4 лет</p>
+            </section>
+            <section class="filters">
+                <h3>Порода</h3>
+                <label for="экзотическая" class="filter">
+                    Экзотическая
+                </label>
+                <label for="чистая" class="filter">
+                    Чистая
+                </label>
+                <label for="бродячая" class="filter">
+                    Бродячая
+                </label>
+                <label for="все" class="filter">
+                    Все
+                </label>
+            </section>
+        </nav>        
+    </main>
+
+    <footer>
+        <div class="footer_contacts">
+            <div>Напишите нам:</div>
+            <div>&#9993;<a href="mailto:cats@babuli.ru">cats@babuli.ru</a></div>
+            <div>&#9993;<a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></div>
+        </div>
+        <div class="footer_web-site">&copy; 2018 ООО 
+            <a href="https://www.youtube.com/watch?v=96gkg5gHad8">
+            "Бабушкины котятки"</a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,472 @@
+body
+{
+    margin: 0;
+    width: 100%;
+}
+
+header
+{
+    font: 32px 'PT Sans Narrow';
+    position: fixed;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid gray;
+    text-align: center;
+    background-color: #fff;
+    z-index: 50;
+}
+
+header::first-letter
+{
+    color: #f00;
+}
+
+.filter_radio
+{
+    display: none;
+}
+
+.sidebar
+{
+    display: none;
+}
+
+/* Вспомогательный класс для отступа */
+
+.indentation
+{
+    height: 40px;
+}
+
+.cat_article
+{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.cat_article:hover
+{
+    transform: scale(1.05);
+    transition: transform .5s ease-in-out;
+}
+
+.main_info
+{
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.extended_info
+{
+    display: none;
+}
+
+/* Изменим 'вид' имени котейки, а так же его эффекты */
+
+.cat_name
+{
+    display: block;
+    text-decoration-line: none;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.7em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat_name
+{
+    color: #000;
+}
+
+.cat_name:visited
+{
+    color: #000;
+}
+
+.cat_name:hover
+{
+    color: #0b0;
+}
+
+span:hover
+{
+    color: #0ab;
+}
+
+/* Ну а почему бы и нет */
+
+.price
+{
+    text-align: right;
+    display: inline-block;
+    font-weight: bold;
+    width: 100%;
+    font-size: 20px;
+}
+
+footer
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+/* Медиа запрос для телефонов */
+
+@media screen and (min-width: 375px) and (max-width: 730px), 
+    (max-width: 375px) 
+{
+    body 
+    {
+        background-color: lightblue;
+        width: 100%;
+    }
+
+    main
+    {
+        width: 100%;
+    }
+
+    main > section
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat_article
+    {
+        margin: 20px;
+        border: 2px solid lightslategrey;
+        height: 100%;
+    }
+    
+    .cat_img
+    {
+        width: 100%;
+        height: 300px;
+    }
+
+    span:active
+    {
+        color: #0f9;
+    }
+
+    footer
+    {
+        width: 100%;
+        height: 100%;
+        font: 14px Arial;
+        padding: 20px;
+        border-top: 2px solid #858585;
+    }
+
+    footer > div
+    {
+        word-wrap: break-word;
+    }
+
+    .footer_contacts
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .footer_web-site
+    {
+        margin-top: 20px;
+    }
+}
+
+/* Медиа запрос для планшетов */
+
+@media screen and (min-width: 730px) and (max-width: 1200px) 
+{
+    body 
+    {
+        background-color: lightcoral;
+        width: 100%;
+    }
+
+    main > section
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .cat_article
+    {
+        width: 233px;
+        border: 2px solid lightyellow;
+        margin: 20px;
+        height: auto;
+    }
+
+    .cat_article:hover
+    {
+        box-shadow: 0 0 10px 5px #858585;
+    }
+
+    .cat_img
+    {
+        width: 100%;
+        height: 200px;
+    }
+
+    footer
+    {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 'contacts web-site' auto
+            / 1fr 1fr;
+        align-items: baseline;
+        font: 14px Arial;
+        padding: 20px;
+        border-top: 2px solid #858585;
+    }
+
+    .footer_contacts
+    {
+        grid-area: contacts;
+    }
+
+    .footer_web-site
+    {
+        text-align: right;
+        align-self: flex-end;
+        grid-area: web-site;
+    }
+}
+
+/* Медиа запрос для десктопов */
+
+@media screen and (min-width: 1200px) 
+{
+    main
+    {
+        display: grid;
+        grid-template: 'main sidebar' 100% / 90% 10%;
+    }
+
+    main > section
+    {
+        grid-area: main;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .sidebar
+    {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 1.5em;
+    }
+
+    .filters
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .filter
+    {
+        box-sizing: border-box;
+        display: block;
+        height: 50px;
+        border: 2px solid #858585;
+        border-radius: 20px;
+        width: 90%;
+        cursor: pointer;
+        margin: 1vh 0;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .filter:hover
+    {
+        background-color: #f05;
+    }
+
+    nav > section
+    {
+        position: relative;
+    }
+
+    nav > section > input
+    {
+        position: absolute;
+    }
+
+    input:checked[id='чистая'] ~ section > article[id='pardino'],
+    input:checked[id='чистая'] ~ section > article[id='Mudrez'],
+    input:checked[id='чистая'] ~ section > article[id='Billy'],
+    input:checked[id='чистая'] ~ section > article[id='Mr.Eyes'],
+    input:checked[id='чистая'] ~ section > article[id='Kuril'],
+    input:checked[id='чистая'] ~ section > article[id='Kotya'],
+    input:checked[id='чистая'] ~ section > article[id='Hikky']
+    {
+        display: none;
+    }
+
+    input:checked[id='чистая'] ~ nav label[for='чистая']
+    {
+        color: #9e9;
+        border-color: #9e9;
+    }
+
+    input:checked[id='бродячая'] ~ nav label[for='бродячая']
+    {
+        color: #9e9;
+        border-color: #9e9;
+    }
+
+    input:checked[id='экзотическая'] ~ nav label[for='экзотическая']
+    {
+        color: #9e9;
+        border-color: #9e9;
+    }
+
+    input:checked[id='все'] ~ nav label[for='все']
+    {
+        color: #9e9;
+        border-color: #9e9;
+    }
+
+    input:checked[id='бродячая'] ~ section > article[id='Mudrez'],
+    input:checked[id='бродячая'] ~ section > article[id='Mr.Eyes'],
+    input:checked[id='бродячая'] ~ section > article[id='Tard'],
+    input:checked[id='бродячая'] ~ section > article[id='Kuril'],
+    input:checked[id='бродячая'] ~ section > article[id='Meowtrix'],
+    input:checked[id='бродячая'] ~ section > article[id='Krut'],
+    input:checked[id='бродячая'] ~ section > article[id='Hikky']
+    {
+        display: none;
+    }
+
+    input:checked[id='экзотическая'] ~ section > article[id='Mudrez'],
+    input:checked[id='экзотическая'] ~ section > article[id='pardino'],
+    input:checked[id='экзотическая'] ~ section > article[id='Tard'],
+    input:checked[id='экзотическая'] ~ section > article[id='Kuril'],
+    input:checked[id='экзотическая'] ~ section > article[id='Meowtrix'],
+    input:checked[id='экзотическая'] ~ section > article[id='Krut'],
+    input:checked[id='экзотическая'] ~ section > article[id='Hikky'],
+    input:checked[id='экзотическая'] ~ section > article[id='Billy'],
+    input:checked[id='экзотическая'] ~ section > article[id='Kotya']
+    {
+        display: none;
+    }
+
+    .cat_article
+    {
+        width: 700px;
+        display: grid;
+        grid-template: 'img cat_name' 50px
+            'img main_info' 250px
+            'extended_info extended_info' 150px
+            '. price' 50px
+            / 50% 50%;
+        grid-gap: 10px 15px;
+        border: 2px solid #858585;
+        border-radius: 20px;
+        transition: all .5s ease-in-out;
+        margin: 20px;
+    }
+
+    .cat_article:hover
+    {
+        box-shadow: 0 0 10px 5px #858585;
+    }
+
+    .main_info
+    {
+        grid-area: main_info;
+    }
+
+    .extended_info
+    {
+        display: block;
+        border-top: 2px solid #858585;
+        overflow-y: hidden;
+        grid-area: extended_info;
+    }
+
+    .extended_info:hover
+    {
+        overflow-y: auto;
+    }
+
+    .cat_name
+    {
+        grid-area: cat_name;
+        margin-top: -8px;
+    }
+
+    .price
+    {
+        margin-top: 0;
+        grid-area: price;
+    }
+
+    .cat_img
+    {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        align-self: baseline;
+    }
+
+    main > aside
+    {
+        grid-area: sidebar;
+    }
+
+    footer
+    {
+        font: 14px Arial;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding: 10px;
+        height: 60px;
+        width: 100%;
+        border-top: 2px solid #858585;
+    }
+
+    footer > .footer_contacts
+    {
+        display: flex;
+        justify-content: space-around;
+        width: 33%;
+        margin-left: 20px;
+    }
+    
+    .footer_contacts > div
+    {
+        margin-right: auto;
+    }
+}
