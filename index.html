@@ -2,8 +2,167 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="index.css">
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
+<input id="breed-1" type="radio" name="breed">
+<input id="all-breed" type="radio" name="breed" checked>
+<input id="no-breed" type="radio" name="breed">
+<main class="market">
+    <header class="shop-title">
+        <h1>Мурмаркет</h1>
+    </header>
+    <section>
+        <section class="cat-card">
+            <article class="card no-breed">
+                <div class="cat-info">
+                    <div><img src="./img/cat1.jpg" alt="Бора-бора"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Бора-бора</a></h2>
+                        </header>
+                        <span>Возраст: около 6 месяцев</span>
+                        <span>Порода: нет</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Дружелюбный, ласковый, ручной.</p>
+                    <p>С другими котами в дружных отношениях, можно взять
+                        в пару к домашнему питомцу, или взять сразу в паре с его
+                        сестричкой Бали.
+                    </p>
+                </div>
+            </article>
+            <article class="card no-breed">
+                <div class="cat-info">
+                    <div><img src="./img/cat2.jpg" alt="Лео"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Лео</a></h2>
+                        </header>
+                        <span>Возраст: 1 год</span>
+                        <span>Порода: нет</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                        <span>Примечание: находится на передержке</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Серьёзный, нелюдимый.</p>
+                    <p>Хорошо уживается с детьми, но плохо - с другими котами. Очень
+                        самостоятельный.
+                    </p>
+                </div>
+            </article>
+            <article class="card no-breed">
+                <div class="cat-info">
+                    <div><img src="./img/cat2.jpg" alt="Лео"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Лео</a></h2>
+                        </header>
+                        <span>Возраст: 1 год</span>
+                        <span>Порода: нет</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Серьёзный, нелюдимый.</p>
+                    <p>Хорошо уживается с детьми, но плохо - с другими котами. Очень
+                        самостоятельный.
+                    </p>
+                </div>
+            </article>
+            <article class="card breed-1">
+                <div class="cat-info">
+                    <div><img src="./img/cat3.jpg" alt="Бородач"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Бородач</a></h2>
+                        </header>
+                        <span>Возраст: 2 года</span>
+                        <span>Порода: рыжик</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Дружелюбный, ласковый, ручной.</p>
+                </div>
+            </article>
+            <article class="card breed-1">
+                <div class="cat-info">
+                    <div><img src="./img/cat3.jpg" alt="Бородач"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Бородач</a></h2>
+                        </header>
+                        <span>Возраст: 2 года</span>
+                        <span>Порода: рыжик</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Дружелюбный, ласковый, ручной.</p>
+                </div>
+            </article>
+            <article class="card breed-1">
+                <div class="cat-info">
+                    <div><img src="./img/cat3.jpg" alt="Бородач"></div>
+                    <article class="cat-passport">
+                        <header>
+                            <h2><a href="#">Бородач</a></h2>
+                        </header>
+                        <span>Возраст: 2 года</span>
+                        <span>Порода: рыжик</span>
+                        <span>Болезни: нет</span>
+                        <span>Статус: ищет хозяина</span>
+                    </article>
+                </div>
+                <div class="cat-description">
+                    <p>Дружелюбный, ласковый, ручной.</p>
+                </div>
+            </article>
+        </section>
+    </section>
+    <aside class="filter">
+        <div>
+            <header>
+                <h2>Возраст</h2>
+            </header>
+            <div class="slider">
+                <div class="bar">
+                    <div class="lp"></div>
+                    <div class="rp"></div>
+                </div>
+            </div>
+        </div>
+        <span>От 2 до 4 лет</span>
+        <div class="filter-breed">
+            <header>
+                <h2>Порода</h2>
+            </header>
+            <label for="all-breed">все породы</label>
+            <label for="no-breed">без породы</label>
+            <label for="breed-1">рыжик</label>
+        </div>
+    </aside>
+    <footer class="contact-us">
+        <ul class="contacts">
+            <li class="contacts-title"><span class="far fa-envelope"></span>Напишите нам:</li>
+            <li><span class="far fa-envelope"></span><a href="#">cats@babuli.ru</a></li>
+            <li><span class="far fa-envelope"></span><a href="#">vnuchek@babuli.ru</a></li>
+        </ul>
+        <span class="contacts-copy">&copy; ООО 2018 &laquo;<a href="#">Бабушкины котятки</a>&raquo;
+        </span>
+    </footer>
+</main>
 </body>
 </html>
