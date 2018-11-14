@@ -3,7 +3,282 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,
+    initial-scale=1,user-scalable=no">
 </head>
 <body>
+    <input type="checkbox" name="breeds-swith" id="oci-breed-box">
+    <input type="checkbox" name="breeds-swith" id="fold-breed-box">
+    <input type="checkbox" name="breeds-swith" id="corat-breed-box">
+    <input type="checkbox" name="breeds-swith" id="none-breed-box">
+    <input type="checkbox" name="breeds-swith" id="all-breed-box" checked>
+
+    <main>
+        <header>
+            <div class="middle-align-in-flex first-letter-red">Мурмаркет</div>
+        </header>
+        <section class="grid-wrapper">
+            <aside class="sidebar">
+                <input id="age-range-input" type="range" min="1" max="8" step="1" list="age-range-list">
+                <datalist id="age-range-list">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                </datalist>
+                <div class="age-range-label-containter">
+                    <label for="age-range-input">Возраст: от 0 до 5 лет</label>
+                </div>
+                <label for="oci-breed-box" class="breed-rectangle-label">
+                    <span class="middle-align-in-flex">
+                        Оцикет
+                    </span>
+                </label>
+                <label for="fold-breed-box" class="breed-rectangle-label">
+                    <span class="middle-align-in-flex">
+                        Хайленд-фолд
+                    </span>
+                </label>
+                <label for="corat-breed-box" class="breed-rectangle-label">
+                    <span class="middle-align-in-flex">
+                        Корат
+                    </span>
+                </label>
+                <label for="none-breed-box" class="breed-rectangle-label">
+                    <span class="middle-align-in-flex">
+                        Нет
+                    </span>
+                </label>
+                <label for="all-breed-box" class="breed-rectangle-label">
+                    <span class="middle-align-in-flex">
+                        Все
+                    </span>
+                </label>
+            </aside>
+            <article class="cat-container">
+                <div class="cat-info-container ocicat-breed-cat">
+                    <div class="image-section"><img src="img/1.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Креветушка</div>
+                        <div class="info-left-align">
+                            Возраст: около 6 месяцев<br>
+                            Пол: мужской<br>
+                            Порода: Оцикет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Котенок неприхотлив, кушает даже овсяную кашу.
+                        Молчаливый, почти не мяукает, очень ручной. К котенку прилагается
+                        игрушка-мячик, туалет, и корм на первое время.
+                    </div>
+                </div>
+                <div class="cat-info-container none-breed-cat">
+                    <div class="image-section"><img src="img/2.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Дайра</div>
+                        <div class="info-left-align">
+                            Возраст: 5 месяцев<br>
+                            Пол: женский<br>
+                            Порода: нет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Дайра очень-очень ласковая и человеко-ориентированная
+                        кошечка, ей необходимы внимание и забота. Серыми осенними вечерами будет
+                        греть вас обнимашками и намурлыкивать песенки на ушко.
+                    </div>
+                </div>
+                <div class="cat-info-container fold-breed-cat">
+                    <div class="image-section"><img src="img/3.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Трумп</div>
+                        <div class="info-left-align">
+                            Возраст: 12 месяцев<br>
+                            Пол: мужской<br>
+                            Порода: Хайленд-фолд<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Его царственную особу нужно любить и ценить, 
+                        кормить строго определенным кормом, предоставить минимум два больших 
+                        лотка. Обязательно наличие дивана, где можно возлежать в красивых позах.
+                    </div>
+                </div>
+                <div class="cat-info-container ocicat-breed-cat">
+                    <div class="image-section"><img src="img/4.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Харитон</div>
+                        <div class="info-left-align">
+                            Возраст: около 7 месяцев<br>
+                            Пол: мужской<br>
+                            Порода: Оцикет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Невероятно контактный, ласковый. 
+                        Воспитан в лучших кошачьих традициях: лоток на 5+, когтеточка так же. 
+                        Составит в любом деле компанию, может с вами: спать, играть, есть или
+                        сидеть на плече.
+                    </div>
+                </div>
+                <div class="cat-info-container corat-breed-cat">
+                    <div class="image-section"><img src="img/5.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Ричи</div>
+                        <div class="info-left-align">
+                            Возраст: 8 месяцев<br>
+                            Пол: мужской<br>
+                            Порода: Корат<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Он молод, здоров и красив как кошачий Бог.
+                        Активный и неутомимый игрун. Любит играть со струей воды и не
+                        боится никого. Дружит с собаками и кошками.
+                    </div>
+                </div>
+                <div class="cat-info-container none-breed-cat">
+                    <div class="image-section"><img src="img/6.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Ариша</div>
+                        <div class="info-left-align">
+                            Возраст: 14 месяцев<br>
+                            Пол: женский<br>
+                            Порода: нет<br>
+                            Болезни: нет<br>
+                            Статус: ищет хозяина<br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Любознательная, ласковая, любит играть с кошачьими 
+                        игрушками. Не капризная. Воспитанная и ухоженная. Ходит в лоточек с 
+                        наполнителем. Привита, оформлен ветпаспорт.
+                    </div>
+                </div>
+                <div class="cat-info-container none-breed-cat">
+                    <div class="image-section"><img src="img/7.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Мурена</div>
+                        <div class="info-left-align">
+                            Возраст: 5 месяцев<br>
+                            Пол: женский<br>
+                            Порода: нет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Милая мурчалка по имени Мурена. 
+                        Этой полосатой красавице нужны ласковые руки и доброе отношение.
+                        Она всегда сможет поднять вам настроение.
+                    </div>
+                </div>
+                <div class="cat-info-container fold-breed-cat">
+                    <div class="image-section"><img src="img/8.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Анжело</div>
+                        <div class="info-left-align">
+                            Возраст: около 17 месяцев<br>
+                            Пол: мужской<br>
+                            Порода: Хайленд-фолд<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Симпатяга Анжело. Полностью здоров, привит.
+                        Лоток освоен отлично. Очень ласковый к людям. Готов часами нежиться 
+                        на ручках, обниматься и мурлыкать. К другим кошкам относится строго,
+                        всех «строит».
+                    </div>
+                </div>
+                <div class="cat-info-container ocicat-breed-cat">
+                    <div class="image-section"><img src="img/9.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Барсик</div>
+                        <div class="info-left-align">
+                            Возраст: 3 месяца<br>
+                            Пол: мужской<br>
+                            Порода: Оцикет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Не у каждого есть котик Барсик! Только у тех, кому 
+                        повезет. Барсик умеет замечательно громко мурлыкать, обожает ласку и
+                        подвижные игры: никто с такой ловкостью не сумеет поймать бантик на
+                        веревочке!
+                    </div>
+                </div>
+                <div class="cat-info-container none-breed-cat">
+                    <div class="image-section"><img src="img/10.jpg" alt="Фото кота"></div>
+                    <div class="main-info-section">
+                        <div class="name-left-align">Цезарь</div>
+                        <div class="info-left-align">
+                            Возраст: 34 месяца<br>
+                            Пол: мужской<br>
+                            Порода: нет<br>
+                            Болезни: нет<br>
+                            <br>
+                            Статус: ищет хозяина<br>
+                        </div>
+                    </div>
+                    <div class="full-info-section info-left-align">
+                        <hr>
+                        Подробная информация: Красавчик Цезарь совсем еще ребёнок.
+                        У Цезаря необыкновенно выразительный, трогательный взгляд, посмотрит и, 
+                        кажется, сейчас заговорит.
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <div class="left-flex-item">
+                <p>Напишите нам:</p>
+                <p><img src="img/letter.png" alt="Иконка письма">
+                <a href="#">cats@babuli.ru</a></p>
+                <p><img src="img/letter.png" alt="Иконка письма">
+                <a href="#">vnuchek@babuli.ru</a></p>
+            </div>
+            <div class="right-flex-item">
+                &copy; 2018 ООО &laquo;<a href="#">Бабушкины котята</a>&raquo;
+            </div>
+        </footer>
+    </main>
 </body>
 </html>
