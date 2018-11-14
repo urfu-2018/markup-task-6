@@ -7,6 +7,15 @@
          url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff') format('woff');
 }
 
+.flex
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+}
+
 body
 {
     background-color: rgb(250, 250, 250);
