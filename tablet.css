@@ -1,0 +1,65 @@
+@media (min-width: 730px) and (max-width: 1200px)
+{
+    .cats-page
+    {
+        display: flex;
+        flex-flow: wrap;
+        flex-direction: row;
+    }
+    
+    .item 
+    {
+        width: 300px;
+        margin: 2px;
+        border: 1px solid #dbd9d9;
+    }
+
+    .item img
+    {
+        width: 280px;
+        margin: 5px;
+    }
+
+    footer
+    {
+        position: sticky;
+        display: inline-block;
+        bottom: 0;
+        top: 0;
+        background: #fff;
+        width: 100%;
+        font-family: arial;
+        font-size: 14px;
+        border-top: 1px solid #000;
+        height: 70px;
+    }
+    
+    .footer-left
+    {
+        padding: 0 10px;
+        float: left;
+    }
+
+    .footer-right
+    {
+        position: fixed;
+        right: 6px;
+        bottom: 0;
+    }
+
+    .footer-right a
+    {
+        color: #4c4cd8;
+    }
+
+    .footer-left a 
+    {
+        color: #4c4cd8;
+        padding: 0 4px;
+    }
+
+    .footer-left img
+    {
+        margin-bottom: -3px;
+    }
+}

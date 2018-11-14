@@ -1,0 +1,140 @@
+@media (min-width:1200px)
+{
+    body
+    {
+        display: grid;
+        grid-template-columns: 1000px 1fr;
+    }
+
+    .horizontal-view,
+    .item h2
+    {
+        float: left;
+    }
+
+    .cats-name
+    {
+        margin-left: 20px;
+    }
+
+    .cats-page 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vertical-view
+    {
+        display: inline-block;
+        border-top: solid 1px #dbd9d9;
+        width: 500px;
+    }
+    
+    .item 
+    {
+        width: 500px;
+        margin: 5px 3px;
+        border: 1px solid #dbd9d9;
+    }
+
+    .item img
+    {
+        float: left;
+        margin: 10px 0 10px 10px;
+        width: 300px;
+        height: 190px;
+    }
+
+    .head
+    {
+        grid-column: span 2;
+    }
+
+    footer
+    {
+        grid-column: span 2;
+        position: fixed;
+        display: inline-block;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        font-family: arial;
+        font-size: 14px;
+        border-top: 1px solid #000;
+    }
+    
+    .footer-left
+    {
+        padding: 0 10px;
+        float: left;
+    }
+
+    .footer-right
+    {
+        position: fixed;
+        right: 6px;
+        bottom: 0;
+    }
+
+    .footer-right a
+    {
+        color: #4c4cd8;
+    }
+
+    .footer-left a 
+    {
+        color: #4c4cd8;
+        padding: 0 4px;
+    }
+
+    .footer-left img
+    {
+        margin-bottom: -3px;
+    }
+    
+    aside
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 4px 0 0 100px;
+        width: 200px;
+        font-family: 'PT Sans Narrow', arial;
+        font-size: 18px;
+    }
+
+    .species-labels
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .species-labels header
+    {
+        margin-bottom: 5px;
+    }
+
+    label
+    {
+        cursor: pointer;
+        border: solid 1px #000;
+        border-radius: 5px;
+        width: 170px;
+        margin-bottom: 5px;
+        padding: 12px 15px;
+    }
+
+    input:checked[id='species-1'] ~ aside label[for='species-1'],
+    input:checked[id='species-2'] ~ aside label[for='species-2'],
+    input:checked[id='species-3'] ~ aside label[for='species-3'],
+    input:checked[id='all'] ~ aside label[for='all']
+    {
+        background: #ccf1a4;
+    }
+
+    input:checked[id='species-1'] ~ main .item:not(.species-1),
+    input:checked[id='species-2'] ~ main .item:not(.species-2),
+    input:checked[id='species-3'] ~ main .item:not(.species-3)
+    {
+        display: none;
+    }
+}
