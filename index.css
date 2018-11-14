@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+}
+
+header
+{
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+}
+
+.card
+{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card div > p
+{
+    font-size: 13px;
+    color: #666;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.card h1
+{
+    margin: 0;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    main
+    {
+        display: grid;
+        grid-template: 'column-1 column-2' / 4fr 1fr;
+        width: 100%;
+    }
+
+    .cards
+    {
+        grid-area: column-1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .controls
+    {
+        grid-area: column-2;
+    }
+
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: relative;
+        background: white;
+        width: 100%;
+    }
+
+    footer div
+    {
+        display: flex;
+    }
+
+    footer p
+    {
+        margin: 10px;
+    }
+
+    footer img
+    {
+        width: 20px;
+        height: 15px;
+    }
+
+    footer :nth-child(4)
+    {
+        display: none;
+    }
+
+    .card
+    {
+        display: grid;
+        grid-template: 'photo description' 2fr
+                       'details details' 1fr
+                       / 1fr 1fr;
+        justify-self: center;
+        width: 90%;
+        height: 200px;
+        margin: 5px;
+        border: 1px solid #bebebe;
+        text-align: start;
+    }
+
+    .card:hover
+    {
+        box-shadow: 0 0 10px #bebebe;
+    }
+
+    .card img
+    {
+        justify-self: center;
+        grid-area: photo;
+        width: 80%;
+        height: 90%;
+        margin: 10px;
+        padding: 0;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    .card h1
+    {
+        grid-area: description;
+    }
+
+    .about
+    {
+        grid-area: description;
+    }
+
+    .details
+    {
+        grid-area: details;
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px) {
+    main
+    {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .controls
+    {
+        display: none;
+    }
+
+    .cards
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer
+    {
+        display: grid;
+        grid-template: 'column-1 column-2' / 4fr 1fr;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: relative;
+        background: white;
+        width: 100%;
+    }
+
+    footer img
+    {
+        width: 20px;
+        height: 15px;
+    }
+
+    .card
+    {
+        justify-self: center;
+        width: 90%;
+        height: 300px;
+        margin: 5px;
+        border: 1px solid #bebebe;
+        text-align: start;
+    }
+
+    .card:hover
+    {
+        box-shadow: 0 0 10px #bebebe;
+    }
+
+    .card img
+    {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    .description
+    {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .description h1
+    {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: normal;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .description div > p
+    {
+        font-size: 13px;
+        color: #666;
+        padding: 0;
+        margin: 0;
+    }
+
+    .details
+    {
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: none;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px) {
+    main
+    {
+        width: 100%;
+    }
+
+    .controls
+    {
+        display: none;
+    }
+
+    .cards
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer
+    {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: relative;
+        background: white;
+        height: 130px;
+        width: 100%;
+    }
+
+    footer .left-align
+    {
+        text-align: left;
+        margin: 15px;
+        display: inline-block;
+    }
+
+    footer .right-align
+    {
+        position: absolute;
+        bottom: 0;
+        margin: 15px;
+    }
+
+    footer img
+    {
+        width: 20px;
+        height: 15px;
+    }
+
+    .card
+    {
+        height: 300px;
+        margin: 5px;
+        border: 1px solid #bebebe;
+        text-align: start;
+    }
+
+    .card:hover
+    {
+        box-shadow: 0 0 10px #bebebe;
+    }
+
+    .card img
+    {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    .description
+    {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .description h1
+    {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: normal;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .description div > p
+    {
+        font-size: 13px;
+        color: #666;
+        padding: 0;
+        margin: 0;
+    }
+
+    .details
+    {
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: none;
+        position: relative;
+    }
+}
+
+input
+{
+    display: none;
+}
+
+.bar
+{
+    position: relative;
+    height: 1px;
+    background-color: rgb(220, 220, 220);
+    margin: 5px 10px 40px;
+}
+
+.blue-bar
+{
+    position: relative;
+    height: 1px;
+    left: 25%;
+    width: 39%;
+    background-color: #b784a7;
+
+}
+
+.slider
+{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: white;
+    top: -10px;
+    box-shadow: 0 0 5px 1px #b784a7;
+    cursor: pointer;
+}
+
+.left
+{
+    left: calc(25% - 13px);
+}
+
+.right
+{
+    left: calc(25% - 13px + 39%);
+}
+
+.breeds-control
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.br-empty:checked ~ .controls .br-l-empty,
+.br-no:checked ~ .controls .br-l-no,
+.br-ryzhik:checked ~ .controls .br-l-ryzhik,
+.br-manchkin:checked ~ .controls .br-l-manchkin,
+.br-cat:checked ~ .controls .br-l-cat,
+.br-twofaces:checked ~ .controls .br-l-twofaces,
+.br-breed:checked ~ .controls .br-l-breed,
+.br-scotlandvislouh:checked ~ .controls .br-l-scotlandvislouh
+{
+    background: #b784a7;
+}
+
+.br-no:checked ~ .cards .card-no,
+.br-ryzhik:checked ~ .cards .card-ryzhik,
+.br-manchkin:checked ~ .cards .card-manchkin,
+.br-cat:checked ~ .cards .card-cat,
+.br-breed:checked ~ .cards .card-breed,
+.br-twofaces:checked ~ .cards .card-twofaces,
+.br-scotlandvislouh:checked ~ .cards .card-scotlandvislouh
+{
+    box-shadow: 0 0 10px 1px;
+}
+
+label
+{
+    border: 1px solid gray;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+
+.red-first::first-letter
+{
+    color: #b784a7;
+}

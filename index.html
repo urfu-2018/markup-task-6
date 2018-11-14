@@ -1,9 +1,211 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Задача «Мурмаркет для всех»</title>
 </head>
+
 <body>
+    <header>
+        <div class="red-first">Мурмаркет</div>
+        <hr>
+    </header>
+    <main>
+        <input class="br-empty" id="empty" type="radio" value="empty" name="breed" checked>
+        <input class="br-no" id="no" type="radio" value="no" name="breed">
+        <input class="br-ryzhik" id="ryzhik" type="radio" value="ryzhik" name="breed">
+        <input class="br-breed" id="breed" type="radio" value="breed" name="breed">
+        <input class="br-manchkin" id="manchkin" type="radio" value="manchkin" name="breed">
+        <input class="br-cat" id="cat" type="radio" value="cat" name="breed">
+        <input class="br-twofaces" id="twofaces" type="radio" value="twofaces" name="breed">
+        <input class="br-scotlandvislouh" id="scotlandvislouh" type="radio" value="scotlandvislouh" name="breed">
+        <div class="cards">
+            <div class="card card-no">
+                <img src="images/cat2.jpg" alt="cat">
+                <div class="about">
+                    <h1>Маркус</h1>
+                    <p>Возраст: 0.5 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Замечательный, красивый, умный, обаятельный кот.</p>
+                </div>
+            </div>
+            <div class="card card-no">
+                <img src="images/cat3.jpg" alt="cat">
+                <div class="about">
+                    <h1>Леонардо ди Котио</h1>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Очень талантливый кот, многократный финалист соревнований, однократный
+                        победитель.</p>
+                </div>
+            </div>
+            <div class="card card-ryzhik">
+                <img src="images/cat4.jpg" alt="cat">
+                <div class="about">
+                    <h1>Альберт</h1>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: рыжик</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Альберт - и этим все сказано.</p>
+                </div>
+            </div>
+            <div class="card card-ryzhik">
+                <img src="images/cat5.jpg" alt="cat">
+                <div class="about">
+                    <h1>Макс</h1>
+                    <p>Возраст: 22 года</p>
+                    <p>Порода: рыжик</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяйку</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Замеччательный кот ищет заботливую хозяйку, которая будет его
+                        любить, кормить, гладить по вечерам.</p>
+                </div>
+            </div>
+            <div class="card card-no">
+                <img src="images/cat9.jpg" alt="cat">
+                <div class="about">
+                    <h1>Кот</h1>
+                    <p>Возраст: 0.5 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Просто кот.</p>
+                </div>
+            </div>
+            <div class="card card-manchkin">
+                <img src="images/cat1.jpg" alt="cat">
+                <div class="about">
+                    <h1>Светлана</h1>
+                    <p>Возраст: 20 лет</p>
+                    <p>Порода: манчкин</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: занята</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Приятная на вид, с непростым характером.</p>
+                </div>
+            </div>
+            <div class="card card-twofaces">
+                <img src="images/cat10.jpg" alt="cat">
+                <div class="about">
+                    <h1>Кошка</h1>
+                    <p>Возраст: 12 лет</p>
+                    <p>Порода: двуликий</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Не просто кошка.</p>
+                </div>
+            </div>
+            <div class="card card-breed">
+                <img src="images/cat8.jpg" alt="cat">
+                <div class="about">
+                    <h1>Имя</h1>
+                    <p>Возраст: возраст</p>
+                    <p>Порода: порода</p>
+                    <p>Болезни: болезни</p>
+                    <p class="status">Статус: статус</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Детали</p>
+                </div>
+            </div>
+            <div class="card card-scotlandvislouh">
+                <img src="images/cat6.jpg" alt="cat">
+                <div class="about">
+                    <h1>Катифнах</h1>
+                    <p>Возраст: 1.5 года</p>
+                    <p>Порода: шотландский вислоухий</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Шотландский вислоухий секс символ</p>
+                </div>
+            </div>
+            <div class="card card-cat">
+                <img src="images/cat7.jpg" alt="cat">
+                <div class="about">
+                    <h1>Рофл</h1>
+                    <p>Возраст: 6 лет</p>
+                    <p>Порода: кот</p>
+                    <p>Болезни: нет</p>
+                    <p class="status">Статус: ищет хозяина</p>
+                </div>
+                <div class="details">
+                    <hr>
+                    <p>Подробности</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <section class="age">
+                <h4 class="controls-heading">Возраст</h4>
+                <div class="age">
+                    <div class="bar">
+                        <div class="blue-bar"></div>
+                        <span class="slider left"></span>
+                        <span class="slider right"></span>
+                    </div>
+                    <span>от х до у лет</span>
+                </div>
+            </section>
+            <section>
+                <h4>Порода</h4>
+                <div class="breeds-control">
+                    <label class="breed-label br-l-empty" for="empty">не выбрано</label>
+                    <label class="breed-label br-l-no" for="no">нет</label>
+                    <label class="breed-label br-l-breed" for="breed">порода</label>
+                    <label class="breed-label br-l-ryzhik" for="ryzhik">рыжик</label>
+                    <label class="breed-label br-l-manchkin" for="manchkin">манчкин</label>
+                    <label class="breed-label br-l-twofaces" for="twofaces">двуликий</label>
+                    <label class="breed-label br-l-cat" for="cat">кот</label>
+                    <label class="breed-label br-l-scotlandvislouh" for="scotlandvislouh">шотландский
+                        вислоухий</label>
+                </div>
+            </section>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <div>
+            <p>Напишите нам:</p>
+            <p><img src="images/baseline_mail_outline_black_18dp.png" alt="mail icon">
+                <a href="#">cats@babuli.ru</a></p>
+            <p><img src="images/baseline_mail_outline_black_18dp.png" alt="mail icon">
+                <a href="#">vnuchek@babuli.ru</a></p>
+        </div>
+        <div>
+            <p>&copy; 2018 &laquo;<a href="#">maxticats</a>&raquo;</p>
+        </div>
+    </footer>
 </body>
+
 </html>
