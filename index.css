@@ -1,10 +1,12 @@
-@font-face {
+@font-face
+{
     font-family: 'PT Sans Narrow';
     font-style: normal;
     font-weight: 400;
-    src: local('PT Sans Narrow'), local('PTSans-Narrow'),
-         url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff2') format('woff2'),
-         url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff') format('woff');
+    src: local('PT Sans Narrow'),
+        local('PTSans-Narrow'),
+        url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff2') format('woff2'),
+        url('fonts/pt-sans-narrow-v9-cyrillic_latin-regular.woff') format('woff');
 }
 
 .flex
@@ -128,19 +130,19 @@ body
 
 .age::before
 {
-    content: "Возраст: ";
+    content: 'Возраст: ';
     color: #000;
 }
 
 .breed::before
 {
-    content: "Порода: ";
+    content: 'Порода: ';
     color: #000;
 }
 
 .ill::before
 {
-    content: "Болезни: ";
+    content: 'Болезни: ';
     color: #000;
 }
 
@@ -153,10 +155,10 @@ body
 
     display: grid;
     grid-template: 'emails' 1fr
-                   'email1' 1fr
-                   'email2' 2fr
-                   'copy' auto
-                   / auto;
+        'email1' 1fr
+        'email2' 2fr
+        'copy' auto
+        / auto;
 }
 
 .padding
@@ -258,9 +260,9 @@ body
     .footer
     {
         grid-template: 'emails .' auto
-                       'email1 .' auto 
-                       'email2 copy' auto
-                       / auto 1fr;
+            'email1 .' auto
+            'email2 copy' auto
+            / auto 1fr;
     }
 }
 
