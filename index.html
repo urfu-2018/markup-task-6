@@ -1,9 +1,302 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header><h1>Мурмаркет</h1></header>
+<main>
+    <input type="radio" id="specific-species" class="specific-species" name="species" value="specific">
+    <input type="radio" id="sleepy-species" class="sleepy-species" name="species" value="sleepy">
+    <input type="radio" id="white-species" class="white-species" name="species" value="white">
+    <input type="radio" id="blue-eyed-species" class="blue-eyed-species" name="species" value="blue-eyed">
+    <input type="radio" id="lovely-species" class="lovely-species" name="species" value="lovely">
+    <input type="radio" id="no-species" class="no-species" name="species" value="no">
+    <input type="radio" id="all-species" class="all-species" name="species" value="all" checked>
+
+    <article class="cat-card-container">
+        <section class="cat-card specific-cat">
+            <img class="photo" src="cats/1.jpg" alt="Ученый кот">
+            <div class="short-description">
+                <p class="name">Ученый</p>
+                <p class="species">Порода: Особая</p>
+                <p>Возраст: 2 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Дружелюбный, ласковый.</p>
+                <p>Возраст 2 года.</p>
+                <p>Ходит по стенам.</p>
+            </div>
+        </section>
+        <section class="cat-card sleepy-cat">
+            <img class="photo" src="cats/2.jpg" alt="Сонька кот">
+            <div class="short-description">
+                <p class="name">Сонька</p>
+                <p class="species">Порода: Сонная</p>
+                <p>Возраст: 5 лет</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+                <p class="notice">Примечание: Можете с ним не соревноваться, кто больше проспит</p>
+            </div>
+            <div class="big-description">
+                <p>Сонный, добрый.</p>
+                <p>Возраст 5 лет.</p>
+                <p>Много ест. Ходит по тебе.</p>
+            </div>
+        </section>
+        <section class="cat-card specific-cat">
+            <img class="photo" src="cats/3.jpg" alt="Леонид кот">
+
+            <div class="short-description">
+                <p class="name">Тик</p>
+                <p class="species">Порода: Особая</p>
+                <p>Возраст: 2 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Гордый, ленивый.</p>
+                <p>Возраст 3 года.</p>
+                <p>Может спать 23 часа в сутки.</p>
+            </div>
+        </section>
+        <section class="cat-card white-cat">
+            <img class="photo" src="cats/4.jpg" alt="София кошка">
+
+            <div class="short-description">
+                <p class="name">София</p>
+                <p class="species">Порода: Белая</p>
+                <p>Возраст: 3 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Чистолюбивая, игривая.</p>
+                <p>Возраст 2 года.</p>
+                <p>Шипит и боится чужих, хозяина не даст в обиду.</p>
+            </div>
+        </section>
+        <section class="cat-card white-cat">
+            <img class="photo" src="cats/5.jpg" alt="Чип кот">
+
+            <div class="short-description">
+                <p class="name">Чип</p>
+                <p class="species">Порода: Белая</p>
+                <p>Возраст: 1 год</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Общительный, добрый.</p>
+                <p>Возраст 1 год.</p>
+                <p>
+                    Тот еще проказник (в хорошем смысле слова). Играет со всем,
+                    что движется и не движется.
+                </p>
+            </div>
+        </section>
+        <section class="cat-card sleepy-cat">
+        <img class="photo" src="cats/6.jpg" alt="Стив кот">
+
+        <div class="short-description">
+            <p class="name">Стив</p>
+            <p class="species">Порода: Сонная</p>
+            <p>Возраст: 3 года</p>
+            <p>Болезни: Нет</p>
+            <p class="status">Статус: Ищет хозяина</p>
+        </div>
+        <div class="big-description">
+            <p>С ним не соскучишься.</p>
+            <p>Возраст 3 года.</p>
+            <p>Ласковый, любит всегда быть в компании.</p>
+        </div>
+        </section>
+        <section class="cat-card blue-eyed-cat">
+            <img class="photo" src="cats/7.jpg" alt="Жаки кот">
+
+            <div class="short-description">
+                <p class="name">Жаки</p>
+                <p class="species">Порода: Голубоглазка</p>
+                <p>Возраст: 6 лет</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Обожает детей.</p>
+                <p>Возраст 6 лет.</p>
+                <p>Кот-расписание, у него все по распианию: еда, сон, игры.</p>
+            </div>
+        </section>
+        <section class="cat-card no-cat">
+            <img class="photo" src="cats/8.jpg" alt="Манго кот">
+
+            <div class="short-description">
+                <p class="name">Манго</p>
+                <p class="species">Порода: Нет</p>
+                <p>Возраст: 5 лет</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Чувствительный и ранимый.</p>
+                <p>Возраст 5 лет.</p>
+                <p>Обожает бегать в темноте и играть с маленьким мячиком.</p>
+            </div>
+        </section>
+        <section class="cat-card specific-cat">
+            <img class="photo" src="cats/9.jpg" alt="Мао кот">
+
+            <div class="short-description">
+                <p class="name">Мао</p>
+                <p class="species">Порода: Особая</p>
+                <p>Возраст: 3 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Резвый, любопытный.</p>
+                <p>Возраст 3 года.</p>
+                <p>Обожает греться под одеялом.</p>
+            </div>
+        </section>
+        <section class="cat-card sleepy-cat">
+            <img class="photo" src="cats/10.jpg" alt="Хаос кот">
+
+            <div class="short-description">
+                <p class="name">Хаос</p>
+                <p class="species">Порода: Сонная</p>
+                <p>Возраст: 4 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Очень тихий, скромняшка.</p>
+                <p>Возраст 4 года.</p>
+                <p>Всё делает вместе с хозяинами: работать, спать, есть.</p>
+            </div>
+        </section>
+        <section class="cat-card lovely-cat">
+            <img class="photo" src="cats/11.jpg" alt="Монти кот">
+
+            <div class="short-description">
+                <p class="name">Монти</p>
+                <p class="species">Порода: Красотка</p>
+                <p>Возраст: 7 лет</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Разговорчивый, домашний.</p>
+                <p>Возраст 7 лет.</p>
+                <p>Любит играть с лазером и в прятки.</p>
+            </div>
+        </section>
+        <section class="cat-card no-cat">
+            <img class="photo" src="cats/12.jpg" alt="Дым кот">
+
+            <div class="short-description">
+                <p class="name">Дым</p>
+                <p class="species">Порода: Нет</p>
+                <p>Возраст: 1 год</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Приветливый, добрый.</p>
+                <p>Возраст 1 год.</p>
+                <p>Всегда рад, когда ты приходишь домой. Любит внимание.</p>
+            </div>
+        </section>
+        <section class="cat-card no-cat">
+            <img class="photo" src="cats/13.jpg" alt="Ром кот">
+
+            <div class="short-description">
+                <p class="name">Ром</p>
+                <p class="species">Порода: Нет</p>
+                <p>Возраст: 2 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Игривый, ласковый.</p>
+                <p>Возраст 2 года.</p>
+                <p>Обожает купаться, по вечерам гипнотизирует машины, стоящих пробке.</p>
+            </div>
+        </section>
+        <section class="cat-card sleepy-cat">
+            <img class="photo" src="cats/14.jpg" alt="Кекс и Рекс коты">
+
+            <div class="short-description">
+                <p class="name">Кекс и Рекс</p>
+                <p class="species">Порода: Сонная</p>
+                <p>Возраст: 5 лет</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Игривые и ласковые.</p>
+                <p>Возраст 5 лет.</p>
+                <p>Не разлей вода, в этом их и сила.</p>
+            </div>
+        </section>
+        <section class="cat-card lovely-cat">
+            <img class="photo" src="cats/15.jpg" alt="Клюква кошка">
+
+            <div class="short-description">
+                <p class="name">Клюква</p>
+                <p class="species">Порода: Красотка</p>
+                <p>Возраст: 3 года</p>
+                <p>Болезни: Нет</p>
+                <p class="status">Статус: Ищет хозяина</p>
+            </div>
+            <div class="big-description">
+                <p>Нежная, тихая.</p>
+                <p>Возраст 3 года.</p>
+                <p>Принцесска, обожает спать на спине.</p>
+            </div>
+        </section>
+    </article>
+    <section class="filter">
+        <section class="age-filter">
+            <p>Возраст</p>
+            <section class="range-age">
+                <section class="line"></section>
+                <section class="blue-line"></section>
+                <section class="min_tumbler"></section>
+                <section class="max_tumbler"></section>
+            </section>
+            <p class="text-range-age">От 1 до 7 лет</p>
+        </section>
+        <section class="species-filter">
+            <p>Порода</p>
+            <label for="specific-species" class="specific">Особая</label>
+            <label for="sleepy-species" class="sleepy">Сонная</label>
+            <label for="white-species" class="white">Белая</label>
+            <label for="blue-eyed-species" class="blue-eyed">Голубоглазка</label>
+            <label for="lovely-species" class="lovely">Красотка</label>
+            <label for="no-species" class="no">Нет</label>
+            <label for="all-species" class="all">Все</label>
+        </section>
+    </section>
+</main>
+<footer>
+    <div class="contacts">
+        <p>Напишите нам:</p>
+        <section class="email">
+            <img src="mail.png" alt="mail">
+            <a href="#">cats@babuli.ru</a>
+        </section>
+        <section class="point"></section>
+        <section class="email">
+            <img src="mail.png" alt="mail">
+            <a href="#">vnuchek@babuli.ru</a>
+        </section>
+    </div>
+    <div class="rights"><p>&copy; 2018 OOO «<a href="#">Бабушкины котятки</a>»</p></div>
+</footer>
 </body>
 </html>

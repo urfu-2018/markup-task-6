@@ -1,0 +1,385 @@
+header h1:first-letter
+{
+    color: red;
+    margin: auto;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-bottom: gray solid 1px;
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+
+body
+{
+    margin: 0;
+}
+
+.cat-card-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cat-card
+{
+    margin-top: 3%;
+    width: 95%;
+    border: gray solid 1px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 10px 2px gray;
+}
+
+.cat-card .short-description .name
+{
+    margin: 20px 20px 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+}
+
+.cat-card div
+{
+    margin: 20px;
+    color: gray;
+    font-size: 15px;
+}
+
+.photo
+{
+    width: 100%;
+}
+
+.big-description
+{
+    display: none;
+}
+
+.big-description p
+{
+    margin: 0;
+}
+
+.short-description .notice
+{
+    display: none;
+    margin-top: 3%;
+}
+
+.short-description p
+{
+    margin: 0;
+}
+
+.short-description .status
+{
+    margin-top: 3%;
+}
+
+footer
+{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5%;
+    border-top: gray solid 1px;
+    font-size: 15px;
+
+}
+
+footer .contacts:first-child
+{
+    color: gray;
+}
+
+footer .email img
+{
+    width: 20px;
+}
+
+footer > div
+{
+
+    margin-bottom: 2%;
+}
+
+.point
+{
+    display: none;
+}
+
+.filter
+{
+    display: none;
+}
+
+input
+{
+    visibility: hidden;
+}
+
+@media (min-width: 730px)
+{
+    .cat-card
+    {
+        width: 30%;
+    }
+
+    .photo
+    {
+        height: 50%;
+    }
+
+    header
+    {
+        margin-bottom: 1%;
+    }
+
+    footer
+    {
+        flex-direction: row;
+        margin-top: 4%;
+    }
+
+    footer > div
+    {
+        padding-bottom: 5px;
+    }
+
+    footer .rights
+    {
+        margin-left: auto;
+        display: flex;
+    }
+
+    footer .rights p
+    {
+        margin: 0;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    main
+    {
+        display: flex;
+    }
+
+    main input[name='species']
+    {
+        display: none;
+    }
+
+    .cat-card-container
+    {
+        align-self: flex-start;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+    }
+
+    .cat-card
+    {
+        display: none;
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        padding: 10px;
+        grid-template-rows: 1fr;
+        margin: 10px;
+    }
+
+    .photo
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .specific-species:checked ~ .filter .species-filter .specific,
+    .sleepy-species:checked ~ .filter .species-filter .sleepy,
+    .white-species:checked ~ .filter .species-filter .white,
+    .blue-eyed-species:checked ~ .filter .species-filter .blue-eyed,
+    .lovely-species:checked ~ .filter .species-filter .lovely,
+    .no-species:checked ~ .filter .species-filter .no,
+    .all-species:checked ~ .filter .species-filter .all
+    {
+        background: #e8fecf;
+        border: #acdd79 solid 1px;
+    }
+
+    .specific-species:checked ~ .cat-card-container .specific-cat
+    {
+        display: grid;
+    }
+
+    .sleepy-species:checked ~ .cat-card-container .sleepy-cat
+    {
+        display: grid;
+    }
+
+    .white-species:checked ~ .cat-card-container .white-cat
+    {
+        display: grid;
+    }
+
+    .blue-eyed-species:checked ~ .cat-card-container .blue-eyed-cat
+    {
+        display: grid;
+    }
+
+    .lovely-species:checked ~ .cat-card-container .lovely-cat
+    {
+        display: grid;
+    }
+
+    .no-species:checked ~ .cat-card-container .no-cat
+    {
+        display: grid;
+    }
+
+    .all-species:checked ~ .cat-card-container .cat-card
+    {
+        display: grid;
+    }
+
+    .filter
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 3%;
+    }
+
+    .contacts
+    {
+        display: flex;
+        width: 35%;
+        margin: 0;
+        height: 30%;
+        align-self: center;
+        justify-content: space-around;
+
+    }
+
+    .rights
+    {
+        align-self: center;
+        height: 30%;
+        margin-bottom: 0;
+    }
+
+    .contacts p
+    {
+        margin: 0;
+    }
+
+    footer
+    {
+        align-content: space-around;
+        height: 60px;
+    }
+
+    footer .email
+    {
+        height: 20px;
+    }
+
+    .filter .age-filter .range-age .min_tumbler,
+    .filter .age-filter .range-age .max_tumbler
+    {
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 5px;
+        background: white;
+        z-index: 1;
+    }
+
+    .filter .age-filter .range-age
+    {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .filter .age-filter .range-age .line
+    {
+        position: absolute;
+        background: #95c5fc;
+        width: 110px;
+        height: 2px;
+        z-index: 0;
+        top: 9px;
+    }
+
+    .filter .age-filter .range-age .blue-line
+    {
+        position: absolute;
+        background: #e8eeef;
+        width: 200px;
+        height: 2px;
+        z-index: -1;
+        top: 9px;
+    }
+
+    .species-filter
+    {
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .species-filter label
+    {
+        text-align: center;
+        width: 200px;
+        border-radius: 8px;
+        border: black solid 1px;
+        font-size: 15px;
+    }
+
+    .species-filter p
+    {
+        font-size: 20px;
+    }
+
+    .age-filter p
+    {
+        font-size: 20px;
+    }
+
+    .big-description
+    {
+        display: block;
+        grid-column: 1 / 3;
+        border-top: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .short-description .notice
+    {
+        display: block;
+    }
+
+    .point
+    {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 100%;
+    }
+}
