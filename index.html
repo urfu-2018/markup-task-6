@@ -2,8 +2,217 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Задача «Мурмаркет»</title>
 </head>
 <body>
+<header class="market-header">
+    <h1 class="title">Мурмаркет</h1>
+</header>
+
+<input type="radio" id="nevermind_breed" name="cat_breed" class="cat_breed nevermind_breed" checked>
+<input type="radio" id="front_breed" name="cat_breed" class="cat_breed front_breed">
+<input type="radio" id="univer_breed" name="cat_breed" class="cat_breed univer_breed">
+<input type="radio" id="sad_breed" name="cat_breed" class="cat_breed sad_breed">
+<input type="radio" id="borodin_breed" name="cat_breed" class="cat_breed borodin_breed">
+<input type="radio" id="mat_breed" name="cat_breed" class="cat_breed mat_breed">
+<input type="radio" id="back_breed" name="cat_breed" class="cat_breed back_breed">
+<input type="radio" id="party_breed" name="cat_breed" class="cat_breed party_breed">
+<input type="radio" id="catt_breed" name="cat_breed" class="cat_breed catt_breed">
+
+<main class="main">
+    <div class="cat_container">
+        <article class="cat_info front">
+            <img src="images/1.jpg" alt="Разметка">
+            <section class="short">
+                <h3 class="name">Разметка</h3>
+                Возраст: 4 года<br>
+                Порода: Фронт<br>
+                Болезни: дедлайн<br>
+            </section>
+            <section class="long">
+                Язы́к разме́тки (текста) в компьютерной терминологии — набор символов или последовательностей,
+                вставляемых в текст для передачи информации о его выводе или строении.
+                Принадлежит классу компьютерных языков. Текстовый документ,
+                написанный с использованием языка разметки,
+                содержит не только сам текст (как последовательность слов и знаков препинания),
+                но и дополнительную информацию о различных его участках — например,
+                указание на заголовки, выделения,
+                списки и т. д.
+                В более сложных случаях язык разметки позволяет вставлять в документ интерактивные элементы и
+                содержание других документов.
+            </section>
+        </article>
+        <article class="cat_info front">
+            <img src="images/2.jpg" alt="Джеэс">
+            <section class="short">
+                <h3 class="name">Джеэс</h3>
+                Возраст: 4 года<br>
+                Порода: Фронт<br>
+                Болезни: дедлайн<br>
+            </section>
+            <section class="long">
+                JavaScript обычно используется как встраиваемый
+                язык для программного доступа к объектам приложений.
+                Наиболее широкое применение находит в браузерах как язык сценариев для
+                придания интерактивности веб-страницам.
+                Основные архитектурные черты: динамическая типизация,
+                слабая типизация, автоматическое управление памятью,
+                прототипное программирование, функции как объекты первого класса.
+            </section>
+        </article>
+        <article class="cat_info univer">
+            <img src="images/3.jpg" alt="Зед">
+            <section class="short">
+                <h3 class="name">Зед</h3>
+                Возраст: 5 лет<br>
+                Порода: Универский<br>
+                Болезни: при смерти<br>
+            </section>
+            <section class="long">
+                Предмет страдания студентов
+            </section>
+        </article>
+        <article class="cat_info sad">
+            <img src="images/4.jpg" alt="Дискретка">
+            <section class="short">
+                <h3 class="name">Дискретка</h3>
+                Возраст: 2 года<br>
+                Порода: ШАД<br>
+                Болезни: датасатанизм<br>
+            </section>
+            <section class="long">
+                В контексте математики в целом дискретная математика часто отождествляется с
+                конечной математикой — направлением,
+                изучающим конечные структуры — конечные графы, конечные группы, конечные автоматы.
+            </section>
+        </article>
+        <article class="cat_info sad">
+            <img src="images/5.jpg" alt="Си">
+            <section class="short">
+                <h3 class="name">Си</h3>
+                Возраст: 1 год<br>
+                Порода: ШАД<br>
+                Болезни: диабет<br>
+            </section>
+            <section class="long">
+                Компилируемый статически типизированный язык программирования общего назначения,
+                разработанный в 1969—1973 годах сотрудником Bell Labs Деннисом Ритчи как развитие языка Би.
+                Первоначально был разработан для реализации операционной системы UNIX,
+                но впоследствии был перенесён на множество других платформ.
+                Согласно дизайну языка, его конструкции близко сопоставляются типичным машинным инструкциям,
+                благодаря чему он нашёл применение в проектах, для которых был свойственен язык ассемблера,
+                в том числе как в операционных системах, так и в различном прикладном программном обеспечении
+                для множества устройств — от суперкомпьютеров до встраиваемых систем
+            </section>
+        </article>
+        <article class="cat_info borodin">
+            <img src="images/6.jpg" alt="Алгосы">
+            <section class="short">
+                <h3 class="name">Алгосы</h3>
+                Возраст: 2 года<br>
+                Порода: Бородинские<br>
+                Болезни: асм<br>
+            </section>
+            <section class="long">
+                Набор инструкций, описывающих порядок действий
+                исполнителя для достижения некоторого результата.
+                В старой трактовке вместо слова «порядок» использовалось слово «последовательность»,
+                но по мере развития параллельности в работе компьютеров
+                слово «последовательность» стали заменять более
+                общим словом «порядок». Независимые инструкции могут
+                выполняться в произвольном порядке, параллельно,
+                если это позволяют используемые исполнители.
+            </section>
+        </article>
+        <article class="cat_info mat">
+            <img src="images/7.jpg" alt="Тервер">
+            <section class="short">
+                <h3 class="name">Тервер</h3>
+                Возраст: 1 год<br>
+                Порода: Матема<br>
+                Болезни: нет<br>
+            </section>
+            <section class="long">
+                Тео́рия вероя́тностей — раздел математики, изучающий случайные события,
+                случайные величины, их свойства и операции над ними.
+            </section>
+        </article>
+        <article class="cat_info back">
+            <img src="images/8.jpg" alt="Клауд">
+            <section class="short">
+                <h3 class="name">Клауд</h3>
+                Возраст: меньше месяца<br>
+                Порода: Бэк<br>
+                Болезни: спидорак<br>
+            </section>
+            <section class="long">
+                Вычислительные мощности Яндекса и сервисы для обработки и хранения данных.
+                Яндекс.Облако — публичная облачная платформа,
+                где вы можете создавать и развивать свои проекты.
+            </section>
+        </article>
+        <article class="cat_info party">
+            <img src="images/9.jpg" alt="Трип">
+            <section class="short">
+                <h3 class="name">Трип</h3>
+                Возраст: бессмертный<br>
+                Порода: Тусовочный<br>
+                Болезни: похмелье<br>
+            </section>
+            <section class="long">
+                ДММ ДПММ ЗМШ BADBAR
+            </section>
+        </article>
+        <article class="cat_info catt">
+            <img src="images/10.jpg" alt="Янессал">
+            <section class="short">
+                <h3 class="name">Янессал</h3>
+                Возраст: 21 год<br>
+                Порода: Кот<br>
+                Болезни: честность<br>
+            </section>
+            <section class="long">
+                Он нассал
+            </section>
+        </article>
+    </div>
+    <div class="filter_container">
+        <section>
+            <h3>Порода</h3>
+            <label for="nevermind_breed" class="nevermind_breed_label">Неважно</label>
+            <label for="front_breed" class="front_breed_label">Фронт</label>
+            <label for="univer_breed" class="univer_breed_label">Универский</label>
+            <label for="sad_breed" class="sad_breed_label">ШАД</label>
+            <label for="borodin_breed" class="borodin_breed_label">Бородинские</label>
+            <label for="mat_breed" class="mat_breed_label">Матема</label>
+            <label for="back_breed" class="back_breed_label">Бэк</label>
+            <label for="party_breed" class="party_breed_label">Тусовочный</label>
+            <label for="catt_breed" class="cat_breed_label">Кот</label>
+        </section>
+    </div>
+</main>
+<footer>
+    <table class="contacs">
+        <tr>
+            <td>Напишите нам:</td>
+        </tr>
+        <tr>
+            <td>
+                &#128231;
+                <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &#128231;
+                <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </td>
+            <td>
+                <div class="copyright">© 2018 ООО«<a href="http://ya.ru">Бабушкины котятки</a>»</div>
+            </td>
+        </tr>
+    </table>
+</footer>
 </body>
 </html>
