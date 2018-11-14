@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body class="flex">
+    <input name="breed" type="radio" id="all" class="hidden all_filter" checked>
+    <input name="breed" type="radio" id="kun" class="hidden kun_filter">
+    <input name="breed" type="radio" id="jojo" class="hidden jojo_filter">
+    <input name="breed" type="radio" id="none" class="hidden none_filter">
     <header class="header">
         <h1 class="title">Мурмаркет для всех</h1>
     </header>
     <main class="main">
         <div class="grid">
-            <article class="card">
+            <article class="card kun">
                 <img class="image" src="img/vasiliy.png" title="Василий" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Василий Иванович</h2>
@@ -24,7 +28,7 @@
                     <p class="text">Любит сидеть на собеседованиях со студентами и с умным видом кивать им.</p>
                 </section>
             </article>
-            <article class="card">
+            <article class="card none">
                 <img class="image" src="img/murzik.png" title="Мурзик" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Мурзик</h2>
@@ -37,7 +41,7 @@
                     <p class="text">Очень ласковый, но пугается незнакомый людей или кошек.</p>
                 </section>
             </article>
-            <article class="card">
+            <article class="card jojo">
                 <img class="image" src="img/jojo.png" title="ДжоДжо" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Джонатан Джостар</h2>
@@ -50,7 +54,7 @@
                     <p class="text">累計発行部数は2016年12月時点で1億部を突破している。</p>
                 </section>
             </article>
-            <article class="card">
+            <article class="card none">
                 <img class="image" src="img/bolek+lelek.png" title="Болек и Лёлек" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Болек и Лёлек</h2>
@@ -63,12 +67,12 @@
                     <p class="text">С другими котами в дружных отношениях, но полхо уживаются с детьми.</p>
                 </section>
             </article>
-            <article class="card">
+            <article class="card kun">
                 <img class="image" src="img/vasiliy.png" title="Василий" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Василий Иванович</h2>
                     <p class="text age">3 года</p>
-                    <p class="text breed">нет</p>
+                    <p class="text breed">Мейн-кун</p>
                     <p class="text ill">нет</p>
                 </section>
                 <section class="more_info">
@@ -76,7 +80,7 @@
                     <p class="text">Любит сидеть на собеседованиях со студентами и с умным видом кивать им.</p>
                 </section>
             </article>
-            <article class="card">
+            <article class="card none">
                 <img class="image" src="img/murzik.png" title="Мурзик" alt="photo">
                 <section class="short_info">
                     <h2 class="name trunc">Мурзик</h2>
@@ -91,8 +95,19 @@
             </article>
         </div>
         <aside class="sidebar">
-            <h2 class="name">Возраст</h2>
-
+            <section>
+                <h2 class="name">Возраст</h2>
+                <input class="range age_range" type="range" min="1" max="6" value="2">
+                <input class="range" type="range" min="1" max="6" value="4">
+                <p>от 2 до 4 лет</p>
+            </section>
+            <section>
+                <h2 class="name">Порода</h2>
+                <label class="breed_filter all_label" for="all">Все породы</label>
+                <label class="breed_filter kun_label" for="kun">Мейн-кун</label>
+                <label class="breed_filter jojo_label" for="jojo">Джостары</label>
+                <label class="breed_filter none_label" for="none">Без породы</label>
+            </section>
         </aside>
     </main>
     <footer class="footer">
