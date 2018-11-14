@@ -236,26 +236,36 @@ main
         text-align: left;
         width: 35vw;
         height: 40vh;
-        display: inline-block;
         vertical-align: bottom;
+        display: inline-grid;
+        grid-template: 'cat-photo-section cat-name' 20%
+            'cat-photo-section cat-short-info' 40%
+            'cat-long-info cat-long-info' 40% / 50% 50%;
+    }
+
+    .cat-box > section
+    {
+        display: grid;
     }
 
     .cat-photo-section
     {
+        grid-area: cat-photo-section;
         text-align: center;
-        width: 100%;
+        margin: 10px;
+        overflow: hidden;
+        object-fit: none;
     }
 
     .cat-photo
     {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        overflow: hidden;
     }
 
     .cat-name
     {
+        grid-area: cat-name;
         display: block;
         overflow: hidden;
         color: #111;
@@ -269,12 +279,20 @@ main
     .cat-short-info,
     .cat-name
     {
-        margin: 10px;
+        margin: 5px;
+    }
+
+    .cat-short-info
+    {
+        grid-area: cat-short-info;
     }
 
     .cat-long-info
     {
-        display: none;
+        grid-area: cat-long-info;
+        margin: 0 -2px;
+        padding: 10px;
+        border-top: 1px solid #888;
     }
 
     /* sidebar */
@@ -300,20 +318,20 @@ main
 
     .age-slider label
     {
-        padding: 20px 0 ;
+        padding: 2vh 0 ;
         display: block;
     }
 
     .breed-picker > label
     {
-        display: grid;
+        display: block;
         font-size: 18px;
         height: 30px;
         width: 90%;
         border: 2px solid #888;
         border-radius: 2px;
         padding: 1em .7em .7em .4em;
-        margin: 10px 0;
+        margin: 1vh 0;
     }
 
     input:checked[id='no-breed'] ~ article .cat-box:not([class*='no-breed']),
