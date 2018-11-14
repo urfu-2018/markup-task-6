@@ -1,0 +1,206 @@
+.head
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.shop-name
+{
+    margin: 10px;
+    font-size: 32px;
+}
+
+.shop-name::first-letter
+{
+    color: #f00;
+}
+
+.slides
+{
+    margin-top: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.cat > :not(.cat-img)
+{
+    padding-left: 10px;
+}
+
+.aside,
+input[name='filter']
+{
+    display: none;
+}
+
+.full-info
+{
+    display: none;
+}
+
+.link-mail::before
+{
+    content: '✉ ';
+}
+
+.footer
+{
+    border-top: 1px solid #000;
+}
+
+@media (min-width: 375px) and (max-width: 730px)
+{
+    .cat
+    {
+        width: 100%;
+    }
+
+    .slides
+    {
+        flex-direction: column;
+        margin: 25px;
+    }
+
+    .cat-img > img
+    {
+        min-width: 375px;
+        max-width: 730px;
+        width: 100%;
+    }
+
+    .footer
+    {
+        display: block;
+        margin: 25px;
+        background: red;
+    }
+
+    .information-about-us
+    {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 730px) and (max-width: 1200px)
+{
+    .slides
+    {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .footer
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .information-about-us
+    {
+        align-self: flex-end;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    main
+    {
+        display: grid;
+        grid-template: 'main sidebar' 100%
+            / 85% 15%;
+    }
+
+    .slides
+    {
+        grid-area: main;
+        justify-content: center;
+    }
+
+    .aside
+    {
+        grid-area: sidebar;
+        display: block;
+        text-align: center;
+    }
+
+    .cat
+    {
+        width: 480px;
+        display: grid;
+        grid-template: 'img short-info' 225px
+            'full-info full-info' 1fr / 1fr 1fr;
+        margin: 10px;
+    }
+
+    .short-info
+    {
+        grid-area: short-info;
+    }
+
+    .cat-img
+    {
+        grid-area: img;
+    }
+
+    .full-info
+    {
+        border-top: 1px solid black;
+        grid-area: full-info;
+        display: block;
+    }
+
+    .filters
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .filter
+    {
+        text-align: center;
+        width: 80%;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .footer
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .information-for-the-bundle
+    {
+        display: flex;
+        justify-content: space-around;
+        width: 375px;
+    }
+
+    .link-mail::before
+    {
+        content: '';
+    }
+
+    .link-mail-2::before
+    {
+        content: '● ';
+    }
+
+    .desktop-mail::before
+    {
+        content: '✉ ';
+    }
+
+    input[id='filter-2']:checked ~ .slides > div:nth-of-type(2n),
+    input[id='filter-3']:checked ~ .slides > div:nth-last-of-type(3n),
+    input[id='filter-4']:checked ~ .slides > div:nth-of-type(3n)
+    {
+        display: none;
+    }
+}
