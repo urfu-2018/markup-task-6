@@ -3,7 +3,150 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Мурмаркет</h1>
+    </header>
+    <div class="grid">
+        <input type="radio" name="breeds" id="any-breed" checked>
+        <input type="radio" name="breeds" id="sly-breed">
+        <input type="radio" name="breeds" id="fun-breed">
+        <input type="radio" name="breeds" id="hero-breed">
+        <input type="radio" name="breeds" id="myst-breed">
+        <main>
+            <div class="cat-cards">
+                <div class="cat-card sly-breed">
+                    <img src="cat-images/bombey.jpg" alt="blacky">
+                    <div class="short-description description">
+                        <h2>Черняк</h2>
+                        <p>Возраст: 24 луны</p>
+                        <p>Порода: хитрючая</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                        <p>Примечание: на данный момент опять куда-то сбежал</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            Независимый кот, который откроет любую дверь, лишь бы выйти на свободу.
+                            Всегда возвращается через неопределенный срок (один раз вернулся через месяц).
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-card sly-breed">
+                    <img src="cat-images/ceylon.jpg" alt="ceylon">
+                    <div class="short-description description">
+                        <h2>Песчаная Буря</h2>
+                        <p>Возраст: 50 лун</p>
+                        <p>Порода: хитрючая</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            Несмотря на возраст очень активная. Очень удивляет своими хитрыми уловками.
+                            Идеальна для съемок смешных видео на YouTube.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-card hero-breed">
+                    <img src="cat-images/ginger.jpg" alt="ginger">
+                    <div class="short-description description">
+                        <h2>Огнегрив</h2>
+                        <p>Возраст: 100 лун</p>
+                        <p>Порода: геройская</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            Этот кот всегда будет стоять за справедливость.
+                            Он очень воинственен, всегда защитит своего хозяина и свой дом.
+                            Но все-таки это не собака, а кот, поэтому не забывайте, что он
+                            спит по 12 часов в день.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-card fun-breed">
+                    <img src="cat-images/gray.jpg" alt="gray">
+                    <div class="short-description description">
+                        <h2>Крутобок</h2>
+                        <p>Возраст: 70 лун</p>
+                        <p>Порода: веселая</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            На фотографии он сильно стесняется, но на самом деле это
+                            очень веселый кот, любит пошутить, очень смешно смеется (да, он умеет!).
+                            Настоящий здоровяк, весит 10 кг.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-card myst-breed">
+                    <img src="cat-images/diffeyes.jpg" alt="diffeyes">
+                    <div class="short-description description">
+                        <h2>Бабочка</h2>
+                        <p>Возраст: 20 лун</p>
+                        <p>Порода: таинственная</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            Таинственная кошечка, поражающая своими глазами.
+                            Обладает исцеляющими свойствами, достаточно больному поспать в
+                            присутствии Бабочки, как на следующий день он встает здоровым.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-card fun-breed">
+                    <img src="cat-images/newspaper.jpg" alt="newspaper">
+                    <div class="short-description description">
+                        <h2>Газетка</h2>
+                        <p>Возраст: 6 лун</p>
+                        <p>Порода: веселая</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="long-description description">
+                        <p>
+                            Очень забавная, постоянно шалит, и что-то нам подсказывает, что
+                            даже через много лет она останется такой же озорной.
+                            Газетка еще котеночек, но уже с характером, вполне может показать коготки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <section class="age-section">
+                <h2>Возраст</h2>
+                <div class="slider">
+                    <p>6</p><input type="range" min="6" max="120" step="1" value="60"><p>120</p>
+                </div>
+            </section>
+            <section class="breed-section">
+                <h2>Порода</h2>
+                <label for="any-breed">Любая</label>
+                <label for="sly-breed">Хитрющая</label>
+                <label for="fun-breed">Веселая</label>
+                <label for="hero-breed">Геройская</label>
+                <label for="myst-breed">Таинственная</label>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <div class="contacts">
+            <p>Напишите нам:</p>
+            <p class="mail"><a href="#">cats@babuli.ru</a></p>
+            <p class="mail"><a href="#">vnuchek@babuli.ru</a></p>
+        </div>
+        <div class="organization">
+            <p>&copy; 2018 ООО "<a href="#">Бабушкины котятки</a>"</p>
+        </div>
+    </footer>
 </body>
 </html>

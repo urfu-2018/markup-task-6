@@ -1,0 +1,348 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('ptsansnarrow.woff2') format('woff2');
+}
+
+body
+{
+    margin: 0;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+header h1
+{
+    font-size: 38px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 15px auto;
+}
+
+header h1:first-letter
+{
+    color: red;
+}
+
+input[type='radio'],
+input[id='sly-breed']:checked ~ main .cat-cards .cat-card:not(.sly-breed),
+input[id='fun-breed']:checked ~ main .cat-cards .cat-card:not(.fun-breed),
+input[id='hero-breed']:checked ~ main .cat-cards .cat-card:not(.hero-breed),
+input[id='myst-breed']:checked ~ main .cat-cards .cat-card:not(.myst-breed)
+{
+    display: none;
+}
+
+input[id='any-breed']:checked ~ aside .breed-section label[for='any-breed'],
+input[id='sly-breed']:checked ~ aside .breed-section label[for='sly-breed'],
+input[id='fun-breed']:checked ~ aside .breed-section label[for='fun-breed'],
+input[id='hero-breed']:checked ~ aside .breed-section label[for='hero-breed'],
+input[id='myst-breed']:checked ~ aside .breed-section label[for='myst-breed']
+{
+    background: yellow;
+}
+
+input[id='any-breed']:checked ~ .cat-cards .cat-card
+{
+    display: grid;
+}
+
+.grid
+{
+    display: grid;
+    margin: 80px 20px 70px;
+    grid-template-columns: 4fr 1fr;
+}
+
+.cat-cards
+{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.cat-card
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 10px;
+    border: 1px solid #969393;
+    padding: 10px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 2px 2px 2px gray;
+}
+
+.cat-card img
+{
+    width: 350px;
+}
+
+.cat-card .short-description
+{
+    padding: 0 10px;
+}
+
+.cat-card .short-description p
+{
+    margin: 10px 0;
+}
+
+.cat-card .short-description h2
+{
+    font-size: 32px;
+    color: black;
+    margin: 15px 0;
+}
+
+.cat-card .long-description
+{
+    grid-column: 1 / 3;
+    border-top: 1px solid #969393;
+}
+
+.description
+{
+    font-size: 20px;
+    color: #615c5c;
+}
+
+aside
+{
+    margin: 0 0 0 20px;
+}
+
+.age-section .slider p
+{
+    display: inline;
+    vertical-align: top;
+}
+
+.age-section .slider
+{
+    text-align: center;
+}
+
+.breed-section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.breed-section label
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    background: white;
+    padding: 15px 0;
+}
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #969393;
+    padding: 10px 20px 20px;
+}
+
+footer .contacts
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer .contacts p:first-child::before
+{
+    position: relative;
+    top: 8px;
+    right: 4px;
+    content: url('message.png');
+    width: 24px;
+    height: 24px;
+}
+
+footer p
+{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0 5px;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+@media (min-device-width: 375px) and (max-device-width: 730px)
+{
+    .grid
+    {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .cat-cards
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .cat-card
+    {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #969393;
+    }
+
+    .cat-card img
+    {
+        width: 100%;
+    }
+
+    .cat-card .long-description
+    {
+        display: none;
+    }
+
+    aside
+    {
+        display: none;
+    }
+
+    .cat-card .short-description h2
+    {
+        font-size: 24px;
+    }
+
+    .description
+    {
+        font-size: 18px;
+        color: #615c5c;
+    }
+
+    footer
+    {
+        position: static;
+        display: block;
+    }
+
+    footer .contacts
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    footer .contacts p::before
+    {
+        position: relative;
+        top: 8px;
+        right: 4px;
+        content: url('message.png');
+        width: 24px;
+        height: 24px;
+    }
+
+    footer .contacts p:first-child::before
+    {
+        display: none;
+    }
+
+}
+
+@media (min-device-width: 730px) and (max-device-width: 1200px)
+{
+    .grid
+    {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .cat-cards
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cat-card
+    {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #969393;
+    }
+
+    .cat-card img
+    {
+        width: 100%;
+    }
+
+    .cat-card .long-description
+    {
+        display: none;
+    }
+
+    aside
+    {
+        display: none;
+    }
+
+    .cat-card .short-description h2
+    {
+        font-size: 24px;
+    }
+
+    .description
+    {
+        font-size: 18px;
+        color: #615c5c;
+    }
+
+    footer
+    {
+        position: static;
+    }
+
+    footer .contacts
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .contacts p::before
+    {
+        position: relative;
+        top: 8px;
+        right: 4px;
+        content: url('message.png');
+        width: 24px;
+        height: 24px;
+    }
+
+    footer .contacts p:first-child::before
+    {
+        display: none;
+    }
+
+}
