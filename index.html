@@ -3,7 +3,274 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
+    <header class="title"><h3>Мурмаркет</h3></header>
+
+    <main class="main-content">
+        <input type="radio" name="breed-selector" id="british">
+        <input type="radio" name="breed-selector" id="turkish">
+        <input type="radio" name="breed-selector" id="scottish">
+        <input type="radio" name="breed-selector" id="no-breed" checked>
+        <input type="radio" name="breed-selector" id="another">
+
+        <section class="cat-cards">
+            <section class="photocard another">
+                <div class="cat-image">
+                    <img src="images/cats_images/1cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Карапуз</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 1 год и 2 месяца<br>
+                        <span>Порода:</span> кимрик<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> умный кот, который быстро понимает, как 
+                        открыть дверь и получить то, что он хочет. Зачастую любит искупаться в теплой воде.
+                        Любит игрушки. Уход: расчесывание два раза в неделю, чистка зубов, глаз, ушей, 
+                        регулярная уборка лотка, чтобы питомец не вымазывал свою длинную шерсть.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard turkish">
+                <div class="cat-image">
+                    <img src="images/cats_images/2cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Иса</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 1 месяц<br>
+                        <span>Порода:</span> турецкий ван<br>
+                        <span>Пол:</span> не определен<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> несмотря на свой возраст, очень активный и
+                        игривый котенок. Обожает купаться с игрушками. Уход: чистить зубы можно раз в месяц.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard scottish">
+                <div class="cat-image">
+                    <img src="images/cats_images/3cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Морис</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 1 год<br>
+                        <span>Порода:</span> скоттиш фолд<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> интеллигентный кот, очень любит
+                        своего хозяина. Мыть и расчесывать нечасто. Постригать коготки. 
+                        Любит рыбу, сыр, творог и каши.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard none">
+                <div class="cat-image">
+                    <img src="images/cats_images/4cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Джуля</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 4 месяца<br>
+                        <span>Порода:</span> нет<br>
+                        <span>Пол:</span> кошка<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> любит обниматься. Хорошо ладит с детьми. Очень
+                        предана, но ревнива. Игривая и ласковая. Кормить нужно только два раза в день
+                        качественным сухим кормом.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard none">
+                <div class="cat-image">
+                    <img src="images/cats_images/5cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Муся</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 2 месяца<br>
+                        <span>Порода:</span> нет<br>
+                        <span>Пол:</span> не определен<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> котенок, который очень любит музыку.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard another">
+                <div class="cat-image">
+                    <img src="images/cats_images/6cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Макар</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 1 год<br>
+                        <span>Порода:</span> мейн кун<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> очень резвая и игривая кошка.
+                        Достаточно болтливая. Очень хороший друг. Уход: менять воду нужно не реже
+                        одного раза в день. Любит играть с водой.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard none">
+                <div class="cat-image">
+                    <img src="images/cats_images/7cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Без имени</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 3 недели<br>
+                        <span>Порода:</span> нет<br>
+                        <span>Пол:</span> не определен<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> самый маленький котенок. Очень нежный.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard british">
+                <div class="cat-image">
+                    <img src="images/cats_images/8cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Круля</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 4 года<br>
+                        <span>Порода:</span> британская<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> независимый и серьезный кот. Очень ласковый.
+                        Интеллигентный. К гостям относится аккуратно, бережливо.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard turkish">
+                <div class="cat-image">
+                    <img src="images/cats_images/9cat.jpg" alt="cat">
+                </div>
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Алиса</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 3 года<br>
+                        <span>Порода:</span> турецкая ангора<br>
+                        <span>Пол:</span> кошка<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> умная, активная, красивая, обучаемая кошка.
+                        Очень привязана к хозяину и месту, и у нее огромный лексический запас «слов».
+                        Следует расчесывать шерстку раз в неделю, чистить зубы и уши раз в две недели.
+                    </p>
+                </div>
+            </section>
+            <section class="photocard none">
+                <div class="cat-image">
+                    <img src="images/cats_images/10cat.jpg" alt="cat">
+                </div>                
+                <div class="main-info-about-cat">
+                    <a href="#" class="name-of-cat">Васька</a>
+                    <p class="describe-of-cat">
+                        <span>Возраст:</span> 5 месяцев<br>
+                        <span>Порода:</span> нет<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                </div>
+                <div class="additional-info-about-cat">
+                    <p class="additional-info">
+                        <span>Дополнительная информация:</span> очень умный, уравновешенный. Любит гулять. Не
+                        любит мыться. Следует постригать коготки раз в две недели.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <section class="filter-menu">
+            <div class="years-filter">
+                <h2>Возраст</h2>
+                <input type="range" min="0" max="5" value="3" id="years">
+                <p>от m до n лет</p>
+            </div>
+            <div class="breed-filter">
+                <h2>Порода</h2>
+                <ul class="breeds">
+                    <li class="breed british-breed">
+                        <label for="british">Британская</label>
+                    </li>
+                    <li class="breed turkish-breed">
+                        <label for="turkish">Турецкая</label>
+                    </li>
+                    <li class="breed scottish-breed">
+                        <label for="scottish">Шотландская</label>
+                    </li>
+                    <li class="breed no-breed">
+                        <label for="no-breed">Нет</label>
+                    </li>
+                    <li class="breed other-breeds">
+                        <label for="another">Другие</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-content">
+        <p>Напишите нам:</p>
+        <div class="contacts">
+            <p><a href="#">cats@babuli.ru</a></p>
+            <p><a href="#">vnuchek@babuli.ru</a></p>
+        </div>
+        <p class="copyright">
+            &copy; 2018 ООО
+            <a href="#" class="organization-name">Бабушкины котятки</a>
+        </p>
+    </footer>
 </body>
 </html>

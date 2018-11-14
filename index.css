@@ -1,0 +1,290 @@
+@import url(http://allfont.ru/allfont.css?fonts=pt-sans-narrow);
+
+body
+{
+    margin: 0;
+}
+
+.title
+{
+    font-family: 'PT SansNarrow', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 5px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.title > h3
+{
+    margin: 10px 0;
+}
+
+.title > h3::first-letter
+{
+    color: #f00;
+}
+
+input[name='breed-selector']
+{
+    display: none;
+}
+
+.main-content
+{
+    overflow: hidden;
+    display: block;
+}
+
+.cat-cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photocard
+{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    margin: 2% 1%;
+    padding: 30px 30px 0;
+    border: 1px solid #808080;
+    cursor: pointer;
+    color: #808080;
+}
+
+.photocard:hover
+{
+    box-shadow: 3px 2px 5px 2px #000;
+}
+
+.cat-image img[src$='cat.jpg']
+{
+    width: 100%;
+    height: 100%;
+}
+
+.main-info-about-cat
+{
+    margin-left: 10px;
+}
+
+.name-of-cat
+{
+    text-decoration-line: none;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.name-of-cat:visited
+{
+    color: #000;
+}
+
+.name-of-cat:hover
+{
+    color: #008000;
+}
+
+.additional-info-about-cat
+{
+    display: none;
+    grid-column-end: span 2;
+    margin-top: 10px;
+    border-top: 1px solid #808080;
+}
+
+.photocard span
+{
+    color: #000;
+    font-weight: bold;
+}
+
+.filter-menu
+{
+    display: none;
+}
+
+.filter-menu > div
+{
+    margin: 0 10px;
+}
+
+.years-filter
+{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+input[type='range']::-moz-range-track
+{
+    height: 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.breeds
+{
+    padding-left: 0;
+}
+
+.breed
+{
+    list-style-type: none;
+    text-align: center;
+    border: 3px solid #808080;
+    border-radius: 3px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.breed > label
+{
+    cursor: pointer;
+    color: #808080;
+}
+
+input[id='british']:checked ~ .filter-menu .british-breed,
+input[id='turkish']:checked ~ .filter-menu .turkish-breed,
+input[id='scottish']:checked ~ .filter-menu .scottish-breed,
+input[id='no-breed']:checked ~ .filter-menu .no-breed,
+input[id='another']:checked ~ .filter-menu .other-breeds
+{
+    border-color: #008000;
+}
+
+input[id='british']:checked ~ .cat-cards .british,
+input[id='turkish']:checked ~ .cat-cards .turkish,
+input[id='scottish']:checked ~ .cat-cards .scottish,
+input[id='no-breed']:checked ~ .cat-cards .none,
+input[id='another']:checked ~ .cat-cards .another
+{
+    display: grid;
+}
+
+.footer-content
+{
+    border-top: 1px solid #d3d3d3;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content p
+{
+    margin: 5px;
+}
+
+.contacts p
+{
+    display: block;
+}
+
+.contacts
+{
+    display: inline-block;
+}
+
+.contacts a[href]::before
+{
+    content: '\2709';
+    color: #000;
+}
+
+.copyright
+{
+    padding-top: 25px;
+    width: 300px;
+    text-align: right;
+    float: right;
+}
+
+.organization-name::before
+{
+    content: '\00AB';
+    color: #000;
+}
+
+.organization-name::after
+{
+    content: '\00BB';
+    color: #000;
+}
+
+@media screen and (min-width: 1201px)
+{
+    .main-content
+    {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 80% 20%;
+    }
+
+    .photocard
+    {
+        width: 40%;
+        display: none;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    .additional-info-about-cat
+    {
+        display: grid;
+    }
+
+    .filter-menu
+    {
+        display: block;
+    }
+    
+    .contacts
+    {
+        display: inline;
+    }
+
+    .footer-content p
+    {
+        display: inline;
+    }
+
+    .contacts p:last-child > a[href]::before
+    {
+        content: '\2776';
+        color: #000;
+    }
+
+    .copyright
+    {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 731px) and (max-width: 1200px)
+{
+    .photocard
+    {
+        padding: 0;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    .cat-cards
+    {
+        justify-content: center;
+    }
+
+    .photocard
+    {
+        width: 100%;
+    }
+
+    .copyright
+    {
+        text-align: left;
+        float: none;
+    }
+}
