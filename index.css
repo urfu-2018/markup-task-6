@@ -230,7 +230,7 @@ footer
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 375px)
+@media screen and (max-width: 1200px) and (min-width: 300px)
 {
     .grid-wrapper
     {
@@ -262,7 +262,7 @@ footer
     }
 }
 
-@media screen and (max-width: 730px) and (min-width: 375px) 
+@media screen and (max-width: 730px) and (min-width: 300px) 
 {
     .cat-info-container
     {
