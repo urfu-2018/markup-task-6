@@ -1,0 +1,168 @@
+@media (min-width: 1200px)
+{
+    :root
+    {
+        --body-margin: 8px;
+        --header-height: 43.6px;
+        --footer-height: 43px;
+        --main-min-height: calc(100vh -
+        var(--header-height) - var(--footer-height) - 2 * var(--body-margin));
+    }
+
+    body
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header
+    {
+        grid-column: span 4;
+    }
+
+    main
+    {
+        grid-column: span 3;
+    }
+
+    aside
+    {
+        grid-column: span 1;
+    }
+
+    footer
+    {
+        grid-column: span 4;
+    }
+
+    main
+    {
+        min-height: var(--main-min-height);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        border-right: none;
+    }
+
+    dt
+    {
+        float: left;
+    }
+
+    h2
+    {
+        padding: 0;
+    }
+
+    .extra-information-block
+    {
+        border-top: 1px solid lightgrey;
+        overflow: hidden;
+    }
+
+    .extra-information-block p
+    {
+        line-height: 1em;
+    }
+
+    dl
+    {
+        width: 48%;
+        margin-bottom: 0;
+    }
+
+    footer
+    {
+        display: flex;
+        align-items: baseline;
+    }
+
+    footer img
+    {
+        display: none;
+    }
+
+    footer p:first-of-type img
+    {
+        display: inline;
+    }
+
+    footer div[id='small-circle']
+    {
+        width: 6px;
+        height: 6px;
+        background-color: rgb(87, 86, 86);
+        border-radius: 3px;
+        margin-left: 15px;
+    }
+
+    footer p:last-of-type
+    {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    aside
+    {
+        padding: 20px;
+    }
+
+    aside section header
+    {
+        font-size: 18px;
+        color: rgb(87, 86, 86);
+        margin-bottom: 10px;
+    }
+
+    aside section[id='age']
+    {
+        margin-bottom: 50px;
+    }
+
+    aside section[id='age'] img
+    {
+        width: 50%;
+    }
+
+    aside section[id='age'] p
+    {
+        padding-left: 0;
+    }
+
+    aside label
+    {
+        border: 1px solid rgb(39, 39, 39);
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: .5em;
+        color: rgb(87, 86, 86);
+        padding: 25px;
+        margin: 5px 10px 5px 0;
+    }
+
+    input:checked[id='breed-1'] ~ aside label[for='breed-1'],
+    input:checked[id='breed-2'] ~ aside label[for='breed-2'],
+    input:checked[id='breed-3'] ~ aside label[for='breed-3'],
+    input:checked[id='no-breed'] ~ aside label[for='no-breed']
+    {
+        background-color: rgb(233,255,208);
+        border: 1px solid rgb(204,241,164);
+    }
+
+    input:checked[id='breed-1'] ~ main dl:not(.breed-1),
+    input:checked[id='breed-2'] ~ main dl:not(.breed-2),
+    input:checked[id='breed-3'] ~ main dl:not(.breed-3)
+    {
+        display: none;
+    }
+
+    aside,
+    aside section[id='breed-labels']
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}

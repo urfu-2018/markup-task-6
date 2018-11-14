@@ -1,0 +1,36 @@
+@media (min-width: 375px) and (max-width: 730px)
+{
+    :root
+    {
+        --body-margin: 8px;
+        --header-height: 43.6px;
+        --footer-height: 140px;
+        --main-min-height: calc(100vh -
+        var(--header-height) - var(--footer-height) - 2 * var(--body-margin));
+    }
+
+    div[class='extra-information-block'],
+    aside
+    {
+        display: none;
+    }
+
+    main
+    {
+        min-height: var(--main-min-height);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer
+    {
+        height: var(--footer-height);
+    }
+
+    dl,
+    img[alt^='cat_']
+    {
+        width: 350px;
+    }
+}

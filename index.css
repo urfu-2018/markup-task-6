@@ -1,0 +1,105 @@
+body
+{
+    font-family: Arial, serif;
+}
+
+input
+{
+    display: none;
+}
+
+body > header,
+footer
+{
+    position: sticky;
+    -moz-position: sticky;
+    -ms-position: sticky;
+    -o-position: sticky;
+    -webkit-position: sticky;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+body > header
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    top: 0;
+}
+
+body > header::first-letter
+{
+    color: red;
+}
+
+main
+{
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+
+aside
+{
+    border-right: 1px solid lightgrey;
+}
+
+footer
+{
+    font-size: 14px;
+    color: rgb(87, 86, 86);
+    bottom: 0;
+}
+
+footer a
+{
+    color: #4c4cd8;
+}
+
+dl
+{
+    border: 1px solid lightgrey;
+}
+
+dl:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+dd
+{
+    margin: 0;
+}
+
+h2
+{
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+dl,
+img[alt^='cat_']
+{
+    width: 250px;
+}
+
+p
+{
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: .5em;
+    color: rgb(87, 86, 86);
+}
+
+.envelope
+{
+    margin: 0 3px -3px 0;
+}
+
+footer p:first-of-type img
+{
+    display: none;
+}

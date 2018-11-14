@@ -1,0 +1,61 @@
+@media (min-width: 730px) and (max-width: 1200px)
+{
+    :root
+    {
+        --body-margin: 8px;
+        --header-height: 43.6px;
+        --footer-height: 87.2px;
+        --main-min-height: calc(100vh -
+        var(--header-height) - var(--footer-height) - 2 * var(--body-margin));
+    }
+
+    div[class='extra-information-block'],
+    aside
+    {
+        display: none;
+    }
+
+    main
+    {
+        min-height: var(--main-min-height);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    dl
+    {
+        margin: 8px;
+    }
+
+    footer
+    {
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: auto 275px;
+    }
+
+    footer p:first-of-type,
+    footer p:nth-of-type(2)
+    {
+        grid-column: 1 / span 2;
+    }
+
+    footer p:nth-of-type(3)
+    {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    footer p:nth-of-type(4)
+    {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    footer p
+    {
+        margin: 6px;
+    }
+}
