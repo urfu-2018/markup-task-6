@@ -1,52 +1,57 @@
+.market-header
+{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    background-color: white;
+    font-size: 32px;
+    font-family: 'PT SansNarrow', sans-serif;
+}
+
+.market-header:first-letter
+{
+    color: red;
+}
+
 .main-block
 {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    align-items: center;
+    margin-top: 60px;
 }
 
 .cat-card
 {
-    width: 400px;
-    height: 400px;
+    width: 20vh;
+    height: auto;
     border: 1px solid #d3d3d3;
     text-align: center;
-    margin: auto;
+    margin: 10px 0 ;
 }
 
-.cat-card:hover
-{
-    box-shadow: 0 0 10px 3px #000;
-    border-radius: 3px;
-}
-
-.inner-block
-{
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: 100%;
-    margin: 5% auto;
-}
-
-.inner-block img
+.cat-card img
 {
     display: block;
-    max-width: 100%;
-    width: auto;
-    height: 60%;
+    width: 100%;
+    height: auto;
+    max-height: 60%;
     margin: 0 auto;
+    object-fit: cover;
 }
 
-.inner-block img:hover
+.text
 {
-    border-radius: 15px;
-    border: 2px solid black;
-    filter: initial;
-    -webkit-filter: initial;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
+    text-align: left;
 }
 
 .cat-name
@@ -66,20 +71,6 @@
 {
     color: red;
     text-decoration: initial;
-}
-
-.short
-{
-    display: none;
-}
-
-.long
-{
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
 }
 
 .long:hover
