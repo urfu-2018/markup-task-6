@@ -2,29 +2,62 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+<input id="breed1" class="breed1" type="radio" name="breed" hidden>
+<input id="breed2" class="breed2" type="radio" name="breed" hidden>
+<input id="breed3" class="breed3" type="radio" name="breed" hidden>
+<input id="breed4" class="breed4" type="radio" name="breed" hidden>
+<input id="breedAll" class="breedAll" type="radio" name="breed" checked hidden>
 <header></header>
 <main>
-    <article class="popup-content">
-        <img src="joker.jpg" alt="">
-        <section>
+    <article class="cat breed1">
+        <img src="joker.jpg" alt="" class="photo">
+        <section class="characteristics">
             <p>Private J. T. "Joker" Davis</p>
             <p>too young</p>
             <p>peaceful</p>
-            <p lang="en">I wanted to see exotic Vietnam... the crown jewel of Southeast Asia.
+        </section>
+        <section class="description">
+            <p lang="en">
+                I wanted to see exotic Vietnam... the crown jewel of Southeast Asia.
                 I wanted to meet interesting and stimulating people of an ancient culture...
                 and kill them. I wanted to be the first kid on my block to get a confirmed kill!
             </p>
         </section>
     </article>
-    <article class="popup-content">
-        <img src="leo.jpg" alt="">
-        <section>
+    <article class="cat breed3">
+        <img src="sack.jpg" alt="" class="photo">
+        <section class="characteristics">
+            <p>Gordon Sackhelm the 3rd</p>
+            <p>35 m.o.</p>
+            <p>kinda stupid</p>
+        </section>
+        <section class="description">
+            <p lang="en">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed magna
+                urna,
+                ullamcorper ut facilisis ut, rutrum a sapien. Suspendisse non sapien libero. Sed
+                interdum
+                ultricies
+                mauris, vitae sollicitudin mi laoreet placerat. Aliquam eu dolor id neque rhoncus
+                suscipit
+                et id
+                nunc.
+            </p>
+        </section>
+    </article>
+    <article class="cat breed1">
+        <img src="leo.jpg" alt="" class="photo">
+        <section class="characteristics">
             <p>Lil Leo</p>
             <p>25 gazelles old</p>
             <p>kinda dangerous</p>
+        </section>
+        <section class="description">
             <p lang="en">gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang
                 gucci gang
                 gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci
@@ -40,31 +73,14 @@
             </p>
         </section>
     </article>
-    <article class="popup-content">
-        <img src="sack.jpg" alt="">
-        <section>
-            <p>Gordon Sackhelm the 3rd</p>
-            <p>35 m.o.</p>
-            <p>kinda stupid</p>
-            <p lang="en">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed magna
-                urna,
-                ullamcorper ut facilisis ut, rutrum a sapien. Suspendisse non sapien libero. Sed
-                interdum
-                ultricies
-                mauris, vitae sollicitudin mi laoreet placerat. Aliquam eu dolor id neque rhoncus
-                suscipit
-                et id
-                nunc.
-            </p>
-        </section>
-    </article>
-    <article class="popup-content">
-        <img src="jordan.jpg" alt="">
-        <section>
+    <article class="cat breed2">
+        <img src="jordan.jpg" alt="" class="photo">
+        <section class="characteristics">
             <p>Jordan Belfort</p>
             <p>2 y.o.</p>
             <p>rich one</p>
+        </section>
+        <section class="description">
             <p lang="en">
                 My name is Jordan Belfort. I'm a former member of the middle class
                 raised by
@@ -87,12 +103,14 @@
             </p>
         </section>
     </article>
-    <article class="popup-content">
-        <img src="dolan.jpg" alt="">
-        <section>
+    <article class="cat breed4">
+        <img src="dolan.jpg" alt="" class="photo">
+        <section class="characteristics">
             <p>Dolan</p>
             <p>12 y.o.</p>
             <p>steals memes from grandayy</p>
+        </section>
+        <section class="description">
             <p lang="en">
                 Quack Quack Quack Quack Quack Quack Quack Quack Quack Quack Quack
                 Quack
@@ -110,7 +128,13 @@
         </section>
     </article>
 </main>
-<aside></aside>
+<aside>
+    <article class="breed-selector"><label for="breed1">dangerous</label></article>
+    <article class="breed-selector"><label for="breed2">neutral</label></article>
+    <article class="breed-selector"><label for="breed3">cute</label></article>
+    <article class="breed-selector"><label for="breed4">dumb</label></article>
+    <article class="breed-selector"><label for="breedAll">all</label></article>
+</aside>
 <footer></footer>
 </body>
 </html>
