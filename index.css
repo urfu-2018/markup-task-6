@@ -1,0 +1,294 @@
+/*ЗАГОЛОВОК*/
+
+header
+{
+    font: 16px 'PT Sans Narrow';
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: #faebd7;
+    margin-top: -102px;
+    display: block;
+    border-bottom: 1px solid cadetblue;
+}
+
+.firstWord
+{
+    color: cadetblue;
+}
+
+/*ОСНОВНАЯ ЧАСТЬ*/
+
+body
+{
+    height: 100%;
+    background: #faebd7;
+}
+
+main
+{
+    margin-top: 100px;
+    /*text-align: center;*/
+}
+
+.blockCat
+{
+    width: 480px;
+    height: 480px;
+    border: 2px solid #5f9ea0;
+    display: inline-block;
+    /*text-align: left;*/
+    overflow: hidden;
+    margin: 20px;
+}
+
+.titleCat
+{
+    text-align: center;
+}
+
+.smartInfo
+{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.smartInfo > .catImg
+{
+    border: 2px solid gray;
+    width: 66%;
+    height: 55%;
+    margin: 5px 0 5px 5px;
+}
+
+.listCat
+{
+    margin: 5px 5px 5px -5px;
+}
+
+.listCat > li
+{
+    margin-bottom: 5px;
+}
+
+.description
+{
+    margin: auto;
+}
+
+.description > p
+{
+    margin: 5px;
+    font-size: 17px;
+}
+
+/*ФЛЕКСИМ*/
+
+.catContent
+{
+    display: flex;
+}
+
+.allCats
+{
+    justify-self: start;
+}
+
+/*САЙДБАР || ИНПУТ*/
+
+.inputFilter
+{
+    display: none;
+}
+
+/*ПОДВАЛ*/
+
+footer
+{
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    height: 30px;
+    display: flex;
+}
+
+footer .footer_left
+{
+    margin-left: 15px;
+}
+
+footer .footer_right
+{
+    margin-right: 15px;
+}
+
+a[href]
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1200px)
+{
+    .sideBar
+    {
+        margin-top: 70px;
+        margin-right: 10px;
+        justify-self: end;
+    }
+
+    .scroll
+    {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .filterLabel
+    {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        line-height: 65px;
+        height: 65px;
+        margin: 10px;
+        width: 200px;
+        background: #5f9ea0;
+        border: 2px solid gray;
+        border-radius: 15px;
+    }
+
+    input[id='check1']:checked ~ .sideBar label[id='label1'],
+    input[id='check2']:checked ~ .sideBar label[id='label2'],
+    input[id='check3']:checked ~ .sideBar label[id='label3']
+    {
+        background: darkgreen;
+    }
+
+    input[id='check1']:checked ~ .allCats .whiteCat
+    {
+        display: none;
+    }
+
+    input[id='check2']:checked ~ .allCats .orangeCat
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px)
+{
+    .sideBar
+    {
+        display: none;
+    }
+
+    .blockCat
+    {
+        width: 320px;
+        height: 440px;
+    }
+
+    .smartInfo
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smartInfo > .catImg
+    {
+        flex-direction: column;
+        border: 2px solid gray;
+        width: 96%;
+        height: 80%;
+        margin: 0 auto;
+
+    }
+
+    .description
+    {
+        display: none;
+    }
+
+    footer
+    {
+        height: 50px;
+        align-items: flex-end;
+    }
+
+    footer .footer_left
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stick
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    .catContent
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .blockCat
+    {
+        width: 520px;
+        height: 490px;
+        display: block;
+        text-align: center;
+
+    }
+
+    .smartInfo
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smartInfo > .catImg
+    {
+        flex-direction: column;
+        border: 2px solid gray;
+        width: 96%;
+        height: 80%;
+        margin: 0 auto;
+
+    }
+
+    .description
+    {
+        display: none;
+    }
+
+    footer
+    {
+        height: 50px;
+        display: block;
+    }
+
+    footer .footer_left
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .footer_right
+    {
+        margin-left: 15px;
+    }
+
+    .stick
+    {
+        display: block;
+    }
+}
