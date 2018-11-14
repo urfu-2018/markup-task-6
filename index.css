@@ -1,0 +1,152 @@
+html,
+body,
+hr,
+p
+{
+    margin: 0;
+}
+
+.header
+{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-family: PT SansNarrow, serif;
+    font-size: 32px;
+    text-align: center;
+    background-color: white;
+}
+
+.header::first-letter
+{
+    color: red;
+}
+
+.main
+{
+    margin: 50px 10px 80px;
+}
+
+.cat-settings .age::before
+{
+    content: 'Возраст: ';
+}
+
+.cat-settings .breed::before
+{
+    content: 'Порода: ';
+}
+
+.cat-settings .diseases::before
+{
+    content: 'Болезни: ';
+}
+
+.cat-settings .status::before
+{
+    content: 'Статус: ';
+}
+
+.cat-settings .status
+{
+    margin-top: 20px;
+}
+
+.cat-settings .description
+{
+    display: none;
+}
+
+.cat-box
+{
+    border: 1px grey solid;
+}
+
+.cat-settings-wrapper
+{
+    margin: 10px;
+}
+
+.footer
+{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    font-family: Arial, serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.footer-inner
+{
+    margin: 10px;
+}
+
+.footer p
+{
+    margin: 2px;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+}
+
+@media all and (min-width: 375px ) and (max-width: 730px)
+{
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cat-box
+    {
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .cat-image
+    {
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 730px ) and (max-width: 1200px)
+{
+    .container
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .cat-box
+    {
+        margin-bottom: 20px;
+        max-width: 350px;
+    }
+
+    .cat-image
+    {
+        width: 100%;
+    }
+
+    .footer .right-side
+    {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: inherit;
+    }
+
+    .footer .left-side
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: inherit;
+    }
+}
