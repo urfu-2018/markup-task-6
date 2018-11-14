@@ -32,6 +32,13 @@ html
 {
     width: 100%;
     flex: 1;
+
+    display: flex;
+}
+
+.cats
+{
+    flex-grow: 1;
 }
 
 .footer
@@ -53,6 +60,31 @@ html
 a
 {
     text-decoration: none;
+}
+
+.filters
+{
+    display: none;
+}
+
+.cat
+{
+    margin: 5px;
+    border: 1px solid lightgray;
+    font-family: Arial, serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.cat-name
+{
+    font-size: 16px;
+    color: black;
+}
+
+.cat:hover
+{
+    box-shadow: 0 0 10px black;
 }
 
 /*min: 375px*/
@@ -114,8 +146,22 @@ a
 
 @media (min-width: 1200px)
 {
+    .title
+    {
+        position: fixed;
+        background: white;
+    }
+
+    .main
+    {
+        margin-top: 45px;
+    }
+
     .footer
     {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         justify-content: space-between;
         align-items: baseline;
     }
@@ -147,4 +193,85 @@ a
         position: relative;
         left: 8px;
     }
+
+    .copyright
+    {
+        margin-right: 25px;
+    }
+
+    .filters
+    {
+        display: flex;
+        flex-direction: column;
+        color: gray;
+        font-family: Arial, serif;
+        padding: 0 25px;
+    }
+
+    .cats
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 25px;
+    }
+
+    .cat
+    {
+        width: 450px;
+        height: 300px;
+    }
+
+    .cat img
+    {
+        height: 130px;
+        margin-right: 20px;
+    }
+
+    .cat-main-info
+    {
+        border-bottom: 1px solid lightgray;
+        padding: 10px;
+        display: flex;
+    }
+
+    .cat-additional-info
+    {
+        display: block;
+        padding: 10px;
+    }
+
+    .species-label
+    {
+        background: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        width: available;
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    input[id='species-1']:checked ~ .filters .species-label[for='species-1'],
+    input[id='species-2']:checked ~ .filters .species-label[for='species-2'],
+    input[id='species-3']:checked ~ .filters .species-label[for='species-3'],
+    input[id='species-all']:checked ~ .filters .species-label[for='species-all']
+    {
+        border-color: green;
+        background: #d8f8c7;
+    }
+
+    input[id='species-1']:checked ~ .cats .species-2,
+    input[id='species-1']:checked ~ .cats .species-3,
+    input[id='species-2']:checked ~ .cats .species-1,
+    input[id='species-2']:checked ~ .cats .species-3,
+    input[id='species-3']:checked ~ .cats .species-1,
+    input[id='species-3']:checked ~ .cats .species-2
+    {
+        display: none;
+    }
+}
+
+.display-none
+{
+    display: none;
 }
