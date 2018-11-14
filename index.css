@@ -8,6 +8,20 @@ body
     margin: 0;
 }
 
+input
+{
+    display: none;
+}
+
+.market
+{
+    display: grid;
+    grid-template: 'header header' 60px
+    'card-container filter-container' auto
+    'footer footer' auto
+        / auto 20%;
+}
+
 .shop-title
 {
     width: 100%;
@@ -45,14 +59,6 @@ body
     flex-flow: row wrap;
 }
 
-.card img
-{
-    width: 220px;
-    height: 145px;
-    margin: 10px;
-    vertical-align: top;
-}
-
 .card:hover
 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
@@ -65,6 +71,14 @@ body
     flex-flow: row;
     border-bottom: 1px solid #e7e7e7;
     width: 100%;
+}
+
+.cat-info img
+{
+    width: 220px;
+    height: 145px;
+    margin: 10px;
+    vertical-align: top;
 }
 
 .cat-info h2
@@ -136,6 +150,13 @@ body
     font: 300 25px 'Roboto', sans-serif;
 }
 
+.filter > span
+{
+    margin: 0 0 30px;
+    color: #939393;
+    font: 400 14px 'Roboto', sans-serif;
+}
+
 .slider
 {
     height: 2px;
@@ -178,12 +199,13 @@ body
     top: -8px;
 }
 
-.filter > span
+.filter-breed
 {
-    margin: 0 0 30px;
-    color: #939393;
-    font: 400 14px 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 .contact-us
 {
@@ -192,13 +214,33 @@ body
     height: 60px;
 }
 
-.market
+.filter-breed label
 {
-    display: grid;
-    grid-template: 'header header' 60px
-        'card-container filter-container' auto
-        'footer footer' auto
-        / auto 20%;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    font: 14px 'Roboto', sans-serif;
+    line-height: .5em;
+    color: #575656;
+    padding: 20px;
+    margin: 5px 20px 5px 0;
+}
+
+.filter-breed label:hover
+{
+    cursor: pointer;
+}
+
+input:checked[id='breed-1'] ~ main aside label[for='breed-1'],
+input:checked[id='all-breed'] ~ main aside label[for='all-breed'],
+input:checked[id='no-breed'] ~ main aside label[for='no-breed']
+{
+    background: #E9FFD0;
+}
+
+input:checked[id='breed-1'] ~ main section > article:not(.breed-1),
+input:checked[id='no-breed'] ~ main section > article:not(.no-breed)
+{
+    display: none;
 }
 
 @media screen and (min-width: 375px) and (max-width: 730px)
