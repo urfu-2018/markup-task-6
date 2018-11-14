@@ -1,0 +1,376 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.cat-photo
+{
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+figure
+{
+    margin: 0;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.char-switch
+{
+    display: none;
+}
+
+.header-title
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow';
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px grey solid;
+    z-index: 5;
+}
+
+.header-title:first-letter
+{
+    color: #f00;
+}
+
+.cats
+{
+    padding: 10px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat
+{
+    width: 400px;
+    height: 450px;
+    box-shadow: 0 4px 29px 0 rgba(0,0,0,.4);
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-discription
+{
+    padding: 10px;
+}
+
+.cat-name
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.shortinfo
+{
+    color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-status
+{
+    display: block;
+    margin-top: 15px;
+}
+
+.cat-discription span:hover
+{
+    font-style: oblique;
+}
+
+.cat-additional
+{
+    display: none;
+    padding: 10px;
+    border-top: 1px grey solid;
+    color: grey;
+}
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: Arial;
+    padding: 20px;
+    border-top: 1px grey solid;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+}
+
+.contacts .far
+{
+    margin-right: 5px;
+}
+
+.contacts-title
+{
+    color: grey;
+}
+
+.contacts-copy
+{
+    display: block;
+    margin-top: 10px;
+}
+
+.contacts .contacts-title .far
+{
+    color: black;
+    display: none;
+}
+
+.cats-filter
+{
+    display: none;
+    padding: 20px;
+}
+
+.filter-title
+{
+    font-weight: normal;
+}
+
+.character
+{
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.character
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input[id='funny']:checked ~ .main .character[for='funny'],
+input[id='silly']:checked ~ .main .character[for='silly'],
+input[id='sad']:checked ~ .main .character[for='sad'],
+input[id='all']:checked ~ .main .character[for='all']
+{
+    border-color: green;
+    background: greenyellow;
+}
+
+input[id='all']:checked ~ .main .cat
+{
+    display: flex;
+}
+
+input[id='all']:not(:checked) ~ .main .cat
+{
+    display: none;
+}
+
+input[id='funny']:checked ~ .main .funny
+{
+    display: flex;
+}
+
+input[id='silly']:checked ~ .main .silly
+{
+    display: flex;
+}
+
+input[id='sad']:checked ~ .main .sad
+{
+    display: flex;
+}
+
+.slider
+{
+    height: 2px;
+    width: 225px;
+    position: relative;
+    margin: 30px 0;
+    background: #e7e7e7;
+}
+
+.slider .bar
+{
+    position: absolute;
+    left: 50px;
+    width: 80px;
+    background: #77a4f1;
+    height: 100%;
+}
+
+.slider .bar .lp,
+.slider .bar .rp
+{
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.slider .bar .lp
+{
+    left: 0;
+    top: -8px;
+}
+
+.slider .bar .rp
+{
+    left: 100%;
+    top: -8px;
+}
+
+@media screen and (min-width: 730px)
+{
+    .cats
+    {
+        flex-flow: row wrap;
+    }
+
+    .cat
+    {
+        width: 300px;
+    }
+
+    .footer
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contacts-copy
+    {
+        align-self: flex-end;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .footer
+    {
+        padding: 10px 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contacts li
+    {
+        margin-right: 30px;
+    }
+
+    .contacts-copy
+    {
+        margin-left: auto;
+    }
+
+    .contacts li:nth-child(3)
+    {
+        list-style-type: disc;
+    }
+
+    .contacts .contacts-title
+    {
+        display: flex;
+    }
+
+    .contacts .contacts-title .far
+    {
+        display: block;
+    }
+
+    .contacts li .far
+    {
+        display: none;
+    }
+
+    .main
+    {
+        display: flex;
+        align-self: flex-start;
+        margin-bottom: auto;
+        box-sizing: border-box;
+    }
+
+    .cats-filter
+    {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .cats
+    {
+        flex: 5;
+    }
+
+    .cat
+    {
+        width: 530px;
+    }
+
+    .cat-main
+    {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .cat-photo
+    {
+        width: 300px;
+    }
+
+    .cat-additional
+    {
+        display: block;
+    }
+
+    .cat-discription
+    {
+        margin-left: 15px;
+    }
+}
