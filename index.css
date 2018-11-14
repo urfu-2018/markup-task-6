@@ -1,0 +1,40 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(fonts/ptsansnarrow.woff2) format('woff2'), url(fonts/ptsansnarrow.woff) format('woff'), url(fonts/ptsansnarrow.ttf) format('truetype');
+    font-style: normal;
+}
+
+html,
+body
+{
+    margin: 0;
+}
+
+.header
+{
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.header .store-name
+{
+    margin: 0;
+    padding: 10px 0;
+    font: 32px 'PT Sans Narrow', sans-serif;
+}
+
+.header .store-name::first-letter
+{
+    color: #f00;
+}
+
+@media screen and (min-width: 730px)    
+{
+    body
+    {
+        background: red;
+    }
+}
