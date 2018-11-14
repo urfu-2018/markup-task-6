@@ -173,16 +173,34 @@ body
     text-decoration: none;
 }
 
-
 .email1::before,
 .email2::before
 {
     content: '✉ ';
 }
 
+.right
+{
+    text-align: right;
+    padding-right: 20px;
+}
+
 .copy
 {
     grid-area: copy;
+}
+
+@media only screen and (max-width: 730px)
+{
+    .right
+    {
+        text-align: left;
+    }
+
+    .grid
+    {
+        max-width: 380px;
+    }
 }
 
 @media only screen and (min-width: 731px) and (max-width: 1200px)
@@ -198,12 +216,6 @@ body
                        'email1 .' auto 
                        'email2 copy' auto
                        / auto 1fr;
-    }
-
-    .right
-    {
-        text-align: right;
-        padding-right: 20px;
     }
 }
 
@@ -241,11 +253,5 @@ body
     .email2::before
     {
         content: '';
-    }
-
-    .right
-    {
-        text-align: right;
-        padding-right: 20px;
     }
 }
