@@ -54,6 +54,7 @@ footer
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     padding: .5% 0;
     transition: all .5s;
+    line-height: 150%;
 }
 
 footer div
@@ -295,6 +296,7 @@ label
     .allcats
     {
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     main
