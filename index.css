@@ -1,0 +1,360 @@
+header
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: white;
+    z-index: 1;
+}
+
+header div
+{
+    flex-grow: 1;
+    font-size: 32px;
+}
+
+header div::first-letter
+{
+    color: red;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+footer
+{
+    width: 100%;
+    background: white;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer a 
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+div.contacts
+{
+    left: 0;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+div.contacts > a::before
+{
+    content: '\2709\2002';
+    color: black;
+}
+
+div.cats
+{
+    border: 1px solid black;
+    display: grid;
+}
+
+h1
+{
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.cats a
+{
+    text-decoration: none;
+    color: black;
+}
+
+p
+{
+    color: gray;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+main > input
+{
+    display: none;
+}
+
+.img
+{
+    background-position: top;
+}
+
+.img_1
+{
+    background: url('https://look.com.ua/pic/201604/1280x960/look.com.ua-160849.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_2
+{
+    background: url('https://mobimg.b-cdn.net/pic/v2/gallery/preview/koshki-zhivotnye-17795.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_3
+{
+    background: url('http://www.pet4me.ru/sites/default/files/imagecache/1000x667/5748_original.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_4
+{
+    background: url('https://www.lovecat.in.ua/wp-content/uploads/2016/03/1234118535_68935_poster2000.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_5
+{
+    background: url('http://oboi.cc/1366-768-100-uploads/new/big/oboik.ru_6242.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_6
+{
+    background: url('https://cs8.pikabu.ru/post_img/2017/12/04/6/og_og_151237985429382235.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_7
+{
+    background: url('http://os1.i.ua/3/1/9181811_61ebd9a6.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_8
+{
+    background: url('https://s1.1zoom.ru/big3/481/352969-admin.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_9
+{
+    background: url('https://mobimg.b-cdn.net/pic/v2/gallery/preview/koshki-zhivotnye-24136.jpg') no-repeat;
+    background-size: cover;
+}
+
+.img_10
+{
+    background: url('http://www.wallpage.ru/imgbig/wallpapers_37950.jpg') no-repeat;
+    background-size: cover;
+}
+
+.panel
+{
+    display: none;
+}
+
+div.cat_info
+{
+    display: none;
+}
+
+label
+{
+    text-align: center;
+    margin: 2px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 730px)
+{
+    main
+    {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    
+    div.cats
+    {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .img
+    {
+        background: white;
+    }
+}
+
+@media screen and (min-width: 731px) and (max-width: 1200px)
+{
+    img
+    {
+        display: none;
+    }
+    
+    main
+    {
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr;
+        grid-gap: 1.5%;
+        margin-top: 50px;
+        margin-bottom: 160px;
+    }
+    
+    div.cats
+    {
+        display: grid;
+        grid-template: 1fr 1fr/1fr;
+    }
+    
+    footer > div.nameCompany
+    {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 5px;
+    }
+    
+}
+
+@media screen and (min-width: 1201px)
+{
+    main
+    {
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr 1fr/2fr 2fr 1fr;
+        grid-template-areas: '. . panel' '. . panel'
+            '. . panel' '. . panel' '. . panel';
+        grid-gap: 1%;
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
+    
+    footer
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    div.contacts
+    {
+        display: flex;
+    }
+    
+    div.contacts::before
+    {
+        content: '\2709\2002';
+        color: black;
+    }
+    
+    div.contacts a::before
+    {
+        content: '\2002';
+    }
+    
+    div.contacts a::after
+    {
+        content: '\2002';
+    }
+    
+    div.contacts a:nth-last-child(1)::before
+    {
+        content: '\25CF\2002';
+    }
+    
+    img
+    {
+        display: none;
+    }
+    
+    .panel
+    {
+        display: block;
+        grid-area: panel;
+    }
+    
+    div.cats
+    {
+        display: none;
+        grid-row-gap: 1%;
+        grid-template: 1fr 1px 1fr/1fr 1fr;
+    }
+    
+    div[class^='img']
+    {
+        margin: 2%;
+    }
+    
+    div.line
+    {
+        grid-column: 1/3;
+        background: black;
+    }
+    
+    div.cat_info
+    {
+        display: block;
+        grid-column: 1/3;
+        margin: 2%;
+    }
+    
+    input[type='range']
+    {
+        -webkit-appearance: none;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track
+    {
+        border-radius: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        background-color: #ccc;
+    }
+    
+    input[type='range']::-webkit-slider-thumb
+    {
+        -webkit-appearance: none;
+        background: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid black;
+        cursor: pointer;
+        margin-top: -5px;
+    }
+    
+    input[id='all']:checked ~ aside nav label[for='all'],
+    input[id='breed_1']:checked ~ aside nav label[for='breed_1'],
+    input[id='breed_2']:checked ~ aside nav label[for='breed_2'],
+    input[id='breed_3']:checked ~ aside nav label[for='breed_3'],
+    input[id='no_breed']:checked ~ aside nav label[for='no_breed']
+    {
+        background: green;
+        border-radius: 10px;
+    }
+    
+    input[id='all']:checked ~ .cats,
+    input[id='breed_1']:checked ~ .breed_1,
+    input[id='breed_2']:checked ~ .breed_2,
+    input[id='breed_3']:checked ~ .breed_3,
+    input[id='no_breed']:checked ~ .no_breed
+    {
+        display: grid;
+    }
+
+    nav
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
