@@ -1,0 +1,117 @@
+/* stylelint-disable selector-max-id  */
+
+.title-text::first-letter
+{
+    color: rgb(255, 0, 0);
+}
+
+.title-text
+{
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+}
+
+.top-bar
+{
+    padding: 10px 0;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
+    /* margin-bottom: 20px; */
+    grid-column: span 2;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+body
+{
+    display: grid;
+    font-family: 'PT Sans Narrow', sans-serif;
+    grid-template-columns: 1fr, 1fr;
+    grid-gap: 10px;
+    background-color: rgb(237, 238, 240);
+    margin: 0;
+}
+
+.cat-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin: 5px;
+    
+
+}
+
+
+.cat-card
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    grid-gap: 5px;
+}
+
+.cat-photo
+{
+    width: 100%;
+}
+
+.cat-name
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cat-age,
+.cat-race,
+.cat-diseases 
+{
+    margin: 0;
+}
+
+.cat-name
+{
+    margin-bottom: 10px;
+}
+
+.cat-status
+{
+    margin-top: 10px;
+}
+
+/* Aside */
+.right-panel
+{
+    margin: 5px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.filter
+{
+    font-size: 20px;
+}
+
+.filter-head
+{
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.filter label
+{
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.16);
+    display: block;
+    padding: 7px;
+    margin-bottom: -12px;
+    ma
+
+}
+input
+{   
+    display: none;
+}
