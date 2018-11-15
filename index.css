@@ -1,0 +1,54 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: 'a b' 'c c' 200px / 4fr 1fr ;
+}
+
+/*Header*/
+
+header
+{
+    border-bottom: 1px solid gray;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    /*grid-area: a;*/
+    position: fixed;
+    width: 100%;
+}
+
+header h1
+{
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+header h1:first-letter
+{
+    color: red;
+}
+
+/*Main*/
+
+.cat_container
+{
+    min-height: calc(100vh - 200px);
+    grid-area: a;
+}
+
+.settings_container
+{
+    min-height: calc(100vh - 200px);
+}
+/*Footer*/
+
+footer
+{
+    display: flex;
+    grid-area: c;
+    border-top: 1px solid gray;
+}
