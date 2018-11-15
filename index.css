@@ -5,6 +5,7 @@ body
 
 .market-header
 {
+    height: 60px;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -25,8 +26,11 @@ body
 
 .market-footer
 {
+    margin-bottom: 0;
+    height: 130px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #d3d3d3;
     font-size: 24px;
     font-family: 'Arial', sans-serif;
@@ -35,7 +39,8 @@ body
 
 .market-footer .trademark
 {
-    padding: 20px 0 10px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .market-footer .simple-ref
@@ -44,15 +49,11 @@ body
     text-decoration: initial;
 }
 
-.main-wrapper
+.main-block
 {
     width: 100%;
     margin-top: 80px;
-    min-height: calc(100vh - 80px);
-}
-
-.main-block
-{
+    min-height: calc(100vh - 235px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,22 +64,23 @@ body
     width: 80%;
     border: 1px solid #d3d3d3;
     text-align: center;
-    margin: 10px 0;
+    overflow: hidden;
+    margin: 10px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 60% 1fr;
 }
 
 .cat-card img
 {
     width: 100%;
-    height: auto;
-    max-height: 40%;
+    height: 100%;
     margin: 0 auto;
     object-fit: cover;
 }
 
 .cat-name
 {
-    font-size: 45px;
-    line-height: 40px;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -95,7 +97,7 @@ body
     padding: 0 5% 5%;
     text-align: left;
     text-overflow: ellipsis;
-    font-size: .7em;
+    font-size: 15px;
 }
 
 .cat-name a:hover
@@ -114,23 +116,19 @@ body
 {
     .main-block
     {
-        align-content: space-around;
-        background: yellow;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-column-gap: 10px;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 
-    .cat-card img
-    {
-        display: block;
-    }
     .cat-card
     {
-        width: 300px;
-
-        margin: 10px 0;
+        flex-basis: 30%;
     }
 
+    .market-footer
+    {
+        height: 80px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
