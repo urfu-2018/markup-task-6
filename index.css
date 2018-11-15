@@ -3,6 +3,7 @@
     font-family: Schoen;
     src: url('Eskal Font4You.ttf');
 }
+
  h1
 {
     flex-basis: 100%;
@@ -17,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
  img
 {
     width: 90%;
@@ -28,14 +30,16 @@
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
 }
- img:not([class='list']):hover
+
+img:not([class='list']):hover
 {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
- .cat-block
+
+.cat-block
 {
     margin: 30px;
     width: 500px;
@@ -48,7 +52,8 @@
     grid-template: 'a b'
         'c c' / 50%;
 }
- .cat-name
+
+.cat-name
 {
     width: 90%;
     overflow: hidden;
@@ -65,11 +70,13 @@
     letter-spacing: 2px;
     display: block;
 }
+
  .cat-name:hover
 {
     text-shadow: 2px 2px 5px #88bdf1;
 }
- .short-info
+
+.short-info
 {
     margin: 10px;
     font-family: Arial, sans-serif;
@@ -81,7 +88,8 @@
     text-align: left;
     font-size: 16px;
 }
- .big-info
+
+.big-info
 {
     grid-column: span 2;
     border-top: .5px solid #ebe7d7;
