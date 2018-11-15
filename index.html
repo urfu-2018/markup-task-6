@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
     <title>Задача «Мурмаркет для всех»</title>
 </head>
@@ -11,16 +12,16 @@
     </header>
     <div class="header-spacer"></div>
 
-    <input class="filter-input" type="radio" name="filter" id="nothing" checked>
-    <input class="filter-input" type="radio" name="filter" id="siamese">
-    <input class="filter-input" type="radio" name="filter" id="rusiian-blue">
-    <input class="filter-input" type="radio" name="filter" id="persian">
-    <input class="filter-input" type="radio" name="filter" id="alley">
-    <input class="filter-input" type="radio" name="filter" id="munchkin">
-    <input class="filter-input" type="radio" name="filter" id="maine-coon">
-    <input class="filter-input" type="radio" name="filter" id="burmese">
-    <input class="filter-input" type="radio" name="filter" id="british-shorthair">
-    <input class="filter-input" type="radio" name="filter" id="bengal">
+    <input class="filter-input radio-breed-no" type="radio" name="filter" id="nothing" checked>
+    <input class="filter-input radio-breed-siamese" type="radio" name="filter" id="siamese">
+    <input class="filter-input radio-breed-russian-blue" type="radio" name="filter" id="russian-blue">
+    <input class="filter-input radio-breed-persian" type="radio" name="filter" id="persian">
+    <input class="filter-input radio-breed-alley" type="radio" name="filter" id="alley">
+    <input class="filter-input radio-breed-munchkin" type="radio" name="filter" id="munchkin">
+    <input class="filter-input radio-breed-maine-coon" type="radio" name="filter" id="maine-coon">
+    <input class="filter-input radio-breed-burmese" type="radio" name="filter" id="burmese">
+    <input class="filter-input radio-breed-british" type="radio" name="filter" id="british-shorthair">
+    <input class="filter-input radio-breed-bengal" type="radio" name="filter" id="bengal">
 
     <article class="cats-shop">
         <aside class="filter">
@@ -38,13 +39,13 @@
                     <label class="filter-breed-element" for="maine-coon">Мэйн-Кун</label>
                     <label class="filter-breed-element" for="munchkin">Манчкин</label>
                     <label class="filter-breed-element" for="persian">Персидская</label>
-                    <label class="filter-breed-element" for="rusiian-blue">Русская Голубая</label>
+                    <label class="filter-breed-element" for="russian-blue">Русская Голубая</label>
                     <label class="filter-breed-element" for="siamese">Сиамская</label>
                 </div>
             </section>
         </aside>
         <article class="cats">
-            <article class="cat">
+            <article class="cat british-breed">
                 <img class="cat-img" src="imgs/British-Shorthair.jpg" alt="Британская Короткошерстная">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Олимпия</a></h2>
@@ -61,7 +62,7 @@
                     С другими котами дружит, любит играть, но не лежит на коленках.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat bengal-breed">
                 <img class="cat-img" src="imgs/Bengal.jpg" alt="Бенгальская">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Пуффи</a></h2>
@@ -78,7 +79,7 @@
                     Остальные коты смотрят на нее как на Иисуса.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat maine-coon-breed">
                 <img class="cat-img" src="imgs/Maine-Coon.jpg" alt="Мейн Кун">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Перат</a></h2>
@@ -95,7 +96,7 @@
                     Просто у предыдущего хозяина было плохо с орфографией.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat alley-breed">
                 <img class="cat-img" src="imgs/Alley.jpg" alt="Дворовой">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Рыжик</a></h2>
@@ -112,7 +113,7 @@
                     Принес мне мышку после того, как я его покормил. Поэтому и взяли домой.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat burmese-breed">
                 <img class="cat-img" src="imgs/Burmese.jpg" alt="Бирманский">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Одри</a></h2>
@@ -129,7 +130,7 @@
                     Если знаете, что готовы к нему - вы подходите друг другу.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat siamese-breed">
                 <img class="cat-img" src="imgs/Siamese.jpg" alt="Cиамский">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Йошка</a></h2>
@@ -146,7 +147,7 @@
                     Кот немного надрессирован, умеет стоят на задних лапах.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat munchkin-breed">
                 <img class="cat-img" src="imgs/Munchkin.jpg" alt="Манчкин">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Пуша</a></h2>
@@ -163,7 +164,7 @@
                     Любите спокойно сидеть у камина? Он точно ваш вариант!
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat persian-breed">
                 <img class="cat-img" src="imgs/Persian.jpg" alt="Персидский">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Риччи</a></h2>
@@ -180,7 +181,7 @@
                     Он никуда, без своего брата Малибу.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat persian-breed">
                 <img class="cat-img" src="imgs/Persian2.jpg" alt="Персидский">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Малибу</a></h2>
@@ -197,7 +198,7 @@
                     Хоть он часто достает своего брата Риччи, они друг без друга не могут.
                 </p>
             </article>
-            <article class="cat">
+            <article class="cat russian-blue-breed">
                 <img class="cat-img" src="imgs/Russian-Blue.jpg" alt="Русская Голубая">
                 <section class="cat-info">
                     <h2 class="cat-name"><a href="https://www.ya.ru">Семми</a></h2>
