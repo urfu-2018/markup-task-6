@@ -11,8 +11,10 @@
 }
 
 .header,
+.wrapper,
 .footer
 {
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -28,6 +30,7 @@
     justify-content: center;
 
     margin-bottom: 4px;
+    border-bottom: 1px solid #949494;
 }
 
 .mur_market
@@ -41,9 +44,7 @@
     color: #f00;
 }
 
-.header,
-.cat,
-.footer
+.cat
 {
     border: 1px solid #949494;
 }
@@ -121,6 +122,8 @@
 {
     display: flex;
     flex-direction: column;
+
+    border-top: 1px solid #949494;
 }
 
 .footer ul,
