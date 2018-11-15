@@ -246,9 +246,14 @@ section.wrapper
     border-radius: 5px;
 }
 
-.breed li label:checked
+.breeds li label:hover
 {
-    background-color: lightgreen;
+    background-color: rgba(152, 251, 152, .5);
+}
+
+.breeds li label:checked
+{
+    background-color: palegreen;
     border-color: springgreen;
 }
 
@@ -256,6 +261,7 @@ section.wrapper
 {
     -webkit-appearance: none;
     background: none;
+    width: 100%;
 }
   
 .slider input[type='range']::-webkit-slider-runnable-track
