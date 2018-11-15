@@ -3,7 +3,112 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header class="header">
+    Мурмаркет
+</header>
+<main class="main">
+    <input type="radio" id="filter-breed-1" name="carousel" hidden>
+    <input type="radio" id="filter-breed-2" name="carousel" hidden>
+    <section class="filter">
+        <label class="filter__age">Возраст
+            <input type="range" min="1" max="100" value="50" class="filter__age__slider">
+        </label>
+        <div class="filter__breed">Порода
+            <div>
+                <label class="filter__breed__label" for="filter-breed-1">A</label>
+                <label class="filter__breed__label" for="filter-breed-2">B</label>
+            </div>
+        </div>
+    </section>
+    <section class="cats">
+        <article class="main__cat breed-1">
+            <img class="main__cat__img" src="Img/Шокер.jpg" alt="Шокер">
+            <div class="main__cat__info">
+                <h2 class="main__cat__info__name">Шокер</h2>
+                <div class="main__cat__info__age">1 год</div>
+                <div class="main__cat__info__breed">A</div>
+                <div class="main__cat__info__disease">нет</div>
+                <p class="main__cat__info__status">нашел хозяина</p>
+            </div>
+            <div class="main__cat__additional">
+                <p>Любит ковры и статическое электричество...</p>
+                <p>Сам устанавливает правила в ЕГО доме.</p>
+            </div>
+        </article>
+
+        <article class="main__cat breed-1">
+            <img class="main__cat__img" src="Img/Антонио.png" alt="Антонио">
+            <div class="main__cat__info">
+                <h2 class="main__cat__info__name">Антонио</h2>
+                <div class="main__cat__info__age">5 месяцев</div>
+                <div class="main__cat__info__breed">A</div>
+                <div class="main__cat__info__disease">глазоухость</div>
+                <p class="main__cat__info__status">ищет хозяина</p>
+            </div>
+            <div class="main__cat__additional">
+                <p>Хороший кот, и глаза красивые</p>
+                <p>Спокоен, ест что найдет.</p>
+            </div>
+        </article>
+        <article class="main__cat breed-2">
+            <img class="main__cat__img" src="Img/Майкл.jpg" alt="Майкл">
+            <div class="main__cat__info">
+                <h2 class="main__cat__info__name">Майкл</h2>
+                <div class="main__cat__info__age">1 год</div>
+                <div class="main__cat__info__breed">B</div>
+                <div class="main__cat__info__disease">нет</div>
+                <p class="main__cat__info__status">ищет хозяина</p>
+            </div>
+            <div class="main__cat__additional">
+                <p>Позитивный кот для веселых компаний</p>
+            </div>
+        </article>
+
+        <article class="main__cat breed-1">
+            <img class="main__cat__img" src="Img/Михаэль.png" alt="Михаэль">
+            <div class="main__cat__info">
+                <h2 class="main__cat__info__name">Михаэль</h2>
+                <div class="main__cat__info__age">2 года</div>
+                <div class="main__cat__info__breed">A</div>
+                <div class="main__cat__info__disease">нет</div>
+                <p class="main__cat__info__status">нашел хозяина</p>
+            </div>
+            <div class="main__cat__additional">
+                <p>Прикольный дворовый</p>
+                <p>Любит сюрпризы и подарки в виде рыбы</p>
+            </div>
+        </article>
+
+        <article class="main__cat breed-2">
+            <img class="main__cat__img" src="Img/Дэрп.jpg" alt="Дэрп">
+            <div class="main__cat__info">
+                <h2 class="main__cat__info__name">Дэрп</h2>
+                <div class="main__cat__info__age">1 год</div>
+                <div class="main__cat__info__breed">B</div>
+                <div class="main__cat__info__disease">нет</div>
+                <p class="main__cat__info__status">ищет хозяина</p>
+            </div>
+            <div class="main__cat__additional">
+                <p>Хороший игривый рыжий кот</p>
+                <p>Любит бегать по ночам</p>
+            </div>
+        </article>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__div">Напишите нам:</div>
+        <div class="footer__div"><a class="footer__a" href="#">cats@babuli.ru</a></div>
+        <div class="footer__div"><a class="footer__a" href="#">vnuchek@babuli.ru</a></div>
+    </div>
+    <div class="footer__right">
+        <div class="footer__div">
+            © 2018 ООО &laquo;<a class="footer__a" href="#">Бабушкины котятки</a>&raquo;
+        </div>
+    </div>
+</footer>
 </body>
 </html>
