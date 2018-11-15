@@ -1,0 +1,308 @@
+@font-face
+{
+    font-family: 'PT-Sans-Narrow';
+    src: url('font/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    font-family: 'PT-Sans-Narrow';
+    margin: 0;
+    color: #6e6e6e;
+}
+
+header
+{
+    min-height: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+}
+
+.head-title
+{
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: normal;
+}
+
+.head-title::first-letter
+{
+    color: #ef574c;
+}
+
+.cards-layout
+{
+    display: flex;
+    flex-flow: wrap column;
+}
+
+.card-block
+{
+    flex-basis: 80%;
+    max-width: 90%;
+    margin: 10px auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.card-block:first-child
+{
+    margin-top: 20px;
+}
+
+.card-block:last-child
+{
+    margin-bottom: 20px;
+}
+
+.info-block
+{
+    padding: 20px;
+    display: block;
+}
+
+.title-name
+{
+    margin: 0;
+    font-weight: normal;
+    color: #2e2e2e;
+    margin-bottom: 10px;
+}
+
+.info
+{
+    margin: 0;
+}
+
+.info:last-child
+{
+    margin-top: 10px;
+}
+
+.more-info
+{
+    display: none;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.img-block
+{
+    display: block;
+}
+
+.img-block img
+{
+    width: 100%;
+    max-width: 600px;
+}
+
+.filter-layout
+{
+    display: none;
+}
+
+input[name='breed']
+{
+    display: none;
+}
+
+footer
+{
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    font: normal normal 14px 'Arial';
+    width: calc(100% - 40px);
+    background: #fff;
+    padding: 20px;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+footer div:first-child a
+{
+    display: block;
+}
+
+@media screen and (min-width: 730px)
+{
+    .cards-layout
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .card-block
+    {
+        flex-basis: 200px;
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .card-block:first-child,
+    .card-block:last-child
+    {
+        margin: 10px 0;
+    }
+
+    footer div:last-child
+    {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    main
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-block
+    {
+        flex-basis: 40%;
+        min-width: 400px;
+    }
+
+    .img-block,
+    .info-block
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px;
+    }
+
+    .img-block
+    {
+        width: 50%;
+    }
+
+    .info-block
+    {
+        width: 30%;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .more-info
+    {
+        display: block;
+    }
+
+    .filter-layout
+    {
+        display: block;
+        min-width: 300px;
+        margin: 20px;
+    }
+
+    h3
+    {
+        font-weight: normal;
+    }
+
+    input[type='range']
+    {
+        -webkit-appearance: none;
+        width: 48%;
+        display: inline-block;
+    }
+
+    input[type='range']::-webkit-slider-thumb
+    {
+        -webkit-appearance: none;
+    }
+
+    input[type='range']::-webkit-slider-thumb
+    {
+        -webkit-appearance: none;
+        border-radius: 10px;
+        height: 20px;
+        width: 20px;
+        background: #fff;
+        cursor: pointer;
+        margin-top: -10px;
+        box-shadow: 0 0 5px #6e6e6e;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track
+    {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+        background: rgba(0, 0, 0, .2);
+    }
+
+    input[type='range']:nth-child(3)
+    {
+        position: relative;
+        left: -10px;
+    }
+
+    input[type='range']:focus
+    {
+        outline: none;
+    }
+
+    .filter-label
+    {
+        display: block;
+        padding: 10px;
+        border: 1px solid #2e2e2e;
+        border-radius: 4px;
+        margin: 10px 0;
+    }
+
+    .sphinx-radio:checked ~ .filter-layout .sphinx,
+    .siberian-radio:checked ~ .filter-layout .siberian,
+    .persian-radio:checked ~ .filter-layout .persian,
+    .siamese-radio:checked ~ .filter-layout .siamese,
+    .abyssinian-radio:checked ~ .filter-layout .abyssinian,
+    .all-radio:checked ~ .filter-layout .all
+    {
+        background: #e7f8d0;
+        border-color: #b0e17e;
+    }
+
+    input[name='breed']:checked ~ .cards-layout .card-block
+    {
+        display: none;
+    }
+
+    .all-radio:checked ~ .cards-layout .card-block
+    {
+        display: block;
+    }
+
+    .sphinx-radio:checked ~ .cards-layout .card-block.sphinx,
+    .siberian-radio:checked ~ .cards-layout .card-block.siberian,
+    .persian-radio:checked ~ .cards-layout .card-block.persian,
+    .siamse-radio:checked ~ .cards-layout .card-block.siamse,
+    .abyssinian-radio:checked ~ .cards-layout .card-block.abyssinian
+    {
+        display: block;
+    }
+
+    footer div
+    {
+        display: inline-block;
+    }
+
+    footer div:first-child a
+    {
+        display: inline;
+    }
+
+    footer div:last-child
+    {
+        position: relative;
+        right: -63%;
+    }
+}

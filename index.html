@@ -3,7 +3,145 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <header>
+        <h1 class="head-title">Мурмаркет</h1>
+    </header>
+    <main>
+        <input type="radio" name="breed" id="sphinx" class="sphinx-radio">
+        <input type="radio" name="breed" id="siberian" class="siberian-radio">
+        <input type="radio" name="breed" id="persian" class="persian-radio">
+        <input type="radio" name="breed" id="siamese" class="siamese-radio">
+        <input type="radio" name="breed" id="abyssinian" class="abyssinian-radio">
+        <input type="radio" name="breed" id="all" class="all-radio" checked>
+        <section class="cards-layout">
+            <article class="card-block siberian">
+                <div class="img-block">
+                    <img src="img/leo.jpg" alt="Leo">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Лео</h2>
+                    <p class="info">Возраст: 3 года</p>
+                    <p class="info">Порода: Сибирская</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: свободен</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+            <article class="card-block abyssinian">
+                <div class="img-block">
+                    <img src="img/arkasha.jpg" alt="Arkasha">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Аркаша</h2>
+                    <p class="info">Возраст: 2 месяца</p>
+                    <p class="info">Порода: Абиссинская</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: занят</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+            <article class="card-block">
+                <div class="img-block">
+                    <img src="img/barsic.jpg" alt="Barsic">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Барсик</h2>
+                    <p class="info">Возраст: 3 года</p>
+                    <p class="info">Порода: Неизвестная</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: свободен</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+            <article class="card-block sphinx">
+                <div class="img-block">
+                    <img src="img/cleopatra.jpg" alt="Cleopatra">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Клеоптра</h2>
+                    <p class="info">Возраст: 3 года</p>
+                    <p class="info">Порода: Сфинкс</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: свободна</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+            <article class="card-block abyssinian">
+                <div class="img-block">
+                    <img src="img/frisya.jpg" alt="Frisya">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Фрися</h2>
+                    <p class="info">Возраст: 3 года</p>
+                    <p class="info">Порода: Абиссинская</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: свободна</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+            <article class="card-block">
+                <div class="img-block">
+                    <img src="img/ivan.jpg" alt="ivan">
+                </div>
+                <div class="info-block">
+                    <h2 class="title-name">Иван</h2>
+                    <p class="info">Возраст: 3 года</p>
+                    <p class="info">Порода: Черный</p>
+                    <p class="info">Болезни: нет</p>
+                    <p class="info">Статус: свободный</p>
+                </div>
+                <div class="more-info">
+                    <p class="info">Дружелюбный</p>
+                    <p class="info">Любит есть и спать</p>
+                </div>
+            </article>
+        </section>
+        <section class="filter-layout">
+            <div class="slider">
+                <h3>Возраст</h3>
+                <input type="range" value="0" min="0" max="10" step="1">
+                <input type="range" value="0" min="0" max="10" step="1">
+                <p>От 2 до 4 лет</p>
+            </div>
+            <div class="breed">
+                <h3>Порода</h3>
+            </div>
+            <label class="filter-label sphinx" for="sphinx">Сфинкс</label>
+            <label class="filter-label siberian" for="siberian">Сибирская</label>
+            <label class="filter-label persian" for="persian">Персидская</label>
+            <label class="filter-label siamese" for="siamese">Сиамская</label>
+            <label class="filter-label abyssinian" for="abyssinian">Абиссинская</label>
+            <label class="filter-label all" for="all">Все</label>
+        </section>
+    </main>
+    <footer>
+        <div>
+            Пишите нам:
+            <a href="#">cats@babuli.ru</a>
+            <a href="#">vnuchek@babuli.ru</a>
+        </div>
+        <div>
+            &#169; 2018 &laquo;<a href="#">Бабушкины котятки</a>&raquo;
+        </div>
+    </footer>
 </body>
 </html>
