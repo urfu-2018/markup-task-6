@@ -1,0 +1,420 @@
+html,
+body
+ {
+    margin: 0;
+    height: 93.5%;
+}
+
+input[type='radio']
+ {
+    display: none;
+}
+
+.filters
+ {
+    display: none;
+}
+
+header
+ {
+    background: white;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    z-index: 100;
+}
+
+h1
+ {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font: 32px PT SansNarrow;
+}
+
+h1::first-letter
+ {
+    color: red;
+}
+
+.card
+ {
+    border: 1px solid gray;
+    width: 80%;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+
+.card:hover
+ {
+    box-shadow: 2px 2px 3px 3px darkslategray;
+}
+
+main
+ {
+    position: relative;
+    top: 10%;
+    min-height: 100%;
+    margin-bottom: -18px;
+}
+
+.cards
+ {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transition-duration: 1000ms;
+}
+
+.full_description
+ {
+    display: none;
+}
+
+.imageholder
+ {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+img
+ {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition-duration: 500ms;
+}
+
+img:hover
+ {
+    transform: scale(1.2);
+    z-index: -1;
+    cursor: pointer;
+}
+
+h4
+ {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-left: 2%;
+}
+
+.brief_description
+ {
+    margin: 2%;
+}
+
+p
+ {
+    margin: .3%;
+}
+
+.name
+ {
+    font-size: 130%;
+    color: gray;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+.name:visited
+ {
+    color: chocolate;
+}
+
+.name:hover
+ {
+    color: brown;
+}
+
+footer
+ {
+    border-top: 1px solid gray;
+    margin-top: 30%;
+    padding: 1%;
+}
+
+.email::before
+ {
+    content: '✉';
+}
+
+aside
+ {
+    margin-top: 5%;
+}
+
+@media screen and (min-width: 730px)
+ {
+    .cards
+ {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card
+ {
+        flex-basis: 31%;
+        height: 450px;
+        margin: 1%;
+    }
+
+    aside
+ {
+        margin-top: 0;
+    }
+
+    footer
+ {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0;
+        margin-top: 10%;
+    }
+
+    .contacts
+ {
+        grid-column: 1;
+    }
+
+    .email[id='1']
+ {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .email[id='2']
+ {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    aside
+ {
+        grid-column: 4;
+        grid-row: 3;
+    }
+}
+
+@media screen and (min-width: 1200px)
+ {
+    main
+ {
+        display: grid;
+        grid-template-columns: 80% auto;
+    }
+
+    .card
+ {
+        flex-basis: 45%;
+        height: 350px;
+        display: grid;
+        grid-template-rows: 20% auto 30%;
+        grid-template-columns: 60% 40%;
+    }
+
+    .imageholder
+ {
+        height: 200px;
+        width: 90%;
+        margin: 5%;
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+
+    h4
+ {
+        display: inline;
+    }
+
+    .brief_description
+ {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .full_description
+ {
+        display: block;
+        border-top: 1px solid gray;
+        grid-row: 3;
+        grid-column: 1 / 3;
+    }
+
+    .full_description > p
+ {
+        margin-left: 2%;
+    }
+
+    .filters
+ {
+        display: block;
+        grid-column: 2;
+        margin-top: 30px;
+    }
+
+    .slidecontainer
+ {
+        width: 100%;
+    }
+
+    .slider
+ {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 69%;
+        height: 3px;
+        background: lightblue;
+        outline: none;
+        opacity: .7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover
+ {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb
+ {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        overflow: hidden;
+        background: lightseagreen;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb
+ {
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        overflow: hidden;
+        background: lightseagreen;
+        cursor: pointer;
+    }
+
+    .age
+ {
+        margin-top: 10px;
+    }
+
+    label
+ {
+        display: block;
+        border: 1px solid gray;
+        padding: 10px;
+        width: 60%;
+        height: 20px;
+        margin: 5px;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition-duration: 500ms;
+    }
+
+    input:checked ~ .cards .card
+ {
+        display: none;
+    }
+
+    input[id='Cute']:checked ~ .cards .card[id='Bony'],
+    input[id='Cute']:checked ~ .cards .card[id='Pushok']
+ {
+        display: grid;
+    }
+
+    input[id='fluffy']:checked ~ .cards .card[id='Rizhik']
+ {
+        display: grid;
+    }
+
+    input[id='evil']:checked ~ .cards .card[id='Luci']
+ {
+        display: grid;
+    }
+
+    input[id='cool']:checked ~ .cards .card[id='long']
+ {
+        display: grid;
+    }
+
+    input[id='no']:checked ~ .cards .card[id='Snezhok'],
+    input[id='no']:checked ~ .cards .card[id='Barsik'],
+    input[id='no']:checked ~ .cards .card[id='Cleo']
+ {
+        display: grid;
+    }
+
+    input[id='rusblue']:checked ~ .cards .card[id='Dimok']
+ {
+        display: grid;
+    }
+
+    input[id='any']:checked ~ .cards .card
+ {
+        display: grid;
+    }
+
+    input[id='Cute']:checked ~ .filters p label[for='Cute'],
+    input[id='fluffy']:checked ~ .filters p label[for='fluffy'],
+    input[id='evil']:checked ~ .filters p label[for='evil'],
+    input[id='rusblue']:checked ~ .filters p label[for='rusblue'],
+    input[id='cool']:checked ~ .filters p label[for='cool'],
+    input[id='no']:checked ~ .filters p label[for='no'],
+    input[id='any']:checked ~ .filters p label[for='any']
+ {
+        background-color: rgba(71, 226, 84, .44);
+        border: 1px solid green;
+    }
+
+    .email::before
+ {
+        content: '';
+    }
+
+    .email[id='1']::after
+ {
+        content: ' •';
+    }
+
+    .email[id='2']
+ {
+        margin-left: 0;
+    }
+
+    .write::before
+ {
+        content: '✉';
+    }
+
+    footer > p
+ {
+        display: inline;
+    }
+
+    footer
+ {
+        padding-top: 5px;
+        display: block;
+        height: 18px;
+    }
+
+    aside
+ {
+        float: right;
+    }
+}
