@@ -6,46 +6,34 @@
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
-    <input type="checkbox" class="breed-selector breed1" id="breed1">
-    <input type="checkbox" class="breed-selector breed2" id="breed2">
-    <input type="checkbox" class="breed-selector breed3" id="breed3">
-    <input type="checkbox" class="breed-selector breed4" id="breed4">
-    <input type="checkbox" class="breed-selector breed5" id="breed5">
-    <input type="checkbox" class="breed-selector no-breed" id="no_breed">
+    <input type="radio" class="breed-selector breed-selector-odd" name="breed" id="breed_odd">
+    <input type="radio" class="breed-selector breed-selector-none" name="breed" id="breed_none">
+    <input type="radio" class="breed-selector breed-selector-all" name="breed" id="breed_all">
     <header class="main-header">
         <h1 class="main-title">Мурмаркет</h1>
     </header>
-    <aside class="property-selector">
+    <aside class="properties">
         <section class="age-selector-box">
             <h2 class="selector-title">Возраст</h2>
             <input class="age-slider" type="range" min="0" step="1" max="20">
         </section>
         <section class="breed-selector-box">
             <h2 class="selector-title">Порода</h2>
-            <label for="breed1" class="breed-button">
-                <span class="breed-name">Милашка</span>
+            <label for="breed_odd" class="breed-button breed-button-odd">
+                <span class="breed-name">Необычные ребята</span>
             </label>
-            <label for="breed2" class="breed-button">
-                <span class="breed-name">Дали</span>
-            </label>
-            <label for="breed3" class="breed-button">
-                <span class="breed-name">Аэродинамичный</span>
-            </label>
-            <label for="breed4" class="breed-button">
-                <span class="breed-name">Какая-то классная</span>
-            </label>
-            <label for="breed5" class="breed-button">
-                <span class="breed-name">Хетфилд</span>
-            </label>
-            <label for="no_breed" class="breed-button">
+            <label for="breed_none" class="breed-button breed-button-none">
                 <span class="breed-name">Нет</span>
+            </label>
+            <label for="breed_all" class="breed-button breed-button-all">
+                <span class="breed-name">Сбросить фильтр</span>
             </label>
         </section>
     </aside>
     <main class="cat-list">
-        <article class="cat-article">
+        <article class="cat-article breed-odd">
             <img class="cat-image" src="cat_images/cat_1.jpg"
-                width="300" height="180" alt="Кот" title="Барсик">
+                width="350" height="210" alt="Кот" title="Барсик">
             <h2 class="cat-name">Барсик</h2>
             <p class="description small-description">
                 Возраст: 4 года<br>
@@ -64,9 +52,9 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-odd">
             <img class="cat-image" src="cat_images/cat_2.jpg"
-                width="300" height="180" alt="Кот" title="Сальвадор">
+                width="350" height="210" alt="Кот" title="Сальвадор">
             <h2 class="cat-name">Сальвадор</h2>
             <p class="description small-description">
                 Возраст: 7 лет<br>
@@ -87,7 +75,7 @@
         </article>
         <article class="cat-article">
             <img class="cat-image" src="cat_images/cat_3.jpg"
-                width="300" height="180" alt="Кот" title="Бульдозер">
+                width="350" height="210" alt="Кот" title="Бульдозер">
             <h2 class="cat-name">Бульдозер</h2>
             <p class="description small-description">
                 Возраст: 5 лет<br>
@@ -108,7 +96,7 @@
         </article>
         <article class="cat-article">
             <img class="cat-image" src="cat_images/cat_4.jpg"
-                width="300" height="180" alt="Кот" title="Джонни">
+                width="350" height="210" alt="Кот" title="Джонни">
             <h2 class="cat-name">Джонни</h2>
             <p class="description small-description">
                 Возраст: 1 год<br>
@@ -127,9 +115,9 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-odd">
             <img class="cat-image" src="cat_images/cat_5.jpg"
-                width="300" height="180" alt="Кот" title="Пушок">
+                width="350" height="210" alt="Кот" title="Пушок">
             <h2 class="cat-name">Пушок</h2>
             <p class="description small-description">
                 Возраст: 3 года<br>
@@ -148,9 +136,9 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-odd">
             <img class="cat-image" src="cat_images/cat_6.jpg"
-                width="300" height="180" alt="Кот" title="Ушастик">
+                width="350" height="210" alt="Кот" title="Ушастик">
             <h2 class="cat-name">Ушастик</h2>
             <p class="description small-description">
                 Возраст: Полгода<br>
@@ -171,7 +159,7 @@
         </article>
         <article class="cat-article">
             <img class="cat-image" src="cat_images/cat_7.jpg"
-                width="300" height="180" alt="Кот" title="Снежок">
+                width="350" height="210" alt="Кот" title="Снежок">
             <h2 class="cat-name">Снежок</h2>
             <p class="description small-description">
                 Возраст: 5 лет<br>
@@ -192,7 +180,7 @@
         </article>
         <article class="cat-article">
             <img class="cat-image" src="cat_images/cat_8.jpg"
-                width="300" height="180" alt="Кот" title="Василий">
+                width="350" height="210" alt="Кот" title="Василий">
             <h2 class="cat-name">Василий</h2>
             <p class="description small-description">
                 Возраст: 10 лет<br>
@@ -213,7 +201,7 @@
         </article>
         <article class="cat-article">
             <img class="cat-image" src="cat_images/cat_9.jpg"
-                width="300" height="180" alt="Кот" title="Иннокентий">
+                width="350" height="210" alt="Кот" title="Иннокентий">
             <h2 class="cat-name">Иннокентий</h2>
             <p class="description small-description">
                 Возраст: 11 лет<br>
@@ -232,9 +220,9 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-odd">
             <img class="cat-image" src="cat_images/cat_10.jpg"
-                width="300" height="180" alt="Кот" title="Джеймс">
+                width="350" height="210" alt="Кот" title="Джеймс">
             <h2 class="cat-name">Джеймс</h2>
             <p class="description small-description">
                 Возраст: 11 лет<br>
@@ -255,14 +243,10 @@
         </article>
     </main>
     <footer class="main-footer">
-        <p class="contact-info contact-info-left">
-            Напишите нам:
-            <br>
-            &#9993; <a class="contact-info-link" href="mailto:cats@babuli.ru">cats@babuli.ru</a>
-            <br>
-            &#9993; <a class="contact-info-link" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
-        </p>
-        <p class="contact-info contact-info-right">
+        <p class="footer-text">Напишите нам:</p>
+        <p class="email-address-1"><a class="contact-info-link" href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
+        <p class="email-address-2"><a class="contact-info-link" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></p>
+        <p class="copyright">
             &copy; 2018 ООО &laquo;
             <a class="contact-info-link" href="https://market.yandex.ru/">Бабушкины котятки</a>&raquo;
         </p>
