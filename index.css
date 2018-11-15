@@ -39,13 +39,7 @@ main
     display: inline-block;
     /*text-align: left;*/
     overflow: hidden;
-    margin: 10px;
-}
-
-.blockCat:hover
-{
-    transition: all .2s linear;
-    box-shadow: 0 0 5px gray;
+    margin: 15px;
 }
 
 .titleCat
@@ -87,6 +81,12 @@ main
 {
     margin: 10px;
     font-size: 17px;
+}
+
+.blockCat:hover
+{
+    transition: all .2s linear;
+    box-shadow: 0 0 5px gray;
 }
 
 /*ФЛЕКСИМ*/
