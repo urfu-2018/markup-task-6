@@ -48,9 +48,24 @@ input[name='filter']
     content: '✉ ';
 }
 
+.cat
+{
+    margin-bottom: 25px;
+}
+
+.cat:hover
+{
+    box-shadow: 0 0 25px #000;
+}
+
+main
+{
+    border-bottom: 1px solid #000;
+}
+
 .footer
 {
-    border-top: 1px solid #000;
+    margin: 25px;
 }
 
 @media (min-width: 375px) and (max-width: 730px)
@@ -76,8 +91,6 @@ input[name='filter']
     .footer
     {
         display: block;
-        margin: 25px;
-        background: red;
     }
 
     .information-about-us
@@ -161,12 +174,24 @@ input[name='filter']
         justify-content: center;
     }
 
+    .range-2
+    {
+        transform: translateY(-27.5px);
+    }
+
     .filter
     {
         text-align: center;
         width: 80%;
         border: 2px solid black;
         border-radius: 10px;
+        height: 50px;
+        display: flex;
+    }
+
+    span
+    {
+        margin: auto;
     }
 
     .footer
@@ -195,6 +220,14 @@ input[name='filter']
     .desktop-mail::before
     {
         content: '✉ ';
+    }
+
+    input[id='filter-1']:checked ~ .aside .filters > .filter-1,
+    input[id='filter-2']:checked ~ .aside .filters > .filter-2,
+    input[id='filter-3']:checked ~ .aside .filters > .filter-3,
+    input[id='filter-4']:checked ~ .aside .filters > .filter-4
+    {
+        background: greenyellow;
     }
 
     input[id='filter-2']:checked ~ .slides > div:nth-of-type(2n),
