@@ -21,6 +21,62 @@
             ) format('woff2');
 }
 
+@media (max-width: 1200px) and (min-width: 730px)
+{
+    main
+    {
+        width: 100%;
+    }
+
+    .filterMenu
+    {
+        display: none;
+    }
+
+    .card img
+    {
+        height: 80%;
+    }
+
+    .card .description
+    {
+        display: none;
+    }
+
+    .card .info
+    {
+        font-size: 10px;
+    }
+
+    .card h2
+    {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 730px)
+{
+    .card
+    {
+        width: 300px;
+        height: 450px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .card .info
+    {
+        font-size: 7px;
+    }
+
+    .card img
+    {
+        width: 300px;
+        height: 250px;
+        border-radius: 25px 25px 0 0;
+    }
+}
+
 html,
 body 
 {
@@ -81,6 +137,7 @@ main
     grid-template-columns: 60% 40%;
     grid-template-rows: 80% 20%;
     height: 47vh;
+    overflow: hidden;
 }
 
 .card img
