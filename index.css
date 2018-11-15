@@ -1,0 +1,86 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans Narrow'), url(
+        https://fonts.gstatic.com/s/ptsansnarrow/v9/BngRUXNadjH0qYEzV7ab-oWlsbCGwR0.woff2
+        ) format('woff2');
+}
+
+html,
+body 
+{
+    margin: 0;
+    height: 90%;
+}
+
+header 
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    height: 90px;
+    text-align: center;
+    font-family: 'PT Sans Narrow';
+    font-size: 32px;
+    border-bottom: 1px solid #5b5757;
+    background-color: white;
+}
+
+header h1 
+{
+    margin-top: 0;
+}
+
+header h1::first-letter
+{
+    color: red;
+}
+
+.wrapper
+{
+    height: 100%;
+    margin-top: 90px;
+    display: grid;
+    grid-template-rows: 1fr 10px;
+}
+
+main
+{
+    height: 100%;
+}
+
+footer
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 14px;
+    font-family: Arial;
+    border-top: 1px solid #5b5757;
+}
+
+footer .leftPart p
+{
+    margin-left: 10px;
+    color: #5b5757;
+}
+
+footer .leftPart a
+{
+    color: #4c4cd8;
+    margin-left: 10px;
+}
+
+footer .leftPart a::before
+{
+    content: '\2709';
+}
+
+footer .rightPart
+{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 40px;
+}
