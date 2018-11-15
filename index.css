@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Задача «Мурмаркет для всех»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="header__h1">Мурмаркет</h1>
+    </header>
+    <main class="main">
+        <input type="radio" checked id="breed1" class="breed1 breed__input" name="cats">
+        <input type="radio" id="breed2" class="breed2 breed__input" name="cats">
+        <input type="radio" id="breed3" class="breed3 breed__input" name="cats">
+        <input type="radio" id="breed4" class="breed4 breed__input" name="cats">
+        <input type="radio" id="breed5" class="breed5 breed__input" name="cats">
+        <section class="container-cats">
+            <article class="item-cat article-breed2">
+                <section class="item-cat__main-information">
+                    <img 
+                        src="images/cat-1.jpg"
+                        alt="Фотография кота Леонардо" 
+                        title="Фотография кота Леонардо" 
+                        class="item-cat__photo">
+                    <div class="item-cat__description">
+                        <p class="item-cat__p item-cat__p_name">Леонардо1</p>
+                        <p class="item-cat__p">Возраст: 3 года</p>
+                        <p class="item-cat__p">Порода: сфинкс</p>
+                        <p class="item-cat__p">Болезни: Нет</p>
+                        <p class="item-cat__p item-cat__p_margin">Статус: ищет хозяина</p>
+                        <p class="item-cat__p item-cat__p_note">Примечание: находится на поддержке</p>  
+                    </div>
+                </section>
+                <section class="item-cat__information-about-cat">
+                    <p class="item-cat__p">Дружелюбный, ласковый, ручной</p>
+                    <p class="item-cat__p item-cat__p_margin">
+                        С другими котами в хороших отношениях. 
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.  
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.
+                    </p>
+                </section>
+            </article>
+            <article class="item-cat article-breed3">
+                <section class="item-cat__main-information">
+                    <img 
+                        src="images/cat-1.jpg"
+                        alt="Фотография кота Леонардо" 
+                        title="Фотография кота Леонардо" 
+                        class="item-cat__photo">
+                    <div class="item-cat__description">
+                        <p class="item-cat__p item-cat__p_name">Леонардо2</p>
+                        <p class="item-cat__p">Возраст: 3 года</p>
+                        <p class="item-cat__p">Порода: сибирская</p>
+                        <p class="item-cat__p">Болезни: Нет</p>
+                        <p class="item-cat__p item-cat__p_margin">Статус: ищет хозяина</p>
+                        <p class="item-cat__p item-cat__p_note">Примечание: находится на поддержке</p>  
+                    </div>
+                </section>
+                <section class="item-cat__information-about-cat">
+                    <p class="item-cat__p">Дружелюбный, ласковый, ручной</p>
+                    <p class="item-cat__p item-cat__p_margin">
+                        С другими котами в хороших отношениях. 
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.  
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.
+                    </p>
+                </section>
+            </article>
+            <article class="item-cat article-breed4">
+                <section class="item-cat__main-information">
+                    <img 
+                        src="images/cat-1.jpg"
+                        alt="Фотография кота Леонардо" 
+                        title="Фотография кота Леонардо" 
+                        class="item-cat__photo">
+                    <div class="item-cat__description">
+                        <p class="item-cat__p item-cat__p_name">Леонардо3</p>
+                        <p class="item-cat__p">Возраст: 3 года</p>
+                        <p class="item-cat__p">Порода: персидская</p>
+                        <p class="item-cat__p">Болезни: Нет</p>
+                        <p class="item-cat__p item-cat__p_margin">Статус: ищет хозяина</p>
+                        <p class="item-cat__p item-cat__p_note">Примечание: находится на поддержке</p>  
+                    </div>
+                </section>
+                <section class="item-cat__information-about-cat">
+                    <p class="item-cat__p">Дружелюбный, ласковый, ручной</p>
+                    <p class="item-cat__p item-cat__p_margin">
+                        С другими котами в хороших отношениях. 
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.  
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.
+                    </p>
+                </section>
+            </article>
+            <article class="item-cat article-breed5">
+                <section class="item-cat__main-information">
+                    <img 
+                        src="images/cat-1.jpg"
+                        alt="Фотография кота Леонардо" 
+                        title="Фотография кота Леонардо" 
+                        class="item-cat__photo">
+                    <div class="item-cat__description">
+                        <p class="item-cat__p item-cat__p_name">Леонардо4</p>
+                        <p class="item-cat__p">Возраст: 3 года</p>
+                        <p class="item-cat__p">Порода: сиамская</p>
+                        <p class="item-cat__p">Болезни: Нет</p>
+                        <p class="item-cat__p item-cat__p_margin">Статус: ищет хозяина</p>
+                        <p class="item-cat__p item-cat__p_note">Примечание: находится на поддержке</p>  
+                    </div>
+                </section>
+                <section class="item-cat__information-about-cat">
+                    <p class="item-cat__p">Дружелюбный, ласковый, ручной</p>
+                    <p class="item-cat__p item-cat__p_margin">
+                        С другими котами в хороших отношениях. 
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.  
+                        Можно взять с собой или взять вместе с его сестрой Эйприл.
+                    </p>
+                </section>
+            </article>
+        </section>
+        <aside class="aside">
+            <section class="breed">
+                <p class="aside__p">Порода</p>
+                <label for="breed2" class="breed__label label-breed2">сфинкс</label>
+                <label for="breed3" class="breed__label label-breed3">сибирская</label>
+                <label for="breed4" class="breed__label label-breed4">персидская</label>
+                <label for="breed5" class="breed__label label-breed5">сиамская</label>
+                <label for="breed1" class="breed__label label-breed1">нет</label>
+            </section>
+        </aside>
+    </main>
+    <footer class="footer">
+        <section class="footer__container-information">
+            <p class="footer__write-us">
+                <img src="images/lette.png" alt="Письмо" title="Письмо" class="footer__icon"> 
+                Напишите нам:
+            </p>
+            <p class="footer__p-email">
+                <img src="images/lette.png" alt="Письмо" title="Письмо" class="footer__icon">
+                <a href="mail:cats@babuli.ru" class="footer__link">cats@babuli.ru</a>
+            </p>
+            <p class="footer__p-email">
+                <img src="images/lette.png" alt="Письмо" title="Письмо" class="footer__icon">
+                <a href="mail:vnuchek@babuli.ru" class="footer__link">vnuchek@babuli.ru</a>
+            </p>
+        </section>
+        <section class="footer__copyright">
+            <p class="footer__copyright-p">
+                &copy; 2018 ООО "<a href="#" class="footer__link">Бабушкины котятки</a>"
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
