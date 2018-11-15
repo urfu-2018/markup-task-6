@@ -1,0 +1,311 @@
+body
+{
+    margin: 0;
+}
+
+header
+{
+    width: 100vw;
+    background: white;
+    border: 1px solid gainsboro;
+    text-align: center;
+    font-size: 200%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    padding: .5%;
+    transition: all 1s;
+}
+
+header::first-letter
+{
+    color: red;
+}
+
+footer .writeus img,
+footer .fletter img,
+footer .cletter img
+{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 4px;
+}
+
+footer .ooo
+{
+    float: right;
+    margin-right: 1%;
+}
+
+footer .fletter img,
+footer .cletter img
+{
+    display: none;
+}
+
+footer
+{
+    width: 100vw;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    padding: .5% 0;
+    transition: all .5s;
+}
+
+footer div
+{
+    display: inline;
+}
+
+main
+{
+    margin: 80px 0 60px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.pictureofCat img
+{
+    width: 300px;
+    height: 300px;
+}
+
+.pictureofCat img:hover
+{
+    -webkit-transform: scale(1.07);
+    -ms-ransform: scale(1.07);
+    transform: scale(1.07);
+    transition: .5s;
+}
+
+.allcats
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.info
+{
+    margin-left: 3%;
+    hyphens: manual;
+    line-height: 80%;
+    margin-top: 2%;
+}
+
+.cat1,
+.cat2,
+.cat3,
+.cat4,
+.cat5,
+.cat6
+{
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    margin-bottom: 1%;
+    transition: all 1s;
+}
+
+.maininfo
+{
+    display: flex;
+    overflow: hidden;
+}
+
+button
+{
+    width: 100px;
+    margin-left: 20%;
+}
+
+input[id='catbutt1']:checked ~ .allcats > :not(.cat1)
+{
+    display: none;
+}
+
+input[id='catbutt2']:checked ~ .allcats > :not(.cat2)
+{
+    display: none;
+}
+
+input[id='catbutt3']:checked ~ .allcats > :not(.cat3)
+{
+    display: none;
+}
+
+input[id='catbutt4']:checked ~ .allcats > :not(.cat4)
+{
+    display: none;
+}
+
+input[id='catbutt5']:checked ~ .allcats > :not(.cat5)
+{
+    display: none;
+}
+
+input[id='catbutt6']:checked ~ .allcats > :not(.cat6)
+{
+    display: none;
+}
+
+label:hover
+{
+    cursor: pointer;
+}
+
+main input:not(.posage)
+{
+    display: none;
+}
+
+label
+{
+    padding: .5%;
+    text-align: start;
+    background: darkgray;
+    color: #333;
+    line-height: 130%;
+    border-top: 3px solid #8470ff;
+    border-left: 3px solid slateblue;
+    border-right: 3px solid slateblue;
+    border-bottom: 3px solid darkslateblue;
+}
+
+.description
+{
+    text-align: left;
+    hyphens: auto;
+    padding: 3%;
+    border-top: 1px solid gainsboro;
+    transition: all 1s;
+}
+
+.description:hover
+{
+    color: cornflowerblue;
+}
+
+.cat1:hover,
+.cat2:hover,
+.cat3:hover,
+.cat4:hover,
+.cat5:hover,
+.cat6:hover
+{
+    box-shadow: 0 0 15px 10px rgba(221, 221, 221, 1);
+}
+
+@media screen and (max-width: 1200px)
+{
+    .pictureofCat img
+    {
+        align-items: center;
+        width: 100%;
+    }
+
+    .description
+    {
+        display: none;
+    }
+
+    .choicecats
+    {
+        display: none;
+    }
+
+    .maininfo
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat1,
+    .cat2,
+    .cat3,
+    .cat4,
+    .cat5,
+    .cat6
+    {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        margin-bottom: 1%;
+    }
+
+    .allcats
+    {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer div
+    {
+        display: block;
+    }
+
+    footer .fletter,
+    footer .cletter
+    {
+        margin-top: 1%;
+    }
+
+    footer .cletter
+    {
+        margin-bottom: -2%;
+    }
+
+    footer .writeus img,
+    footer .circle
+    {
+        display: none;
+    }
+
+    footer .fletter img,
+    footer .cletter img
+    {
+        display: inline;
+    }
+
+    .info
+    {
+        line-height: 80%;
+    }
+
+}
+
+@media screen and (max-width: 730px)
+{
+    header
+    {
+        font-size: 100%;
+    }
+
+    footer div
+    {
+        font-size: 80%;
+    }
+
+    .allcats
+    {
+        flex-direction: column;
+    }
+
+    main
+    {
+        justify-content: center;
+        margin-bottom: 130px;
+    }
+
+    footer .ooo
+    {
+        float: left;
+        margin-top: 3%;
+    }
+}
