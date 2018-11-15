@@ -1,0 +1,210 @@
+h1
+{
+    top: 0;
+    text-align: center;
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+header h1::first-letter
+{
+    color: red;
+}
+
+img.cat
+{
+    height: 230px;
+    margin: 5px;
+}
+
+img.letter
+{
+    width: 15px;
+}
+
+main section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.cat
+{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 410px;
+    border: 1px solid lightgrey;
+    margin: 10px;
+}
+
+section.name
+{
+    margin: 10px;
+}
+
+section.cat:hover
+{
+    box-shadow: 1px 1px 10px rgba(0, 0, 1, .5);
+}
+
+section.cat article
+{
+    display: flex;
+}
+
+header
+{
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 20px;
+}
+
+footer
+{
+    border-top: 2px solid lightgrey;
+    margin-top: 20px;
+}
+
+section.cat > div
+{
+    border-top: 1px solid lightgrey;
+    font-family: Verdana;
+    color: gray;
+}
+
+article div
+{
+    margin: 10px;
+}
+
+div.contacts
+{
+    display: flex;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer div
+{
+    font-family: Verdana;
+    color: gray;
+    margin: 5px;
+}
+
+p
+{
+    font-family: Verdana;
+    color: gray;
+}
+
+h2
+{
+    font-family: Verdana;
+}
+
+button
+{
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+}
+
+button:checked
+{
+    background-color: lightgreen;
+}
+
+section.filter
+{
+    border-left: 1px solid lightgrey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+label
+{
+    font-family: 'Verdana';
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    color: #777;
+    line-height: 33px;
+    border: 2px solid lightgray;
+}
+
+input.all:checked ~ .filter div.p label.all,
+input.no:checked ~ .filter div.p label.no,
+input.kysya:checked ~ .filter div.p label.kysya,
+input.topkot:checked ~ .filter div.p label.topkot
+{
+    background-color: lightgreen;
+}
+
+input.no:checked ~ section.cats section:not(.no),
+input.kysya:checked ~ section.cats section:not(.kysya),
+input.topkot:checked ~ section.cats section:not(.topkot)
+{
+    display: none;
+}
+
+@media screen and (max-width: 1200px)
+{
+    section.filter
+    {
+        display: none;
+    }
+
+    div.contacts
+    {
+        display: block;
+    }
+
+    section.cat > div
+    {
+        display: none;
+    }
+
+    img.cat
+    {
+        margin: 0;
+        height: 300px;
+    }
+
+    section.cat article
+    {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 730px)
+    {
+        footer
+        {
+            display: block;
+        }
+
+        section.cat
+        {
+            margin: 5px 100px;
+        }
+
+    }
+}

@@ -3,7 +3,156 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>
+            Мурмаркет
+        </h1>
+    </header>
+    <main>
+    <input id="select-type-all" name="radio-set-1" type="radio" class="all" checked="checked">
+    <input id="select-type-1" name="radio-set-1" type="radio" class="no">
+    <input id="select-type-2" name="radio-set-1" type="radio" class="kysya">
+    <input id="select-type-3" name="radio-set-1" type="radio" class="topkot">
+    <section class="cats">
+        <section class="cat no">
+            <article>
+                <img class="cat" src="images/cat1.jpg" alt="cat1">
+                <div class="name">
+                    <h2>Сеня</h2>
+                    <p>
+                        Порода: нет<br>
+                        Возраст: 6 лет
+                    </p>
+                </div>
+            </article>
+            <div>
+                Веселый, пушистый.<br><br>
+                Меня трудно найти, легко потерять и невозможно забыть.
+            </div>
+        </section>
+        <section class="cat kysya">
+            <article>
+                <img class="cat" src="images/cat2.jpg" alt="cat2">
+                <div class="name">
+                    <h2>Ворчун</h2>
+                    <p>
+                        Порода: кыся<br>
+                        Возраст: 4 года
+                    </p>
+                </div>
+            </article>
+            <div>
+                Недовольный.<br><br>
+                Возьмите его уже кто-нибудь пжлст! Он нам надоел.
+            </div>
+        </section>
+        <section class="cat kysya">
+            <article>
+                <img class="cat" src="images/cat3.jpg" alt="cat3">
+                <div class="name">
+                    <h2>Аркадий</h2>
+                    <p>
+                        Порода: кыся<br>
+                        Возраст: 4 года
+                    </p>
+                </div>
+            </article>
+            <div>
+                Только что от ветеринара.<br><br>
+                Ему не повезло. Все потому что грабил банки.
+            </div>
+        </section>
+        <section class="cat kysya">
+            <article>
+                <img class="cat" src="images/cat4.jpg" alt="cat4">
+                <div class="name">
+                    <h2>Брат Аркадия</h2>
+                    <p>
+                        Порода: кыся<br>
+                        Возраст: 4 года
+                    </p>
+                </div>
+            </article>
+            <div>
+                Еще не был у ветеринара.<br><br>
+                Этому повезло.
+            </div>
+        </section>
+        <section class="cat topkot">
+            <article>
+                <img class="cat" src="images/cat5.jpg" alt="cat5">
+                <div class="name">
+                    <h2>Блинчик</h2>
+                    <p>
+                        Порода: топовый кот<br>
+                        Возраст: 2 года
+                    </p>
+                </div>
+            </article>
+            <div>
+                <p>Классный котейка, кормить блинчиками)</p>
+            </div>
+        </section>
+        <section class="cat no">
+            <article>
+                <img class="cat" src="images/cat6.jpg" alt="cat6">
+                <div class="name">
+                    <h2>Вероника</h2>
+                    <p>
+                        Порода: нет<br>
+                        Возраст: 1 год
+                    </p>
+                </div>
+            </article>
+            <div>
+                Любопытая кошка, умеет какать в унитаз.<br><br>
+                Как тебе такое Илон Маск?
+            </div>
+        </section>
+    </section>
+    <section class="filter">
+        <div>
+            <h2>
+                Возраст
+            </h2>
+            <div>
+                <input type="range" min="1" max="6" value="3">
+            </div>
+            <p>
+                от 1 до 6 лет
+            </p>
+        </div>
+        <div class="p">
+            <h2>
+                Порода
+            </h2>
+            <label for="select-type-all" class="all">без фильтра</label><br>
+            <label for="select-type-1" class="no">нет</label><br>
+            <label for="select-type-2" class="kysya">кыся</label><br>
+            <label for="select-type-3" class="topkot">топовый кот</label>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="contacts">
+            <div>
+                Напишите нам:
+            </div>
+            <div>
+                <a href="https://translate.google.ru"><img class="letter"
+                    src="images/letter.png" alt="letter">vnuchek@babuli.ru</a>
+            </div>
+            <div>
+                <a href="https://translate.google.ru"><img class="letter"
+                    src="images/letter.png" alt="letter">cats@babuli.ru</a>
+            </div>
+        </div>
+        <div class="c">
+            © 2018 «Бабушкины котятки»
+        </div>
+    </footer>
 </body>
 </html>
