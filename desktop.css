@@ -5,8 +5,14 @@
 
 .entries
 {
-    display: grid;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;  */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ширины столбцов */
+    grid-template-rows: repeat(5, 450px); /* высоты рядов */
     grid-gap: 20px;
 }
 
@@ -21,6 +27,13 @@
 .entry-summary
 {
     display: flex;
+    height: 300px;
     padding: 10px;
     align-items: flex-start;
+}
+
+.entry-description
+{
+    display: flex;
+    height: 100px;
 }
