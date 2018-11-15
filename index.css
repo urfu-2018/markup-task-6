@@ -3,13 +3,7 @@
     font-family: Schoen;
     src: url('Eskal Font4You.ttf');
 }
-
-.items
-{
-    display: flex;
-}
-
-h1
+ h1
 {
     flex-basis: 100%;
     text-align: center;
@@ -18,13 +12,12 @@ h1
     color: #411e02;
 }
 
-article:not([class])
+.main-content
 {
     display: flex;
     flex-wrap: wrap;
 }
-
-img
+ img
 {
     width: 90%;
     height: 90%;
@@ -35,20 +28,19 @@ img
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
 }
-
-img:not([class='list']):hover
+ img:not([class='list']):hover
 {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
-
-.cat-block
+ .cat-block
 {
     margin: 30px;
     width: 500px;
     height: 350px;
+    padding: 1%;
     border: 1px solid #ebe7d7;
     overflow: hidden;
     text-align: center;
@@ -56,8 +48,7 @@ img:not([class='list']):hover
     grid-template: 'a b'
         'c c' / 50%;
 }
-
-.cat-name
+ .cat-name
 {
     width: 90%;
     overflow: hidden;
@@ -74,13 +65,11 @@ img:not([class='list']):hover
     letter-spacing: 2px;
     display: block;
 }
-
-.cat-name:hover
+ .cat-name:hover
 {
     text-shadow: 2px 2px 5px #88bdf1;
 }
-
-.short-info
+ .short-info
 {
     margin: 10px;
     font-family: Arial, sans-serif;
@@ -92,8 +81,7 @@ img:not([class='list']):hover
     text-align: left;
     font-size: 16px;
 }
-
-.big-info
+ .big-info
 {
     grid-column: span 2;
     border-top: .5px solid #ebe7d7;
@@ -102,11 +90,6 @@ img:not([class='list']):hover
     color: #616060;
     font-size: 14px;
     text-align: justify;
-    width: 98%;
-}
-
-h3
-{
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    width: 100%;
+    height: 100px;
 }
