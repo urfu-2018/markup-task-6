@@ -255,6 +255,15 @@ body
         margin: 20px 0;
         display: block;
         flex-basis: 20%;
+        font: 15px Arial, sans-serif;
+        color: #565656;
+    }
+
+    .filter .filter-name
+    {
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
     }
 
     .cats-shop
@@ -309,24 +318,39 @@ body
     {
         display: block;
         margin: 2%;
-        padding: 2%;
         border: 2px solid #565656;
         border-radius: 5px;
-        width: 90%;
+        width: 80%;
+        padding: 15px;
     }
 
-    .radio-breed-no:checked ~ .cats-shop .cats > .cat,
-    .radio-breed-siamese:checked ~ .cats-shop .cats > .siamese-breed,
-    .radio-breed-russian-blue:checked ~ .cats-shop .cats > .russian-blue-breed,
-    .radio-breed-persian:checked ~ .cats-shop .cats > .persian-breed,
-    .radio-breed-alley:checked ~ .cats-shop .cats > .alley-breed,
-    .radio-breed-munchkin:checked ~ .cats-shop .cats > .munchkin-breed,
-    .radio-breed-maine-coon:checked ~ .cats-shop .cats > .maine-coon-breed,
-    .radio-breed-burmese:checked ~ .cats-shop .cats > .burmese-breed,
-    .radio-breed-british:checked ~ .cats-shop .cats > .british-breed,
-    .radio-breed-bengal:checked ~ .cats-shop .cats > .bengal-breed
+    .rb-no:checked ~ .cats-shop .cats > .cat,
+    .rb-siamese:checked ~ .cats-shop .cats > .siamese,
+    .rb-russian:checked ~ .cats-shop .cats > .russian,
+    .rb-persian:checked ~ .cats-shop .cats > .persian,
+    .rb-alley:checked ~ .cats-shop .cats > .alley,
+    .rb-munchkin:checked ~ .cats-shop .cats > .munchkin,
+    .rb-maine-coon:checked ~ .cats-shop .cats > .maine-coon,
+    .rb-burmese:checked ~ .cats-shop .cats > .burmese,
+    .rb-british:checked ~ .cats-shop .cats > .british,
+    .rb-bengal:checked ~ .cats-shop .cats > .bengal
     {
         order: -1;
         opacity: 1;
+    }
+
+    .rb-no:checked ~ .cats-shop .filter-breed-elements > .lb-no,
+    .rb-siamese:checked ~ .cats-shop .filter-breed-elements > .lb-siamese,
+    .rb-russian:checked ~ .cats-shop .filter-breed-elements > .lb-russian,
+    .rb-persian:checked ~ .cats-shop .filter-breed-elements > .lb-persian,
+    .rb-alley:checked ~ .cats-shop .filter-breed-elements > .lb-alley,
+    .rb-munchkin:checked ~ .cats-shop .filter-breed-elements > .lb-munchkin,
+    .rb-maine-coon:checked ~ .cats-shop .filter-breed-elements > .lb-maine-coon,
+    .rb-burmese:checked ~ .cats-shop .filter-breed-elements > .lb-burmese,
+    .rb-british:checked ~ .cats-shop .filter-breed-elements > .lb-british,
+    .rb-bengal:checked ~ .cats-shop .filter-breed-elements > .lb-bengal
+    {
+        background-color: #e9ffd0;
+        border-color: #a7de70;
     }
 }
