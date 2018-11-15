@@ -444,10 +444,11 @@ section.wrapper
     .content
     {
         margin: 0 auto;
+        transition: all 1s;
     }
 }
 
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1200px)
 {
     .content
     {
@@ -455,7 +456,7 @@ section.wrapper
     }
 }
 
-@media screen and (max-width: 879px)
+@media screen and (max-width: 880px)
 {
     .content
     {
@@ -463,7 +464,7 @@ section.wrapper
     }
 }
 
-@media screen and (max-width: 729px)
+@media (max-width: 730px)
 {
     .item
     {
