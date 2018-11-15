@@ -1,9 +1,246 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
+
 <body>
+    <header class="header">
+        <h1 class="header-title">Мурмаркет</h1>
+    </header>
+    <input type="radio" name="breed" id="scottish-fold">
+    <input type="radio" name="breed" id="british-shorthair">
+    <input type="radio" name="breed" id="bombay">
+    <input type="radio" name="breed" id="shartrez">
+    <input type="radio" name="breed" id="unnecessary" checked>
+    <main class="content-wrapper">
+        <section class="cards-wrapper">
+            <article class="cat-card scottish-fold" id="matilda">
+                <div class="img-wrapper">
+                    <img src="./images/matilda.jpg" alt="Матильда" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#matilda">Матильда</a></h2>
+                    <p>Возраст: 3,5 года</p>
+                    <p>Порода: шотландская вислоухая</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Славная кошечка 3,5 года, но игривая, как котёнок.
+                    Она не против отправиться в новый дом вторым питомцем.
+                    Но боится агрессивных животных.
+                    Матильда - кошечка-компаньонка для доброго, любящего животных человека.
+                </div>
+            </article>
+            <article class="cat-card" id="martin">
+                <div class="img-wrapper">
+                    <img src="./images/martin.jpg" alt="Мартин" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#martin">Мартин</a></h2>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: мочекаменная</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Крупный котик весом около 6 кг уже.
+                    Несмотря на свою упитанность, он любит побегать-поиграть, кого-нибудь погонять...
+                    Любит полежать на спинке, раскинув в стороны свои лапки...
+                    Мартину требуется периодическое наблюдение у ветеринара,
+                    потому что он болел мочекаменной болезнью.
+                </div>
+            </article>
+            <article class="cat-card" id="molly">
+                <div class="img-wrapper">
+                    <img src="./images/molly.jpg" alt="Молли" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#molly">Молли</a></h2>
+                    <p>Возраст: 3 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Кошка-пушинка, весом всего 2 кг. Невероятная красотка!
+                    Миниатюрная, счастливого трёхцветного окраса с ярко-зелеными глазками и
+                    пикантным рыжим пятнышком на мордочке!
+                </div>
+            </article>
+            <article class="cat-card british-shorthair" id="steffy">
+                <div class="img-wrapper">
+                    <img src="./images/steffy.jpg" alt="Штеффи" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#steffy">Штеффи</a></h2>
+                    <p>Возраст: 7 лет</p>
+                    <p>Порода: британская короткошёрстная</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Возраст 7 лет. По прошествии месяца, кошечка все еще не доверяет,
+                    иногда шипит или пытается бить лапой. Такое поведение
+                    свойственно кошками при стрессе, смене места жительства.
+                    Кошечка достаточно упитанная, у неё очень мягкая,
+                    плюшевая шёрстка, как и у всех бриташек, и толстенькие щёчки.
+                </div>
+            </article>
+            <article class="cat-card" id="carry">
+                <div class="img-wrapper">
+                    <img src="./images/carry.jpg" alt="Карри" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#carry">Карри</a></h2>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Кошечка очень ласковая, но со своим характером, с "перчинкой".
+                    Не любит других кошек, поэтому пристраивается единственной кошечкой в семью.
+                    С людьми достаточно ласковая, любит погладиться,
+                    но не терпит сильных тисканий и навязчивого внимания.
+                </div>
+            </article>
+            <article class="cat-card shartrez" id="motya">
+                <div class="img-wrapper">
+                    <img src="./images/motya.jpg" alt="Мотя" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#motya">Мотя</a></h2>
+                    <p>Возраст: 3,5 года</p>
+                    <p>Порода: картезианская</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Серая дымчатая шёрстка почти как у русской голубой,
+                    но у Моти она чуть более плюшевая и мягонькая.
+                    Кошечке 3,5 года, она стерилизована и отлично умеет пользоваться лоточком.
+                    Не против отправиться в новый дом вторым питомцем. Но боится агрессивных животных.
+                </div>
+            </article>
+            <article class="cat-card bombay" id="killer">
+                <div class="img-wrapper">
+                    <img src="./images/killer.jpg" alt="Киллер" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#killer">Киллер</a></h2>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: бомбейская</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Шикарный холёный чёрный кот с хорошей блестящей шерстью!
+                    Мальчишка очень ласковый, любит потереться об ноги и чтобы почесали шейку и щёчки.
+                    Но Киллер достаточно серьёзный кот, так что не стоит махать перед его носом мячиками
+                    и куколками! Поэтому он не подойдёт в компанию к детям,
+                    хотя поиграть с верёвочкой или лазером он точно не откажется.
+                </div>
+            </article>
+            <article class="cat-card" id="knopochka">
+                <div class="img-wrapper">
+                    <img src="./images/knopochka.jpg" alt="Кнопочка" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#knopochka">Кнопочка</a></h2>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Кнопочка не даст Вам скучать в одиночестве...
+                    Она всегда рядом и всегда рада общению.
+                    У Кнопочки очень мягкая шёрстка и любопытный длинный носик.
+                    Кошечка небольшого размера и небольшого веса.
+                    Возраст 4 года, стерилизована и вакцинирована.
+                </div>
+            </article>
+            <article class="cat-card" id="george">
+                <div class="img-wrapper">
+                    <img src="./images/george.jpg" alt="Джордж" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#george">Джордж</a></h2>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Джордж - взрослый кот, 5 лет.
+                    Очень спокойный, серьезный и с неповторимой харизмой...
+                    Не смотрите, что у Джорджа простой неприметный окрас.
+                    Зато у него большое любящее своих хозяев сердце.
+                    Это очень преданный кот, которому нужна своя семья и общение.
+                </div>
+            </article>
+            <article class="cat-card" id="cherepashka">
+                <div class="img-wrapper">
+                    <img src="./images/turtle.jpg" alt="Черепашка" class="cat-img">
+                </div>
+                <div class="short-description">
+                    <h2><a href="#cherepashka">Черепашка</a></h2>
+                    <p>Возраст: 1,5 месяцев</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+                <div class="full-description">
+                    Котику около 1,5 месяцев.
+                    Он уже самостоятельно кушает и пользуется лоточком.
+                    Очень ласковый и подвижный малыш.
+                </div>
+            </article>
+        </section>
+        <section class="menu-wrapper">
+            <section class="age-wrapper">
+                <h2>Возраст</h2>
+                <div class="range-slider">
+                    <input class="min" name="range_1" type="range" min="1" max="100" value="10" />
+                    <input class="max" name="range_1" type="range" min="1" max="100" value="90" />
+                </div>
+                <span>от</span>
+                <span>до</span>
+                <span>лет</span>
+            </section>
+            <section class="breed-wrapper">
+                <h2>Порода</h2>
+                <label for="scottish-fold" class="breed-label">
+                    шотландская вислоухая
+                </label>
+                <label for="british-shorthair" class="breed-label">
+                    британская короткошёрстная
+                </label>
+                <label for="bombay" class="breed-label">
+                    бомбейская
+                </label>
+                <label for="shartrez" class="breed-label">
+                    картезианская
+                </label>
+                <label for="unnecessary" class="breed-label">
+                    нет
+                </label>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+            <div><span>Напишите нам:</span></div>
+            <div><a href="#">cats@babuli.ru</a></div>
+            <div><a href="#">vnuchek@babuli.ru</a></div>
+            <div>&copy; 2018 ООО &laquo;<a href="">Бабушкины котятки</a>&raquo;</div>
+        </footer>
 </body>
+
 </html>
