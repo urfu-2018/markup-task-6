@@ -3,7 +3,153 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <header>
+        <h2>Мурмаркет</h2>
+    </header>
+    <input type="radio" value="all" name="breed" id="all" class="input-all" checked>
+    <input type="radio" value="sphinx" name="breed" id="sphinx" class="input-sphinx">
+    <input type="radio" value="siberian" name="breed" id="siberian" class="input-siberian">
+    <input type="radio" value="persian" name="breed" id="persian" class="input-persian">
+    <input type="radio" value="siamese" name="breed" id="siamese" class="input-siamese">
+    <main>
+        <section class="cat-card siberian">
+            <img src="img/cat1.jpg" alt="1">
+            <section class="short-description">
+                <h2>Тима</h2>
+                <p>Возраст: 2 года</p>
+                <p>Порода: блондин</p>
+                <p>Болезни: нет</p>
+                <p class="status">Статус: хочет запрыгнуть</p>
+            </section>
+            <section class="full-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum eget faucibus enim, a convallis justo.
+                    Curabitur interdum diam quis bibendum consectetur.
+                    Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                    mattis semper, tellus sem facilisis ligula, eget tristique
+                    nisi erat non nulla.</p>
+            </section>
+        </section>
+        <section class="cat-card sphinx">
+            <img src="img/cat2.jpg" alt="2">
+            <section class="short-description">
+                <h2>Борька</h2>
+                <p>Возраст: 6 месяцев</p>
+                <p>Порода: галстукот</p>
+                <p>Болезни: нет</p>
+                <p class="status">Статус: есть галстук</p>
+            </section>
+            <section class="full-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum eget faucibus enim, a convallis justo.
+                    Curabitur interdum diam quis bibendum consectetur.
+                    Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                    mattis semper, tellus sem facilisis ligula, eget tristique
+                    nisi erat non nulla.</p>
+            </section>
+        </section>
+        <section class="cat-card sphinx">
+            <img src="img/cat3.jpg" alt="3">
+            <section class="short-description">
+                <h2>Ведьмак</h2>
+                <p>Возраст: 5 месяцев</p>
+                <p>Порода: белый</p>
+                <p>Болезни: нет</p>
+                <p class="status">Статус: ненавижу порталы!</p>
+                <p>Примечание: 1/27 вероятность, что спокойно себе живет с Йеннифэр в Каэр-Морхен.</p>
+            </section>
+            <section class="full-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum eget faucibus enim, a convallis justo.
+                    Curabitur interdum diam quis bibendum consectetur.
+                    Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                    mattis semper, tellus sem facilisis ligula, eget tristique
+                    nisi erat non nulla.</p>
+            </section>
+        </section>
+        <section class="cat-card persian">
+            <img src="img/cat4.jpg" alt="4">
+            <section class="short-description">
+                <h2>Артемка</h2>
+                <p>Возраст: 3 месяца</p>
+                <p>Порода: сонька</p>
+                <p>Болезни: нет</p>
+                <p class="status">Статус: спааать...</p>
+            </section>
+            <section class="full-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum eget faucibus enim, a convallis justo.
+                    Curabitur interdum diam quis bibendum consectetur.
+                    Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                    mattis semper, tellus sem facilisis ligula, eget tristique
+                    nisi erat non nulla.</p>
+            </section>
+        </section>
+        <section class="cat-card siamese">
+            <img src="img/cat5.jpg" alt="5">
+            <section class="short-description">
+                <h2>Киря</h2>
+                <p>Возраст: 4 месяца</p>
+                <p>Порода: блондин</p>
+                <p>Болезни: нет</p>
+                <p class="status">Статус: да не грустный я</p>
+            </section>
+            <section class="full-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum eget faucibus enim, a convallis justo.
+                    Curabitur interdum diam quis bibendum consectetur.
+                    Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                    mattis semper, tellus sem facilisis ligula, eget tristique
+                    nisi erat non nulla.
+                </p>
+                <p>
+                    Another one
+                </p>
+            </section>
+        </section>
+    </main>
+    <aside>
+        <section class="age-filter">
+            <h3>Возраст</h3>
+            <section class="range-age">
+                <section class="line"></section>
+                <section class="selected-line"></section>
+                <section class="tumbler min-tumbler"></section>
+                <section class="tumbler max-tumbler"></section>
+            </section>
+            <p>от 2 до 4 лет</p>
+        </section>
+        <section class="breed-filter">
+            <h3>Порода</h3>
+            <label class="breed-item label-sphinx" for="sphinx">сфинкс</label>
+            <label class="breed-item label-siberian" for="siberian">сибирская</label>
+            <label class="breed-item label-persian" for="persian">персидская</label>
+            <label class="breed-item label-siamese" for="siamese">сиамская</label>
+            <label class="breed-item label-all" for="all">все</label>
+        </section>
+    </aside>
+    <footer>
+        <section class="contacts">
+            <p><img alt="email" src="img/email.png" class="letter-icon"/> Напишите нам:</p>
+            <ul>
+                <li>
+                    <img alt="email" src="img/email.png" class="letter-icon"/>
+                    <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+                </li>
+                <li class="li-point"><span class="point"></span></li>
+                <li>
+                    <img alt="email" src="img/email.png" class="letter-icon"/>
+                    <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+                </li>
+            </ul>
+        </section>
+        <section class="copyright">
+            <p>&copy; 2018 ООО &laquo;<a href="index.html">Бабушкины котятки</a>&raquo;</p>
+        </section>
+    </footer>
 </body>
 </html>
