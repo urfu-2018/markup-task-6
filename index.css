@@ -5,7 +5,16 @@ body
     color: #706f6f;
 }
 
-/* главная сетка */
+.header,
+.footer,
+.cat-card-wrapper,
+.choice ~ .filter .choice-label,
+input[type='range'],
+input[type='range']::-webkit-slider-thumb
+
+{
+    border: 1px solid #bdc3c7;
+}
 
 .general-layout
 {
@@ -16,19 +25,15 @@ body
         / 80% 20%;
 }
 
-/* header */
-
 .header
 {
     grid-area: header;
     text-align: center;
-    border: 1px solid lightgray;
 }
 
 .header-title
 {
-    font-family: 'PT Sans Narrow';
-    font-size: 32px;
+    font: normal 32px 'PT Sans Narrow';
     color: #000;
 }
 
@@ -41,7 +46,6 @@ body
 {
     grid-area: footer;
     display: flex;
-    border: 1px solid lightgray;
 }
 
 .footer-left
@@ -90,7 +94,6 @@ body
         'full-info full-info' 130px
         / 250px 150px;
     margin: 30px;
-    border: 1px solid lightgray;
 }
 
 .cat-card-wrapper:hover
@@ -131,6 +134,11 @@ body
     -o-transform: scale(1.2);
 }
 
+.decoration
+{
+    font-weight: bold;
+}
+
 .short-information
 {
     grid-area: short-info;
@@ -151,7 +159,7 @@ body
 {
     grid-area: full-info;
     padding: 15px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #bdc3c7;
 }
 
 .filter
@@ -177,7 +185,6 @@ body
     display: block;
     height: 40px;
     margin: 10px;
-    border: 1px solid lightgray;
     text-align: center;
     padding-top: 10px;
 }
@@ -190,16 +197,8 @@ body
     border: 1px solid #96e796;
 }
 
-.choice[id='female']:checked ~ .main .female .cat-card-wrapper
-{
-    display: grid;
-}
-
-.choice[id='male']:checked ~ .main .male .cat-card-wrapper
-{
-    display: grid;
-}
-
+.choice[id='female']:checked ~ .main .female .cat-card-wrapper,
+.choice[id='male']:checked ~ .main .male .cat-card-wrapper,
 .choice[id='all']:checked ~ .main .cat-card .cat-card-wrapper
 {
     display: grid;
@@ -211,16 +210,14 @@ input[type='range']
     width: 90%;
     border-radius: 8px;
     height: 7px;
-    border: 1px solid #bdc3c7;
     background-color: #fff;
-    margin: 0 30px;
+    margin-bottom: 20px;
 }
 
 input[type='range']::-webkit-slider-thumb
 {
     -webkit-appearance: none;
     background-color: #fff;
-    border: 1px solid #bdc3c7;
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -264,6 +261,11 @@ input[type='range']::-webkit-slider-thumb
         justify-content: flex-end;
     }
 
+    .short-information
+    {
+        padding-left: 20px;
+    }
+
     .general-layout
     {
         display: grid;
@@ -278,7 +280,7 @@ input[type='range']::-webkit-slider-thumb
         flex-basis: 40%;
         display: none;
         grid-template: 'img' 200px
-            'short-info' 200px
+            'short-info' 160px
             /300px;
         margin: 10px;
     }
@@ -326,6 +328,11 @@ input[type='range']::-webkit-slider-thumb
             'main' 1fr
             'footer'  140px
             /100%;
+    }
+
+    .short-information
+    {
+        padding: 20px;
     }
 
     .cat-card-wrapper
