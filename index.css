@@ -31,7 +31,7 @@ body
 {
     margin: 0;
     display: grid;
-    grid-template-rows: 10vh auto 10vh;
+    grid-template-rows: 10vh auto auto;
 }
 
 main
@@ -85,6 +85,21 @@ aside
         margin: 20px;
         padding: 15px;
     }
+
+    footer
+    {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer > .contacts > p,
+    footer > .copyright
+    {
+        margin: 2px;
+        font-size: 2vh;
+    }
 }
 
 @media screen and (min-width: 1200px)
@@ -108,7 +123,8 @@ aside
 
     aside
     {
-        display: block;
+        display: flex;
+        flex-direction: column;
         box-sizing: border-box;
         border: solid 2px darkcyan;
         position: fixed;
@@ -121,6 +137,8 @@ aside
     {
         width: 100%;
         height: 5vh;
+        box-sizing: border-box;
+        border: solid darkseagreen 2px;
     }
 
     .breed-selector > label
@@ -147,21 +165,43 @@ aside
 
     footer
     {
+        padding: 10px;
         grid-column: 1 / 5;
         grid-row: 3 / 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contacts > p
+    {
+        margin: 10px;
     }
 
     .cat
     {
         width: 400px;
-        align-items: flex-start;
         padding: 10px;
         margin: 10px;
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
     }
 
     .cat > .description
     {
         display: block;
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        border-top: solid 1px darkslategrey;
     }
 
     input.breed1:checked ~ main > .cat:not(.breed1),
@@ -170,5 +210,14 @@ aside
     input.breed4:checked ~ main > .cat:not(.breed4)
     {
         display: none;
+    }
+
+    input.breed1:checked ~ aside > .breed-selector.breed1,
+    input.breed2:checked ~ aside > .breed-selector.breed2,
+    input.breed3:checked ~ aside > .breed-selector.breed3,
+    input.breed4:checked ~ aside > .breed-selector.breed4,
+    input.breedAll:checked ~ aside > .breed-selector.breedAll
+    {
+        background: lightgreen;
     }
 }
