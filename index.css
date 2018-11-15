@@ -26,7 +26,11 @@
     .contacts
     {
         display: flex;
+        -ms-flex-item-align: start;
         align-self: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         background: #fff;
         font-family: Arial, Helvetica, sans-serif;
@@ -78,6 +82,9 @@
     {
         margin: 10px 0;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -89,7 +96,12 @@
     .cats
     {
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         border-bottom: 1px solid #e8e8e8;
     }
@@ -123,6 +135,7 @@
     {
         width: 300px;
         height: 200px;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 
@@ -168,7 +181,12 @@
 {
     .cats
     {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     }
 
@@ -193,11 +211,15 @@
         width: 95%;
         height: 100px;
         display: grid;
+        -ms-grid-rows: 40px 40px;
+        -ms-grid-columns: 150px 1fr 270px;
         grid-template: 40px 40px / 150px 1fr 270px;
     }
 
     .contacts .write-back
     {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
@@ -209,10 +231,17 @@
     .contact
     {
         display: flex;
+        -ms-grid-column: 1;
         grid-column: 1;
+        -ms-grid-row: 2;
         grid-row: 2;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
@@ -220,9 +249,15 @@
     {
         display: flex;
         margin: 0;
+        -ms-grid-row: 2;
         grid-row: 2;
+        -ms-grid-column: 3;
         grid-column: 3;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
         margin-bottom: 2px;
     }
@@ -241,7 +276,12 @@
     {
         height: 50px;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         border-top: 1px solid #e8e8e8;
     }
@@ -273,12 +313,19 @@
     .contact
     {
         margin: 0 initial;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
     .mail2
     {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
     }
 
@@ -290,6 +337,7 @@
     .cat-list
     {
         display: grid;
+        -ms-grid-columns: 75% 25%;
         grid-template-columns: 75% 25%;
         grid-template-areas: 'cards filter';
     }
@@ -301,6 +349,9 @@
         margin-top: 78px;
         margin-bottom: 60px;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
         grid-area: cards;
     }
@@ -345,6 +396,8 @@
         display: flex;
         grid-area: more-bio;
         margin: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -354,12 +407,10 @@
         float: right;
         grid-area: filter;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
-    }
-
-    .slider
-    {
-        appearance: none;
     }
 
     .text-age
@@ -378,6 +429,9 @@
     {
         margin-top: 100px;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -386,6 +440,8 @@
         padding: 0 15px;
         margin: 10px 0;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         width: 300px;
         height: 100px;
@@ -416,6 +472,47 @@
     .chosen-three-cats:checked ~ .cats .chosen-three
     {
         opacity: 1;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
         order: -1;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .cat-photo img
+    {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .name a,
+    .info .bio,
+    .info .status
+    {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    .cat-list .cat .more-bio
+    {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .cats
+    {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .filter
+    {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
     }
 }
