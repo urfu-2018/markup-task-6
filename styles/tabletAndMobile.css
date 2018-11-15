@@ -1,0 +1,79 @@
+input,
+.filter,
+.cat-card .description
+{
+    display: none;
+}
+
+.cat-card img
+{
+    width: 100%;
+}
+
+.cat-card > .info > p
+{
+    margin: 0;
+}
+
+footer a[href^='mailto:']::before
+{
+    content: url('../images/envelope.png');
+    margin-right: 5px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+.cards
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin: 15px 0;
+}
+
+.cat-card > .info
+{
+    padding: 0 40px 40px;
+}
+
+footer
+{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0 30px;
+}
+
+footer .contacts
+{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 730px)
+{
+    .cards
+    {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        margin: 25px;
+    }
+}
+
+@media screen and (min-width: 730px)
+{
+    footer
+    {
+        height: 70px;
+        padding: 0 5px;
+        margin: 15px 0;
+    }
+
+    footer .copyright
+    {
+        align-self: flex-end;
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}

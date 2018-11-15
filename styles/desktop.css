@@ -30,7 +30,6 @@ footer a:not(:first-of-type)::before
 .cat-card
 {
     padding: 10px;
-    border: 2px solid lightgrey;
     display: grid;
     grid-template: 'photo info' 170px
         'description description' 90px
