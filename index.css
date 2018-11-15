@@ -1,180 +1,177 @@
-@media screen and (min-width: 375px) and (max-width: 730px)
+body
 {
-    body
-    {
-        margin: 0;
-    }
+    margin: 0;
+}
 
-    .shop-name
-    {
-        text-align: center;
-        background: #fff;
-        top: 0;
-        font-size: 32px;
-        font-family: 'PT Sans Narrow', sans-serif;
-        margin-bottom: 30px;
-        border-bottom: 1px solid #e8e8e8;
-        font-weight: normal;
-        padding: 10px;
-    }
+.shop-name
+{
+    text-align: center;
+    background: #fff;
+    top: 0;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+    font-weight: normal;
+    padding: 10px;
+}
 
-    .shop-name::first-letter
-    {
-        color: #f00;
-    }
+.shop-name::first-letter
+{
+    color: #f00;
+}
 
-    .contacts
-    {
-        display: flex;
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        background: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        bottom: 0;
-        width: 300px;
-        margin: 0 auto;
-        height: 110px;
-    }
+.contacts
+{
+    display: flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    bottom: 0;
+    width: 300px;
+    margin: 0 auto;
+    height: 110px;
+}
 
-    .contacts .write-back
-    {
-        margin-top: 10px;
-    }
+.contacts .write-back
+{
+    margin-top: 10px;
+}
 
-    .contacts a
-    {
-        color: #4c4cd8;
-    }
+.contacts a
+{
+    color: #4c4cd8;
+}
 
-    .contacts .organization-name::before
-    {
-        content: '\00AB';
-    }
+.contacts .organization-name::before
+{
+    content: '\00AB';
+}
 
-    .contacts .organization-name::after
-    {
-        content: '\00BB';
-    }
+.contacts .organization-name::after
+{
+    content: '\00BB';
+}
 
-    .contacts .mail::before
-    {
-        content: '\2709';
-    }
+.contacts .mail::before
+{
+    content: '\2709';
+}
 
-    .contacts .organization-name::after,
-    .contacts .organization-name::before,
-    .contacts .mail::before
-    {
-        color: #000;
-    }
+.contacts .organization-name::after,
+.contacts .organization-name::before,
+.contacts .mail::before
+{
+    color: #000;
+}
 
-    .contacts a
-    {
-        text-decoration: none;
-    }
+.contacts a
+{
+    text-decoration: none;
+}
 
-    .contact
-    {
-        margin: 10px 0;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
+.contact
+{
+    margin: 10px 0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
-    .organization
-    {
-        margin: 10px 0;
-    }
+.organization
+{
+    margin: 10px 0;
+}
 
-    .cats
-    {
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-bottom: 1px solid #e8e8e8;
-    }
+.cats
+{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
 
-    .cat
-    {
-        margin-bottom: 20px;
-        text-align: justify;
-        border: 1px solid #ddd;
-    }
+.cat
+{
+    margin-bottom: 20px;
+    text-align: justify;
+    border: 1px solid #ddd;
+}
 
-    .cat-photo
-    {
-        text-align: left;
-        margin: 0 0 30px;
-        width: 100%;
-    }
+.cat-photo
+{
+    text-align: left;
+    margin: 0 0 30px;
+    width: 100%;
+}
 
-    .cat:hover
-    {
-        box-shadow: 0 0 3px 2px #000;
-        -webkit-box-shadow: 0 0 3px 2px #000;
-        transform: scale(1.01);
-        -webkit-transform: scale(1.01);
-        -moz-transform: scale(1.01);
-        -ms-transform: scale(1.01);
-        -o-transform: scale(1.01);
-    }
+.cat:hover
+{
+    box-shadow: 0 0 3px 2px #000;
+    -webkit-box-shadow: 0 0 3px 2px #000;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+}
 
-    .cat-photo img
-    {
-        width: 300px;
-        height: 200px;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
+.cat-photo img
+{
+    width: 300px;
+    height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 
-    .name
-    {
-        font-family: Comfortaa, cursive;
-        font-weight: bold;
-        font-size: 1.5em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-    }
+.name
+{
+    font-family: Comfortaa, cursive;
+    font-weight: bold;
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
 
-    a
-    {
-        color: #000;
-        text-decoration: none;
-    }
+a
+{
+    color: #000;
+    text-decoration: none;
+}
 
-    .info,
-    .more-bio
-    {
-        font-family: 'Open Sans', sans-serif;
-        margin-left: 15px;
-    }
+.info,
+.more-bio
+{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 15px;
+}
 
-    .cat-list a:hover
-    {
-        color: aqua;
-    }
+.cat-list a:hover
+{
+    color: aqua;
+}
 
-    .more-bio,
-    .grouper,
-    .filter,
-    .dot
-    {
-        display: none;
-    }
+.more-bio,
+.grouper,
+.filter,
+.dot
+{
+    display: none;
 }
 
 @media screen and (min-width: 730px) and (max-width: 1200px)
