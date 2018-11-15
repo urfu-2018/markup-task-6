@@ -88,7 +88,14 @@ main
 .catContent
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.allCats
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 /*САЙДБАР || ИНПУТ*/
