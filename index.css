@@ -11,7 +11,7 @@
 
 .header-banner
 {
-    margin-top: -1%;
+    margin-top: -1.2%;
     position: fixed;
     text-align: center;
     top: 0;
@@ -119,6 +119,8 @@
     padding: 10px;
 }
 
+
+
 .main
 {
     display: flex;
@@ -127,12 +129,13 @@
 .controller
 {
     flex-direction: column;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 1%;
     margin-right: 10px;
     width: 22%;
     font-family: 'Fira Sans', sans-serif;
     display: none;
+    right: 0;
+    position: fixed;
 }
 
 .controller h1
@@ -144,7 +147,7 @@
 
 .controller input
 {
-    display: none;
+    display: block;
 }
 
 .buttons
@@ -163,9 +166,46 @@
     border: 1px solid #000;
 }
 
+.button
+{
+    display: block;
+    margin: -10px;
+    padding: 2.88%;
+}
+
 .breed-button:hover
 {
-    background: rgba(0, 250, 0, .6);
+    background: #50fd0099;
+    transition: .2s;
+}
+
+input[value="breed-1"]:checked ~ .main .controller .breed-1,
+input[value="breed-3"]:checked ~ .main .controller .breed-3,
+input[value="breed-5"]:checked ~ .main .controller .breed-5,
+input[value="breed-6"]:checked ~ .main .controller .breed-6,
+input[value="breed-7"]:checked ~ .main .controller .breed-7,
+input[value="breed-8"]:checked ~ .main .controller .breed-8,
+input[value="breed-9"]:checked ~ .main .controller .breed-9,
+input[value="breed-11"]:checked ~ .main .controller .breed-11
+{
+    background: #00f40099;
+}
+
+input[name="switch"]:checked ~ .main .cats .cat-card
+{
+    display: none;
+}
+
+input[value="breed-1"]:checked ~ .main .cats .breed_1,
+input[value="breed-3"]:checked ~ .main .cats .breed_3,
+input[value="breed-5"]:checked ~ .main .cats .breed_5,
+input[value="breed-6"]:checked ~ .main .cats .breed_6,
+input[value="breed-7"]:checked ~ .main .cats .breed_7,
+input[value="breed-8"]:checked ~ .main .cats .breed_8,
+input[value="breed-9"]:checked ~ .main .cats .breed_9,
+input[value="breed-11"]:checked ~ .main .cats .breed_11
+{
+    display: flex;
 }
 
 /* Tablet Styles */
@@ -223,7 +263,7 @@
 {
     .cats 
     {
-        margin-top: 7%;
+        margin-top: 3.3%;
         margin-bottom: 2%;
         justify-content: flex-start;
         flex-flow: row wrap;
@@ -270,22 +310,32 @@
     .desktop-styles
     {
         display: flex;
+        height: 6%;
         flex-direction: row;
+        align-items: center;
         font-size: 100%;
     }
 
     .desktop-styles span
     {
-        padding-left: 2%;
+        padding-left: .2%;
     }
 
     .desktop-styles-company
     {
         margin-left: auto;
+        display: flex;
     }
 
     .controller
     {
         display: flex;
     }
+
+    input[name="switch"]:checked ~ footer .desktop-styles
+    {
+        position: fixed;
+        height: 5%;
+    }
+
 }

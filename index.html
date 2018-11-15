@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
+    <!-- checkbox для выбора породы кота -->
+    <input id="breed-1" type="checkbox" name="switch" value="breed-1">
+    <input id="breed-3" type="checkbox" name="switch" value="breed-3">
+    <input id="breed-5" type="checkbox" name="switch" value="breed-5">
+    <input id="breed-6" type="checkbox" name="switch" value="breed-6">
+    <input id="breed-7" type="checkbox" name="switch" value="breed-7">
+    <input id="breed-8" type="checkbox" name="switch" value="breed-8">
+    <input id="breed-9" type="checkbox" name="switch" value="breed-9">
+    <input id="breed-11" type="checkbox" name="switch" value="breed-11">
+
     <header class="header-banner">Мурмаркет</header>
     <article class="main">
     <section class="cats">
@@ -29,7 +39,7 @@
                 у вас под боком. Любит рисовую кашу и фрискис</p>
             </div>
         </div>
-        <div class="cat-card breed_2">
+        <div class="cat-card breed_1">
             <div class="cat-card-main-info">
                 <img src="cats/Чубайс.jpg" class="cat-photo" alt="Котик сибирец рыжий">
                 <div class="cat-brief-information">
@@ -93,7 +103,7 @@
             </div>
             <div class="cat-full-information">
                 <p>Два милых брата. Идут в комплекте!</p>
-                <p>Эти два брата не могут друг без друга. Никак. Вообще! спать - только вместе. 
+                <p>Эти два брата не могут друг без друга. спать - только вместе. 
                 Играть - только вместе! Они от разных кошек, но сошлись как братья. 
                 Лупе пол года, а Пупе полтора.</p>
             </div>
@@ -102,7 +112,7 @@
             <div class="cat-card-main-info">
                 <img src="cats/мейн-кун.jpg" class="cat-photo" alt="Котик мейн кун">
                 <div class="cat-brief-information">
-                    <h1><a href="#">Дон Винни Ля Хуанито Котталес</a></h1>
+                    <h1><a href="#">Хуанито Котталес</a></h1>
                     <p>Возраст: 4 года</p>
                     <p>Порода: Мейн кун</p>
                     <p>Кастрация: &#10004;</p><br>
@@ -140,7 +150,7 @@
                     <p>Возраст: 5 лет</p>
                     <p>Порода: Саванна</p>
                     <p>Стерилизация: &#10004;</p><br>
-                    <p>Статус: <a href="https://vk.com/ramzan">Появился хозяйн</a></p>
+                    <p>Статус: <a href="https://vk.com/ramzan">Приручен</a></p>
                 </div>
             </div>
             <div class="cat-full-information">
@@ -165,7 +175,7 @@
                 <p>Этот кот будет просто наблюдать за вашей рутинной жизнью и сочувствовать.</p>
             </div>
         </div>
-        <div class="cat-card breed_2">
+        <div class="cat-card breed_1">
             <div class="cat-card-main-info">
                 <img src="cats/Миша.jpg" class="cat-photo" alt="Котик сибирец">
                 <div class="cat-brief-information">
@@ -173,7 +183,7 @@
                     <p>Возраст: Полгода</p>
                     <p>Порода: Сибирец</p>
                     <p>Кастрация: &#10008;</p><br>
-                    <p>Статус: <a href="https://vk.com/ilmdmaydum">Появился хозяйн</a></p>
+                    <p>Статус: <a href="https://vk.com/ilmdmaydum">Приручен</a></p>
                 </div>
             </div>
             <div class="cat-full-information">
@@ -200,16 +210,8 @@
             </div>
         </div>
     </section>
-
+    
     <nav class="controller">
-        <input id="breed-1" type="checkbox" name="switch1" value="breed-1">
-        <input id="breed-3" type="checkbox" name="switch3" value="breed-3">
-        <input id="breed-5" type="checkbox" name="switch5" value="breed-5">
-        <input id="breed-6" type="checkbox" name="switch6" value="breed-6">
-        <input id="breed-7" type="checkbox" name="switch7" value="breed-7">
-        <input id="breed-8" type="checkbox" name="switch8" value="breed-8">
-        <input id="breed-9" type="checkbox" name="switch9" value="breed-9">
-        <input id="breed-11" type="checkbox" name="switch12" value="breed-11">
 
         <h1>Возраст</h1>
 
@@ -219,32 +221,32 @@
 
         <h1>Порода</h1>
 
-        <div class="breed-button">
-            <label for="breed-1">Сибирец</label>
+        <div class="breed-button breed-1">
+            <label for="breed-1"><a class="button">Сибирец</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-3">Бенгал</label>
+        <div class="breed-button breed-3">
+            <label for="breed-3"><a class="button">Бенгал</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-5">Као-мани</label>
+        <div class="breed-button breed-5">
+            <label for="breed-5"><a class="button">Као-мани</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-6">Мейн кун</label>
+        <div class="breed-button breed-6">
+            <label for="breed-6"><a class="button">Мейн кун</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-7">Русская голубая</label>
+        <div class="breed-button breed-7">
+            <label for="breed-7"><a class="button">Русская голубая</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-8">Саванна</label>
+        <div class="breed-button breed-8">
+            <label for="breed-8"><a class="button">Саванна</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-9">Тойгер</label>
+        <div class="breed-button breed-9">
+            <label for="breed-9"><a class="button">Тойгер</a></label>
         </div>
-        <div class="breed-button">
-            <label for="breed-11">Чаузи</label>
+        <div class="breed-button breed-11">
+            <label for="breed-11"><a class="button">Чаузи</a></label>
         </div>
     </nav>
-
+    
     </article>
 
     <footer>
@@ -282,13 +284,12 @@
             <span>
                 &#9990; <a href="tel:+79002207777">+7-900-220-77-77</a>
             </span>
-            <span>&#9899;</span>
             <span>
                 &#9993; <a href="mailto:grandmaNyura@yandex.ru">grandmaNyura@yandex.ru</a>
             </span>
             <span class="desktop-styles-company">
                 &#169; 2018 ООО &#171;
-                <a href="mailto:grandmaNyura@yandex.ru">Бабушкины котятки</a>&#187;
+                <a href="mailto:grandmaNyura@yandex.ru">Бабушкины котятки</a>&#187;&nbsp;&nbsp;&nbsp;
             </span>
         </div>
     </footer>
