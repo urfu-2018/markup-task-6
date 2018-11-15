@@ -50,7 +50,7 @@ img:not([class='list']):hover
     margin: 30px;
     width: 500px;
     height: 350px;
-    padding: 1%;
+    padding-right: 1%;
     border: 1px solid #ebe7d7;
     overflow: hidden;
     text-align: center;
