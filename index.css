@@ -119,8 +119,6 @@
     padding: 10px;
 }
 
-
-
 .main
 {
     display: flex;
@@ -179,31 +177,31 @@
     transition: .2s;
 }
 
-input[value="breed-1"]:checked ~ .main .controller .breed-1,
-input[value="breed-3"]:checked ~ .main .controller .breed-3,
-input[value="breed-5"]:checked ~ .main .controller .breed-5,
-input[value="breed-6"]:checked ~ .main .controller .breed-6,
-input[value="breed-7"]:checked ~ .main .controller .breed-7,
-input[value="breed-8"]:checked ~ .main .controller .breed-8,
-input[value="breed-9"]:checked ~ .main .controller .breed-9,
-input[value="breed-11"]:checked ~ .main .controller .breed-11
+input[value='breed-1']:checked ~ .main .controller .breed-1,
+input[value='breed-3']:checked ~ .main .controller .breed-3,
+input[value='breed-5']:checked ~ .main .controller .breed-5,
+input[value='breed-6']:checked ~ .main .controller .breed-6,
+input[value='breed-7']:checked ~ .main .controller .breed-7,
+input[value='breed-8']:checked ~ .main .controller .breed-8,
+input[value='breed-9']:checked ~ .main .controller .breed-9,
+input[value='breed-11']:checked ~ .main .controller .breed-11
 {
     background: #00f40099;
 }
 
-input[name="switch"]:checked ~ .main .cats .cat-card
+input[name='switch']:checked ~ .main .cats .cat-card
 {
     display: none;
 }
 
-input[value="breed-1"]:checked ~ .main .cats .breed_1,
-input[value="breed-3"]:checked ~ .main .cats .breed_3,
-input[value="breed-5"]:checked ~ .main .cats .breed_5,
-input[value="breed-6"]:checked ~ .main .cats .breed_6,
-input[value="breed-7"]:checked ~ .main .cats .breed_7,
-input[value="breed-8"]:checked ~ .main .cats .breed_8,
-input[value="breed-9"]:checked ~ .main .cats .breed_9,
-input[value="breed-11"]:checked ~ .main .cats .breed_11
+input[value='breed-1']:checked ~ .main .cats .breed_1,
+input[value='breed-3']:checked ~ .main .cats .breed_3,
+input[value='breed-5']:checked ~ .main .cats .breed_5,
+input[value='breed-6']:checked ~ .main .cats .breed_6,
+input[value='breed-7']:checked ~ .main .cats .breed_7,
+input[value='breed-8']:checked ~ .main .cats .breed_8,
+input[value='breed-9']:checked ~ .main .cats .breed_9,
+input[value='breed-11']:checked ~ .main .cats .breed_11
 {
     display: flex;
 }
@@ -332,7 +330,7 @@ input[value="breed-11"]:checked ~ .main .cats .breed_11
         display: flex;
     }
 
-    input[name="switch"]:checked ~ footer .desktop-styles
+    input[name='switch']:checked ~ footer .desktop-styles
     {
         position: fixed;
         height: 5%;
