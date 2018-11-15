@@ -1,9 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>Задача «Мурмаркет для всех»</title>
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Задача «Мурмаркет для всех»</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="index_common.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="mobile.css">
+    </head>
+
+    <body>
+        <header><div>Мурмаркет</div></header>
+        <article class="carousel">
+            <input type="checkbox" name="breed" id="one" class="one">
+            <input type="checkbox" name="breed" id="two" class="two">
+            <input type="checkbox" name="breed" id="three" class="three">
+            <input type="checkbox" name="breed" id="all" class="all" checked>
+            <div class="wrap">
+                
+                <section class="cat-info one">
+                    <div class="avatar">
+                        <img src="avatars/Боря.jpg" alt="кот">
+                    </div>
+                    <div class="info">
+                        <header class="name">Боря</header>
+                        <ul>
+                            <li>Возраст: 6 месяцев</li>
+                            <li>Порода: нет</li>
+                            <li>Болезни: нет</li>
+                        </ul>
+                        <div>Статус: в поисках</div>
+                    </div>
+                    <div class="full-info">
+                        <div>
+                            Борька игрвый мальчишка, постояно ищет приключения
+                            на свой пушистый зад. Но проблем не создает.
+                            Акуратный и ласковый пацан.
+                        </div>
+                    </div>
+                </section>
+                <section class="cat-info two">
+                    <div class="avatar">
+                        <img src="avatars/Карл.jpg" alt="кот">
+                    </div>
+                    <div class="info">
+                        <header class="name">Карл</header>
+                        <ul>
+                            <li>Возраст: 2 года</li>
+                            <li>Порода: нет</li>
+                            <li>Болезни: нет</li>
+                        </ul>
+                        <div>Статус: в поисках</div>
+                    </div>
+                    <div class="full-info three">
+                        <div>
+                            Карл добрый, толстый и любит есть. Много, часто,
+                            всегда.
+                        </div>
+                    </div>
+                </section>
+                <section class="cat-info one">
+                    <div class="avatar">
+                        <img src="avatars/Арчибальт.jpg" alt="кот">
+                    </div>
+                    <div class="info">
+                        <header class="name">Арчибальт IV</header>
+                        <ul>
+                            <li>Возраст: 8 месяцев</li>
+                            <li>Порода: Драконорожденный</li>
+                            <li>Болезни: нет</li>
+                        </ul>
+                        <div>Статус: в поисках железного трона</div>
+                    </div>
+                    <div class="full-info">
+                        <div>
+                            Арчибальт. Просто Арчибальт. Если его злить, то он
+                            натравит на тебя своих летающих дружков.
+                        </div>
+                    </div>
+                </section>
+                <section class="cat-info three">
+                    <div class="avatar">
+                        <img src="avatars/Кот.jpg" alt="кот">
+                    </div>
+                    <div class="info">
+                        <header class="name">Кот</header>
+                        <ul>
+                            <li>Возраст: 3 года</li>
+                            <li>Порода: нет</li>
+                            <li>Болезни: нет</li>
+                        </ul>
+                        <div>Статус: в поисках</div>
+                    </div>
+                    <div class="full-info">
+                        <div>
+                            Просто Кот. Делает кошачьи дела. Спит, играет, ест.
+                            А что еще должен делать кот?
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="filter">
+                <input type="range" name="age" min="0" max="30">
+                <label for="one">
+                    <span>сфинксы</span>
+                </label>
+                <label for="two">
+                        <span>мейнкун</span>
+                </label>
+                <label for="three">
+                        <span>бродяги</span>
+                </label>
+                <label for="all">
+                    <span>все</span>
+                </label>
+            </div>
+        </article>
+        <footer>
+            <div class="mails">
+                <div>Напишите нам:</div>
+                <ul>
+                    <li><a href="cats@babuli.ru">cats@babuli.ru</a></li>
+                    <li><a href="vnuchek@babuli.ru">vnuchek@babuli.ru</a></li>
+                </ul>
+            </div>
+            <div class="TM">
+                <div>© 2018 ООО "<a href="">Бабушкины котята</a>"</div>
+            </div>
+        </footer>
+    </body>
 </html>

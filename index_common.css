@@ -1,0 +1,171 @@
+body
+{
+    font-family: sans-serif;
+}
+
+body > header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+body > header > div
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow';
+}
+
+body > header > div::first-letter
+{
+    color: red;
+}
+
+@media screen and (max-width: 750px)
+{
+    body > footer
+    {
+        height: auto;
+    }
+
+    body > footer > div
+    {
+        display: block;
+        float: none;
+    }
+
+    body > footer .mails
+    {
+        margin-bottom: 20px;
+    }
+
+    body > footer .TM
+    {
+        float: none;
+    }
+
+    body > footer .TM > div
+    {
+        position: static;
+    }
+}
+
+.mails > div
+{
+    color: gray;
+}
+
+body > footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 5px;
+    background: white;
+    border-top: 1px solid #e1e1e1;
+}
+
+body > footer > div
+{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > footer a
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+body > footer .mails a
+{
+    
+    display: inline-block;
+    vertical-align: super;
+    line-height: 1.25;
+}
+
+body > footer ul
+{
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+body > footer li
+{
+    list-style-image: url('baseline_mail_outline_black_18dp.png');
+    list-style-position: inside;
+}
+
+@media screen and (min-width: 750px)
+{
+    body > footer > div
+    {
+        display: inline-block;
+    }
+
+    body > footer .TM
+    {
+        float: right;
+        width: 250px;
+        padding: 10px;
+    }
+
+    body > footer .TM > div
+    {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    body > article
+    {
+        position: relative;
+        padding-top: 60px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    body > footer > .mails
+    {
+        padding-left: 20px;
+    }
+
+    body > footer > .mails > div,
+    body > footer > .mails > ul,
+    body > footer > .mails > ul li 
+    {
+        display: inline;
+    }
+
+    body > footer > .mails > div
+    {
+        padding-right: 20px;
+    }
+
+    body > footer .mails a
+    {
+        vertical-align: baseline;
+    }
+
+    body > footer .TM
+    {
+        display: inline;
+        position: static;
+        padding: 0;
+    }
+
+    body > footer .TM > div
+    {
+        position: static;
+    }
+}
