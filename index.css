@@ -9,7 +9,7 @@ html,
 body
 {
     margin: 0;
-    /* background-color: red; */
+    background-color: red;
 }
 
 .header
@@ -36,6 +36,11 @@ body
 .header .store-name::first-letter
 {
     color: #f00;
+}
+
+.filter
+{
+    display: none;
 }
 
 .cats
@@ -117,7 +122,7 @@ body
     text-decoration: none;
 }
 
-.footer .footer-element .email::before
+.email::before
 {
     content: '';
     display: inline-block;
@@ -133,13 +138,20 @@ body
     height: 76px;
 }
 
+.emails
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
 @media screen and (min-width: 730px)    
 {
-    /* html,
+    html,
     body
     {
         background-color: yellow;
-    } */
+    }
     .header
     {
         position: fixed;
@@ -176,5 +188,112 @@ body
     .footer-spacer
     {
         display: block;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    html,
+    body
+    {
+        background-color: initial;
+    }
+
+    .header
+    {
+        position: static;
+    }
+
+    .footer
+    {
+        position: static;
+    }
+
+    .footer-spacer
+    {
+        display: none;
+    }
+
+    .header-spacer
+    {
+        display: none;
+    }
+
+    .emails
+    {
+        width: 400px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .emails::before
+    {
+        content: '';
+        display: inline-block;
+        background-image: url(imgs/mail-img.png);
+        background-size: cover;
+        width: 13px;
+        height: 13px;
+    }
+
+    .email::before
+    {
+        display: none;
+    }
+
+    .write-us + .email::after
+    {
+        content: "\25CF";
+        display: inline-block;
+        padding: 0 15px;
+        color: #565656;
+    }
+
+    .filter
+    {
+        margin: 20px 0;
+        display: block;
+        flex-basis: 20%;
+    }
+
+    .cats-shop
+    {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .cats
+    {
+        flex-basis: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cat-img
+    {
+        margin: 5% 5%;
+        width: 95%;
+        height: auto;
+        border-radius: 7px;
+    }
+
+    .cat
+    {
+        display: grid;
+        grid-template-rows: 190px 100px;
+        grid-template-columns: 260px auto;
+        grid-column-gap: 5px;
+    }
+
+    .short-info
+    {
+        margin: 5% 2%;
+    }
+
+    .full-info
+    {
+        display: block;
+        grid-column: span 2;
+        border-top: 1px solid #d3d3d3;
+        padding: 15px 15px;
     }
 }
