@@ -1,0 +1,259 @@
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+body
+{
+    margin: 0;
+}
+
+a:hover
+{
+    color: #8170c0;
+}
+
+.kitty-boxes-container
+{
+    margin-bottom: 100px;
+    z-index: 1;
+    display: grid;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    flex-grow: 3;
+}
+
+.main-page
+{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    text-align: center;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filters
+{
+    margin-top: 20px;
+    flex-basis: 300px;
+    min-width: 300px;
+    height: 500px;
+    border: 1px solid #cfcfcf;
+}
+
+.full-info
+{
+    padding-left: 10px;
+    border-top: 1px solid #cfcfcf;
+    text-align: left;
+    grid-column: 1 / 3;
+}
+
+.kitty-box
+{
+    border: 1px solid #cfcfcf;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 130px;
+}
+
+.kitty-box:hover
+{
+    box-shadow: 0 0 10px #808080;
+}
+
+.header-with-img
+{
+    margin: 10px;
+    overflow: hidden;
+    height: 180px;
+}
+
+.header-with-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease-out;
+}
+
+.header-with-img img:hover
+{
+    transform: scale(1.1);
+}
+
+.about-kitty
+{
+    padding-top: 10px;
+    text-align: left;
+}
+
+.kitty-name
+{
+    margin: 0;
+    font-weight: 300;
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cell-mode-info
+{
+    transition: all .3s ease-out;
+}
+
+.cell-mode-info:hover
+{
+    color: #8170c0;
+    cursor: default;
+    transform: translate(3px, 0);
+}
+
+.page-header
+{
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'PT Sans Narrow', arial;
+    font-size: 32px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+
+.page-header::first-letter
+{
+    color: #f00;
+}
+
+footer
+{
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 999;
+    font-size: 14px;
+    border-top: 1px solid #cfcfcf;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.copyright
+{
+    padding: 15px;
+    float: right;
+    margin-top: 38px;
+    text-align: right;
+}
+
+.contacts
+{
+    padding: 15px;
+    text-align: left;
+    float: left;
+}
+
+footer a
+{
+    color: #4c4cd8;
+}
+
+footer a:hover
+{
+    color: #f00;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px)
+{
+    .full-info
+    {
+        display: none;
+    }
+
+    .kitty-box
+    {
+        display: block;
+    }
+
+    .filters
+    {
+        display: none;
+    }
+
+    .kitty-boxes-container
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header-with-img
+    {
+        height: 300px;
+        margin: 0;
+    }
+
+    .about-kitty
+    {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .header-with-img
+    {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 730px)
+{
+    .kitty-boxes-container
+    {
+        display: block;
+        padding: 15px;
+        margin-bottom: 140px;
+    }
+
+    .kitty-box
+    {
+        margin: 0;
+        margin-top: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contacts
+    {
+        float: none;
+    }
+
+    .copyright
+    {
+        padding-top: 0;
+        float: none;
+        text-align: left;
+        margin: 0;
+    }
+
+    .header-with-img
+    {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    .header-with-img
+    {
+        height: 300px;
+    }
+}
