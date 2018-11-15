@@ -284,6 +284,13 @@ input[type='range']::-webkit-slider-thumb
             /300px;
         margin: 10px;
     }
+
+    .choice[id='female']:checked ~ .main .cat-card .cat-card-wrapper,
+    .choice[id='male']:checked ~ .main .cat-card .cat-card-wrapper,
+    .choice[id='all']:checked ~ .main .cat-card .cat-card-wrapper
+    {
+        display: grid;
+    }
 }
 
 @media screen and (min-width: 375px) and (max-width: 730px)
@@ -342,5 +349,12 @@ input[type='range']::-webkit-slider-thumb
         display: none;
         grid-template: 'img'
             'short-info';
+    }
+
+    .choice[id='female']:checked ~ .main .cat-card .cat-card-wrapper,
+    .choice[id='male']:checked ~ .main .cat-card .cat-card-wrapper,
+    .choice[id='all']:checked ~ .main .cat-card .cat-card-wrapper
+    {
+        display: grid;
     }
 }
