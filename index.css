@@ -135,7 +135,7 @@ input[type='range']::-moz-range-track
     list-style-type: none;
     text-align: center;
     border: 3px solid #808080;
-    border-radius: 3px;
+    border-radius: 10px;
     padding: 10px 0;
     margin-bottom: 10px;
     cursor: pointer;
@@ -143,6 +143,7 @@ input[type='range']::-moz-range-track
 
 .breed > label
 {
+    display: block;
     cursor: pointer;
     color: #808080;
 }
@@ -177,14 +178,19 @@ input[id='another']:checked ~ .cat-cards .another
     margin: 5px;
 }
 
+.contacts
+{
+    display: inline-block;
+}
+
 .contacts p
 {
     display: block;
 }
 
-.contacts
+.contacts a[href]
 {
-    display: inline-block;
+    text-decoration: none;
 }
 
 .contacts a[href]::before
@@ -213,7 +219,7 @@ input[id='another']:checked ~ .cat-cards .another
     color: #000;
 }
 
-@media screen and (min-width: 1201px)
+@media screen and (min-width: 1200.1px)
 {
     .main-content
     {
@@ -249,9 +255,10 @@ input[id='another']:checked ~ .cat-cards .another
         display: inline;
     }
 
-    .contacts p:last-child > a[href]::before
+    .contacts p:nth-child(n + 2) > a[href]::before
     {
-        content: '\2776';
+        font-size: 1.4em;
+        content: '• ';
         color: #000;
     }
 
@@ -261,7 +268,7 @@ input[id='another']:checked ~ .cat-cards .another
     }
 }
 
-@media screen and (min-width: 731px) and (max-width: 1200px)
+@media screen and (min-width: 730.1px) and (max-width: 1200px)
 {
     .photocard
     {
