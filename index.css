@@ -1,4 +1,5 @@
-body, html
+body,
+html
 {
     margin: 2px;
     padding: 0;
@@ -75,8 +76,7 @@ a:hover
     box-sizing: border-box;
     padding: 10px;
     border: 1px solid #dcdcdc;
-    grid-template:
-        'cat-img   short-info' 2fr
+    grid-template: 'cat-img short-info' 2fr
         'full-info full-info' 1fr
         / 1fr 1fr;
     grid-gap: 20px 10px;
@@ -146,6 +146,7 @@ a:hover
 
 /* --------------------------------------------------------------- */
 /* TODO: range slider */
+
 input[type='range']
 {
     width: 210px;
@@ -167,10 +168,11 @@ input[type='range']::-webkit-slider-runnable-track
 {
     width: 200px;
     height: 1px;
-    background: #003D7C;
+    background: #003d7c;
 }
 
-input[type='range']:last-of-type::-webkit-slider-runnable-track{
+input[type='range']:last-of-type::-webkit-slider-runnable-track
+{
     background: none;
 }
 
@@ -179,9 +181,9 @@ input[type='range']::-webkit-slider-thumb
     position: relative;
     height: 15px;
     width: 15px;
-    margin-top: -7px;
+    margin: -7px 0 0;
     background: #fff;
-    border: 1px solid #003D7C;
+    border: 1px solid #003d7c;
     border-radius: 25px;
     z-index: 1;
 }
@@ -197,8 +199,7 @@ input[type='range']::-webkit-slider-thumb
     height: 60px;
     width: 210px;
     display: inline-block;
-    margin-top: -5px;
-    margin-left: 20px;
+    margin: -5px 0 20px 0;
 }
 
 .range-slider input
@@ -215,10 +216,20 @@ input[type='range']::-webkit-slider-thumb
 {
     position: relative;
     float: right;
-    margin-right: -5px;
+    margin: 0 -5px 0 0;
 }
 /* TODO: range slider */
 /* --------------------------------------------------------------- */
+
+.breed-wrapper
+{
+    margin: 50px 0 0;
+}
+
+.age-title
+{
+    margin: 30px 0 0;
+}
 
 .breed-label
 {
@@ -232,7 +243,7 @@ input[type='range']::-webkit-slider-thumb
 
 input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
 input[id='scottish-fold']:checked ~ .content-wrapper .scottish-fold,
-input[id='british-shorthair']:checked ~ .content-wrapper .british-shorthair,
+input[id='british']:checked ~ .content-wrapper .british-shorthair,
 input[id='bombay']:checked ~ .content-wrapper .bombay,
 input[id='shartrez']:checked ~ .content-wrapper .shartrez
 {
@@ -241,7 +252,7 @@ input[id='shartrez']:checked ~ .content-wrapper .shartrez
 
 input[id='unnecessary']:checked ~ .content-wrapper label[for='unnecessary'],
 input[id='scottish-fold']:checked ~ .content-wrapper label[for='scottish-fold'],
-input[id='british-shorthair']:checked ~ .content-wrapper label[for='british-shorthair'],
+input[id='british']:checked ~ .content-wrapper label[for='british'],
 input[id='bombay']:checked ~ .content-wrapper label[for='bombay'],
 input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
 {
@@ -251,36 +262,86 @@ input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
 
 .footer
 {
-    flex-direction: row;
-    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+    font: normal 14px Arial;
 }
-
-.footer div
-{
-    margin: 0 20px;
-}
-
-.footer div:last-child
-{
-    margin-left: auto;
-}
-
 /* ✉ */
 
 /* Mobile styles */
-@media only screen and (min-width: 375px) and (max-width: 730px)
+@media  screen and (min-width: 375px) and (max-width: 730px)
 {
+    .full-description,
+    .menu-wrapper
+    {
+        display: none;
+    }
 
+    input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
+    input[id='scottish-fold']:checked ~ .content-wrapper .cat-card,
+    input[id='british']:checked ~ .content-wrapper .cat-card,
+    input[id='bombay']:checked ~ .content-wrapper .cat-card,
+    input[id='shartrez']:checked ~ .content-wrapper .cat-card
+    {
+        display: grid;
+    }
+
+    .cat-card
+    {
+        grid-template: 'cat-img' 2fr
+            'short-info' 150px;
+        grid-gap: 20px 10px;
+        flex-basis: 100%;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .content-wrapper
+    {
+        display: flex;
+    }
+
+    .cards-wrapper
+    {
+        display: block;
+    }
 }
 
 /* Tablet styles */
-@media only screen and (min-width: 730px) and (max-width: 1200px)
+@media  screen and (min-width: 730px) and (max-width: 1200px)
 {
+    .full-description,
+    .menu-wrapper
+    {
+        display: none;
+    }
 
-}
+    input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
+    input[id='scottish-fold']:checked ~ .content-wrapper .cat-card,
+    input[id='british']:checked ~ .content-wrapper .cat-card,
+    input[id='bombay']:checked ~ .content-wrapper .cat-card,
+    input[id='shartrez']:checked ~ .content-wrapper .cat-card
+    {
+        display: grid;
+    }
 
-/* Desktop styles */
-@media only screen and (min-width: 1200px)
-{
+    .cat-card
+    {
+        grid-template: 'cat-img' 2fr
+            'short-info' 150px
+            / auto;
+        grid-gap: 20px 10px;
+        flex-basis: 50%;
+        margin: 0 0 20px;
+    }
 
+    .content-wrapper
+    {
+        display: flex;
+    }
+
+    .cards-wrapper
+    {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr;
+    }
 }
