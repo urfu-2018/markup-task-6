@@ -1,0 +1,350 @@
+@font-face
+{
+    font-family: Intro Cond;
+    src: url('IntroCondLightFree.otf') format('opentype');
+}
+
+body
+{
+    font-family: 'Intro Cond';
+    background: #2d2d2d;
+}
+
+.container
+{
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+}
+
+input[type='checkbox']
+{
+    display: none;
+
+}
+
+.header
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, .46);
+}
+
+.menu
+{
+    grid-column: 2;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    grid-row: 1;
+}
+
+.cats
+{
+    grid-column: 1;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.content
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 100px);
+}
+
+.footer
+{
+    font-family: Arial;
+    font-size: .8em;
+    padding-top: 5px;
+    grid-row: 3;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, .46);
+}
+
+.footer a
+{
+    color: white;
+}
+
+.left_footer
+{
+    float: left;
+}
+
+.right_footer
+{
+    float: right;
+}
+
+.big_info
+{
+    display: flex;
+    grid-column: span 2;
+    overflow: hidden;
+    font-size: .8em;
+    align-content: flex-start;
+    padding: 7px;
+
+}
+
+input[id='no']:checked ~ .cats > .no,
+input[id='scotland']:checked ~ .cats > .scotland,
+input[id='kornish']:checked ~ .cats > .kornish,
+input[id='siam']:checked ~ .cats > .siam
+{
+    grid-column: 1;
+    grid-row: span 5;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    border: 1px solid lightgrey;
+    color: dimgray;
+    border-radius: 8px;
+    background: rgb(157, 227, 226);
+}
+
+input[id='no']:checked ~ .menu > label[for='no'],
+input[id='scotland']:checked ~ .menu > label[for='scotland'],
+input[id='kornish']:checked ~ .menu > label[for='kornish'],
+input[id='siam']:checked ~ .menu > label[for='siam']
+{
+    color: rgb(157, 227, 226);
+}
+
+input[id='no']:not(:checked) ~ .cats > .no,
+input[id='scotland']:not(:checked) ~ .cats > .scotland,
+input[id='kornish']:not(:checked) ~ .cats > .kornish,
+input[id='siam']:not(:checked) ~ .cats > .siam
+{
+    display: none;
+}
+
+.cat:hover
+{
+    box-shadow: 0 0 10px white;
+}
+
+.info a
+{
+    grid-column: 2;
+    grid-row: 1;
+    color: black;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.info
+{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: hidden;
+    font-size: 1em;
+    padding: 7px;
+}
+
+.cat .img_center
+{
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.img_center:hover
+{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.img_center
+{
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 90%;
+    margin: 5px;
+    border-radius: inherit;
+}
+
+.Eva
+{
+    background-image: url(https://pp.userapi.com/c851416/v851416202/36cb5/7hQPa1H_nxA.jpg);
+}
+
+.Tom
+{
+    background-image: url(https://pp.userapi.com/c845217/v845217226/f4713/0ids8-AkgwA.jpg);
+}
+
+.Salt
+{
+    background-image: url(https://pp.userapi.com/c834304/v834304508/b13af/hExBzMK8UJI.jpg);
+}
+
+.Patrik
+{
+    background-image: url(https://pp.userapi.com/c840427/v840427638/8a176/gL6qApF1afs.jpg);
+}
+
+.Matroskin
+{
+    background-image: url(https://pp.userapi.com/c849532/v849532252/9a8bd/8QUCA2z17SQ.jpg);
+}
+
+.Malish
+{
+    background-image: url(https://pp.userapi.com/c845524/v845524957/104ad0/LYbklfe-jsU.jpg);
+}
+
+.Like
+{
+    background-image: url(https://pp.userapi.com/c850132/v850132480/5d8b8/9ZuEEYr4UKA.jpg);
+}
+
+.Leya
+{
+    background-image: url(https://pp.userapi.com/c834202/v834202929/f6260/j1IQHNqemyQ.jpg);
+}
+
+.Klubnichka
+{
+    background-image: url(https://pp.userapi.com/c850636/v850636753/1b222/AOcx69euRUw.jpg);
+}
+
+.Fanta
+{
+    background-image: url(https://pp.userapi.com/c824601/v824601025/12b2b0/OAvXl7REasI.jpg);
+}
+
+.img_range
+{
+    width: 150px;
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 730px)
+{
+    .menu
+    {
+        display: none;
+    }
+
+    .big_info
+    {
+        display: none;
+    }
+
+    .cats
+    {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    input[id='no']:not(:checked) ~ .cats > .no,
+    input[id='scotland']:not(:checked) ~ .cats > .scotland,
+    input[id='kornish']:not(:checked) ~ .cats > .kornish,
+    input[id='siam']:not(:checked) ~ .cats > .siam
+    {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 700px;
+        height: 500px;
+        border: 1px solid lightgrey;
+        color: dimgray;
+        border-radius: 8px;
+        background: rgb(157, 227, 226);
+    }
+
+    .info
+    {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .img_center
+    {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .content
+    {
+        display: flex;
+    }
+}
+
+@media screen and (min-device-width: 730px) and (max-device-width: 1200px)
+{
+    .menu
+    {
+        display: none;
+    }
+
+    .big_info
+    {
+        display: none;
+    }
+
+    .cats
+    {
+        display: flex;
+        flex-flow: row wrap;
+        margin: auto;
+    }
+
+    input[id='no']:not(:checked) ~ .cats > .no,
+    input[id='scotland']:not(:checked) ~ .cats > .scotland,
+    input[id='kornish']:not(:checked) ~ .cats > .kornish,
+    input[id='siam']:not(:checked) ~ .cats > .siam
+    {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        height: 350px;
+        border: 1px solid lightgrey;
+        color: dimgray;
+        border-radius: 8px;
+        background: rgb(157, 227, 226);
+    }
+
+    .info
+    {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .img_center
+    {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .content
+    {
+        display: flex;
+    }
+
+}
