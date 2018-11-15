@@ -262,6 +262,7 @@ footer a
 
     .ads
     {
+        align-self: start;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -465,7 +466,7 @@ footer a
     input[id='american-curl']:checked ~ .ads .american-curl,
     input[id='scottish-fold']:checked ~ .ads .scottish-fold
     {
-        display: inline-block;
+        display: block;
     }
 
     footer
