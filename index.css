@@ -1,6 +1,11 @@
+
 body
 {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .market-header
@@ -26,13 +31,13 @@ body
 
 .market-footer
 {
-    margin-bottom: 0;
     height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-self: flex-end;
     border: 1px solid #d3d3d3;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Arial', sans-serif;
     padding: 10px;
 }
@@ -51,9 +56,13 @@ body
 
 .main-block
 {
-    width: 100%;
     margin-top: 80px;
-    min-height: calc(100vh - 235px);
+    padding: 0 10px 10px;
+}
+
+.cat-section
+{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,8 +88,19 @@ body
     object-fit: cover;
 }
 
+.text
+{
+    height: auto;
+    padding: 0 5% 5%;
+    text-align: left;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+
 .cat-name
 {
+    font-size: 20px;
+    margin: 10px 0;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -91,30 +111,36 @@ body
     text-decoration: none;
 }
 
-.text
-{
-    height: auto;
-    padding: 0 5% 5%;
-    text-align: left;
-    text-overflow: ellipsis;
-    font-size: 15px;
-}
-
 .cat-name a:hover
 {
     color: red;
     text-decoration: initial;
 }
 
-.long:hover
+.short p
 {
-    overflow: auto;
-    -webkit-box-orient: initial;
+    margin: 0 0 5%;
 }
 
-@media screen and (min-width: 730px)
+.cat-filter
 {
-    .main-block
+    display: none;
+    padding-top: 10px;
+}
+
+.cat-type
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50px;
+    margin: 5px 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+@media screen and (min-device-width: 730px)
+{
+    .cat-section
     {
         flex-flow: row wrap;
         justify-content: space-between;
@@ -130,5 +156,25 @@ body
         height: 80px;
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-device-width: 1200px)
+{
+    .main-block
+    {
+        display: grid;
+        grid-template-columns: 1fr 25%;
+    }
+
+    .cat-filter
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat-card
+    {
+        flex-basis: 45%;
     }
 }
