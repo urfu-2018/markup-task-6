@@ -78,7 +78,7 @@ body
 .item-cat__main-information
 {
     width: 100%;
-    height: 209px;
+    height: 214px;
     padding: 15px;
     overflow: hidden;
     box-sizing: border-box;
@@ -136,6 +136,11 @@ body
     height: auto;
 }
 
+.aside-section
+{
+    margin-bottom: 30px;
+}
+
 .aside__p
 {
     color: #8a8a8a;
@@ -143,6 +148,61 @@ body
     margin: 0 0 15px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.range-bar
+{
+    width: 100%;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.range-bar__line
+{
+    width: 100%;
+    height: 1px;
+    background: #cacaca;
+    z-index: 100;
+}
+
+.range-bar__line-range
+{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background: #1d6be4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 105;
+}
+
+.range-bar__circle
+{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    z-index: 110;
+    border: 1px solid #cacaca;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.range-bar__circle-left
+{
+    left: 25%;
+}
+
+.range-bar__circle-right
+{
+    right: 25%;
 }
 
 .breed__label
@@ -314,6 +374,7 @@ body
 
     .item-cat
     {
+        display: block !important;
         width: 32%;
     }
 
