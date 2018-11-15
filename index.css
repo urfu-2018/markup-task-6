@@ -129,6 +129,14 @@ input
     visibility: hidden;
 }
 
+.contacts > img
+{
+    display: none;
+    width: 20px;
+    /*align-self: flex-end;*/
+    padding: 0;
+}
+
 @media (min-width: 730px)
 {
     .cat-card
@@ -262,6 +270,14 @@ input
         padding: 3%;
     }
 
+    .emails
+    {
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        width: 60%;
+    }
+
     .contacts
     {
         display: flex;
@@ -269,8 +285,6 @@ input
         margin: 0;
         height: 30%;
         align-self: center;
-        justify-content: space-around;
-
     }
 
     .rights
@@ -381,5 +395,20 @@ input
         height: 10px;
         background: black;
         border-radius: 100%;
+    }
+
+    .email img
+    {
+        display: none;
+    }
+
+    .contacts > img
+    {
+        display: block;
+    }
+
+    .contacts > p
+    {
+        padding-left: 5px;
     }
 }
