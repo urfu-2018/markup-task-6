@@ -2,8 +2,268 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1 class="name-shop">Мурмаркет</h1>
+    </header>
+    <main class="layout-positioner">
+        <input type="checkbox" name="filter-breed" id="korat">
+        <input type="checkbox" name="filter-breed" id="singapura">
+        <input type="checkbox" name="filter-breed" id="bengal">
+        <input type="checkbox" name="filter-breed" id="siberian">
+        <input type="checkbox" name="filter-breed" id="highlend-fold">
+        <input type="checkbox" name="filter-breed" id="egyptian-mau">
+        <input type="checkbox" name="filter-breed" id="norwegian-forest">
+        <input type="checkbox" name="filter-breed" id="bombei">
+        <input type="checkbox" name="filter-breed" id="american-curl">
+        <input type="checkbox" name="filter-breed" id="scottish-fold">
+        <div class="ads">
+            <article class="card korat">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/korat.jpg" alt="Кошка Беатриче">
+                    </div>
+                    <div class="main-info">
+                        <h2>Беатриче</h2>
+                        <div class="short-description">
+                            <p>Возраст: 2 года</p>
+                            <p>Порода: корат</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Энергичная, умная и ласковая.</p>
+                    <p>Не любит громкие и резкие звуки.</p>
+                </div>
+            </article>
+            <article class="card singapura">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/singapura.jpg" alt="Кошка Гертруда">
+                    </div>
+                    <div class="main-info">
+                        <h2>Гертруда</h2>
+                        <div class="short-description">
+                            <p>Возраст: около 10 месяцев</p>
+                            <p>Порода: сингапурская</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Дружелюбная, миролюбивая, пугливая.</p>
+                </div>
+            </article>
+            <article class="card bengal">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/bengal.jpg" alt="Кошка Жоржетта">
+                    </div>
+                    <div class="main-info">
+                        <h2>Жоржетта</h2>
+                        <div class="short-description">
+                            <p>Возраст: около 1 года</p>
+                            <p>Порода: бенгальская</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Игривая, активная, ловкая.</p>
+                    <p>Обожает играть с водой.</p>
+                </div>
+            </article>
+            <article class="card siberian">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/siberian.jpg" alt="Кот Арсений-Котовский">
+                    </div>
+                    <div class="main-info">
+                        <h2>Арсений-Котовский</h2>
+                        <div class="short-description">
+                            <p>Возраст: 1 год</p>
+                            <p>Порода: сибирская</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Умный и послушный.</p>
+                    <p>Отличный охотник.</p>
+                </div>
+            </article>
+            <article class="card highlend-fold">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/highlend-fold.jpg" alt="Кот Тамерлан">
+                    </div>
+                    <div class="main-info">
+                        <h2>Тамерлан</h2>
+                        <div class="short-description">
+                            <p>Возраст: 2 года</p>
+                            <p>Порода: хайленд фолд</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Интеллигентна, мягка, спокойна и жизнерадостна.</p>
+                    <p>Комфортно сосуществует со всеми членами семьи.</p>
+                </div>
+            </article>
+            <article class="card egyptian-mau">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/egyptian-mau.jpg" alt="Кошка Терпсихора">
+                    </div>
+                    <div class="main-info">
+                        <h2>Терпсихора</h2>
+                        <div class="short-description">
+                            <p>Возраст: 1 год</p>
+                            <p>Порода: египетская мау</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Преданная.</p>
+                    <p>Любит ноутбуки.</p>
+                </div>
+            </article>
+            <article class="card norwegian-forest">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/norwegian-forest.jpeg" alt="Кот Фердинанд">
+                    </div>
+                    <div class="main-info">
+                        <h2>Фердинанд</h2>
+                        <div class="short-description">
+                            <p>Возраст: 2 года</p>
+                            <p>Порода: норвежская лесная</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Дружелюбный, обладает мягким нравом и хорошими манерами.</p>
+                    <p>Любит поговорить, обожает играть и любит поохотиться на бантики.</p>
+                </div>
+            </article>
+            <article class="card bombei">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/bombei.jpg" alt="Кошка Шерри">
+                    </div>
+                    <div class="main-info">
+                        <h2>Шерри</h2>
+                        <div class="short-description">
+                            <p>Возраст: 2 месяца</p>
+                            <p>Порода: бомбейская</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Спокойная.</p>
+                    <p>Обожает колени своего хозяина.</p>
+                </div>
+            </article>
+            <article class="card american-curl">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/american-curl.jpg" alt="Кошка Эзра">
+                    </div>
+                    <div class="main-info">
+                        <h2>Эзра</h2>
+                        <div class="short-description">
+                            <p>Возраст: около 1 года</p>
+                            <p>Порода: американский керл</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Уравновешенная, интеллигентная.</p>
+                    <p>Обожает детей.</p>
+                </div>
+            </article>
+            <article class="card scottish-fold">
+                <div class="card-main-p">
+                    <div class="image">
+                        <img src="img/shotlandskaya-vislouhaya.jpg" alt="Кот Яся">
+                    </div>
+                    <div class="main-info">
+                        <h2>Яся</h2>
+                        <div class="short-description">
+                            <p>Возраст: 1 год</p>
+                            <p>Порода: скоттиш фолд</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-description">
+                    <p>Интеллигентный</p>
+                    <p>Отлично дружит с другими домашними животными.</p>
+                </div>
+            </article>
+        </div>
+        <div class="filter">
+            <section>
+                <h3>Возраст</h3>
+                <div class="range-controls">
+                    <div class="scale">
+                        <div class="selected-part"></div>
+                    </div>
+                    <div class="toggle min-toggle"></div>
+                    <div class="toggle max-toggle"></div>
+                </div>
+                <div>
+                    <p>от 0 до 4 лет</p>
+                </div>
+            </section>
+            <section class="breed">
+                <h3>Порода</h3>
+                <div>
+                    <label for="korat">корат</label>
+                    <label for="singapura">сингапурская</label>
+                    <label for="bengal">бенгальская</label>
+                    <label for="siberian">сибирская</label>
+                    <label for="highlend-fold">хайленд фолд</label>
+                    <label for="egyptian-mau">египетская мау</label>
+                    <label for="norwegian-forest">норвежская лесная</label>
+                    <label for="bombei">бомбейская</label>
+                    <label for="american-curl">американский керл</label>
+                    <label for="scottish-fold">скоттиш фолд</label>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="layout-positioner">
+        <div class="contacts">
+            <p>Напишите нам:</p>
+            <ul>
+                <li><a class="mail" href="#">cats@babuli.ru</a></li>
+                <li><a class="mail" href="#">vnuchek@babuli.ru</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <span>&copy; 2018 ООО &#171;<a href="#">Бабушкины котятки</a>&#187;</span>
+        </div>
+    </footer>
 </body>
 </html>
