@@ -4,6 +4,11 @@
     src: url('Eskal Font4You.ttf');
 }
 
+.items
+{
+    display: flex;
+}
+
  h1
 {
     flex-basis: 100%;
@@ -17,6 +22,7 @@
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
  img
@@ -100,4 +106,59 @@ img:not([class='list']):hover
     text-align: justify;
     width: 100%;
     height: 100px;
+}
+
+.controls
+{
+    flex-basis: 70%;
+}
+
+h3,
+.age-text
+{
+    text-align: center;
+}
+
+.bar
+{
+    position: relative;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 5px 10px 20px;
+}
+
+.slider
+{
+    position: relative;
+    height: 1px;
+    left: 29%;
+    width: 32%;
+    background-color: #3b4bdb;
+    z-index: 2;
+}
+
+.point-left
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 16%;
+    margin-top: -25px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px #c5c2c2;
+}
+
+.point-right
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: #fff;
+    display: inline-block;
+    margin-left: 30%;
+    margin-top: -25px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px #c5c2c2;
 }
