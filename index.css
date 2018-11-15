@@ -4,6 +4,11 @@
     src: url('Eskal Font4You.ttf');
 }
 
+.items
+{
+    display: flex;
+}
+
 h1
 {
     flex-basis: 100%;
@@ -98,4 +103,10 @@ img:not([class='list']):hover
     font-size: 14px;
     text-align: justify;
     width: 98%;
+}
+
+h3
+{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
