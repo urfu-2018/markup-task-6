@@ -78,7 +78,7 @@
     {
         display: grid;
         grid-template: 'main' auto
-                       'footer' auto
+            'footer' auto;
     }
 
     .cat-article
@@ -145,14 +145,13 @@
 
 @media screen and (min-width: 1200px)
 {
-
     body
     {
         display: grid;
         grid-template: 'main selectors' auto
-                       'main .'         auto
-                       'footer footer'  auto
-                    / 4fr 1fr;
+            'main .'         auto
+            'footer footer'  auto
+            / 4fr 1fr;
         gap: 1vw;
     }
 
@@ -171,9 +170,9 @@
         flex-basis: 40%;
         display: grid;
         grid-template: 'img cat-name' 1.7em
-                    'img small-description' 150px
-                    'full-description full-description' 2fr
-                    / 1fr 1fr;
+            'img small-description' 150px
+            'full-description full-description' 2fr
+            / 1fr 1fr;
         gap: 20px;
     }
 
