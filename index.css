@@ -42,6 +42,12 @@ main
     margin: 10px;
 }
 
+.blockCat:hover
+{
+    transition: all .2s linear;
+    box-shadow: 0 0 5px gray;
+}
+
 .titleCat
 {
     text-align: center;
