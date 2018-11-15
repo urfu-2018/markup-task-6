@@ -69,6 +69,7 @@ main
 {
     width: 15%;
     position: fixed;
+    top: -30px;
     right: 0;
     padding: 5%;
 }
@@ -78,9 +79,9 @@ input[type='checkbox']
     display: none;
 }
 
-.cat-type1 input[type='checkbox']:checked ~ .content > .type1
+.content > .info-block
 {
-    display: block;
+    display: none;
 }
 
 .control-panel input[type='range']
@@ -90,13 +91,23 @@ input[type='checkbox']
 
 .control-panel .types > label
 {
-    width: 90%;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 10%;
+    width: 200px;
     height: 50px;
-    border: 1px solid #efefef;
+    border: 1px solid #979697;
+}
+
+.control-panel .types > label > span
+{
+    vertical-align: middle;
 }
 
 .content
 {
+    max-width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 450px);
     grid-gap: 20px;
@@ -143,6 +154,23 @@ input[type='checkbox']
 {
     border-top: 1px solid #efefef;
     padding: 10px 0;
+}
+
+.cat-type1:checked ~ .content > .type1,
+.cat-type2:checked ~ .content > .type2,
+.cat-type3:checked ~ .content > .type3,
+.cat-type-all:checked ~ .content > .info-block
+{
+    display: block;
+}
+
+.cat-type1:checked ~ .control-panel > .types > label:nth-child(1),
+.cat-type2:checked ~ .control-panel > .types > label:nth-child(2),
+.cat-type3:checked ~ .control-panel > .types > label:nth-child(3),
+.cat-type-all:checked ~ .control-panel > .types > label:nth-child(4)
+{
+    border: 1px solid #afe379;
+    background: #e9ffd0;
 }
 
 input[type='range']
@@ -257,4 +285,74 @@ input[type='range']:focus::-ms-fill-lower
 input[type='range']:focus::-ms-fill-upper
 {
     background: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    header
+    {
+        height: 60px;
+        font-size: 50px;
+        vertical-align: middle;
+    }
+
+    .control-panel
+    {
+        display: none;
+    }
+
+    .content
+    {
+        margin: auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+        grid-gap: 20px;
+    }
+
+    .info-block
+    {
+        display: block;
+        max-width: 350px;
+        height: 300px;
+    }
+
+    .info-block img
+    {
+        display: block;
+        margin: auto;
+        max-width: 200px;
+        min-width: 150px;
+        max-height: 160px;
+        object-fit: cover;
+    }
+
+    .info-block .full-info
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 768px)
+{
+    .content
+    {
+        display: block;
+    }
+
+    .info-block
+    {
+        margin: 20px auto;
+        width: 90%;
+        max-width: 750px;
+        min-width: 400px;
+        height: 500px;
+    }
+
+    .info-block img
+    {
+        min-width: 90%;
+        min-height: 70%;
+        margin: auto;
+    }
 }
