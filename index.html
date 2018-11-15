@@ -1,9 +1,199 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
+    <header class="header">Cats</header>
+    <input type="radio" name="species" hidden id="sfinks">
+    <input type="radio" name="species" hidden id="simple">
+    <input type="radio" name="species" hidden id="siam">
+    <input type="radio" name="species" hidden id="non">
+    <input type="radio" name="species" hidden id="all">
+    <div class="grid">
+        <div class="cats">
+            <article class="block non">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/yF4LTg">
+                <div class="cat-info">
+
+                    <h4 class="cat-name">Жужик</h4>
+
+                    <p>
+                        <span>Возраст: 1 год</span>
+                        <br>
+                        <span>Порода: нет</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+
+                </div>
+                <hr class="decor">
+                <p class="add-info">Дружелюбный, чистый,огромный котик. Требует много пропитания</p>
+            </article>
+
+            <article class="block simple">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/zqMymj">
+                <div class="cat-info">
+
+                    <h4 class="cat-name">Газетка</h4>
+
+                    <p>
+                        <span>Возраст: пол года</span>
+                        <br>
+                        <span>Порода: Обычная</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+
+                </div>
+                <hr class="decor">
+                <p class="add-info">Спокойная кошечка, не имеет интереса к жизни
+                </p>
+            </article>
+
+            <article class="block non">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/dRwHsG">
+                <div class="cat-info">
+
+                    <h4 class="cat-name">Ушастик</h4>
+
+                    <p>
+                        <span>Возраст: 3 месяца</span>
+                        <br>
+                        <span>Порода: нет</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+
+                </div>
+                <hr class="decor">
+                <p class="add-info">Питается исключительно вискасом со вкусом индейки и бульона
+                </p>
+            </article>
+
+            <article class="block simple">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/zQpqfn">
+                <div class="cat-info">
+
+                    <h4 class="cat-name">Пуша</h4>
+
+                    <p>
+                        <span>Возраст: 2 года</span>
+                        <br>
+                        <span>Порода: нет</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+
+                </div>
+                <hr class="decor">
+                <p class="add-info">Игривая кошечка, отдаем с лотком</p>
+            </article>
+
+            <article class="block siam">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/8yYjyq">
+                <div class="cat-info">
+
+                    <h4 class="cat-name">Баффи</h4>
+
+                    <p>
+                        <span>Возраст: 3 месяца</span>
+                        <br>
+                        <span>Порода: Сиамская</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+
+                </div>
+                <hr class="decor">
+                <p class="add-info">Грызет все подряд и всех</p>
+            </article>
+            <article class="block sfinks">
+                <img alt="cat" class="cat-image hovered" src="https://goo.gl/Bf9FDz">
+                <div class="cat-info">
+                    <h4 class="cat-name">Мисс презрение и огромные уши</h4>
+                    <p>
+                        <span>Возраст: 1 год</span>
+                        <br>
+                        <span>Порода: Сфинкс</span>
+                        <br>
+                        <span>Болезни: нет</span>
+                        <br>
+                    </p>
+                    <p>Статус: в поисках хозяина</p>
+                </div>
+                <hr class="decor">
+                <p class="add-info">Заберите, если нравится кот без шерсти</p>
+            </article>
+        </div>
+        <div class="filters">
+            <form>
+                <h2>Возраст</h2>
+                <div class="range-input">
+                    <input type="range" min="0" max="100" step="1" class="slider" value="50">
+                    <br>
+                    <input type="range" min="0" max="100" step="1" class="slider" value="3">
+                    <br>
+                </div>
+
+                <span>От 1 до 3 лет</span>
+            </form>
+            <form>
+                <h2>Порода</h2>
+                <label class="species" for="sfinks">
+                    <span>Сфинкс</span>
+                </label>
+                <br>
+                <label class="species" for="simple">
+                    <span>Обычная</span>
+                </label>
+                <br>
+                <label class="species" for="siam">
+                    <span>Сиамская</span>
+                </label>
+                <br>
+                <label class="species" for="non">
+                    <span>Нет</span>
+                </label>
+                <br>
+                <label class="species" for="all">
+                    <span>Любая</span>
+                </label>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="emails">
+            <span>&#9993;Напишите нам:</span><br>
+            <span>
+                <a class="contacts" href="#">babushka@gmail.com</a> <br>
+            </span>
+            <span>
+                <a class="contacts" href="#">vnuk@gmail.com</a>
+            </span>
+
+        </div>
+        <div class="logo">&copy; 2018 ООО "
+            <a class="contacts" href="#">Бабушкины котятки</a>"
+        </div>
+
+    </footer>
 </body>
+
 </html>

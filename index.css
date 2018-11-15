@@ -1,0 +1,319 @@
+footer
+{
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    padding-right: 100px;
+    border-top: gray solid 1px;
+    font-size: 14px;
+    z-index: 10;
+    display: flex;
+}
+
+.logo
+{
+    color: black;
+}
+
+.emails
+{
+    color: black;
+}
+
+.contacts
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.decor
+{
+    visibility: hidden;
+}
+
+.cat-image
+{
+    width: 19em;
+    height: 15em;
+    padding: .5em;
+}
+
+.block
+{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+    margin: .5em;
+    width: 20em;
+}
+
+.header
+{
+    border-bottom: gray solid   1px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 32px;
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+}
+
+.grid
+{
+    margin-top: 3em;
+}
+
+.header::first-letter
+{
+    color: red;
+}
+
+@media screen and (max-width: 730px) and (min-width: 375px)
+{
+    .grid
+    {
+        grid-column: 1;
+    }
+
+    .add-info
+    {
+        display: none;
+    }
+
+    .filters
+    {
+        display: none;
+    }
+
+    footer
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 730px)
+ {
+    .grid
+    {
+        border: 1px solid green;
+        grid-column: 3;
+    }
+
+    .add-info
+    {
+        display: none;
+    }
+
+    .emails
+    {
+        flex-grow: 1;
+        flex-direction: column;
+    }
+
+    .filters
+    {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1200px)
+{
+    .grid
+    {
+        grid-template-columns: 4fr 1fr;
+        grid-template-areas: 'c fil';
+        display: grid;
+        vertical-align: top;
+    }
+
+    .cats
+    {
+        grid-area: c;
+        vertical-align: top;
+        align-self: center;
+    }
+
+    .filters
+    {
+        grid-area: fil;
+        align-content: center;
+        text-align: center;
+    }
+
+    .add-info
+    {
+        display: initial;
+    }
+
+    .cat-info
+    {
+        display: inline-block;
+        width: 10em;
+    }
+
+    .cat-image
+    {
+        width: 13em;
+        height: 10em;
+        padding: .5em;
+        display: inline-block;
+    }
+
+    .block
+    {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 15px;
+        margin: .5em;
+        width: 25em;
+        height: 15em;
+        vertical-align: top;
+    }
+
+    .decor
+    {
+        visibility: initial;
+    }
+
+    .range-input
+    {
+        position: relative;
+    }
+
+    input[type='range']
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .contacts
+    {
+        margin: 5px;
+    }
+
+    .emails
+    {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+    }
+}
+
+.cat-name
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+article
+{
+    border: 1px lightgray solid;
+}
+
+.slider
+{
+    -webkit-appearance: none;
+    width: 300px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background: #d3d3d3;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.slider::-moz-range-thumb
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background: #d3d3d3;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.species
+{
+    width: 300px;
+    height: 50px;
+    border: 1px solid gray;
+    align-content: center;
+    margin-top: 1px;
+    padding-top: 10px;
+    display: block;
+    font-size: 25px;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+input[id='sfinks']:checked ~ .grid > .filters > form > .species[for='sfinks']
+{
+    background-color: springgreen;
+}
+
+input[id='simple']:checked ~ .grid > .filters > form > .species[for='simple']
+{
+    background-color: springgreen;
+}
+
+input[id='siam']:checked ~ .grid > .filters > form > .species[for='siam']
+{
+    background-color: springgreen;
+}
+
+input[id='non']:checked ~ .grid > .filters > form > .species[for='non']
+{
+    background-color: springgreen;
+}
+
+input[id='all']:checked ~ .grid > .filters > form > .species[for='all']
+{
+    background-color: springgreen;
+}
+
+input[id='non']:checked ~ .grid > .cats > article:not([class*='non'])
+{
+    display: none;
+}
+
+input[id='sfinks']:checked ~ .grid > .cats > article:not([class*='sfinks'])
+{
+    display: none;
+}
+
+input[id='simple']:checked ~ .grid > .cats > article:not([class*='simple'])
+{
+    display: none;
+}
+
+input[id='siam']:checked ~ .grid > .cats > article:not([class*='siam'])
+{
+    display: none;
+}
