@@ -248,7 +248,7 @@ input
     opacity: .3;
 }
 
-footer
+.dekstop
 {
     position: relative;
     left: 0;
@@ -263,10 +263,15 @@ footer
     height: 50px;
 }
 
-.footer a
+.dekstop a
 {
     color: #4c4cd8;
     text-decoration: none;
+}
+
+.tablett
+{
+    display: none;
 }
 
 .copyright
@@ -302,21 +307,43 @@ footer
 {
     display: flex;
 }
+
 .main-content
 {
     display: grid;
     grid-template: 'a b c' / 30%;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-footer
+.dekstop
 {
-    align-items: flex-end;
-    flex-direction: row;
+    display: none;
 }
 
-.main-content
+.tablett
 {
-    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    flex-wrap: wrap;
+}
+
+[href*='vnu'],
+[href*='cats']
+{
+    margin: 0;
+    text-decoration: none;
+}
+
+.copyright
+{
+    margin-top: 56px;
+}
+
+.copyright a
+{
+    text-decoration: none;
 }
 
 .big-info,
@@ -334,12 +361,17 @@ h1
 {
     display: grid;
     grid-template: 'a'
-        'b' / 50%;
-    width: 90%;
+        'b' / 100%;
+    width: 250px;
+    justify-content: center;
+    margin-left: 40px;
 }
 
-.cat-block div
+img
 {
-    width:
+    height: 150px;
+    width: 100%;
+    margin: 0;
 }
+
 }
