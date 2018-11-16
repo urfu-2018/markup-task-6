@@ -93,6 +93,11 @@
     color: #4e7454;
 }
 
+.ya-ya::first-letter
+{
+    color: red;
+}
+
 .cat-photo
 {
     width: 100%;
@@ -148,6 +153,41 @@
     display: block;
 }
 
+.slider
+{
+    width: 200px;
+    background: #7779;
+    height: 1px;
+}
+
+.slider-blue-line
+{
+    display: flex;
+    width: 100px;
+    background: #66f9;
+    height: 2px;
+    margin-left: 35px;
+}
+
+.slider-circle-1,
+.slider-circle-2
+{
+    margin-top: -9px;
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7779;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    border-radius: 10px;
+    background: white;
+}
+
+.slider-circle-2
+{
+    margin-right: 0;
+    margin-left: auto;
+}
+
 .buttons
 {
     display: flex;
@@ -159,7 +199,7 @@
     display: inline-block;
     padding: 10px;
     color: #777;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: .5%;
     border: 1px solid #000;
 }
@@ -168,13 +208,21 @@
 {
     display: block;
     margin: -10px;
-    padding: 2.88%;
+    padding: 9px;
+}
+
+.slider-age-text
+{
+    margin-top: 22px;
+    margin-bottom: -10px;
+    color: #555;
 }
 
 .breed-button:hover
 {
-    background: #50fd0099;
+    background: #50fd0060;
     transition: .2s;
+    border: 1px solid #0f0;
 }
 
 input[value='breed-1']:checked ~ .main .controller .breed-1,
@@ -187,6 +235,7 @@ input[value='breed-9']:checked ~ .main .controller .breed-9,
 input[value='breed-11']:checked ~ .main .controller .breed-11
 {
     background: #00f40099;
+    border: 1px solid #0f0;
 }
 
 input[name='switch']:checked ~ .main .cats .cat-card
