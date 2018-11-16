@@ -10,7 +10,7 @@
     .page-wrap 
     {
         min-height: 100%;
-        margin-bottom: -85px; 
+        margin-bottom: -85px;
     }
 
     .page-wrap:after
@@ -20,7 +20,7 @@
 
     .page-wrap:after
     {
-        height: 80px; 
+        height: 80px;
     }
 
     .all-screen-view,
@@ -40,7 +40,7 @@
         margin-left: 20px;
     }
 
-     .cats-page 
+    .cats-page 
     {
         float: left;
         display: grid;
@@ -57,7 +57,7 @@
 
     .desktop-view p
     {
-        margin-left: 10px; 
+        margin-left: 10px;
     }
     
     .item 
