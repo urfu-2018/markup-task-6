@@ -4,6 +4,29 @@
     src: url('Eskal Font4You.ttf');
 }
 
+body
+{
+    overflow-x: hidden;
+}
+
+header
+{
+    width: 100%;
+    text-align: center;
+    margin-left: -8px;
+    font-family: 'PT Sans Narrow', arial;
+    font-size: 32px;
+    border: solid 2px #dcdcdc;
+    padding: 10px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+header::first-letter
+{
+    color: #f00;
+}
+
 .items
 {
     display: flex;
@@ -13,9 +36,10 @@ h1
 {
     flex-basis: 100%;
     text-align: center;
-    font-family: fantasy;
+    font-family: Schoen;
     font-size: 32px;
     color: #411e02;
+    letter-spacing: 3px;
 }
 
 .main-content
@@ -168,7 +192,7 @@ h3,
     text-align: center;
 }
 
-.choice-of-breed label
+.breeds
 {
     display: flex;
     flex-direction: column;
@@ -176,5 +200,84 @@ h3,
     margin: 10px 0;
     height: 25px;
     font-size: 14px;
+    padding-top: 7px;
     cursor: pointer;
+}
+
+input
+{
+    display: none;
+}
+
+.breed-input-all:checked ~ .controls-breeds .all,
+.breed-input-sibir:checked ~ .controls-breeds .sibirien,
+.breed-input-blue:checked ~ .controls-breeds .blue,
+.breed-input-regdoll:checked ~ .controls-breeds .regdoll,
+.breed-input-no:checked ~ .controls-breeds .no
+{
+    background-color: #5f3618;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.breed-input-blue:checked ~ .main-content .cat-block.rus-blue
+{
+    opacity: 1;
+}
+
+.breed-input-sibir:checked ~ .main-content .cat-block.sibir
+{
+    opacity: 1;
+}
+
+.breed-input-regdoll:checked ~ .main-content .cat-block.regd
+{
+    opacity: 1;
+}
+
+.breed-input-no:checked ~ .main-content .cat-block.without-breed
+{
+    opacity: 1;
+}
+
+.breed-input-blue:checked ~ .main-content .cat-block,
+.breed-input-sibir:checked ~ .main-content .cat-block,
+.breed-input-regdoll:checked ~ .main-content .cat-block,
+.breed-input-no:checked ~ .main-content .cat-block
+{
+    opacity: .3;
+}
+
+footer
+{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-top: 1px solid gray;
+    height: 50px;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.copyright
+{
+    margin: 5px 0;
+}
+
+
+.letter
+{
+    width: 20px;
+    padding-right: 8px;
+    opacity: .5;
 }

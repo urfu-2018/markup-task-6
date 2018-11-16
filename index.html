@@ -6,32 +6,38 @@
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
+    <header>Мурмаркет</header>
     <div class="items">
+        <input type="radio" class="breed-input-all" id="all-breeds" name="bread" checked>
+        <input type="radio" class="breed-input-sibir" id="sibirien-breed" name="bread">
+        <input type="radio" class="breed-input-blue" id="blue-breed" name="bread">
+        <input type="radio" class="breed-input-regdoll" id="regdoll-breed" name="bread">
+        <input type="radio" class="breed-input-no" id="no-breed" name="bread">
         <article class="main-content">
-            <h1>Котики ищут новый дом</h1>
-            <section class="cat-block">
-                <img src="https://clck.ru/Ec8zU" alt="Котик Сиамка">
-                <div><h2><a class="cat-name" href="#">Сиамка</a></h2>
-                    <p class="short-info">Возраст: 4 месяца
+            <h1>Котики ищут новый дом!</h1>
+            <section class="cat-block regd">
+                <img src="https://clck.ru/EcAYL" alt="Кошка Долли">
+                <div><h2><a class="cat-name" href="#">Долли</a></h2>
+                    <p class="short-info">Возраст: 1 год
                         <br>
-                        Порода: Сиамский кот
+                        Порода: Рэгдолл
                         <br>
                         Болезни: нет
                         <br><br>
                         Статус: ищет хозяина
                     </p>
                 </div>
-                <p class="big-info">Активый, любит играть,
-                        иногда может проявить характер.
+                <p class="big-info">Ласковая, дружелюбная, активная кошка.
                     <br>
-                        Хорошо уживается и любит играть с детьми, 
-                    уверенно ведет себя с другими котам.
+                    Перкасно уживается с другими кошками
                     <br>
-                    Возраст: 4 месяца
+                    Любит играть с детьми
+                    <br>
+                    Возраст: 1 год
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
+            <section class="cat-block rus-blue">
                 <img src="https://clck.ru/Ec9N2" alt="Котик Василёк">
                 <div><h2><a class="cat-name" href="#">Василёк</a></h2>
                     <p class="short-info">Возраст: 6 месяцев
@@ -57,12 +63,34 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
-                <img src="https://clck.ru/EcARB" alt="Кошка Бела">
+            <section class="cat-block without-breed">
+                <img src="https://clck.ru/Ec8zU" alt="Котик Сиамка">
+                <div><h2><a class="cat-name" href="#">Сиамка</a></h2>
+                    <p class="short-info">Возраст: 4 месяца
+                        <br>
+                        Порода: нет
+                        <br>
+                        Болезни: нет
+                        <br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </div>
+                <p class="big-info">Активый, любит играть,
+                        иногда может проявить характер.
+                    <br>
+                        Хорошо уживается и любит играть с детьми, 
+                    уверенно ведет себя с другими котам.
+                    <br>
+                    Возраст: 4 месяца
+                    <br>
+                </p>
+            </section>
+            <section class="cat-block regd">
+                <img src="https://clck.ru/EiTLh" alt="Кошка Бела">
                 <div><h2><a class="cat-name" href="#">Бела</a></h2>
                     <p class="short-info">Возраст: 1,5 года
                         <br>
-                        Порода: Турецкий ван
+                        Порода: Рэгдолл
                         <br>
                         Болезни: нет
                         <br><br>
@@ -84,7 +112,7 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
+            <section class="cat-block sibir">
                 <img src="https://clck.ru/EcAX5" alt="Кошка Рыся">
                 <div><h2><a class="cat-name" href="#">Рыся</a></h2>
                     <p class="short-info">Возраст: 8 месяцев
@@ -114,33 +142,11 @@
                 </p>
             </section>
             <section class="cat-block">
-                <img src="https://clck.ru/EcAYL" alt="Кошка Долли">
-                <div><h2><a class="cat-name" href="#">Долли</a></h2>
-                    <p class="short-info">Возраст: 1 год
-                        <br>
-                        Порода: Рэгдолл
-                        <br>
-                        Болезни: нет
-                        <br><br>
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <p class="big-info">Ласковая, дружелюбная, активная кошка.
-                    <br>
-                    Перкасно уживается с другими кошками
-                    <br>
-                    Любит играть с детьми
-                    <br>
-                    Возраст: 1 год
-                    <br>
-                </p>
-            </section>
-            <section class="cat-block">
                 <img src="https://clck.ru/EcFeh" alt="Кошка Леотигря">
                 <div><h2><a class="cat-name" href="#">Леотигря</a></h2>
                     <p class="short-info">Возраст: 10 месяцев
                         <br>
-                        Порода: Тойгер
+                        Порода: нет
                         <br>
                         Болезни: нет
                         <br><br>
@@ -164,13 +170,13 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
+            <section class="cat-block without-breed">
                 <img src="https://clck.ru/EcFgz"
                     alt="Кошка Шотти-лотти">
                 <div><h2><a class="cat-name" href="#">Шотти-лотти</a></h2>
                     <p class="short-info">Возраст: 4 месяца
                         <br>
-                        Порода: Шотландская вислоухая
+                        Порода: нет
                         <br>
                         Болезни: нет
                         <br><br>
@@ -189,12 +195,12 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
-                <img src="https://clck.ru/EcGWU" alt="Кот Мурзик">
+            <section class="cat-block regd">
+                <img src="https://clck.ru/EiTMF" alt="Кот Мурзик">
                 <div><h2><a class="cat-name" href="#">Мурзик</a></h2>
                     <p class="short-info">Возраст: 2 года
                         <br>
-                        Порода: нет
+                        Порода: Рэгдолл
                         <br>
                         Болезни: нет
                         <br><br>
@@ -213,7 +219,7 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
+            <section class="cat-block sibir">
                 <img src="https://clck.ru/EcGgP" alt="Кошка Мурлыка">
                 <div><h2><a class="cat-name" href="#">Мурлыка</a></h2>
                     <p class="short-info">Возраст: 11 
@@ -239,7 +245,7 @@
                     <br>
                 </p>
             </section>
-            <section class="cat-block">
+            <section class="cat-block sibir">
                 <img src="https://clck.ru/EiDjf" alt="Кошка Мурка">
                 <div><h2><a class="cat-name" href="#">Мурка</a></h2>
                     <p class="short-info">Возраст: 11 
@@ -277,7 +283,22 @@
                 </div>
                 <p class="age-text">от 2 до 4 лет</p>
             </div>
+            <section class="choice-of-breed">
+                <h3>Выбор породы</h3>
+                <label class="all breeds" for="all-breeds">Не выбрано</label>
+                <label class="regdoll breeds" for="regdoll-breed">Рэгдолл</label>
+                <label class="blue breeds" for="blue-breed">Русская голубая</label>
+                <label class="sibirien breeds" for="sibirien-breed">Сибирская кошка</label>
+                <label class="no breeds" for="no-breed">породы нет (неизвестна)</label>
+            </section>
         </article>
     </div>
+    <footer>
+        <img class="letter" src="https://clck.ru/EfbA2">
+        Напишите нам: 
+        <a href="mailto:cats@babuli.ru"alt="письмо">cats@babuli.ru</a>
+        <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+        <p class="copyright">&copy; 2018 OOO &#171;<a href="#">Бабушкины котятки</a>&#187;</p>
+    </footer>
 </body>
 </html>
