@@ -271,13 +271,27 @@ footer
 
 .copyright
 {
-    margin: 5px 0;
+    margin: 0;
+    float: right;
+    margin-left: auto;
 }
 
 
 .letter
 {
     width: 20px;
-    padding-right: 8px;
+    height: 10px;
     opacity: .5;
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+
+.email
+{
+    margin: 0 15px;
+}
+
+[href*='vnu']
+{
+    margin-left: 10px;
 }
