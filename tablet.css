@@ -9,28 +9,34 @@
         var(--header-height) - var(--footer-height) - 2 * var(--body-margin));
     }
 
-    div[class='extra-information-block'],
-    aside
+    header
     {
-        display: none;
+        height: var(--header-height);
     }
 
     main
     {
         min-height: var(--main-min-height);
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 33vh);
         justify-content: center;
-        align-items: center;
+        grid-gap: 10px;
+        padding: 2% 0;
     }
 
-    dl
+    .card
     {
-        margin: 8px;
+        margin: 0;
+    }
+
+    .photo
+    {
+        width: 96%;
     }
 
     footer
     {
+        height: var(--footer-height);
         padding-top: 10px;
         display: grid;
         grid-template-columns: auto 275px;
@@ -56,6 +62,6 @@
 
     footer p
     {
-        margin: 6px;
+        margin: 5px;
     }
 }

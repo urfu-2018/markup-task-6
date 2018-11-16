@@ -1,9 +1,14 @@
 body
 {
     font-family: Arial, serif;
+    font-size: 14px;
+    color: rgb(87, 86, 86);
 }
 
-input
+input,
+aside,
+.extra-information-block,
+footer p:first-of-type img
 {
     display: none;
 }
@@ -24,6 +29,7 @@ body > header
 {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 32px;
+    color: black;
     text-align: center;
     top: 0;
 }
@@ -46,8 +52,6 @@ aside
 
 footer
 {
-    font-size: 14px;
-    color: rgb(87, 86, 86);
     bottom: 0;
 }
 
@@ -56,14 +60,20 @@ footer a
     color: #4c4cd8;
 }
 
-dl
+.card
 {
     border: 1px solid lightgrey;
 }
 
-dl:hover
+.card:hover
 {
     box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.photo
+{
+    width: 96%;
+    margin: 2%;
 }
 
 dd
@@ -71,35 +81,45 @@ dd
     margin: 0;
 }
 
+.basic-information-block ul
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+}
+
+.basic-information-block li:last-of-type
+{
+    margin: 7% 0;
+}
+
+.basic-information-block ul li *
+{
+    display: inline-block;
+}
+
+.basic-information-block dt::after
+{
+    content: ': ';
+}
+
 h2
 {
     font-size: 22px;
     font-weight: 500;
-    padding-left: 15px;
+    color: black;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 7%;
 }
 
-dl,
-img[alt^='cat_']
-{
-    width: 250px;
-}
-
-p
+footer p
 {
     padding-left: 15px;
-    font-size: 14px;
     line-height: .5em;
-    color: rgb(87, 86, 86);
 }
 
 .envelope
 {
     margin: 0 3px -3px 0;
-}
-
-footer p:first-of-type img
-{
-    display: none;
 }
