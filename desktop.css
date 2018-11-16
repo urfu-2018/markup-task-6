@@ -165,9 +165,9 @@
         background: #ccf1a4;
     }
 
-    input:checked[id='species-1'] ~ .flex-box main .item:not(.species-1),
-    input:checked[id='species-2'] ~ .flex-box main .item:not(.species-2),
-    input:checked[id='species-3'] ~ .flex-box main .item:not(.species-3)
+    input:checked[id='species-1'] ~ .flex-box .cats-page .item:not(.species-1),
+    input:checked[id='species-2'] ~ .flex-box .cats-page .item:not(.species-2),
+    input:checked[id='species-3'] ~ .flex-box .cats-page .item:not(.species-3)
     {
         display: none;
     }
