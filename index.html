@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,
+    initial-scale=1,user-scalable=no">
 </head>
 
 <body>
@@ -13,14 +15,14 @@
             <h1>Мурмаркет</h1>
         </header>
         <section class="wrapper">
+            <input type="radio" name="breeds-switch" id="red-breed" class="breeds-switch">
+            <input type="radio" name="breeds-switch" id="siberian-breed" class="breeds-switch">
+            <input type="radio" name="breeds-switch" id="persian-breed" class="breeds-switch">
+            <input type="radio" name="breeds-switch" id="seamese-breed" class="breeds-switch">
+            <input type="radio" name="breeds-switch" id="abyssinian-breed" class="breeds-switch">
+            <input type="radio" name="breeds-switch" id="no-breed" class="breeds-switch" checked>
             <section class="content">
-                <input type="radio" name="category1" id="category1" class="category1-input">
-                <input type="radio" name="category2" id="category2" class="category2-input">
-                <input type="radio" name="category3" id="category3" class="category3-input">
-                <input type="radio" name="category4" id="category4" class="category4-input">
-                <input type="radio" name="category5" id="category5" class="category5-input">
-                <input type="radio" name="category6" id="no-category" class="no-category-input" checked>
-                <article class="item">
+                <article class="item red-breed">
                     <img src="images/1.jpg" alt="Эмоциональный котик" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -36,7 +38,7 @@
                         Здесь мало текста.
                     </p>
                 </article>
-                <article class="item">
+                <article class="item siberian-breed">
                     <img src="images/2.jpg" alt="Вупсень и Пупсень" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -57,7 +59,7 @@
                     </p>
                 </article>
 
-                <article class="item">
+                <article class="item seamese-breed">
                     <img src="images/3.jpg" alt="Хипстер" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -78,7 +80,7 @@
                     </p>
                 </article>
 
-                <article class="item">
+                <article class="item persian-breed">
                     <img src="images/4.jpg" alt="Бора-бора" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -104,7 +106,7 @@
                         nulla sit amet cursus.
                     </p>
                 </article>
-                <article class="item">
+                <article class="item no-breed">
                     <img src="images/5.jpg" alt="Чарли" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -124,7 +126,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item seamese-breed">
                     <img src="images/6.jpg" alt="Сэр Упоров" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -144,7 +146,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item no-breed">
                     <img src="images/8.jpg" alt="Гопник" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -164,7 +166,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item seamese-breed">
                     <img src="images/9.jpg" alt="Сессия" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -184,7 +186,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item red-breed">
                     <img src="images/10.jpg" alt="Каеф" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -204,7 +206,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item red-breed">
                     <img src="images/11.jpg" alt="Доминант" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -224,7 +226,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item red-breed">
                     <img src="images/12.jpg" alt="Сам по себе" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -244,7 +246,7 @@
                         cursus
                     </p>
                 </article>
-                <article class="item">
+                <article class="item red-breed">
                     <img src="images/13.jpg" alt="Рила" width="500" height="309"
                         title="фотография котика">
                     <div class="description">
@@ -274,14 +276,12 @@
 
                 <nav class="breeds">
                     <h2>Порода</h2>
-                    <ul>
-                        <li><label for="category1">сфинкс</label></li>
-                        <li><label for="category2">сибирская</label></li>
-                        <li><label for="category3">персиская</label></li>
-                        <li><label for="category4">сиамская</label></li>
-                        <li><label for="category5">абиссинская</label></li>
-                        <li><label for="no-category">нет</label></li>
-                    </ul>
+                    <label for="red-breed">рыжики</label>
+                    <label for="siberian-breed">сибирская</label>
+                    <label for="persian-breed">персидская</label>
+                    <label for="seamese-breed">сиамская</label>
+                    <label for="abyssinian-breed">абиссинская</label>
+                    <label for="no-breed">нет</label>
                 </nav>
             </aside>
         </section>
