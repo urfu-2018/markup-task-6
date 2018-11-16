@@ -136,19 +136,59 @@ header h1:first-letter
 {
     min-height: calc(100vh - 200px);
     grid-area: c;
-    border: 1px solid green;
     z-index: 1;
 }
 
 .settings
 {
-    width: 100px;
-    height: 100px;
-    border: 1px solid red;
     margin: 0;
     padding: 0;
     position: fixed;
+}
 
+.settings h2
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.settings p
+{
+    color: #8a8f99;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/*input range*/
+
+.block_range
+{
+    position: relative;
+    height: 10px;
+}
+
+input[type='range']
+{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    background: #d3d3d4;
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb
+{
+    position: relative;
+    z-index: 1;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #a2f5a5;
+    cursor: pointer;
 }
 
 input[type='radio']
@@ -156,9 +196,33 @@ input[type='radio']
     display: none;
 }
 
-.breed-labels label
+/*list label*/
+
+.cat_label:hover
 {
     cursor: pointer;
+}
+
+.cat_label
+{
+    display: block;
+    height: 30px;
+    width: 200px;
+    border: 1px solid #a2f5a5;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 30px;
+}
+
+input.bambino:checked ~ main .settings_container .settings .bambino_label,
+input.all:checked ~ main .settings_container .settings .all_label,
+input.bengal:checked ~ main .settings_container .settings .bengal_label,
+input.korat:checked ~ main .settings_container .settings .korat_label,
+input.rex:checked ~ main .settings_container .settings .rex_label,
+input.bobtail:checked ~ main .settings_container .settings .bobtail_label
+{
+    background-color: #a2f5a5;
 }
 
 input.bambino:checked ~ main .cat_container .cat-bengal,
@@ -169,6 +233,37 @@ input.bambino:checked ~ main .cat_container .cat-bobtail
     display: none;
 }
 
+input.bengal:checked ~ main .cat_container .cat-bambino,
+input.bengal:checked ~ main .cat_container .cat-korat,
+input.bengal:checked ~ main .cat_container .cat-rex,
+input.bengal:checked ~ main .cat_container .cat-bobtail
+{
+    display: none;
+}
+
+input.korat:checked ~ main .cat_container .cat-bambino,
+input.korat:checked ~ main .cat_container .cat-bengal,
+input.korat:checked ~ main .cat_container .cat-rex,
+input.korat:checked ~ main .cat_container .cat-bobtail
+{
+    display: none;
+}
+
+input.rex:checked ~ main .cat_container .cat-bambino,
+input.rex:checked ~ main .cat_container .cat-bengal,
+input.rex:checked ~ main .cat_container .cat-korat,
+input.rex:checked ~ main .cat_container .cat-bobtail
+{
+    display: none;
+}
+
+input.bobtail:checked ~ main .cat_container .cat-bambino,
+input.bobtail:checked ~ main .cat_container .cat-bengal,
+input.bobtail:checked ~ main .cat_container .cat-korat,
+input.bobtail:checked ~ main .cat_container .cat-rex
+{
+    display: none;
+}
 /*Footer*/
 
 footer

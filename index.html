@@ -271,14 +271,19 @@
     </section>
     <section class="settings_container">
         <div class="settings">
-            <ul class="breed-labels">
-                <li class="all"><label for="all">Все</label></li>
-                <li class="none"><label for="bambino">Бомбейская</label></li>
-                <li class="sphynx"><label for="bengal">Бенгальская</label></li>
-                <li class="little"><label for="korat">Корат</label></li>
-                <li class="little"><label for="rex">Корниш рекс</label></li>
-                <li class="little"><label for="bobtail">Бобтейл</label></li>
-            </ul>
+            <h2>Возраст</h2>
+            <div class="block_range">
+                <input type="range" min="0" max="100" step="10" value="10">
+                <input type="range" min="0" max="100" step="10" value="90">
+            </div>
+            <p>от 2-х до 4-х лет</p>
+            <h2>Порода</h2>
+                <label class="cat_label all_label" for="all">Все</label>
+                <label class="cat_label bambino_label" for="bambino">Бомбейская</label>
+                <label class="cat_label bengal_label" for="bengal">Бенгальская</label>
+                <label class="cat_label korat_label" for="korat">Корат</label>
+                <label class="cat_label rex_label" for="rex">Корниш рекс</label>
+                <label class="cat_label bobtail_label" for="bobtail">Бобтейл</label>
         </div>
     </section>
     <!--Footer-->
