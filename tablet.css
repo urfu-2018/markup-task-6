@@ -22,10 +22,8 @@
 
     footer
     {
-        position: sticky;
+        position: static;
         display: inline-block;
-        bottom: 0;
-        top: 0;
         background: #fff;
         width: 100%;
         font-family: arial;
@@ -42,9 +40,8 @@
 
     .footer-right
     {
-        position: fixed;
-        right: 6px;
-        bottom: 0;
+        float: right;
+        margin: 33px 6px 0;
     }
 
     .footer-right a

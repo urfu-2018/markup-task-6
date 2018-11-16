@@ -1,15 +1,38 @@
 @media (min-width:1200px)
 {
-    body
+    body,
+    html
     {
-        display: grid;
-        grid-template-columns: 1000px 1fr;
+        margin: 0;
+        height: 100%;
     }
 
-    .horizontal-view,
+    .page-wrap 
+    {
+        min-height: 100%;
+        margin-bottom: -85px; 
+    }
+
+    .page-wrap:after
+    {
+        display: block;
+    }
+
+    .page-wrap:after
+    {
+        height: 80px; 
+    }
+
+    .all-screen-view,
     .item h2
     {
         float: left;
+    }
+
+    .item h2,
+    .all-screen-view p
+    {
+        margin: 9px 0 10px 20px;
     }
 
     .cats-name
@@ -17,17 +40,24 @@
         margin-left: 20px;
     }
 
-    .cats-page 
+     .cats-page 
     {
+        float: left;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 510px);
+        align-content: space-between;
     }
 
-    .vertical-view
+    .desktop-view
     {
         display: inline-block;
         border-top: solid 1px #dbd9d9;
         width: 500px;
+    }
+
+    .desktop-view p
+    {
+        margin-left: 10px; 
     }
     
     .item 
@@ -47,13 +77,14 @@
 
     .head
     {
+        position: static;
         grid-column: span 2;
     }
 
     footer
     {
         grid-column: span 2;
-        position: fixed;
+        height: 80px;
         display: inline-block;
         bottom: 0;
         background: #fff;
@@ -71,9 +102,8 @@
 
     .footer-right
     {
-        position: fixed;
-        right: 6px;
-        bottom: 0;
+        float: right;
+        margin: 33px 6px 0;
     }
 
     .footer-right a
@@ -92,9 +122,10 @@
         margin-bottom: -3px;
     }
     
-    aside
+    .filter
     {
         display: flex;
+        float: left;
         flex-direction: column;
         margin: 4px 0 0 100px;
         width: 200px;
@@ -123,10 +154,10 @@
         padding: 12px 15px;
     }
 
-    input:checked[id='species-1'] ~ aside label[for='species-1'],
-    input:checked[id='species-2'] ~ aside label[for='species-2'],
-    input:checked[id='species-3'] ~ aside label[for='species-3'],
-    input:checked[id='all'] ~ aside label[for='all']
+    input:checked[id='species-1'] ~ .filter label[for='species-1'],
+    input:checked[id='species-2'] ~ .filter label[for='species-2'],
+    input:checked[id='species-3'] ~ .filter label[for='species-3'],
+    input:checked[id='all'] ~ .filter label[for='all']
     {
         background: #ccf1a4;
     }

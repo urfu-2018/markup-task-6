@@ -8,8 +8,7 @@
 {
     footer
     {
-        position: sticky;
-        bottom: 0;
+        position: static;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,7 +68,7 @@ body
     
 }
 
-aside
+.filter
 {
     display: none;
 }
@@ -81,7 +80,7 @@ input
 
 .head
 {
-    position: sticky;
+    position: static;
     background: #fff;
     top: 0;
     border-bottom: 1px solid #000;
@@ -102,12 +101,12 @@ input
     color: #f33446;
 }
 
-.horizontal-view > p
+.all-screen-view > p
 {
     margin: 5px 0 10px 25px;
 }
 
-.vertical-view
+.desktop-view
 {
     display: none;
 }
