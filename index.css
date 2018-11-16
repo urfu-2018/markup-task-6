@@ -295,3 +295,51 @@ footer
 {
     margin-left: 10px;
 }
+
+@media (min-width: 730px) and (max-width: 1200px)
+{
+.items
+{
+    display: flex;
+}
+.main-content
+{
+    display: grid;
+    grid-template: 'a b c' / 30%;
+}
+
+footer
+{
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.main-content
+{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.big-info,
+h1
+{
+    display: none;
+}
+
+.controls-breeds
+{
+    display: none;
+}
+
+.cat-block
+{
+    display: grid;
+    grid-template: 'a'
+        'b' / 50%;
+    width: 90%;
+}
+
+.cat-block div
+{
+    width:
+}
+}
