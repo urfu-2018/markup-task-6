@@ -4,10 +4,11 @@ html
     margin: 2px;
     padding: 0;
 }
+/* General styles */
 
 body
 {
-    border: 1px solid #dcdcdc;
+    border: 1px solid #d3d3d3;
 }
 
 body > input
@@ -34,7 +35,7 @@ a:hover
 .header
 {
     width: 100%;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #d3d3d3;
     background-color: #fff;
 }
 
@@ -54,38 +55,25 @@ a:hover
 {
     box-sizing: border-box;
     padding: 20px;
-    display: grid;
-    grid-gap: 0 20px;
-    grid-template: 1fr / 4fr 1fr;
     font: normal 14px 'Roboto', sans-serif;
-    min-height: 100%;
-    width: 100%;
-}
-
-.cards-wrapper
-{
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    grid-gap: 20px;
+    min-height: calc(100vh - 104px);
     width: 100%;
 }
 
 .cat-card
 {
-    display: none;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #dcdcdc;
-    grid-template: 'cat-img short-info' 2fr
-        'full-info full-info' 1fr
-        / 1fr 1fr;
-    grid-gap: 20px 10px;
-    width: 100%;
+    border: 1px solid #d3d3d3;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 6px 1px rgba(130, 130, 130, .6);
 }
 
 .img-wrapper
 {
     grid-area: cat-img;
+    overflow: hidden;
 }
 
 .short-description
@@ -98,27 +86,20 @@ a:hover
     grid-area: full-info;
 }
 
-.cat-card:hover
+.range-slider
 {
-    box-shadow: 0 0 6px 1px rgba(130, 130, 130, .6);
-}
-
-.img-wrapper
-{
-    overflow: hidden;
+    display: none;
 }
 
 .cat-img
 {
-    width: 100%;
-    height: 100%;
+    transition-duration: .75s;
 }
 
 .cat-img:hover
 {
     cursor: pointer;
     transform: scale(1.2);
-    transition-duration: .75s;
 }
 
 .content-wrapper h2
@@ -138,137 +119,32 @@ a:hover
     margin: 0;
 }
 
-.short-description p:first-of-type,
-.short-description p:last-of-type
-{
-    margin: 15px 0 0;
-}
-
-/* --------------------------------------------------------------- */
-/* TODO: range slider */
-
-input[type='range']
-{
-    width: 210px;
-    height: 30px;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-}
-
-input[type='range'],
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb
-{
-    -webkit-appearance: none;
-    background: none;
-}
-
-input[type='range']::-webkit-slider-runnable-track
-{
-    width: 200px;
-    height: 1px;
-    background: #003d7c;
-}
-
-input[type='range']:last-of-type::-webkit-slider-runnable-track
-{
-    background: none;
-}
-
-input[type='range']::-webkit-slider-thumb
-{
-    position: relative;
-    height: 15px;
-    width: 15px;
-    margin: -7px 0 0;
-    background: #fff;
-    border: 1px solid #003d7c;
-    border-radius: 25px;
-    z-index: 1;
-}
-
-.range-slider + input[type='range']::-webkit-slider-thumb
-{
-    z-index: 2;
-}
-
-.range-slider
-{
-    position: relative;
-    height: 60px;
-    width: 210px;
-    display: inline-block;
-    margin: -5px 0 20px 0;
-}
-
-.range-slider input
-{
-    position: absolute;
-}
-
-.range-slider
-{
-    position: absolute;
-}
-
-.range-slider .right
-{
-    position: relative;
-    float: right;
-    margin: 0 -5px 0 0;
-}
-/* TODO: range slider */
-/* --------------------------------------------------------------- */
-
-.breed-wrapper
-{
-    margin: 50px 0 0;
-}
-
-.age-title
-{
-    margin: 30px 0 0;
-}
-
-.breed-label
-{
-    margin: 10px 0;
-    padding: 15px;
-    display: block;
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 3px;
-}
-
-input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
-input[id='scottish-fold']:checked ~ .content-wrapper .scottish-fold,
-input[id='british']:checked ~ .content-wrapper .british-shorthair,
-input[id='bombay']:checked ~ .content-wrapper .bombay,
-input[id='shartrez']:checked ~ .content-wrapper .shartrez
-{
-    display: grid;
-}
-
-input[id='unnecessary']:checked ~ .content-wrapper label[for='unnecessary'],
-input[id='scottish-fold']:checked ~ .content-wrapper label[for='scottish-fold'],
-input[id='british']:checked ~ .content-wrapper label[for='british'],
-input[id='bombay']:checked ~ .content-wrapper label[for='bombay'],
-input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
-{
-    background-color: #adffad;
-    border-color: #6fda6f;
-}
-
 .footer
 {
-    border-top: 1px solid lightgrey;
     font: normal 14px Arial;
+    border-top: 1px solid #d3d3d3;
 }
-/* ✉ */
+
+.mail-list
+{
+    margin: 0;
+    padding: 0;
+}
+
+.mail-list li
+{
+    list-style-type: none;
+}
+
+.mail-list__title
+{
+    color: #808080;
+}
+/* General styles */
 
 /* Mobile styles */
-@media  screen and (min-width: 375px) and (max-width: 730px)
+
+@media only screen and (min-width: 375px) and (max-width: 730px)
 {
     .full-description,
     .menu-wrapper
@@ -277,7 +153,7 @@ input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
     }
 
     input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
-    input[id='scottish-fold']:checked ~ .content-wrapper .cat-card,
+    input[id='scottish']:checked ~ .content-wrapper .cat-card,
     input[id='british']:checked ~ .content-wrapper .cat-card,
     input[id='bombay']:checked ~ .content-wrapper .cat-card,
     input[id='shartrez']:checked ~ .content-wrapper .cat-card
@@ -285,29 +161,77 @@ input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
         display: grid;
     }
 
-    .cat-card
-    {
-        grid-template: 'cat-img' 2fr
-            'short-info' 150px;
-        grid-gap: 20px 10px;
-        flex-basis: 100%;
-        width: 100%;
-        margin: 0 0 20px;
-    }
-
+    .cards-wrapper,
     .content-wrapper
-    {
-        display: flex;
-    }
-
-    .cards-wrapper
     {
         display: block;
     }
+
+    .cat-card:last-of-type
+    {
+        margin: 0;
+    }
+
+    .cat-card
+    {
+        margin: 0 0 20px;
+        grid-template: 'cat-img' auto
+            'short-info' auto;
+        grid-gap: 20px 10px;
+        width: 100%;
+    }
+
+    .cat-img
+    {
+        width: 100%;
+    }
+
+    .short-description
+    {
+        padding: 0 20px 20px;
+    }
+
+    .short-description h2
+    {
+        margin: 0 0 20px;
+    }
+
+    .short-description p:last-of-type
+    {
+        margin: 20px 0 0 ;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 15px;
+    }
+
+    .grandson-mail
+    {
+        margin: -5px 0 0;
+    }
+
+    .mail-list
+    {
+        margin: 0 0 20px;
+    }
+
+    .grandma-mail::before,
+    .grandson-mail::before
+    {
+        content: '✉';
+        margin: 0 2px 0 0;
+        color: #000;
+        font-size: 18px;
+    }
 }
+/* Mobile styles */
 
 /* Tablet styles */
-@media  screen and (min-width: 730px) and (max-width: 1200px)
+
+@media only screen and (min-width: 730px) and (max-width: 1200px)
 {
     .full-description,
     .menu-wrapper
@@ -316,32 +240,250 @@ input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
     }
 
     input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
-    input[id='scottish-fold']:checked ~ .content-wrapper .cat-card,
+    input[id='scottish']:checked ~ .content-wrapper .cat-card,
     input[id='british']:checked ~ .content-wrapper .cat-card,
     input[id='bombay']:checked ~ .content-wrapper .cat-card,
     input[id='shartrez']:checked ~ .content-wrapper .cat-card
     {
         display: grid;
-    }
-
-    .cat-card
-    {
-        grid-template: 'cat-img' 2fr
-            'short-info' 150px
-            / auto;
-        grid-gap: 20px 10px;
-        flex-basis: 50%;
-        margin: 0 0 20px;
-    }
-
-    .content-wrapper
-    {
-        display: flex;
     }
 
     .cards-wrapper
     {
         display: grid;
         grid-template: 1fr / 1fr 1fr 1fr;
+        grid-gap: 20px;
+        width: 100%;
+    }
+
+    .cat-card
+    {
+        grid-template: 'cat-img' 1fr
+            'short-info' 1fr
+            / 1fr;
+        grid-gap: 20px 10px;
+        width: 100%;
+    }
+
+    .short-description
+    {
+        padding: 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .short-description h2
+    {
+        margin: 0 0 auto;
+    }
+
+    .short-description p:last-of-type
+    {
+        margin: auto 0 0 ;
+    }
+
+    .img-wrapper,
+    .cat-img
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer
+    {
+        display: flex;
+        padding: 10px 20px 15px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .grandma-mail::before,
+    .grandson-mail::before
+    {
+        content: '✉';
+        margin: 0 2px 0 0;
+        color: #000;
+        font-size: 20px;
     }
 }
+/* Tablet styles */
+
+/* Desktop styles */
+
+@media only screen and (min-width: 1200px)
+{
+    .content-wrapper
+    {
+        display: grid;
+        grid-gap: 0 20px;
+        grid-template: 1fr / 4fr 1fr;
+    }
+
+    .cards-wrapper
+    {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        grid-gap: 20px;
+        width: 100%;
+    }
+
+    .cat-card
+    {
+        display: none;
+        box-sizing: border-box;
+        padding: 10px;
+        grid-template: 'cat-img short-info' 2fr
+            'full-info full-info' 1fr
+            / 1fr 1fr;
+        grid-gap: 20px 10px;
+        width: 100%;
+        max-height: 298px;
+    }
+
+    .img-wrapper,
+    .cat-img
+    {
+        width: 234px;
+        height: 156px;
+    }
+
+    .short-description p:first-of-type,
+    .short-description p:last-of-type
+    {
+        margin: 15px 0 0;
+    }
+
+    /* Age range slider */
+
+    input[type='range']
+    {
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        cursor: pointer;
+        outline: none;
+    }
+
+    input[type='range'],
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-webkit-slider-thumb
+    {
+        -webkit-appearance: none;
+        background: none;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track
+    {
+        width: 100%;
+        height: 1px;
+        background: #d3d3d3;
+    }
+
+    input[type='range']:last-of-type::-webkit-slider-runnable-track
+    {
+        background: none;
+    }
+
+    input[type='range']::-webkit-slider-thumb
+    {
+        height: 20px;
+        width: 20px;
+        margin: -10px 0 0;
+        background: #fff;
+        border: 1px solid #808080;
+        box-shadow: 0 0 3px 1px rgba(130, 130, 130, .6);
+        border-radius: 25px;
+        z-index: 1;
+    }
+
+    .range-slider + input[type='range']::-webkit-slider-thumb
+    {
+        z-index: 2;
+    }
+
+    .range-slider
+    {
+        position: relative;
+        display: inline-block;
+        height: 40px;
+        width: 100%;
+        margin: -5px auto 0;
+    }
+
+    .range-slider input
+    {
+        position: absolute;
+    }
+    /* Age range slider end */
+
+    .age-wrapper,
+    .bread-wrapper
+    {
+        margin: 0 0 10px;
+    }
+
+    .breed-label
+    {
+        margin: 10px 0;
+        padding: 15px;
+        display: block;
+        cursor: pointer;
+        border: 1px solid #000;
+        border-radius: 3px;
+    }
+
+    input[id='unnecessary']:checked ~ .content-wrapper .cat-card,
+    input[id='scottish']:checked ~ .content-wrapper .scottish-fold,
+    input[id='british']:checked ~ .content-wrapper .british-shorthair,
+    input[id='bombay']:checked ~ .content-wrapper .bombay,
+    input[id='shartrez']:checked ~ .content-wrapper .shartrez
+    {
+        display: grid;
+    }
+
+    input[id='unnecessary']:checked ~ .content-wrapper label[for='unnecessary'],
+    input[id='scottish']:checked ~ .content-wrapper label[for='scottish'],
+    input[id='british']:checked ~ .content-wrapper label[for='british'],
+    input[id='bombay']:checked ~ .content-wrapper label[for='bombay'],
+    input[id='shartrez']:checked ~ .content-wrapper label[for='shartrez']
+    {
+        background-color: #adffad;
+        border-color: #6fda6f;
+    }
+
+    .footer
+    {
+        display: flex;
+        padding: 5px 20px 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mail-list
+    {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .mail-list li
+    {
+        margin: 0 5px;
+    }
+
+    .mail-list__title::before
+    {
+        content: '✉';
+        margin: 0 5px 0 0;
+        color: #000;
+        font-size: 20px;
+    }
+
+    .grandson-mail::before
+    {
+        content: '●';
+        margin: 0 10px 0 0;
+        font-size: 16px;
+        color: #4d4d4d;
+    }
+}
+/* Desktop styles */

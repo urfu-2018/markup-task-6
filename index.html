@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Задача «Мурмаркет для всех»</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
@@ -11,7 +12,7 @@
     <header class="header">
         <h1 class="header-title">Мурмаркет</h1>
     </header>
-    <input type="radio" name="breed" id="scottish-fold">
+    <input type="radio" name="breed" id="scottish">
     <input type="radio" name="breed" id="british">
     <input type="radio" name="breed" id="bombay">
     <input type="radio" name="breed" id="shartrez">
@@ -206,14 +207,14 @@
             <section class="age-wrapper">
                 <h2>Возраст</h2>
                 <div class="range-slider">
-                    <input class="min" name="age-range" type="range" min="1" max="100" value="10">
-                    <input class="max" name="age-range" type="range" min="1" max="100" value="90">
+                    <input class="min" name="age-range" type="range" min="1" max="10" value="3">
+                    <input class="max" name="age-range" type="range" min="1" max="10" value="8">
                 </div>
                 <div class="age-title">от 2 до 4 лет</div>
             </section>
             <section class="breed-wrapper">
                 <h2>Порода</h2>
-                <label for="scottish-fold" class="breed-label">
+                <label for="scottish" class="breed-label">
                     шотландская вислоухая
                 </label>
                 <label for="british" class="breed-label">
@@ -233,9 +234,9 @@
     </main>
     <footer class="footer">
         <ul class="mail-list">
-            <li>Напишите нам:</li>
-            <li><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></li>
-            <li><a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></li>
+            <li class="mail-list__title">Напишите нам:</li>
+            <li class="grandma-mail"><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></li>
+            <li class="grandson-mail"><a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></li>
         </ul>
         <div class="company-copyright">© 2018 ООО «<a href="#">Бабушкины котятки</a>»</div>
     </footer>
