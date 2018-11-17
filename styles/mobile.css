@@ -3,19 +3,8 @@
     width: 100%;
 }
 
-.cat-info-full
-{
-    display: none;
-}
-
-main
-{
-    max-width: 730px;
-}
-
 .cat-footer
 {
-    font: 14px Arial;
     grid-template: 'h' 55px 'm' 50px '©' auto;
 }
 

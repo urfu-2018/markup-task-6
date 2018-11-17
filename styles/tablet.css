@@ -3,14 +3,14 @@
     width: 300px;
 }
 
-.cat-info-full
-{
-    display: none;
-}
-
 .cat-img
 {
     margin: 15px auto 0;
     display: block;
     width: 100%;
+}
+
+.cat-footer
+{
+    grid-template: 'h h' 63px 'm ©' auto;
 }
