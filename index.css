@@ -7,6 +7,16 @@
     border-bottom: 1px solid black;
 }
 
+body
+{
+    font-family: sans-serif;
+}
+
+ul
+{
+    padding: 0;
+}
+
 .shop-name
 {
     margin: 10px;
@@ -15,7 +25,7 @@
 
 .shop-name::first-letter
 {
-    color: #f00;
+    color: red;
 }
 
 .slides
@@ -27,20 +37,21 @@
     align-items: flex-start;
 }
 
-.cat > :not(.cat-img)
-{
-    padding-left: 10px;
-}
-
 .aside,
 input[name='filter']
 {
     display: none;
 }
 
+.short-info > p
+{
+    color: gray;
+}
+
 .full-info
 {
     display: none;
+    color: grey;
 }
 
 .link-mail::before
@@ -50,22 +61,38 @@ input[name='filter']
 
 .cat
 {
+    padding: 10px;
     margin-bottom: 25px;
+}
+
+.cat > .short-info
+{
+    padding-left: 10px;
 }
 
 .cat:hover
 {
-    box-shadow: 0 0 25px #000;
+    box-shadow: 0 0 25px black;
 }
 
 main
 {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid gray;
 }
 
 .footer
 {
     margin: 25px;
+}
+
+.footer a
+{
+    text-decoration: none;
+}
+
+.desktop-mail
+{
+    color: gray;
 }
 
 @media (min-width: 375px) and (max-width: 730px)
@@ -83,8 +110,6 @@ main
 
     .cat-img > img
     {
-        min-width: 375px;
-        max-width: 730px;
         width: 100%;
     }
 
@@ -143,9 +168,9 @@ main
 
     .cat
     {
-        width: 480px;
+        width: 450px;
         display: grid;
-        grid-template: 'img short-info' 225px
+        grid-template: 'img short-info' 4fr
             'full-info full-info' 1fr / 1fr 1fr;
         margin: 10px;
     }
@@ -162,7 +187,7 @@ main
 
     .full-info
     {
-        border-top: 1px solid black;
+        border-top: 1px solid gray;
         grid-area: full-info;
         display: block;
     }
@@ -170,8 +195,8 @@ main
     .filters
     {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .range-2
@@ -183,10 +208,11 @@ main
     {
         text-align: center;
         width: 80%;
-        border: 2px solid black;
+        border: 2px solid gray;
         border-radius: 10px;
         height: 50px;
         display: flex;
+        margin-bottom: 10px;
     }
 
     span
@@ -204,7 +230,7 @@ main
     {
         display: flex;
         justify-content: space-around;
-        width: 375px;
+        width: 425px;
     }
 
     .link-mail::before
@@ -228,6 +254,7 @@ main
     input[id='filter-4']:checked ~ .aside .filters > .filter-4
     {
         background: greenyellow;
+        border-color: green;
     }
 
     input[id='filter-2']:checked ~ .slides > div:nth-of-type(2n),
