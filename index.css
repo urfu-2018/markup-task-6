@@ -74,7 +74,7 @@ body
 {
     display: flex;
     margin: 5px auto;
-    width: 100%;
+    width: auto;
     border-radius: 10%;
     transition: all .5s ease;
 }
@@ -102,7 +102,6 @@ body
 .icon-dot
 {
     display: none;
-
 }
 
 @media screen and (min-width: 1200px)
@@ -110,27 +109,28 @@ body
     .main
     {
         display: grid;
-        height: 100%;
-        grid-template-rows: 100%;
-        grid-template-columns: 80% 20%;
+        min-height: 100vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: .8fr .2fr;
         position: relative;
     }
 
     .cats
     {
-        display: flex;
+        display: grid;
         flex-flow: row wrap;
-        width: 100%;
+        grid-template-columns: 1fr 1fr;
         justify-content: space-around;
     }
 
     .cat
     {
         border: 1px solid #d7d7d7;
-        width: 45%;
-        height: auto;
         display: grid;
-        grid-template-columns: 60% 1fr;
+        width: 500px;
+        height: 450px;
+        grid-template-columns: .6fr 1fr;
+        grid-template-rows: .5fr 1fr .6fr;
         margin: 5px auto;
     }
 
@@ -141,8 +141,10 @@ body
 
     .img-cat
     {
-        width: 100%;
-        margin: 5px;
+        display: flex;
+        width: 1fr;
+        margin: auto;
+        padding: 5px;
         grid-row: 1 / 3;
     }
 
@@ -166,6 +168,7 @@ body
         grid-row: 2;
         grid-column: 2;
         margin: auto;
+        align-items: center;
     }
 
     .description
@@ -225,14 +228,20 @@ body
     {
         display: flex;
         position: sticky;
+        width: 100%;
         bottom: 0;
         border-top: 1px solid #d7d7d7;
         background: #f8f8f8;
     }
 
+    .copyright
+    {
+        margin: 5px auto;
+    }
+
     .mail
     {
-        margin: 5px;
+        margin: 5px auto;
         display: flex;
         flex-grow: 1;
         flex-direction: row;
@@ -250,7 +259,7 @@ body
     }
 }
 
-@media screen and (min-width: 730px) and (max-width: 1200px)
+@media screen and (min-width: 730px) and (max-width: 1199px)
 {
     .head
     {
@@ -284,7 +293,7 @@ body
     }
 }
 
-@media screen and (max-width: 730px)
+@media screen and (max-width: 729px)
 {
     .head
     {
