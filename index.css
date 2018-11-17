@@ -379,6 +379,7 @@ input
     {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .dekstop
@@ -408,7 +409,8 @@ input
     
     .copyright
     {
-        margin: 20px 0 0;
+        margin: 20px 0;
+        text-decoration: none;
     }
 
     .cat-block
@@ -417,6 +419,7 @@ input
         grid-template: 'a'
             'b' / 100%;
         width: 300px;
+        margin: 20px;
     }
 
     img
@@ -441,5 +444,11 @@ input
     {
         margin: 0;
         padding: 0;
+    }
+
+    [href*='vnu'],
+    [href*='cats']
+    {
+        margin: 0;
     }
 }
