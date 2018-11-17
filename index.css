@@ -5,7 +5,27 @@ body
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.type-selector
+{
+    display: none;
+}
+
+.no-type:checked ~ .main-block .cat-section .cat-card:not(.no),
+.britan-type:checked ~ .main-block .cat-section .cat-card:not(.britan),
+.pers-type:checked ~ .main-block .cat-section .cat-card:not(.pers)
+{
+    display: none;
+}
+
+.no-type:checked ~ .main-block .cat-filter .cat-types .no,
+.britan-type:checked ~ .main-block .cat-filter .cat-types .britan,
+.pers-type:checked ~ .main-block .cat-filter .cat-types .pers,
+.no-filter:checked ~ .main-block .cat-filter .cat-types .all
+{
+    background-color: #7fffd4;
 }
 
 .market-header
@@ -39,7 +59,8 @@ body
     border: 1px solid #d3d3d3;
     font-size: 20px;
     font-family: 'Arial', sans-serif;
-    padding: 10px;
+    padding: 10px 20px;
+
 }
 
 .market-footer .trademark
@@ -54,9 +75,20 @@ body
     text-decoration: initial;
 }
 
+.market-footer .hidden-image
+{
+    display: none;
+    margin: 0 5px;
+}
+
+.market-footer .contacts .dot
+{
+    display: none;
+}
+
 .main-block
 {
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 0 10px 10px;
 }
 
@@ -75,7 +107,7 @@ body
     text-align: center;
     overflow: hidden;
     margin: 10px;
-    height: 400px;
+    height: 800px;
     display: grid;
     grid-template-rows: 60% 1fr;
 }
@@ -90,16 +122,16 @@ body
 
 .text
 {
+    margin: 20px 30px;
     height: auto;
-    padding: 0 5% 5%;
     text-align: left;
     text-overflow: ellipsis;
-    font-size: 15px;
+    font-size: 35px;
 }
 
 .cat-name
 {
-    font-size: 20px;
+    font-size: 40px;
     margin: 10px 0;
     overflow: hidden;
     white-space: nowrap;
@@ -125,15 +157,39 @@ body
 .cat-filter
 {
     display: none;
+    margin: 5px 20px;
+}
+
+.cat-age
+{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-name
+{
+    font-size: 20px;
+}
+
+.age-range
+{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.cat-types
+{
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cat-type
 {
+    margin: 5px 0;
     border: 1px solid black;
     border-radius: 5px;
     height: 50px;
-    margin: 5px 20px;
     text-align: center;
     line-height: 50px;
 }
@@ -149,6 +205,18 @@ body
     .cat-card
     {
         flex-basis: 30%;
+        height: 400px;
+    }
+
+    .text
+    {
+        margin: 0 10px;
+        font-size: 18px;
+    }
+
+    .cat-name
+    {
+        font-size: 30px;
     }
 
     .market-footer
@@ -171,10 +239,45 @@ body
     {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .cat-card
     {
         flex-basis: 45%;
+    }
+
+    .market-footer
+    {
+        height: 30px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .market-footer .contacts
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .market-footer .contacts .simple-image
+    {
+        display: none;
+    }
+
+    .market-footer .contacts .hidden-image
+    {
+        display: initial;
+    }
+
+    .market-footer .contacts .simple-ref
+    {
+        margin: 0 10px;
+    }
+
+    .market-footer .contacts .dot
+    {
+        display: initial;
     }
 }

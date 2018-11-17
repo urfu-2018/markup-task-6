@@ -6,10 +6,14 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+<input type="radio" name="type" id="no-type" class="type-selector no-type">
+<input type="radio" name="type" id="britan-type" class="type-selector britan-type">
+<input type="radio" name="type" id="pers-type" class="type-selector pers-type">
+<input type="radio" name="type" id="no-filter" class="type-selector no-filter" checked>
 <header class="market-header">Мурмаркет</header>
 <main class="main-block">
     <article class="cat-section">
-        <div class="cat-card red">
+        <div class="cat-card no">
             <img src="https://www.fresher.ru/wp-content/uploads/2018/03/1.jpg" alt="boris" title="boris"
                  height="240">
             <div class="text">
@@ -22,7 +26,7 @@
                 </section>
             </div>
         </div>
-        <div class="cat-card gray">
+        <div class="cat-card britan">
             <img src="https://stc01.mir24.tv/media/images/original/original14797108.jpg"
                  alt="eduard" title="eduard"
                  height="240">
@@ -36,7 +40,7 @@
                 </section>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card no">
             <img src="https://cdn5.img.ria.ru/images/148839/96/1488399690.jpg" alt="mantikora"
                  title="mantikora" height="240">
             <div class="text"><h3 class="cat-name"><a href="#">Мантикора</a></h3>
@@ -48,7 +52,7 @@
                 </section>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card britan">
             <img src="http://droplak.ru/wp-content/uploads/2016/04/11-8.jpg" alt="barnabi" title="barnabi"
                  height="240">
             <div class="text"><h3 class="cat-name"><a href="#">Барнаби</a></h3>
@@ -60,7 +64,7 @@
                 </section>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card pers">
             <img src="http://droplak.ru/wp-content/uploads/2016/04/3-8.jpg" alt="vasya" title="vasya"
                  height="240">
             <div class="text"><h3 class="cat-name"><a href="#">Вася</a></h3>
@@ -72,7 +76,7 @@
                 </section>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card no">
             <div class="inner-block">
                 <img src="https://www.meme-arsenal.com/memes/b73d0ff9295a4a2fd3f0d8d1d872ebc0.jpg"
                      alt="charley"
@@ -88,12 +92,12 @@
                 </div>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card no">
             <img src="https://bipbap.ru/wp-content/uploads/2017/09/1476347524_krasavicy-koshki-i-koty-10.jpg"
                  alt="keira" title="keira" height="240">
             <div class="inner-block">
                 <div class="text"><h3 class="cat-name"><a href="#">Кейра</a></h3>
-                    <section class="cat-description">
+                    <section class="short">
                         <p>Возраст: 2 года.<br>
                             Порода: Обычный двортерьер.<br>
                             Болезни: Отсутствуют.</p>
@@ -102,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card pers">
             <div class="inner-block">
                 <img src="https://kulturologia.ru/files/u18476/cote.jpg" alt="francis" title="francis"
                      height="240">
@@ -116,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card on">
             <div class="inner-block">
                 <img
                     src="https://www.pressa.tv/uploads/posts/2014-04/1397719235_ch1.jpg"
@@ -131,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="cat-card">
+        <div class="cat-card no">
             <div class="inner-block">
                 <img src="https://cs8.pikabu.ru/post_img/big/2016/05/09/11/1462820972121569254.jpg" alt="mia"
                      title="mia" height="240">
@@ -147,18 +151,35 @@
         </div>
     </article>
     <aside class="cat-filter">
-        <section class="cat-type">Gray</section>
-        <section class="cat-type">Red</section>
+        <article class="cat-age">
+            <section class="filter-name">Возраст</section>
+            <section>
+                <input type="range" class="age-range">
+            </section>
+            от 2 до 4 лет
+        </article>
+        <section class="filter-name">Порода</section>
+        <article class="cat-types">
+            <label class="cat-type pers" for="pers-type">Персидская</label>
+            <label class="cat-type britan" for="britan-type">Британская</label>
+            <label class="cat-type no" for="no-type">Нет</label>
+            <label class="cat-type all" for="no-filter">Все породы</label>
+        </article>
     </aside>
 </main>
-
 <footer class="market-footer">
     <section class="contacts">
+        <img class="hidden-image"
+             src="https://upload.wikimedia.org/wikipedia/commons/4/4f/High-contrast-mail-mark-unread.svg"
+             alt="mail" height="20">
         Напишите нам:<br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/High-contrast-mail-mark-unread.svg"
+        <img class="simple-image"
+             src="https://upload.wikimedia.org/wikipedia/commons/4/4f/High-contrast-mail-mark-unread.svg"
              alt="mail" height="14">
         <a class="simple-ref" href="#">cats@babuli.ru</a><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/High-contrast-mail-mark-unread.svg"
+        <section class="dot">&#x25cf;</section>
+        <img class="simple-image"
+             src="https://upload.wikimedia.org/wikipedia/commons/4/4f/High-contrast-mail-mark-unread.svg"
              alt="mail" height="14">
         <a class="simple-ref" href="#">vnuchek@babuli.ru</a>
     </section>
