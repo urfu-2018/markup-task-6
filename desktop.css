@@ -52,9 +52,9 @@
         margin: 2%;
         display: grid;
         grid-template: 'photo name' 15%
-        'photo basic' auto
-        'extra extra' 1fr
-        / 60% 40%;
+            'photo basic' auto
+            'extra extra' 1fr
+            / 60% 40%;
     }
 
     .photo-container
@@ -164,9 +164,9 @@
         border: 1px solid rgb(204,241,164);
     }
 
-    [id='breed-1']:checked ~ main dl:not(.breed-1),
-    [id='breed-2']:checked ~ main dl:not(.breed-2),
-    [id='breed-3']:checked ~ main dl:not(.breed-3)
+    [id='breed-1']:checked ~ main .card:not(.breed-1),
+    [id='breed-2']:checked ~ main .card:not(.breed-2),
+    [id='breed-3']:checked ~ main .card:not(.breed-3)
     {
         display: none;
     }

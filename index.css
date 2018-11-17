@@ -81,19 +81,26 @@ dd
     margin: 0;
 }
 
-.basic-information-block ul
+.basic-information-block
 {
     display: flex;
     flex-direction: column;
     padding-left: 7%;
+    justify-content: flex-start;
 }
 
-.basic-information-block li:last-of-type
+.definition-wrap
+{
+    margin: 1% 0;
+}
+
+.basic-information-block .definition-wrap:last-of-type
 {
     margin: 7% 0;
 }
 
-.basic-information-block ul li *
+.definition-wrap dt,
+.definition-wrap dd
 {
     display: inline-block;
 }

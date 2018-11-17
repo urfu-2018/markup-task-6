@@ -27,7 +27,7 @@
         height: var(--footer-height);
     }
 
-    .contacts *:last-child
+    .contacts p:last-child
     {
         margin-top: 40px;
     }
