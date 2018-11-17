@@ -74,7 +74,7 @@ body
 {
     display: flex;
     margin: 5px auto;
-    width: auto;
+    width: 1fr;
     border-radius: 10%;
     transition: all .5s ease;
 }
@@ -91,12 +91,11 @@ body
     margin: 10px;
 }
 
-.cat
+.main
 {
-    width: 30%;
-    height: auto;
-    margin: 5px auto;
-    border: 1px solid #d7d7d7;
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column;
 }
 
 .icon-dot
@@ -266,10 +265,24 @@ body
         font-size: 24px;
     }
 
+    .main
+    {
+        display: flex;
+        min-height: 100vh;
+    }
+
     .cats
     {
         display: flex;
         flex-flow: row wrap;
+    }
+
+    .cat
+    {
+        display: flex;
+        border: 1px solid #d7d7d7;
+        flex-direction: column;
+        margin: 5px auto;
     }
 
     .footer
@@ -300,10 +313,11 @@ body
         font-size: 18px;
     }
 
-    .cats
+    .cat
     {
-        display: flex;
-        flex-direction: column;
+        width: 300px;
+        border: 1px solid #d7d7d7;
+        margin: 5px auto;
     }
 
     .footer
