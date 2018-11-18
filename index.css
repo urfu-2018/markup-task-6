@@ -36,13 +36,23 @@ footer
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .contacts
 {
     flex: 1 0 365px;
     margin: 20px;
+}
+
+.contacts .label
+{
+    color: gray;
+}
+
+.contacts ul
+{
+    margin: 0;
     padding-left: 0;
 }
 
@@ -53,8 +63,10 @@ footer
 
 .contacts li::before
 {
-    content: '✉ ';
-    font-size: 25px;
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    content: '\f0e0';
+    margin-right: 5px;
+    font-weight: 900;
     color: gray;
 }
 
@@ -62,11 +74,6 @@ footer
 {
     flex: 1 0 300px;
     padding: 15px;
-}
-
-.dot-between-contacts
-{
-    display: none;
 }
 
 .card
@@ -101,7 +108,7 @@ footer
 {
     display: none;
     padding: 20px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .card ul
@@ -293,14 +300,42 @@ footer
         display: block;
     }
 
+    footer
+    {
+        align-items: center;
+    }
+
+    .contacts
+    {
+        display: flex;
+        align-items: center;
+    }
+
     .contacts li
     {
         display: inline;
         margin: 0 20px;
     }
 
-    .dot-between-contacts
+    .contacts .label::before
     {
-        display: inline;
+        font-family: 'Font Awesome 5 Free', sans-serif;
+        content: '\f0e0';
+        margin-right: 5px;
+        font-weight: 900;
+    }
+
+    .contacts li::before
+    {
+        content: none;
+    }
+
+    .contacts li:last-of-type::before
+    {
+        font-family: 'Font Awesome 5 Free', sans-serif;
+        content: '\f111';
+        font-weight: 900;
+        font-size: 10px;
+        margin: 0 15px 0 -25px;
     }
 }
