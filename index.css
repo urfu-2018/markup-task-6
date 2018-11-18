@@ -47,6 +47,7 @@
 
 .cat_card
 {
+    max-height: 303px;
     border: 2px lavender solid;
     margin: 15px 0 0 15px;
     font-family: 'Segoe UI', sans-serif;
@@ -228,6 +229,7 @@ input[id='brown']:checked ~ .aside_column label[for='brown']
 
     .cat_card
     {
+        max-height: 999px;
         display: inline-block;
         border: 2px lavender solid;
     }
@@ -296,7 +298,7 @@ input[id='brown']:checked ~ .aside_column label[for='brown']
     {
         display: block;
         width: 500px;
-
+        max-height: 999px;
         margin-top: 20px;
     }
 
