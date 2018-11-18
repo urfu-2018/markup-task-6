@@ -139,6 +139,7 @@
 
     .filter label
     {
+        position: relative;
         display: block;
         cursor: pointer;
         width: 230px;
@@ -149,9 +150,10 @@
         margin-bottom: 20px;
     }
 
-    .filter label div
+    .filter label span
     {
-        padding-top: 10px;
+        position: relative;
+        top: 10px;
         padding-left: 40px;
         width: 100%;
 
@@ -187,7 +189,6 @@
     }
 
     input[type='range']:focus
-
     {
         outline: none;
     }
@@ -221,8 +222,8 @@
     {
         position: relative;
         content: '';
-        height: 2px;
+        height: 20px;
+        width: 100px;
         background: #707;
-        z-index: 10;
     }
 }
