@@ -33,31 +33,26 @@ body
     height: 40px;
 }
 
+.filter
+{
+    display: none;
+}
+
 .main-footer
 {
-    display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 110px;
-    background-color: white;
     border-top: 1px solid gray;
-    flex-direction: column;
-    padding-left: 20px;
     font: 14px Arial;
     z-index: 9999;
-}
-
-.main-footer .dot
-{
-    display: none;
+    background-color: white;
 }
 
 .main-footer .write-us
 {
     color: gray;
-    margin: 4px 0;
 }
 
 .main-footer a
@@ -65,66 +60,9 @@ body
     text-decoration: none;
 }
 
-.main-footer .mail-link:before
-{
-    content: url('images/mail-icon-16-16.png');
-    position: relative;
-    top: 4px;
-    margin-right: 4px;
-}
-
-.main-footer .copyright
-{
-    margin-bottom: 10px;
-    margin-top: auto;
-}
-
-.footer-wrapper
-{
-    height: 110px;
-}
-
-.cat-list
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.cat-list > input
-{
-    display: none;
-}
-
-.cat-list-item
-{
-    margin: 10px auto;
-    padding-bottom: 10px;
-    border: 1px solid gray;
-    width: 300px;
-    height: 400px;
-}
-
 .cat-list-item:hover
 {
     box-shadow: 0 0 10px gray;
-}
-
-.cat-list-item .image
-{
-    width: 100%;
-    height: 50%;
-}
-
-.cat-list-item .note,
-.cat-list-item .long-description
-{
-    display: none;
-}
-
-.cat-list-item .short-description,
-.cat-list-item .status
-{
-    margin-left: 10px;
 }
 
 .cat-list-item .short-description,
@@ -155,15 +93,93 @@ body
     padding: 0;
 }
 
-.filter
+.main-footer .dot
 {
     display: none;
 }
 
-@media screen and (min-width: 730px)
+.main-footer .write-us
+{
+    margin: 4px 0;
+}
+
+.cat-list-item .image
+{
+    width: 100%;
+    height: 50%;
+}
+
+.cat-list-item .note,
+.cat-list-item .long-description
+{
+    display: none;
+}
+
+.cat-list > input
+{
+    display: none;
+}
+
+.cat-list-item
+{
+    border: 1px solid gray;
+}
+
+.cat-list-item .short-description,
+.cat-list-item .status
+{
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    .main-footer
+    {
+        display: flex;
+        flex-direction: column;
+        height: 110px;
+        padding-left: 20px;
+    }
+
+    .main-footer .copyright
+    {
+        margin-bottom: 10px;
+        margin-top: auto;
+    }
+
+    .footer-wrapper
+    {
+        height: 110px;
+    }
+
+    .cat-list
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat-list-item
+    {
+        margin: 10px auto;
+        padding-bottom: 10px;
+        width: 300px;
+        height: 400px;
+    }
+
+    .main-footer .mail-link:before
+    {
+        content: url('images/mail-icon-16-16.png');
+        position: relative;
+        top: 4px;
+        margin-right: 4px;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px)
 {
     .cat-list
     {
+        display: flex;
         flex-flow: row wrap;
     }
 
@@ -184,6 +200,7 @@ body
         height: auto;
         padding-top: 10px;
         padding-bottom: 10px;
+
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: 2em 1.2em 1.2em;
@@ -205,6 +222,14 @@ body
         margin-right: 40px;
         margin-left: auto;
     }
+
+    .main-footer .mail-link:before
+    {
+        content: url('images/mail-icon-16-16.png');
+        position: relative;
+        top: 4px;
+        margin-right: 4px;
+    }
 }
 
 @media screen and (min-width: 1200px)
@@ -220,6 +245,8 @@ body
         grid-column: span 2;
         width: auto;
         height: auto;
+        margin: 20px 10px;
+
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 2.5em 5.4em 1.5em 2.5em 1fr;
@@ -228,7 +255,9 @@ body
     .cat-list-item .image
     {
         width: calc(100% - 20px);
+        max-width: 300px;
         height: calc(100% - 25px);
+        max-height: 200px;
         grid-row: 1 / 5;
         margin: 10px 10px 15px;
         box-shadow: 0 0 5px gray;
@@ -436,11 +465,6 @@ body
         margin: 0 10px;
     }
 
-    .main-footer .mail-link::before
-    {
-        content: '';
-    }
-
     .main-footer .dot
     {
         display: block;
@@ -452,6 +476,6 @@ body
 
     .main-footer .copyright
     {
-        margin-bottom: auto;
+        margin: auto 10px auto auto;
     }
 }
