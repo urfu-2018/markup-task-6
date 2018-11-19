@@ -4,8 +4,8 @@ html
     display: flex;
     flex-direction: column;
 
-    height: 100%;
     margin: 0;
+    min-height: 100vh;
 }
 
 .title
@@ -42,9 +42,6 @@ html
 .footer
 {
     font: normal 14px Arial, serif;
-
-    position: fixed;
-    bottom: 0;
 
     display: flex;
 
@@ -176,13 +173,6 @@ a
 
 @media (min-width: 730px) and (max-width: 1200px)
 {
-    .wrapper
-    {
-        display: grid;
-
-        grid-template-rows: auto 1fr auto;
-    }
-
     .footer
     {
         align-items: flex-end;
@@ -259,21 +249,11 @@ a
 {
     .title
     {
-        position: fixed;
-
         background: white;
-    }
-
-    .main
-    {
-        margin-top: 45px;
     }
 
     .footer
     {
-        position: fixed;
-        bottom: 0;
-
         align-items: baseline;
         justify-content: space-between;
 
