@@ -3,17 +3,68 @@
 .content
 {
     grid-area: content;
-    background: #ff8b72;
     display: flex;
     flex-direction: column;
 }
 
+input[type='radio']
+{
+    display: none;
+}
+
 .cat-card
 {
-    width: 100%;
+    width: 90%;
     height: 400px;
-    background: #71ff80;
-    margin: 20px;
+    border: 1px solid gray;
+    margin: 5%;
+    display: grid;
+    grid-template: 45% 55% / 1fr;
+    grid-template-areas: 'cat-face' 'short-info';
+    color: #898a86;
+    font-size: 19px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 10px #7f7f80;
+}
+
+.cat-card .full-information
+{
+    display: none;
+}
+
+.cat-card img
+{
+    width: 100%;
+    height: 100%;
+    grid-area: cat-face;
+}
+
+.cat-card .cat-name
+{
+    color: #1b1c19;
+    font-size: 25px;
+    font-weight: 600;
+    flex-grow: 2;
+}
+
+.cat-card .cat-status
+{
+    flex-grow: 2;
+    margin-top: 5%;
+}
+
+.cat-card .short-info
+{
+    grid-area: short-info;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 
 .footer
@@ -76,7 +127,7 @@
 .filters
 {
     grid-area: filters;
-    background: #ff72e9;
+    display: none;
 }
 
 /*дефолтный грид*/
@@ -114,7 +165,7 @@
 {
     .cat-card
     {
-        width: 465px;
+        width: 500px;
         height: 350px;
     }
 
@@ -133,6 +184,30 @@
         align-items: flex-start;
     }
 
+    .cat-card
+    {
+        margin: 2%;
+        display: none;
+        grid-template: 60% 40% / 55% 45%;
+        grid-template-areas: 'cat-face short-info'
+            'full-information full-information';
+    }
+
+    .cat-card img
+    {
+        margin: 10px;
+        height: 90%;
+        width: 90%;
+    }
+
+    .cat-card .full-information
+    {
+        grid-area: full-information;
+        border: 1px solid #a4a4a4;
+        display: unset;
+        padding: 10px;
+    }
+
     .footer
     {
         flex-direction: row;
@@ -142,4 +217,75 @@
     {
         flex-grow: 1;
     }
+
+    .filters
+    {
+        display: flex;
+        flex-flow: column;
+        color: #898a86;
+        font-size: 19px;
+        height: 70%;
+    }
+
+    .cat-age-range
+    {
+        width: 80%;
+        height: 5px;
+        background: darkgray;
+        margin: 10px;
+    }
+
+    .cat-age-range::-moz-range-thumb
+    {
+        -moz-appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 15px;
+        border: 2px solid #3386cb;
+        background: #cadae8;
+        cursor: pointer;
+        box-shadow: 0 3px 15px rgba(0,0,0,.1);
+    }
+
+    .filters .input-cat-age
+    {
+        height: 40px;
+    }
+
+    .filters .age,
+    .filters .breed
+    {
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .breed-block
+    {
+        border: 1px solid #a4a4a4;
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 80%;
+        box-shadow: 0 0 2px #8e8e8e;
+    }
+
+    input[id='breed-wild']:checked ~ .filters .breed-wild,
+    input[id='breed-home']:checked ~ .filters .breed-home,
+    input[id='breed-combat']:checked ~ .filters .breed-combat,
+    input[id='breed-sea']:checked ~ .filters .breed-sea,
+    input[id='breed-no']:checked ~ .filters .breed-no
+    {
+        background: #7ccf8e;
+    }
+
+    input[id='breed-wild']:checked ~ .content .breed-wild,
+    input[id='breed-home']:checked ~ .content .breed-home,
+    input[id='breed-combat']:checked ~ .content .breed-combat,
+    input[id='breed-sea']:checked ~ .content .breed-sea,
+    input[id='breed-no']:checked ~ .content .cat-card
+    {
+        display: grid;
+    }
+
 }
