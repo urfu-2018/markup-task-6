@@ -7,42 +7,42 @@
 </head>
 <body>
 <div class="wrapper">
+    <input id="without-breed-button" class="without-breed-button side-menu-input-for-buttons" type="checkbox">
+    <input id="all-cats-again-button" class="all-cats-again-button side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-1" class="target-item-1 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-2" class="target-item-2 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-3" class="target-item-3 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-4" class="target-item-4 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-5" class="target-item-5 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-6" class="target-item-6 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-7" class="target-item-7 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-8" class="target-item-8 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-9" class="target-item-9 side-menu-input-for-buttons" type="checkbox">
+    <input id="target-item-10" class="target-item-10 side-menu-input-for-buttons" type="checkbox">
     <header class="article-title">Котики Бабы Клавы</header>
     <article class="side-menu">
         <h2>Возраст</h2>
-        <img src="slider.png" title="" alt="">
+        <input type="range" class="fake-input" min="0" max="10" value="2" step="1">
         <p>от 2 до 4 лет</p>
         <h2>Порода</h2>
-        <a href="#target-item-3">Бомбейская кошка</a>
-        <a href="#target-item-1">Британская короткошерстная</a>
-        <a href="#target-item-5">Сибирская кошка</a>
-        <a href="#target-item-7">Кроликовидная кошка</a>
-        <a href="#without-breed-button">Без породы</a>
-        <a href="#all-cats-again-button">Все котики</a>
+        <label for="target-item-3" class="category-button button-3">Бомбейская кошка</label>
+        <label for="target-item-1" class="category-button button-1">Британская короткошерстная</label>
+        <label for="target-item-5" class="category-button button-5">Сибирская кошка</label>
+        <label for="target-item-7" class="category-button button-7">Кроликовидная кошка</label>
+        <label for="without-breed-button" class="category-button button-without-breed">Без породы</label>
+        <label for="all-cats-again-button" class="category-button button-all-cats">Все котики</label>
     </article>
     <main class="cat-site">
-    <span id="without-breed-button" class="without-breed-button"></span>
-    <span id="all-cats-again-button" class="all-cats-again-button"></span>
-    <span id="target-item-1" class="target-item-1"></span>
-    <span id="target-item-2" class="target-item-2"></span>
-    <span id="target-item-3" class="target-item-3"></span>
-    <span id="target-item-4" class="target-item-4"></span>
-    <span id="target-item-5" class="target-item-5"></span>
-    <span id="target-item-6" class="target-item-6"></span>
-    <span id="target-item-7" class="target-item-7"></span>
-    <span id="target-item-8" class="target-item-8"></span>
-    <span id="target-item-9" class="target-item-9"></span>
-    <span id="target-item-10" class="target-item-10"></span>
     <article class="cardboard item1">
         <img src="cat-1.png" alt="Фото милого и пушистого котика" class="koto-photo"
              title="Наша гордость и самый хороший мальчик - Персиваль - вечный победитель">
         <h2 class="cat-name">Perseval</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 1 год</li>
             <li>Порода: британская короткошерстная</li>
             <li>Болезни: нет</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Этот котик - очень хороший мальчик, пускай и не песик. Он постоянно завоевывает
             призовые места на кошачьих соревнованиях. Он очень чистоплотный, грациозный и величавый.
             Пожалуйста, участвуйте с ним в соревнованиях - он это очень любит. Еще бы, ведь на них ему
@@ -54,12 +54,12 @@
              title="Это наши Бонни и Клайд - молодая пара, которые без ума друг от друга"
              class="koto-photo">
         <h2 class="cat-name">Meresha и Diesel</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: Meresha - 1 год, Diesel - 1.5 года</li>
             <li>Порода: беспородные лапочки</li>
             <li>Болезни: безграничная любовь друг к другу</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Эти два прекрасных создания безмерно влюблены друг в друга, поэтому
             и все фотографии у них совместные, и поэтому, если вы хотите взять этих
             милашек к себе, то тогда брать их надо только парой, ведь они попросту
@@ -72,12 +72,12 @@
              class="koto-photo"
              title="Lucifer - хороший котик, но он не хочет, чтобы кто-то писал задачу «Про котиков»">
         <h2 class="cat-name">Lucifer</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 6 месяцев</li>
             <li>Порода: бомбейская кошка</li>
             <li>Болезни: нелюбовь к программированию</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Lucifer - очень добрый, игривый и милый котик, он очень сообразительный и смелый,
             но у него есть один недостаток - из-за того, что внучек очень много времени проводил
             за компьютером и программировал, у него не хватало времени для игры с малышом Luci, а
@@ -92,12 +92,12 @@
              title="Это Вася - он очень любит кушать капусту из вашего кошелька, осторожнее!!!"
              class="koto-photo">
         <h2 class="cat-name">Вася</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 1.2 года</li>
             <li>Порода: родился в трущобах</li>
             <li>Болезни: предприниматель на всю голову</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Вася - тот редкий вид котов, про которых можно сказать - миллионер
             из трущоб. Пол года назад, я подобрала его по доброте душевной на улице
             около вокзала, считайте от смерти спасла, а уже через пол года, Вася
@@ -114,12 +114,12 @@
              class="koto-photo"
              title="По скольку мы не могли решить кошка перед нами или хлеб, мы не могли есть">
         <h2 class="cat-name">Magnolia</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 7 месяцев</li>
             <li>Порода: Сибирская кошка</li>
             <li>Болезни: слишком сладкия булочка</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Magnolia с нами уже 3 месяца, и знаете, это были самые голодные 3 месяца в нашей
             семье, потому, что мы постоянно боялись перепутать ее с сладенькой булочкой,
             и, однажны, съесть не ту... ... ... Шууууутка, Magnolia - спокойная девочка, она
@@ -132,12 +132,12 @@
              title="Это наш киберкотлет Игнат - его стиль игры - MID OR FEED"
              class="koto-photo">
         <h2 class="cat-name">Игнат</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 1.5 года</li>
             <li>Порода: любитель ходить на MID</li>
             <li>Болезни: законченный игроман</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Игнат очень любит играть. Очень Любит Играть. Под словом очень я имею в
             виду ОЧЕНЬ любит играть... Игнат проводит сутки напролет лежа перед телевизором
             и играя в свою Sony Playstation 5. Слава богу, Игнат не играет на деньги, в казино
@@ -153,12 +153,12 @@
              title="Это Monya и она пока не определилась... Кролик или котик вот в чем вопрос"
              class="koto-photo">
         <h2 class="cat-name">Monya</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 7 месяцев</li>
             <li>Порода: редкая кроликовидная кошка</li>
             <li>Болезни: муки выбора</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Monya очень милая девочка, но она пока не определилась окончательно, кролик она
             или котик, так что если вы давно мечтали о кролике, но так же давно вы хотели
             кошечку, то тогда Monya - ваш выбор, поживете - определитесь, а пока, какие
@@ -171,12 +171,12 @@
              title="Это наш диванный аналитик Игорь Степанович"
              class="koto-photo">
         <h2 class="cat-name">Игорь Степанович</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 3 года</li>
             <li>Порода: диванно-кроватные анакотики</li>
             <li>Болезни: чрезмерно развитое критическое мышление</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Игорь Степанович очень любит вечерами, на самом деле даже днями и ночами
             сидеть на диване, смотреть телевизор и выносить вердикты, приговоры,
             строить свои теории заговоров и приоткрывать завесу тайны для себя и всех,
@@ -191,12 +191,12 @@
              title="Удостоенный титула 'Лапка Бога' по версии болельщиков - Котофеев"
              class="koto-photo">
         <h2 class="cat-name">Котофеев</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 5 лет</li>
             <li>Порода: рекотсмен</li>
             <li>Болезни: нет и быть не может! Здоров как бык!</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Котофеев - легенда кошачьего футбола, на недавнем XV по котоболу,
             он защищал честь России в сборной команде и максимально достойно
             провел все игры. Не один раз удостаивался награды "Лапка Бога".
@@ -211,12 +211,12 @@
              title="Это наш стилист и самый модный парень на деревне по версии журнала Amurrr"
              class="koto-photo">
         <h2 class="cat-name">Antuan France De La Pari Fon Mon Te Sion Junior</h2>
-        <ul>
+        <ul class="brief-cat-info">
             <li>Возраст: 4 года</li>
             <li>Порода: стильный модный молодежный</li>
             <li>Болезни: нездоровая любовь к шоппингу</li>
         </ul>
-        <p>
+        <P class="cat-story">
             Антуан Франсе де ла Пари Мон Те Сьон Младший - в народе Петрович - икона
             стиля на районе. Его уважают и реальные пацаны, и влиятельные коты. Его
             чувство стиля - бесподобно, он может из бездомного кота сделать кота
@@ -228,11 +228,11 @@
 </main>
 </div>
 <footer class="contact-us">
-    <div class="footer-title">
+    <h2 class="footer-title">
         Заинтересовались предложением или хотите забрать Игната - пишите:
-    </div>
-    <a href="#" class="contact-link-1">FoOkySNick@ya.ru</a>
-    <a href="#" class="contact-link-2">vk.com/fookysnick</a>
+    </h2>
+    <a href="#" class="contact-link-1 contact-link">FoOkySNick@ya.ru</a>
+    <a href="#" class="contact-link-2 contact-link">vk.com/fookysnick</a>
     <div class="company-info">
         &copy; 2018 ЗАО &laquo;<a href="#">Бабулины Котятки</a>&raquo;
     </div>

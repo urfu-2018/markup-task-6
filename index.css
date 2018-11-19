@@ -1,20 +1,93 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-title:first-letter
+{
+    color: #f00;
+}
+
+.article-title
+{
+    font-size: 2em;
+
+    position: fixed;
+
+    width: 100%;
+    padding: 10px;
+
+    text-align: center;
+
+    border-bottom: 2px solid lightgray;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.cardboard
+{
+    border: 2px solid lightgray;
+}
+
+.koto-photo
+{
+    width: 100%;
+}
+
+.cat-name
+{
+    font-weight: initial;
+
+    text-align: center;
+}
+
+.footer-title
+{
+    font-size: 16px;
+    font-weight: normal;
+
+    width: 50%;
+
+    color: gray;
+}
+
+.contact-us
+{
+    border-top: 2px solid lightgray;
+}
+
+.company-info > a
+{
+    text-decoration: none;
+}
+
+.contact-us > a
+{
+    text-decoration: none;
+}
+
+.company-info
+{
+    color: black;
+}
+
+.side-menu-input-for-buttons
+{
+    display: none;
+}
+
 @media screen and (min-width: 1200px)
 {
-    html,
-    body
-    {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    body
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
     .wrapper
     {
         display: grid;
@@ -25,26 +98,8 @@
 
     .article-title
     {
-        font-size: 2em;
-
-        position: fixed;
-
-        width: 100%;
-        padding: 10px;
-
-        text-align: center;
-
-        border-bottom: 2px solid lightgray;
-        background: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-
         grid-row: 1 start;
         grid-column: span 2;
-    }
-
-    .article-title:first-letter
-    {
-        color: #f00;
     }
 
     .cat-site
@@ -70,7 +125,7 @@
         grid-column: 2;
     }
 
-    .side-menu > p
+    .cat-story
     {
         font-size: 16px;
 
@@ -84,7 +139,7 @@
         margin-bottom: 0;
     }
 
-    .side-menu > a
+    .category-button
     {
         display: block;
 
@@ -100,63 +155,90 @@
         background: white;
     }
 
-    .target-item-1:target ~ :not(.item1),
-    .target-item-3:target ~ :not(.item3),
-    .target-item-5:target ~ :not(.item5),
-    .target-item-7:target ~ :not(.item7)
+    .category-button:hover:first-letter
+    {
+        color: #f00;
+    }
+
+    .category-button:hover
+    {
+        border-radius: 10px;
+    }
+
+    .category-button:active
+    {
+        border: 2px inset lightgray;
+    }
+
+    .side-menu-input-for-buttons:checked ~ main > .cardboard
     {
         display: none;
     }
 
-    .without-breed-button:target ~ .cardboard
+    .target-item-1:checked ~ .side-menu > .button-1,
+    .target-item-3:checked ~ .side-menu > .button-3,
+    .target-item-5:checked ~ .side-menu > .button-5,
+    .target-item-7:checked ~ .side-menu > .button-7,
+    .all-cats-again-button:checked ~ .side-menu > .button-all-cats,
+    .without-breed-button:checked ~ .side-menu > .button-without-breed
+    {
+        border: 2px inset lightgray;
+        border-radius: 10px;
+    }
+
+    .target-item-1:checked ~ main > .item1,
+    .target-item-3:checked ~ main > .item3,
+    .target-item-5:checked ~ main > .item5,
+    .target-item-7:checked ~ main > .item7
     {
         display: block;
     }
 
-    .without-breed-button:target ~ .item1,
-    .without-breed-button:target ~ .item3,
-    .without-breed-button:target ~ .item5,
-    .without-breed-button:target ~ .item7
+    .without-breed-button:checked ~ main > .item2,
+    .without-breed-button:checked ~ main > .item4,
+    .without-breed-button:checked ~ main > .item6,
+    .without-breed-button:checked ~ main > .item8,
+    .without-breed-button:checked ~ main > .item9,
+    .without-breed-button:checked ~ main > .item10
     {
-        display: none;
+        display: block;
     }
 
-    .side-menu > img
+    .all-cats-again-button:checked ~ main > .cardboard
     {
-        padding-left: 10px;
+        display: block;
+    }
+
+    .fake-input
+    {
+        margin-top: 20px;
+
+        -webkit-appearance: none;
+           -moz-appearance: none;
     }
 
     .cardboard
     {
         width: 45%;
         margin: 20px;
-
-        border: 2px solid lightgray;
     }
 
     .cardboard:hover
     {
-        box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, .5);
-    }
-
-    .koto-photo
-    {
-        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
     }
 
     .cat-name
     {
         width: 100%;
-
-        text-align: center;
     }
 
-    .cardboard > ul
+    .brief-cat-info
     {
         margin: 1.5em .5em;
     }
 
-    .cardboard > p
+    .cardboard > .cat-story
     {
         margin: .5em 1em;
     }
@@ -164,34 +246,20 @@
     .contact-us
     {
         display: flex;
-
-        border-top: 2px solid lightgray;
     }
 
     .contact-us > a,
-    .contact-us > .footer-title
-    {
-        margin: 20px 10px;
-
-        text-decoration: none;
-    }
-
     .footer-title
     {
-        width: 50%;
+        margin: 20px 10px;
     }
 
-    .contact-us > .company-info
+    .company-info
     {
         width: 40%;
         margin: 20px 10px;
 
         text-align: right;
-    }
-
-    .company-info > a
-    {
-        text-decoration: none;
     }
 
     .contact-link-1
@@ -209,21 +277,6 @@
 
 @media screen and (min-width: 730px) and (max-width: 1200px)
 {
-    html,
-    body
-    {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    body
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
     .wrapper
     {
         display: grid;
@@ -234,25 +287,7 @@
 
     .article-title
     {
-        font-size: 2em;
-
-        position: fixed;
-
-        width: 100%;
-        padding: 10px;
-
-        text-align: center;
-
-        border-bottom: 2px solid lightgray;
-        background: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-
         grid-row: 1 start;
-    }
-
-    .article-title:first-letter
-    {
-        color: #f00;
     }
 
     .cat-site
@@ -264,7 +299,7 @@
 
         grid-row: 2;
         flex-wrap: wrap;
-        align-content: space-around;
+        justify-content: stretch;
     }
 
     .cardboard
@@ -273,26 +308,15 @@
         flex-direction: column;
 
         width: 31%;
-        margin: 10px auto;
-
-        border: 2px solid lightgray;
-    }
-
-    .koto-photo
-    {
-        width: 100%;
+        margin: 10px 6px;
     }
 
     .cat-name
     {
-        font-weight: initial;
-
         margin: 1em .5em;
-
-        text-align: center;
     }
 
-    .cardboard > ul
+    .brief-cat-info
     {
         margin: 1em .5em;
 
@@ -309,20 +333,14 @@
         padding-top: .5em;
         padding-left: .3em;
 
-        text-decoration: none;
-
-        border-top: 2px solid lightgray;
-
         flex: 0 0 auto;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 30px 30px;
         grid-template-columns: 1fr 1fr;
     }
 
-    .contact-us > .footer-title
+    .footer-title
     {
         padding-bottom: 10px;
-
-        color: gray;
 
         grid-row: 1;
         grid-column: span 2;
@@ -332,28 +350,24 @@
     {
         display: block;
 
-        width: fit-content;
-
         grid-row: 2;
         grid-column: span 2;
     }
 
-    .contact-us > .company-info
+    .company-info
     {
         width: 100%;
 
         text-align: right;
-
-        color: black;
     }
 
-    .cardboard > p
+    .cardboard > .cat-story
     {
         display: none;
     }
 
-    .contact-link-1:before,
-    .contact-link-2:before
+    .contact-link:before,
+    .contact-link:before
     {
         content: '\2709';
     }
@@ -364,21 +378,8 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 730px)
+@media screen and (max-width: 730px)
 {
-    html
-    {
-        height: 100%;
-    }
-
-    body
-    {
-        display: flex;
-        flex-direction: column;
-
-        height: 100%;
-    }
-
     .wrapper
     {
         display: grid;
@@ -389,27 +390,10 @@
 
     .article-title
     {
-        font-size: 2em;
-
-        position: fixed;
         top: 0;
         left: 0;
 
-        width: 100%;
-        padding: .3em;
-
-        text-align: center;
-
-        border-bottom: 2px solid lightgray;
-        background: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-
         grid-row: 1 start;
-    }
-
-    .article-title:first-letter
-    {
-        color: #f00;
     }
 
     .cat-site
@@ -428,36 +412,26 @@
     .cardboard
     {
         margin: 1em;
-
-        border: 2px solid lightgray;
     }
 
-    .cardboard > p
+    .cardboard > .cat-story
     {
         display: none;
-    }
-
-    .koto-photo
-    {
-        width: 100%;
     }
 
     .cat-name
     {
         font-size: 2em;
-        font-weight: initial;
 
         margin: .5em 1em 0;
-
-        text-align: center;
     }
 
-    .cardboard > ul
+    .brief-cat-info
     {
         margin: 1em;
     }
 
-    .cardboard > ul > li
+    .brief-cat-info > li
     {
         font-size: 1.1em;
 
@@ -475,17 +449,14 @@
         padding-top: .5em;
         padding-left: .5em;
 
-        border-top: 2px solid lightgray;
-
         flex: 0 0 auto;
         align-content: space-around;
     }
 
-    .contact-us > .footer-title
+    .footer-title
     {
+        margin-left: 5px;
         padding-bottom: 10px;
-
-        color: gray;
     }
 
     .contact-us > a
@@ -493,16 +464,13 @@
         padding: 0 5px 5px;
     }
 
-    .contact-us > .company-info
+    .company-info
     {
-        margin-top: 2em;
-        margin-bottom: .5em;
-
-        color: black;
+        margin: 2em 0 .5em;
     }
 
-    .contact-link-1:before,
-    .contact-link-2:before
+    .contact-link:before,
+    .contact-link:before
     {
         content: '\2709';
     }
