@@ -1,9 +1,226 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,
+    initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
+    <input type="radio" id="b-1" name="breed">
+    <input type="radio" id="b-2" name="breed">
+    <input type="radio" id="b-3" name="breed">
+    <input type="radio" id="b-4" name="breed">
+    <input type="radio" id="b-5" name="breed">
+    <input type="radio" id="no-b" name="breed">
+    <input type="radio" id="all" name="breed" checked>
+    <div class="page">
+        <header>Мурмаркет</header>
+        <div class="cats-cards">
+            <div class="cat-1 british cat">
+                <div  class="photo">
+                    <img src="./pictures/1.jpg" alt="Шелдон" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Шелдон</p>
+                    <p>Возраст: 3 месяца</p>
+                    <p>Порода: британская</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Смышленный не по годам малыш, будет рад жить в большой семье.
+                </div>
+            </div>
+            <div class="cat-2 persian cat">
+                <div  class="photo">
+                    <img src="./pictures/3.jpg" alt="Марфа" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Марфа</p>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: персидская</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Ласковая, требуется особый уход за шерстью.
+                </div>
+            </div>
+            <div class="cat-3 british cat">
+                <div  class="photo">
+                    <img src="./pictures/4.jpg" alt="Борис" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Борис</p>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: британская</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Не требует много внимания, желательно в дом без других домашних
+                    животных.
+                </div>
+            </div>
+            <div class="cat-4 bengali cat">
+                <div  class="photo">
+                    <img src="./pictures/7.jpg" alt="Мира" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Мира</p>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: бенгальская</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Спокойный и уравновешанный характер, легко уживается
+                    с другими животными.
+                </div>
+            </div>
+            <div class="cat-5 bengali cat">
+                    <div  class="photo">
+                        <img src="./pictures/8.jpg" alt="Нептун" width="260" height="150">
+                    </div>
+                    <div class="information">
+                        <p class="name">Нептун</p>
+                        <p>Возраст: 8 меяцев</p>
+                        <p>Порода: бенгальская</p>
+                        <p>Болезни: отсутствуют</p>
+                        <p class="status">Статус: ищет дом</p>
+                    </div>
+                    <div class="detailed-information">
+                        Безумно любит детей и обожает играть роль няни для них.
+                    </div>
+                </div>
+            <div class="cat-6 coon cat">
+                <div  class="photo">
+                    <img src="./pictures/9.jpg" alt="Цезарь" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Цезарь</p>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: мейн-кун</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Злой и много ест, но зато очень большой.
+                </div>
+            </div>
+            <div class="cat-7 british cat">
+                <div  class="photo">
+                    <img src="./pictures/6.jpg" alt="Кексик" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Кексик</p>
+                    <p>Возраст: 3 месяца</p>
+                    <p>Порода: британская</p>
+                    <p>Болезни: отсутствуют</p>                 
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Маленький непоседа.
+                </div>
+            </div>
+            <div class="cat-8 other cat">
+                <div  class="photo">
+                    <img src="./pictures/10.jpg" alt="Каспер" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Каспер</p>
+                    <p>Возраст: 2 месяца</p>
+                    <p>Порода: другая</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Игривый как и все котята, когда вырастит будет 
+                    давольно-таки большим.
+                </div>
+            </div>
+            <div class="cat-9 scottish cat">
+                <div  class="photo">
+                    <img src="./pictures/2.jpg" alt="Айша" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Айша</p>
+                    <p>Возраст: 3 года</p>
+                    <p>Порода: шотландская</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Добрая и ласковая. Можно в дом с другими животными.
+                </div>
+            </div>
+            <div class="cat-10 other cat">
+                <div  class="photo">
+                    <img src="./pictures/5.jpg" alt="Дуся" width="260" height="150">
+                </div>
+                <div class="information">
+                    <p class="name">Дуся</p>
+                    <p>Возраст: 3 года</p>
+                    <p>Порода: другая</p>
+                    <p>Болезни: отсутствуют</p>
+                    <p class="status">Статус: ищет дом</p>
+                </div>
+                <div class="detailed-information">
+                    Обворожительная дама с характером, обожает сметану.
+                </div>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="filter-age">
+                <p class="p-age">Возраст</p>
+                <div class="range-age">
+                    <input type="range" id="age" name="age">
+                </div>
+                <p>от 2 месяцев</p>
+            </div>
+            <div class="filter-b">
+                <div class="b-div l-1">
+                    <label class="b-label" for="b-1">британская</label>
+                </div>
+                <div class="b-div l-2">
+                    <label class="b-label" for="b-2">персидская</label>
+                </div>
+                <div class="b-div l-3">
+                    <label class="b-label" for="b-3">бенгальская</label>
+                </div>
+                <div class="b-div l-4">
+                    <label class="b-label" for="b-4">мейн-кун</label>
+                </div>
+                <div class="b-div l-5">
+                    <label class="b-label" for="b-5">шотландская</label>
+                </div>
+                <div class="b-div l-no">
+                    <label class="b-label" for="no-b">другая</label>
+                </div>
+                <div class="b-div l-all">
+                    <label class="b-label" for="all">все</label>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="contacts">
+                <ul>
+                    <li>Напишите нам:</li>
+                    <li>
+                        <img src="./pictures/email.png" alt="email" width="18" height="18">
+                        <a href="#">cats@babuli.com</a>
+                    </li>
+                    <li>
+                        <img src="./pictures/email.png" alt="email" width="18" height="18">
+                        <a href="#">vnuchek@babuli.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="company">
+                © 2018 ООО &#171;<a href="#">Сумасшедшая бабулька</a>&#187;
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

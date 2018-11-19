@@ -1,0 +1,482 @@
+body
+{
+    margin: 0;
+}
+
+.page
+{
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    border: 1px solid #666;
+    grid-template: 'header header header' 65px
+        'cats-cards cats-cards filter' auto
+        'footer footer footer' 50px
+        / 40% 40% 17.8%;
+}
+
+header
+{
+    grid-area: header;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 32px;
+    font-family: PT SansNarrow, sans-serif;
+    border-bottom: 1px solid #666;
+}
+
+header::first-letter
+{
+    color: red;
+}
+
+.cats-cards
+{
+    height: 100%;
+    box-sizing: border-box;
+    grid-area: cats-cards;
+    display: grid;
+    grid-gap: 20px;
+    margin-left: 20px;
+    grid-template: 'cat-1 cat-2' auto
+        'cat-3 cat-4' auto
+        'cat-5 cat-6' auto
+        'cat-7 cat-8' auto
+        'cat-9 cat-10' auto
+        / 1fr 1fr;
+    font-size: 18px;
+}
+
+input[name='breed']
+{
+    display: none;
+}
+
+.cat
+{
+    display: none;
+}
+
+.cat-1
+{
+    grid-area: cat-1;
+}
+
+.cat-2
+{
+    grid-area: cat-2;
+}
+
+.cat-3
+{
+    grid-area: cat-3;
+}
+
+.cat-4
+{
+    grid-area: cat-4;
+}
+
+.cat-5
+{
+    grid-area: cat-5;
+}
+
+.cat-6
+{
+    grid-area: cat-6;
+}
+
+.cat-7
+{
+    grid-area: cat-7;
+}
+
+.cat-8
+{
+    grid-area: cat-8;
+}
+
+.cat-9
+{
+    grid-area: cat-9;
+}
+
+.cat-10
+{
+    grid-area: cat-10;
+}
+
+p
+{
+    margin: 3px;
+}
+
+.cat-1,
+.cat-2,
+.cat-3,
+.cat-4,
+.cat-5,
+.cat-6,
+.cat-7,
+.cat-8,
+.cat-9,
+.cat-10
+{
+    border: 1px solid #666;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template: 'photo information' 75%
+        'detailed-information detailed-information' 1fr
+        / 60% 1fr;
+}
+
+.cat
+{
+    display: none;
+}
+
+.cat-1:hover,
+.cat-2:hover,
+.cat-3:hover,
+.cat-4:hover,
+.cat-5:hover,
+.cat-6:hover,
+.cat-7:hover,
+.cat-8:hover,
+.cat-9:hover,
+.cat-10:hover
+{
+    box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+}
+
+.photo
+{
+    grid-area: photo;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 20px 30px 50px 5px rgba(0,0,0,.25);
+}
+
+.information
+{
+    grid-area: information;
+    margin-top: 10px;
+}
+
+.name
+{
+    margin-bottom: 10px;
+    font-size: 30px;
+    
+}
+
+.status
+{
+    margin-top: 20px;
+}
+
+.detailed-information
+{
+    grid-area: detailed-information;
+    margin-left: 28px;
+    
+}
+
+.filter
+{
+    grid-area: filter;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #666;
+}
+
+.p-age
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.filter-age
+{
+    margin-top: 22px;
+    padding-bottom: 23px;
+    margin-left: 20px;
+    
+}
+
+input[name='age']
+{
+    box-shadow: 1px 1px 1px #666;
+    border: 1px solid #666;
+    height: 10%;
+    width: 80%;
+    border-radius: 20%/80%;
+    background: #fff;
+    margin-left: 5%;
+}
+
+.filter-b
+{
+    border-top: 1px solid #666;
+}
+
+.b-div
+{
+    width: 80%;
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    border-top: 1px solid #666;
+    box-shadow: inset 1px 1px 20px 1px rgba(0,0,0,1);
+
+}
+
+input[id='b-1']:checked ~ .page .filter .filter-b .l-1,
+input[id='b-2']:checked ~ .page .filter .filter-b .l-2,
+input[id='b-3']:checked ~ .page .filter .filter-b .l-3,
+input[id='b-4']:checked ~ .page .filter .filter-b .l-4,
+input[id='b-5']:checked ~ .page .filter .filter-b .l-5,
+input[id='no-b']:checked ~ .page .filter .filter-b .l-no,
+input[id='all']:checked ~ .page .filter .filter-b .l-all
+{
+    box-shadow: inset 1px 1px 10px 10px rgba(221, 33, 45, .8);
+}
+
+input[id='b-1']:checked ~ .page .cats-cards .british
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='b-2']:checked ~ .page .cats-cards .persian
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='b-3']:checked ~ .page .cats-cards .bengali
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='b-4']:checked ~ .page .cats-cards .coon
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='b-5']:checked ~ .page .cats-cards .scottish
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='no-b']:checked ~ .page .cats-cards .other
+{
+    display: grid;
+    grid-area: auto;
+}
+
+input[id='all']:checked ~ .page .cats-cards .cat
+{
+    display: grid;
+}
+
+footer
+{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #666;
+}
+
+.contacts
+{
+    display: inline;
+    margin-left: 5px;
+}
+
+li
+{
+    list-style-type: none;
+    display: inline;
+    margin-right: 20px;
+}
+@media screen and (min-width: 730px) and (max-width: 1200px)
+{
+    .page
+    {
+        display: grid;
+        grid-gap: 20px;
+        grid-template: 'header' 65px
+            'cats-cards' auto
+            'footer' 140px
+            / 100%;
+        box-sizing: border-box;
+    }
+
+    .cats-cards
+    {
+        box-sizing: border-box;
+        grid-area: cats-cards;
+        display: grid;
+        padding: 0 20px;
+        grid-gap: 20px;
+        margin: 0;
+        grid-template: 'cat-1 cat-2 cat-3' auto
+            'cat-4 cat-5 cat-6' auto
+            'cat-7 cat-8 cat-9' auto
+            '. cat-10 .'  auto
+            / 1fr 1fr 1fr;
+        font-size: 18px;
+    }
+
+    .filter
+    {
+        display: none;
+    }
+
+    header
+    {
+        grid-area: header;
+        padding-top: 2%;
+    }
+
+    .detailed-information
+    {
+        display: none;
+    }
+
+    .cat
+    {
+        border: 1px solid #666;
+        display: grid;
+        grid-row-gap: 5%;
+        grid-template: 'photo' 30%
+            'information' 1fr
+            / 1fr;
+        
+    }
+
+    .photo
+    {
+        grid-area: photo;
+        display: flex;
+        margin: auto;
+        box-shadow: none;
+    }
+
+    .information
+    {
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+
+    li
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer
+    {
+        grid-area: footer;
+        margin: 20px;
+        height: 80px;
+        border-bottom: 1px solid #666;
+
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 730px)
+{
+    .page
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter
+    {
+        display: none;
+    }
+
+    .detailed-information
+    {
+        display: none;
+    }
+       
+    .cats-cards
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2%;
+        margin-right: 4%;
+    }
+
+    .cat
+    {
+        display: grid;
+        grid-template: 'photo' 2fr
+            'information' 3fr
+            /1fr;
+        margin-top: 20px;
+    }
+
+    .photo
+    {
+        grid-area: photo;
+        display: flex;
+        margin: auto;
+        box-shadow: none;
+    }
+
+    .information
+    {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .status
+    {
+        margin-top: 30px;
+    }
+
+    .name
+    {
+        margin-bottom: 25px;
+    }
+    
+    footer
+    {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contacts
+    {
+        margin-left: 0;
+    }
+
+    .company
+    {
+        margin-left: 7%;
+    }
+}
