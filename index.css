@@ -1,26 +1,24 @@
 body,
 html
 {
-    margin: 0;
-    height: 100%;
-}
-
-.wrapper
-{
-    height: 100vh;
     display: flex;
     flex-direction: column;
+
+    height: 100%;
+    margin: 0;
 }
 
 .title
 {
-    border-bottom: solid lightgray 1px;
     font: normal 32px 'PT Sans Narrow', sans-serif;
-    text-align: center;
 
+    width: 100%;
     height: 40px;
     padding-bottom: 5px;
-    width: 100%;
+
+    text-align: center;
+
+    border-bottom: solid lightgray 1px;
 }
 
 .title:first-letter
@@ -30,10 +28,10 @@ html
 
 .main
 {
-    width: 100%;
+    display: flex;
     flex: 1;
 
-    display: flex;
+    width: 100%;
 }
 
 .cats
@@ -43,13 +41,17 @@ html
 
 .footer
 {
-    background: white;
     font: normal 14px Arial, serif;
 
+    position: fixed;
+    bottom: 0;
+
     display: flex;
-    padding: 0 25px;
+
+    width: 100%;
 
     border-top: solid lightgray 1px;
+    background: white;
 }
 
 .footer p
@@ -69,16 +71,21 @@ a
 
 .cat
 {
-    margin: 5px;
-    border: 1px solid lightgray;
     font-family: Arial, serif;
     font-size: 14px;
+
+    margin: 5px;
+
     color: gray;
+    border: 1px solid lightgray;
 }
 
 .cat-name
 {
     font-size: 16px;
+
+    margin-bottom: 20px;
+
     color: black;
 }
 
@@ -98,21 +105,23 @@ a
     .wrapper
     {
         display: grid;
+
         grid-template-rows: auto 1fr auto;
     }
 
     .footer
     {
-        justify-content: space-between;
         flex-direction: column;
+        justify-content: space-between;
+
         padding-bottom: 15px;
     }
 
     .cats
     {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 
     .cat
@@ -122,9 +131,10 @@ a
 
     .cat-img-container
     {
+        overflow: hidden;
+
         width: 300px;
         height: 200px;
-        overflow: hidden;
     }
 
     .cat img
@@ -140,19 +150,27 @@ a
     .contacts
     {
         margin-bottom: 20px;
+        margin-left: 20px;
     }
 
     .contacts .mail
     {
-        margin-left: 5px;
         display: block;
+
+        margin-left: 5px;
     }
 
     .contacts .mail:before
     {
-        content: url('icons/mail.png');
         position: relative;
         right: 5px;
+
+        content: url('icons/mail.png');
+    }
+
+    .copyright
+    {
+        margin-left: 20px;
     }
 }
 
@@ -161,13 +179,15 @@ a
     .wrapper
     {
         display: grid;
+
         grid-template-rows: auto 1fr auto;
     }
 
     .footer
     {
-        justify-content: space-between;
         align-items: flex-end;
+        justify-content: space-between;
+
         padding-bottom: 15px;
     }
 
@@ -179,8 +199,10 @@ a
     .cats
     {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+
         padding: 0 25px;
+
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .cat
@@ -190,9 +212,10 @@ a
 
     .cat-img-container
     {
+        overflow: hidden;
+
         width: 300px;
         height: 200px;
-        overflow: hidden;
     }
 
     .cat img
@@ -209,6 +232,8 @@ a
     {
         display: flex;
         flex-direction: column;
+
+        margin-left: 5px;
     }
 
     .contacts .mail
@@ -218,9 +243,15 @@ a
 
     .contacts .mail:before
     {
-        content: url('icons/mail.png');
         position: relative;
         right: 5px;
+
+        content: url('icons/mail.png');
+    }
+
+    .copyright
+    {
+        margin-right: 20px;
     }
 }
 
@@ -229,6 +260,7 @@ a
     .title
     {
         position: fixed;
+
         background: white;
     }
 
@@ -241,16 +273,20 @@ a
     {
         position: fixed;
         bottom: 0;
-        width: 100%;
-        justify-content: space-between;
+
         align-items: baseline;
+        justify-content: space-between;
+
+        width: 100%;
     }
 
     .contacts
     {
         display: flex;
-        flex-direction: row;
         align-items: baseline;
+        flex-direction: row;
+
+        margin-left: 20px;
     }
 
     .contacts p,
@@ -261,17 +297,20 @@ a
 
     .contacts p:before
     {
-        content: url('icons/mail.png');
         position: relative;
         right: 10px;
+
+        content: url('icons/mail.png');
     }
 
     .contacts a:not(:last-child):after
     {
-        content: '●';
-        color: darkgray;
         position: relative;
         left: 8px;
+
+        content: '●';
+
+        color: darkgray;
     }
 
     .copyright
@@ -281,22 +320,29 @@ a
 
     .filters
     {
+        font-family: Arial, serif;
+
         display: flex;
         flex-direction: column;
-        color: gray;
-        font-family: Arial, serif;
+
         padding: 0 25px;
+
+        color: gray;
     }
 
     .cats
     {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+
         padding: 0 25px;
+
+        grid-template-columns: 1fr 1fr;
     }
 
     .cat
     {
+        display: none;
+
         width: 450px;
         height: 300px;
     }
@@ -309,49 +355,109 @@ a
 
     .cat-main-info
     {
-        border-bottom: 1px solid lightgray;
-        padding: 10px;
         display: flex;
+
+        padding: 10px;
+
+        border-bottom: 1px solid lightgray;
     }
 
     .cat-additional-info
     {
         display: block;
+
         padding: 10px;
     }
 
     .species-label
     {
-        background: white;
-        border: 2px solid black;
-        border-radius: 5px;
         width: available;
         margin: 5px;
         padding: 10px;
+
         cursor: pointer;
+        -webkit-transition: background .1s ease-in;
+        -moz-transition: background .1s ease-in;
+        -o-transition: background .1s ease-in;
+        transition: background .1s ease-in;
+
+        border: 2px solid black;
+        border-radius: 5px;
+        background: white;
+    }
+
+    .species-label:hover
+    {
+        cursor: pointer;
+
+        background: #d8f8c7;
     }
 
     input[id='species-1']:checked ~ .filters .species-label[for='species-1'],
     input[id='species-2']:checked ~ .filters .species-label[for='species-2'],
-    input[id='species-3']:checked ~ .filters .species-label[for='species-3'],
-    input[id='species-all']:checked ~ .filters .species-label[for='species-all']
+    input[id='species-3']:checked ~ .filters .species-label[for='species-3']
     {
         border-color: green;
         background: #d8f8c7;
     }
 
-    input[id='species-1']:checked ~ .cats .species-2,
-    input[id='species-1']:checked ~ .cats .species-3,
-    input[id='species-2']:checked ~ .cats .species-1,
-    input[id='species-2']:checked ~ .cats .species-3,
-    input[id='species-3']:checked ~ .cats .species-1,
-    input[id='species-3']:checked ~ .cats .species-2
+    input[id='species-1']:checked ~ .cats .species-1,
+    input[id='species-2']:checked ~ .cats .species-2,
+    input[id='species-3']:checked ~ .cats .species-3
     {
-        display: none;
+        display: block;
+    }
+
+    .slider
+    {
+        width: 130px;
+        height: 20px;
+        position: relative;
+    }
+
+    .slider-not-active
+    {
+        position: absolute;
+        top: 10px;
+        border-top: 1px solid #dfe9ed;
+        z-index: 0;
+        width: 130px;
+    }
+
+    .slider-active
+    {
+        position: absolute;
+        top: 10px;
+        left: 27px;
+        width: 65px;
+        z-index: 1;
+        border-top: 1px solid #70b1fe;
+    }
+
+    .slider-select
+    {
+        position: absolute;
+        top: 3px;
+        width: 14px;
+        height: 14px;
+        background: rgba(255, 255, 255, 255);
+        box-shadow: 0 1px 4px;
+        z-index: 2;
+        border-radius: 20px;
+    }
+
+    .slider-select-start
+    {
+        left: 21px;
+    }
+
+    .slider-select-end
+    {
+        left: 84px;
     }
 }
 
-.display-none
+.hidden-checkbox
 {
     display: none;
 }
