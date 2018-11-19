@@ -410,40 +410,47 @@ a
 
     .slider
     {
+        position: relative;
+
         width: 130px;
         height: 20px;
-        position: relative;
     }
 
     .slider-not-active
     {
         position: absolute;
-        top: 10px;
-        border-top: 1px solid #dfe9ed;
         z-index: 0;
+        top: 10px;
+
         width: 130px;
+
+        border-top: 1px solid #dfe9ed;
     }
 
     .slider-active
     {
         position: absolute;
+        z-index: 1;
         top: 10px;
         left: 27px;
+
         width: 65px;
-        z-index: 1;
+
         border-top: 1px solid #70b1fe;
     }
 
     .slider-select
     {
         position: absolute;
+        z-index: 2;
         top: 3px;
+
         width: 14px;
         height: 14px;
+
+        border-radius: 20px;
         background: rgba(255, 255, 255, 255);
         box-shadow: 0 1px 4px;
-        z-index: 2;
-        border-radius: 20px;
     }
 
     .slider-select-start
