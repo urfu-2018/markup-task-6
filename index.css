@@ -1,4 +1,4 @@
-@font-face 
+@font-face
 {
     font-family: 'PT Sans Narrow';
     src: local('PT Sans Narrow'), local('ptsansnarrow'), url('./Fonts/ptsansnarrow.woff2') format('woff2'), url('./Fonts/ptsansnarrow.woff') format('woff'), url('./Fonts/ptsansnarrow.ttf') format('truetype');
@@ -12,7 +12,7 @@ header
     overflow: hidden;
     top: 0;
     background-color: white;
-    position: fixed;
+    position: sticky;
     font: 32px 'PT Sans Narrow';
     text-align: center;
     margin: 0;
@@ -26,7 +26,7 @@ header::first-letter
     color: red;
 }
 
-footer img 
+footer img
 {
     width: 25px;
 }
@@ -37,6 +37,52 @@ footer img
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: repeat(5, 1fr);
+}
+
+.age
+{
+    height: 60px;
+    text-align: center;
+    color: #453e85;
+}
+
+.bar
+{
+    position: relative;
+    height: 1px;
+    background-color: rgb(220, 220, 220);
+    margin: 5px 10px 40px;
+}
+
+.blue-bar
+{
+    position: relative;
+    height: 1px;
+    left: 25%;
+    width: 39%;
+    background-color: #70caff;
+}
+
+.left
+{
+    left: calc(25% - 13px);
+}
+
+.right
+{
+    left: calc(25% - 13px + 39%);
+}
+
+.slider
+{
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 26px;
+    background-color: white;
+    top: -13px;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    cursor: pointer;
 }
 
 .filters
@@ -56,7 +102,7 @@ footer img
     cursor: pointer;
 }
 
-.filters .slider
+.filters.slider
 {
     -webkit-appearance: none;
     width: 100%;
@@ -205,23 +251,23 @@ footer
         display: block;
         margin: 80px 0 100px;
     }
-    
+
     .cat-item
     {
         width: 250px;
         margin: 10px auto;
     }
-    
+
     .footer-flex
     {
         flex-direction: column;
     }
-    
+
     .footer-flex p:last-child
     {
         margin: 0;
     }
-    
+
     .footer-flex p
     {
         padding: 5px 10px;
@@ -236,12 +282,12 @@ footer
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    
+
     .cat-item
     {
         width: 250px;
     }
-    
+
     .footer-flex
     {
         display: grid;
@@ -249,14 +295,14 @@ footer
         grid-template-rows: 1fr 1fr 1fr;
         padding: 5px 0;
     }
-    
+
     .footer-flex p:last-child
     {
         margin-top: auto;
         grid-row: 1 / 4;
         grid-column: 2 / 2;
     }
-    
+
     .footer-flex p
     {
         margin: 0;
@@ -269,22 +315,22 @@ footer
     {
         display: none;
     }
-    
+
     .filters
     {
         display: none;
     }
-    
+
     .cat-item
     {
         display: block !important;
     }
-    
+
     .cat-item img
     {
         margin: 0;
     }
-    
+
     .short-info
     {
         padding: 15px;
