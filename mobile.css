@@ -4,9 +4,109 @@
     src: url('pt-sans-narrow_[allfont.ru].ttf');
 }
 
-@media (min-width: 375px) and (max-width: 730px)
+body
 {
-    footer
+    margin: 0;
+    
+}
+
+.filter
+{
+    display: none;
+}
+
+.filter-input
+{
+    display: none;
+}
+
+.header
+{
+    position: sticky;
+    background: #fff;
+    top: 0;
+    border-bottom: 1px solid #a5a5a5;
+    font-family: 'PT Sans Narrow', arial;
+    font-size: 22px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+}
+
+.header > h1
+{
+    margin-top: 0;
+}
+
+.header h1::first-letter
+{
+    color: #f33446;
+}
+
+.all-screen-view > p
+{
+    margin: 5px 0 10px 25px;
+}
+
+.desktop-view
+{
+    display: none;
+}
+
+.description:hover
+{
+    text-shadow: 0 0 5px #002fff;
+}
+
+.item:hover,
+.cats-page img:hover
+{
+    box-shadow: 0 0 5px 1px #505050;
+    
+}
+
+.cats-name:hover
+{
+    text-shadow: 0 0 5px #fbff00;
+    
+}
+
+.description
+{
+    margin: 0 0 0 20px;
+    color: #a5a5a5;
+}
+
+.cats-name
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 25px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.footer-left p
+{
+    color: #a5a5a5;
+}
+
+.desktop-view__mail
+{
+    display: none;
+}
+
+.round-point
+{
+    display: none;
+}
+
+@media (max-width: 730px)
+{
+    .footer
     {
         position: static;
         display: flex;
@@ -60,84 +160,4 @@
     {
         width: inherit;
     }
-}
-
-body
-{
-    margin: 0;
-    
-}
-
-.filter
-{
-    display: none;
-}
-
-input
-{
-    display: none;
-}
-
-.head
-{
-    position: static;
-    background: #fff;
-    top: 0;
-    border-bottom: 1px solid #000;
-    font-family: 'PT Sans Narrow', arial;
-    font-size: 22px;
-    text-align: center;
-    height: 60px;
-    width: 100%;
-}
-
-.head > h1
-{
-    margin-top: 0;
-}
-
-.head h1::first-letter
-{
-    color: #f33446;
-}
-
-.all-screen-view > p
-{
-    margin: 5px 0 10px 25px;
-}
-
-.desktop-view
-{
-    display: none;
-}
-
-.description:hover
-{
-    text-shadow: 0 0 5px #002fff;
-}
-
-.item:hover,
-img:hover
-{
-    box-shadow: 0 0 5px 1px #505050;
-    
-}
-
-.cats-name:hover
-{
-    text-shadow: 0 0 5px #fbff00;
-    
-}
-
-.description
-{
-    margin: 0 0 0 20px;
-    color: #a5a5a5;
-}
-
-.cats-name
-{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-left: 25px;
 }
