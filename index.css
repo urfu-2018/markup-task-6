@@ -8,6 +8,7 @@ header
 {
     font: 32px 'PT Sans Narrow';
     position: fixed;
+    top: 0;
     display: inline-block;
     vertical-align: top;
     -webkit-box-sizing: border-box;
@@ -48,12 +49,6 @@ header::first-letter
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
     word-wrap: break-word;
     padding: 20px;
-}
-
-.cat_article:hover
-{
-    transform: scale(1.05);
-    transition: transform .5s ease-in-out;
 }
 
 .main_info
@@ -265,6 +260,7 @@ footer a
     {
         display: grid;
         grid-template: 'main sidebar' 100% / 90% 10%;
+        margin: 60px 0;
     }
 
     main > section
@@ -288,7 +284,6 @@ footer a
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
     }
 
     .filter
@@ -320,68 +315,68 @@ footer a
         position: absolute;
     }
 
-    input:checked[id='чистая'] ~ section > article[id='pardino'],
-    input:checked[id='чистая'] ~ section > article[id='Mudrez'],
-    input:checked[id='чистая'] ~ section > article[id='Billy'],
-    input:checked[id='чистая'] ~ section > article[id='Mr.Eyes'],
-    input:checked[id='чистая'] ~ section > article[id='Kuril'],
-    input:checked[id='чистая'] ~ section > article[id='Kotya'],
-    input:checked[id='чистая'] ~ section > article[id='Hikky']
+    input:checked[id='чистая'] ~ main section > article[id='pardino'],
+    input:checked[id='чистая'] ~ main section > article[id='Mudrez'],
+    input:checked[id='чистая'] ~ main section > article[id='Billy'],
+    input:checked[id='чистая'] ~ main section > article[id='Mr.Eyes'],
+    input:checked[id='чистая'] ~ main section > article[id='Kuril'],
+    input:checked[id='чистая'] ~ main section > article[id='Kotya'],
+    input:checked[id='чистая'] ~ main section > article[id='Hikky']
     {
         display: none;
     }
 
-    input:checked[id='чистая'] ~ nav label[for='чистая']
+    input:checked[id='чистая'] ~ main nav label[for='чистая']
     {
         color: #9e9;
         border-color: #9e9;
     }
 
-    input:checked[id='бродячая'] ~ nav label[for='бродячая']
+    input:checked[id='бродячая'] ~ main nav label[for='бродячая']
     {
         color: #9e9;
         border-color: #9e9;
     }
 
-    input:checked[id='экзотическая'] ~ nav label[for='экзотическая']
+    input:checked[id='экзотическая'] ~ main nav label[for='экзотическая']
     {
         color: #9e9;
         border-color: #9e9;
     }
 
-    input:checked[id='все'] ~ nav label[for='все']
+    input:checked[id='все'] ~ main nav label[for='все']
     {
         color: #9e9;
         border-color: #9e9;
     }
 
-    input:checked[id='бродячая'] ~ section > article[id='Mudrez'],
-    input:checked[id='бродячая'] ~ section > article[id='Mr.Eyes'],
-    input:checked[id='бродячая'] ~ section > article[id='Tard'],
-    input:checked[id='бродячая'] ~ section > article[id='Kuril'],
-    input:checked[id='бродячая'] ~ section > article[id='Meowtrix'],
-    input:checked[id='бродячая'] ~ section > article[id='Krut'],
-    input:checked[id='бродячая'] ~ section > article[id='Hikky']
+    input:checked[id='бродячая'] ~ main section > article[id='Mudrez'],
+    input:checked[id='бродячая'] ~ main section > article[id='Mr.Eyes'],
+    input:checked[id='бродячая'] ~ main section > article[id='Tard'],
+    input:checked[id='бродячая'] ~ main section > article[id='Kuril'],
+    input:checked[id='бродячая'] ~ main section > article[id='Meowtrix'],
+    input:checked[id='бродячая'] ~ main section > article[id='Krut'],
+    input:checked[id='бродячая'] ~ main section > article[id='Hikky']
     {
         display: none;
     }
 
-    input:checked[id='экзотическая'] ~ section > article[id='Mudrez'],
-    input:checked[id='экзотическая'] ~ section > article[id='pardino'],
-    input:checked[id='экзотическая'] ~ section > article[id='Tard'],
-    input:checked[id='экзотическая'] ~ section > article[id='Kuril'],
-    input:checked[id='экзотическая'] ~ section > article[id='Meowtrix'],
-    input:checked[id='экзотическая'] ~ section > article[id='Krut'],
-    input:checked[id='экзотическая'] ~ section > article[id='Hikky'],
-    input:checked[id='экзотическая'] ~ section > article[id='Billy'],
-    input:checked[id='экзотическая'] ~ section > article[id='Kotya']
+    input:checked[id='экзотическая'] ~ main section > article[id='Mudrez'],
+    input:checked[id='экзотическая'] ~ main section > article[id='pardino'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Tard'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Kuril'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Meowtrix'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Krut'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Hikky'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Billy'],
+    input:checked[id='экзотическая'] ~ main section > article[id='Kotya']
     {
         display: none;
     }
 
     .cat_article
     {
-        width: 700px;
+        width: 550px;
         display: grid;
         grid-template: 'img cat_name' 50px
             'img main_info' 250px
@@ -397,6 +392,8 @@ footer a
 
     .cat_article:hover
     {
+        transform: scale(1.05);
+        transition: transform .5s ease-in-out;
         box-shadow: 0 0 10px 5px #858585;
     }
 
@@ -450,7 +447,9 @@ footer a
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top: auto;
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
         padding: 10px;
         height: 60px;
         width: 100%;
