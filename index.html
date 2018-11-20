@@ -6,38 +6,50 @@
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
-    <input type="radio" class="breed-selector breed-selector-odd" name="breed" id="breed_odd">
-    <input type="radio" class="breed-selector breed-selector-none" name="breed" id="breed_none">
-    <input type="radio" class="breed-selector breed-selector-all" name="breed" id="breed_all">
+    <input type="checkbox" class="breed-selector breed-selector-persian" id="breed_persian">
+    <input type="checkbox" class="breed-selector breed-selector-siamese" id="breed_siamese">
+    <input type="checkbox" class="breed-selector breed-selector-maine-coon" id="breed_maine_coon">
+    <input type="checkbox" class="breed-selector breed-selector-none" id="breed_none">
+    <input type="checkbox" class="breed-selector breed-selector-all" id="breed_all" checked>
     <header class="main-header">
         <h1 class="main-title">Мурмаркет</h1>
     </header>
     <aside class="properties">
         <section class="age-selector-box">
             <h2 class="selector-title">Возраст</h2>
-            <input class="age-slider" type="range" min="0" step="1" max="20">
+            <div class="age-selector-line">
+                <div class="age-selector-line-between"></div>
+                <div class="age-selector-thumb age-selector-thumb-left"></div>
+                <div class="age-selector-thumb age-selector-thumb-right"></div>
+            </div>
         </section>
         <section class="breed-selector-box">
             <h2 class="selector-title">Порода</h2>
-            <label for="breed_odd" class="breed-button breed-button-odd">
-                <span class="breed-name">Необычные ребята</span>
+            <label for="breed_persian" class="breed-button breed-button-persian">
+                <span class="breed-name">Персидская кошка</span>
+            </label>
+            <label for="breed_siamese" class="breed-button breed-button-siamese">
+                <span class="breed-name">Сиамская кошка</span>
+            </label>
+            <label for="breed_maine_coon" class="breed-button breed-button-maine-coon">
+                <span class="breed-name">Мейн-Кун</span>
             </label>
             <label for="breed_none" class="breed-button breed-button-none">
                 <span class="breed-name">Нет</span>
             </label>
             <label for="breed_all" class="breed-button breed-button-all">
-                <span class="breed-name">Сбросить фильтр</span>
+                <span class="breed-name">Показать все</span>
             </label>
         </section>
     </aside>
     <main class="cat-list">
-        <article class="cat-article breed-odd">
+        <article class="cat-article breed-persian">
             <img class="cat-image" src="cat_images/cat_1.jpg"
                 width="350" height="210" alt="Кот" title="Барсик">
             <h2 class="cat-name">Барсик</h2>
             <p class="description small-description">
                 Возраст: 4 года<br>
-                Порода: Милашка<br>
+                Порода: Персидская<br>
                 Статус: Ищет хозяина
             </p>
             <p class="description full-description">
@@ -52,13 +64,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article breed-odd">
+        <article class="cat-article breed-maine-coon">
             <img class="cat-image" src="cat_images/cat_2.jpg"
                 width="350" height="210" alt="Кот" title="Сальвадор">
             <h2 class="cat-name">Сальвадор</h2>
             <p class="description small-description">
                 Возраст: 7 лет<br>
-                Порода: Дали<br>
+                Порода: Мейн-Кун<br>
                 Статус: Ищет хозяина
             </p>
             <p class="description full-description">
@@ -73,7 +85,7 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-none">
             <img class="cat-image" src="cat_images/cat_3.jpg"
                 width="350" height="210" alt="Кот" title="Бульдозер">
             <h2 class="cat-name">Бульдозер</h2>
@@ -94,7 +106,7 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-none">
             <img class="cat-image" src="cat_images/cat_4.jpg"
                 width="350" height="210" alt="Кот" title="Джонни">
             <h2 class="cat-name">Джонни</h2>
@@ -115,13 +127,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article breed-odd">
+        <article class="cat-article breed-persian">
             <img class="cat-image" src="cat_images/cat_5.jpg"
                 width="350" height="210" alt="Кот" title="Пушок">
             <h2 class="cat-name">Пушок</h2>
             <p class="description small-description">
                 Возраст: 3 года<br>
-                Порода: Аэродинамичный<br>
+                Порода: Персидская<br>
                 Статус: Мчится навстречу приключениям
             </p>
             <p class="description full-description">
@@ -136,13 +148,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article breed-odd">
+        <article class="cat-article breed-siamese">
             <img class="cat-image" src="cat_images/cat_6.jpg"
                 width="350" height="210" alt="Кот" title="Ушастик">
             <h2 class="cat-name">Ушастик</h2>
             <p class="description small-description">
                 Возраст: Полгода<br>
-                Порода: Какая-то классная<br>
+                Порода: Сиамская<br>
                 Статус: Ищет хозяина
             </p>
             <p class="description full-description">
@@ -157,7 +169,7 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-none">
             <img class="cat-image" src="cat_images/cat_7.jpg"
                 width="350" height="210" alt="Кот" title="Снежок">
             <h2 class="cat-name">Снежок</h2>
@@ -178,13 +190,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-persian">
             <img class="cat-image" src="cat_images/cat_8.jpg"
                 width="350" height="210" alt="Кот" title="Василий">
             <h2 class="cat-name">Василий</h2>
             <p class="description small-description">
                 Возраст: 10 лет<br>
-                Порода: Нет<br>
+                Порода: Персидская<br>
                 Статус: Смотрит тебе в душу
             </p>
             <p class="description full-description">
@@ -199,13 +211,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article">
+        <article class="cat-article breed-maine-coon">
             <img class="cat-image" src="cat_images/cat_9.jpg"
                 width="350" height="210" alt="Кот" title="Иннокентий">
             <h2 class="cat-name">Иннокентий</h2>
             <p class="description small-description">
                 Возраст: 11 лет<br>
-                Порода: Нет<br>
+                Порода: Мейн-Кун<br>
                 Статус: Хочет рассказать тебе историю
             </p>
             <p class="description full-description">
@@ -220,13 +232,13 @@
                 viverra justo, sit amet pharetra elit rhoncus eget.
             </p>
         </article>
-        <article class="cat-article breed-odd">
+        <article class="cat-article breed-none">
             <img class="cat-image" src="cat_images/cat_10.jpg"
                 width="350" height="210" alt="Кот" title="Джеймс">
             <h2 class="cat-name">Джеймс</h2>
             <p class="description small-description">
                 Возраст: 11 лет<br>
-                Порода: Хетфилд<br>
+                Порода: Нет<br>
                 Статус: Готов навалить метала
             </p>
             <p class="description full-description">
@@ -244,10 +256,10 @@
     </main>
     <footer class="main-footer">
         <p class="footer-text">Напишите нам:</p>
-        <p class="email-address-1">
+        <p class="email-address email-address-1">
             <a class="contact-info-link" href="mailto:cats@babuli.ru">cats@babuli.ru</a>
         </p>
-        <p class="email-address-2">
+        <p class="email-address email-address-2">
             <a class="contact-info-link" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
         </p>
         <p class="copyright">
