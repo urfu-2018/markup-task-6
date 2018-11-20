@@ -327,21 +327,21 @@ a
         margin: 1vh 0;
     }
 
-    input:checked[id='no-breed'] ~ article .cat-box:not([class*='no-breed']),
-    input:checked[id='angora'] ~ article .cat-box:not([class*='angora']),
-    input:checked[id*='maine'] ~ article .cat-box:not([class*='maine']),
-    input:checked[id*='wirehair'] ~ article .cat-box:not([class*='wirehair']),
-    input:checked[id='siberian'] ~ article .cat-box:not([class*='siberian'])
+    .no-breed:checked ~ article .cat-box:not(.no-breed),
+    .angora:checked ~ article .cat-box:not(.angora),
+    .maine:checked ~ article .cat-box:not(.maine),
+    .wirehair:checked ~ article .cat-box:not(.wirehair),
+    .siberian:checked ~ article .cat-box:not(.siberian)
     {
         display: none;
     }
 
-    input[id='no-filter']:checked ~ aside label[for='no-filter'],
-    input[id='no-breed']:checked ~ aside label[for='no-breed'],
-    input[id='angora']:checked ~ aside label[for='angora'],
-    input[id='maine-coon']:checked ~ aside label[for='maine-coon'],
-    input[id*='wirehair']:checked ~ aside label[for*='wirehair'],
-    input[id='siberian']:checked ~ aside label[for='siberian']
+    .no-filter:checked ~ aside .no-filter,
+    .no-breed:checked ~ aside .no-breed,
+    .angora:checked ~ aside .angora,
+    .maine-coon:checked ~ aside .maine-coon,
+    .wirehair:checked ~ aside .wirehair,
+    .siberian:checked ~ aside .siberian
     {
         border-color: #9e9;
         color: #9e9;
