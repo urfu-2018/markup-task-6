@@ -86,7 +86,7 @@ footer .contacts ul
 
 footer .contacts li::before
 {
-    content: '\2709 ';
+    content: '\2709 '; /* Значок письма ✉ */
     font-size: 1.5em;
     padding-right: 2px;
     padding-top: 100px;
@@ -179,9 +179,7 @@ section.wrapper
 
 .item .description
 {
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    padding: 15px 15px 15px 0;
 }
 
 .item li
@@ -243,14 +241,15 @@ section.wrapper
 .breeds label:hover
 {
     background-color: rgba(152, 251, 152, .5);
+    cursor: pointer;
 }
 
-input[id='red-breed']:checked ~ label[for='red-breed'],
-input[id='siberian-breed']:checked ~ label[for='siberian-breed'],
-input[id='persian-breed']:checked ~ label[for='persian-breed'],
-input[id='seamese-breed']:checked ~ label[for='seamese-breed'],
-input[id='abyssinian-breed']:checked ~ label[for='abyssinian-breed'],
-input[id='no-breed']:checked ~ label[for='no-breed']
+input[id='red-breed']:checked ~ .menu label[for='red-breed'],
+input[id='siberian-breed']:checked ~ .menu label[for='siberian-breed'],
+input[id='persian-breed']:checked ~ .menu label[for='persian-breed'],
+input[id='seamese-breed']:checked ~ .menu label[for='seamese-breed'],
+input[id='abyssinian-breed']:checked ~ .menu label[for='abyssinian-breed'],
+input[id='no-breed']:checked ~ .menu label[for='no-breed']
 {
     background-color: palegreen;
     border-color: springgreen;
@@ -266,131 +265,43 @@ input[id='no-breed']:checked ~ .content .no-breed
     display: grid;
 }
 
-.slider input[type='range']
+.range_wrapper
 {
-    -webkit-appearance: none;
-    background: none;
-    width: 100%;
+    position: absolute;
 }
-  
-.slider input[type='range']::-webkit-slider-runnable-track
+
+.age-description
 {
+    padding-top: 30px;
+}
+
+input[type='range']
+{
+    position: absolute;
+    width: 160px;
     height: 5px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-}
-  
-.slider input[type='range']::-ms-track
-{
-    height: 5px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-}
-  
-.slider input[type='range']::-moz-range-track
-{
-    height: 5px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-}
-  
-.slider input[type='range']::-webkit-slider-thumb
-{
+    padding: 0;
     -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #555;
-    margin-top: -5px;
-    position: relative;
-}
-  
-.slider input[type='range']::-ms-thumb
-{
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #555;
-    margin-top: -5px;
-    position: relative;
-}
-  
-.slider input[type='range']::-moz-range-thumb
-{
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #555;
-    margin-top: -5px;
-    position: relative;
-}
-  
-.slider input[type='range']:focus
-{
+    background: #d3d3d3;
     outline: none;
+    margin: 10px 0 0;
+    box-sizing: border-box;
+    border: .2em solid white;
 }
 
-.slider input[type='range']:focus::-webkit-slider-thumb:after
+input[type='range']::-webkit-slider-thumb
 {
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background: #eee;
-    border-radius: 5px;
-    color: #555;
-    padding: 5px 10px;
-    border: 2px solid #555;
-}
-
-.slider input[type='range']:focus::-ms-thumb:after
-{
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #eee;
-    border-radius: 5px;
-    color: #555;
-    padding: 5px 10px;
-    border: 2px solid #555;
-}
-
-.slider input[type='range']:focus::-moz-range-thumb:after
-{
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #eee;
-    border-radius: 5px;
-    color: #555;
-    padding: 5px 10px;
-    border: 2px solid #555;
-}
-  
-.slider input[type='range']:focus::-webkit-slider-runnable-track
-{
-    background: #ccc;
-}
-  
-.slider input[type='range']:focus::-ms-track
-{
-    background: #ccc;
-}
-  
-.slider input[type='range']:focus::-moz-range-track
-{
-    background: #ccc;
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
+    cursor: pointer;
 }
 
 /* Adaptive */
@@ -405,7 +316,7 @@ input[id='no-breed']:checked ~ .content .no-breed
     }
 }
 
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1200px)
 {
     .item
     {
@@ -460,18 +371,11 @@ input[id='no-breed']:checked ~ .content .no-breed
     {
         margin: 0 auto;
         transition: all 1s;
-    }
-}
-
-@media screen and (max-width: 1200px)
-{
-    .content
-    {
         width: calc(320px * 3);
     }
 }
 
-@media screen and (max-width: 880px)
+@media screen and (max-width: 951px)
 {
     .content
     {
