@@ -167,6 +167,7 @@ html
     padding-top: 50px;
     padding-bottom: 20px;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -177,8 +178,6 @@ html
     width: fit-content;
     border: 1px solid #a0a0a0;
     margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .category-selectors
@@ -475,6 +474,11 @@ html
         display: block;
     }
 
+    .category-label:hover
+    {
+        background-color: #cfc;
+    }
+
     .category-cute-radio:checked ~ .body .category-cute-label,
     .category-wild-radio:checked ~ .body .category-wild-label,
     .category-special-radio:checked ~ .body .category-special-label,
@@ -484,6 +488,16 @@ html
     {
         background-color: rgba(173, 255, 47, .5);
         border: 1px solid green;
+    }
+
+    .category-cute-radio:checked ~ .body .category-cute-label:hover,
+    .category-wild-radio:checked ~ .body .category-wild-label:hover,
+    .category-special-radio:checked ~ .body .category-special-label:hover,
+    .category-meditative-radio:checked ~ .body .category-meditative-label:hover,
+    .category-playful-radio:checked ~ .body .category-playful-label:hover,
+    .category-all-radio:checked ~ .body .category-all-label:hover
+    {
+        background-color: #adff2f;
     }
 
     .category-cute-radio:checked ~ .body .category-cute,
