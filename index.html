@@ -15,11 +15,11 @@
         Мурмаркет
     </header>
     <main class="cat-list">
-        <input type="radio" id="first" class="no-choise grouper" name="species" checked>
-        <input type="radio" id="second" class="preety-cats grouper" name="species">
-        <input type="radio" id="third" class="multi-color-cats grouper" name="species">
-        <input type="radio" id="fourth" class="bright-cats grouper" name="species">
-        <input type="radio" id="fifth" class="chosen-three-cats grouper" name="species">
+        <input type="checkbox" id="first" class="no-choise grouper" name="species" checked>
+        <input type="checkbox" id="second" class="preety-cats grouper" name="species">
+        <input type="checkbox" id="third" class="multi-color-cats grouper" name="species">
+        <input type="checkbox" id="fourth" class="bright-cats grouper" name="species">
+        <input type="checkbox" id="fifth" class="chosen-three-cats grouper" name="species">
         <section class="cats">
         <article class="cat preety bright">
             <section class="cat-photo">
@@ -257,7 +257,7 @@
             </article>
             <article class="labels-for-choose">
                 <h3 class="labels-header">Выберите группу кис</h3>
-                <label for="first" class="label-for-choose first-label">Не выбрано</label>
+                <label for="first" class="label-for-choose first-label">Все</label>
                 <label for="second" class="label-for-choose second-label">Красотки</label>
                 <label for="third" class="label-for-choose third-label">Разноцветные</label>
                 <label for="fourth" class="label-for-choose fourth-label">Светленькие</label>
@@ -266,7 +266,8 @@
         </section>
     </main>
     
-    <footer class="contacts">
+    <footer class="contacts-wrap">
+        <div class="contacts">
         <span class="write-back">Напишите нам:</span>
         <p class="contact">
             <a href="#" class="mail mail1">cats@babuli.tu</a>
@@ -276,6 +277,7 @@
         <p class="organization">
             &copy; 2018 ООО <a href="#" class="organization-name">Бабушкины котятки</a>
         </p>
+        </div>
     </footer>
 </body>
 
