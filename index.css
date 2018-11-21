@@ -139,6 +139,60 @@ body
         margin-bottom: 0;
     }
 
+    .two-sided-range-input
+    {
+        position: relative;
+
+        height: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bar
+    {
+        position: absolute;
+        top: 6px;
+
+        display: block;
+
+        width: 100%;
+        height: 2px;
+
+        background: black;
+    }
+
+    .left-dot,
+    .right-dot
+    {
+        position: absolute;
+
+        width: 15px;
+        height: 15px;
+
+        cursor: pointer;
+
+        border-radius: 10px;
+        background: lightblue;
+    }
+
+    .left-dot:hover,
+    .right-dot:hover
+    {
+        filter: brightness(.8);
+    }
+
+    .left-dot
+    {
+        top: 0;
+        left: 20%;
+    }
+
+    .right-dot
+    {
+        top: 0;
+        right: 20%;
+    }
+
     .category-button
     {
         display: block;
@@ -207,14 +261,6 @@ body
     .all-cats-again-button:checked ~ main > .cardboard
     {
         display: block;
-    }
-
-    .fake-input
-    {
-        margin-top: 20px;
-
-        -webkit-appearance: none;
-        -moz-appearance: none;
     }
 
     .cardboard
