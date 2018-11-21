@@ -249,7 +249,8 @@ body
 .breed2:checked ~ .container-cats .article-breed2,
 .breed3:checked ~ .container-cats .article-breed3,
 .breed4:checked ~ .container-cats .article-breed4,
-.breed5:checked ~ .container-cats .article-breed5
+.breed5:checked ~ .container-cats .article-breed5,
+.breed1:checked ~ .container-cats .item-cat
 {
     display: block;
 }
