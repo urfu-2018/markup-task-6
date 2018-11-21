@@ -15,6 +15,7 @@ header
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     padding: .5%;
     transition: all 1s;
+    z-index: 1;
 }
 
 header::first-letter
@@ -32,7 +33,7 @@ footer .cletter img
     top: 4px;
 }
 
-footer .ooo
+footer .copyright
 {
     float: right;
     margin-right: 1%;
@@ -203,6 +204,23 @@ label
     box-shadow: 0 0 15px 10px rgba(221, 221, 221, 1);
 }
 
+.circleofAge:hover
+{
+    cursor: pointer;
+    background: black;
+}
+
+.circleofAge
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: gainsboro;
+    position: relative;
+    top: 6%;
+    left: 80%;
+}
+
 @media screen and (max-width: 1200px)
 {
     .pictureofCat img
@@ -244,6 +262,7 @@ label
     {
         flex-direction: row;
         justify-content: space-around;
+        width: 100%;
     }
 
     footer div
