@@ -19,68 +19,71 @@ input[type='radio']
     display: none;
 }
 
-input[id='sherst']:checked ~ .cat-container article:not([class~='sherstyaka'])
+@media screen and (min-width: 1201px) 
 {
-    opacity: .5;
+    input[id='sherst']:checked ~ .cat-boxes article:not([class~='sherstyaka'])
+    {
+        opacity: .5;
+    }
+
+    input[id='sherst']:checked ~ .filters label[for='sherst']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
+
+    input[id='komochek']:checked ~ .cat-boxes article:not([class~='komochek'])
+    {
+        opacity: .5;
+    }
+
+    input[id='komochek']:checked ~ .filters label[for='komochek']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
+
+    input[id='lezhachy']:checked ~ .cat-boxes article:not([class~='lezhachy'])
+    {
+        opacity: .5;
+    }
+
+    input[id='lezhachy']:checked ~ .filters label[for='lezhachy']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
+
+    input[id='belyashik']:checked ~ .cat-boxes article:not([class~='belyashik'])
+    {
+        opacity: .5;
+    }
+
+    input[id='belyashik']:checked ~ .filters label[for='belyashik']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
+
+    input[id='pers']:checked ~ .cat-boxes article:not([class~='pers'])
+    {
+        opacity: .5;
+    }
+
+    input[id='pers']:checked ~ .filters label[for='pers']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
+
+    input[id='all']:checked ~ .filters label[for='all']
+    {
+        background-color: #bab0dd;
+        border-color: #bab0dd;
+    }
 }
 
-input[id='sherst']:checked ~ .filters label[for='sherst']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-input[id='komochek']:checked ~ .cat-container article:not([class~='komochek'])
-{
-    opacity: .5;
-}
-
-input[id='komochek']:checked ~ .filters label[for='komochek']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-input[id='lezhachy']:checked ~ .cat-container article:not([class~='lezhachy'])
-{
-    opacity: .5;
-}
-
-input[id='lezhachy']:checked ~ .filters label[for='lezhachy']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-input[id='belyashik']:checked ~ .cat-container article:not([class~='belyashik'])
-{
-    opacity: .5;
-}
-
-input[id='belyashik']:checked ~ .filters label[for='belyashik']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-input[id='pers']:checked ~ .cat-container article:not([class~='pers'])
-{
-    opacity: .5;
-}
-
-input[id='pers']:checked ~ .filters label[for='pers']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-input[id='all']:checked ~ .filters label[for='all']
-{
-    background-color: #bab0dd;
-    border-color: #bab0dd;
-}
-
-.cat-container
+.cat-boxes
 {
     margin-bottom: 60px;
     z-index: 1;
@@ -292,14 +295,32 @@ footer
     margin: 0;
 }
 
-.contacts .not-desktop-mode
+.contacts .list-mode
 {
     display: none;
 }
 
-.contacts .desktop-mode a:first-child
+.contacts .row-mode a:first-child
 {
     margin-right: 4px;
+}
+
+.contacts .row-mode::before
+{
+    content: '\2709';
+    margin-right: 6px;
+}
+
+.contacts .list-mode a::before
+{
+    content: '\2709';
+    margin-right: 6px;
+    color: #000;
+}
+
+.contacts .list-mode a::before:hover
+{
+    color: #000;
 }
 
 footer a
@@ -320,12 +341,12 @@ footer a:hover
         margin-top: 38px;
     }
 
-    .contacts .not-desktop-mode
+    .contacts .list-mode
     {
         display: block;
     }
 
-    .contacts .desktop-mode
+    .contacts .row-mode
     {
         display: none;
     }
@@ -338,7 +359,6 @@ footer a:hover
     .kitty-box
     {
         display: block;
-        opacity: 1 !important;
         height: auto;
     }
 
@@ -347,7 +367,7 @@ footer a:hover
         display: none;
     }
 
-    .cat-container
+    .cat-boxes
     {
         margin-bottom: 100px;
         grid-template-columns: repeat(3, 1fr);
@@ -375,7 +395,7 @@ footer a:hover
 
 @media screen and (max-width: 730px)
 {
-    .cat-container
+    .cat-boxes
     {
         display: block;
         padding: 15px;
@@ -384,7 +404,6 @@ footer a:hover
 
     .kitty-box
     {
-        margin: 0;
         margin-top: 15px;
         width: 100%;
         box-sizing: border-box;
