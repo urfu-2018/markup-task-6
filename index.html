@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Задача «Мурмаркет для всех»</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<input type="radio" name="type" id="no-type" class="type-selector no-type">
-<input type="radio" name="type" id="britan-type" class="type-selector britan-type">
-<input type="radio" name="type" id="pers-type" class="type-selector pers-type">
-<input type="radio" name="type" id="no-filter" class="type-selector no-filter" checked>
+<input type="checkbox" id="no-type" class="type-selector no-type">
+<input type="checkbox" id="britan-type" class="type-selector britan-type">
+<input type="checkbox" id="pers-type" class="type-selector pers-type">
+<input type="checkbox" id="no-filter" class="type-selector no-filter" checked>
 <header class="market-header">Мурмаркет</header>
 <main class="main-block">
     <article class="cat-section">
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container"><img
                 src="https://www.fresher.ru/wp-content/uploads/2018/03/1.jpg"
-                alt="boris" title="boris"
+                alt="беспородистый кот Борис" title="может мяукать"
                 height="240">
             </section>
             <section class="text">
                 <h3 class="cat-name"><a href="#">Борис</a></h3>
                 <section class="short">
-                    <p>Возраст: 666 лет.<br>
-                        Порода: Нет.<br>
-                        Болезни: Все.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 666 лет.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Все.</li>
+                    </ul>
                     Статус: Ищет жертву.
                 </section>
             </section>
@@ -36,14 +39,16 @@
         <article class="cat-card britan">
             <section class="image-container"><img
                 src="https://stc01.mir24.tv/media/images/original/original14797108.jpg"
-                alt="eduard" title="eduard"
+                alt="британский кот Эдуард" title="вы не пожалеете"
                 height="240"></section>
             <section class="text">
                 <h3 class="cat-name"><a href="#">Эдуард</a></h3>
                 <section class="short">
-                    <p>Возраст: 3 месяца.<br>
-                        Порода: Британская.<br>
-                        Болезни: Высокомерие.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 3 месяца.</li>
+                        <li>Порода: Британская.</li>
+                        <li>Болезни: Высокомерие.</li>
+                    </ul>
                     Статус: Ищет дворецкого.
                 </section>
             </section>
@@ -53,15 +58,18 @@
                 dolor in reprehenderit in voluptate velit esse cillum
             </section>
         </article>
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container"><img
-                src="https://cdn5.img.ria.ru/images/148839/96/1488399690.jpg" alt="mantikora"
-                title="mantikora" height="240"></section>
+                src="https://cdn5.img.ria.ru/images/148839/96/1488399690.jpg"
+                alt="беспородистая кошка Мантикора"
+                title="очень мягкая кошка" height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Мантикора</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Нет.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -72,13 +80,15 @@
         <article class="cat-card britan">
             <section class="image-container">
                 <img src="http://droplak.ru/wp-content/uploads/2016/04/11-8.jpg"
-                     alt="barnabi" title="barnabi"
+                     alt="британский кот Барнаби" title="считает себя лучше всех"
                      height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Барнаби</a></h3>
                 <section class="short">
-                    <p>Возраст: 1 год.<br>
-                        Порода: Британская.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 1 год.</li>
+                        <li>Порода: Британская.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -91,13 +101,15 @@
         <article class="cat-card pers">
             <section class="image-container">
                 <img src="http://droplak.ru/wp-content/uploads/2016/04/3-8.jpg"
-                     alt="vasya" title="vasya"
+                     alt="персидский кот Вася" title="Настоящий Перс"
                      height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Вася</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Персидская.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Персидская.</li>
+                        <li>олезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -105,17 +117,19 @@
                 tempor incididunt ut labore et dolore magna aliqua.
             </section>
         </article>
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container">
                 <img src="https://www.meme-arsenal.com/memes/b73d0ff9295a4a2fd3f0d8d1d872ebc0.jpg"
-                     alt="charley"
-                     title="charley"
+                     alt="беспородистый кот Чарли"
+                     title="Очень добрый"
                      height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Чарли</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Нет.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -125,16 +139,18 @@
                 dolor in reprehenderit in voluptate velit esse cillum
             </section>
         </article>
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container">
                 <img src="http://www.pet4me.ru/sites/default/files/imagecache/400x267/5748_original.jpg"
-                    alt="keira" title="keira" height="240"></section>
+                     alt="беспородистая кошка Кейра" title="красивая кошка" height="240"></section>
 
             <section class="text"><h3 class="cat-name"><a href="#">Кейра</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Нет.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -147,13 +163,15 @@
         <article class="cat-card pers">
             <section class="image-container">
                 <img src="https://kulturologia.ru/files/u18476/cote.jpg"
-                     alt="francis" title="francis"
+                     alt="персидский кот Фрэнсис" title="самостоятельный"
                      height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Фрэнсис</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Персидская.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Персидская.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -163,15 +181,17 @@
                 dolor in reprehenderit in voluptate velit esse cillum
             </section>
         </article>
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container"><img
                 src="https://www.pressa.tv/uploads/posts/2014-04/1397719235_ch1.jpg"
-                alt="mantikora" title="mantikora" height="240"></section>
+                alt="беспородистый кот Тайсон" title="боец" height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Тайсон</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Нет.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -181,16 +201,18 @@
                 dolor in reprehenderit in voluptate velit esse cillum
             </section>
         </article>
-        <article class="cat-card no">
+        <article class="cat-card no-type">
             <section class="image-container">
                 <img src="https://cs8.pikabu.ru/post_img/big/2016/05/09/11/1462820972121569254.jpg"
-                     alt="mia"
-                     title="mia" height="240"></section>
+                     alt="беспородистая кошка Мия"
+                     title="самая молодая" height="240"></section>
             <section class="text"><h3 class="cat-name"><a href="#">Мия</a></h3>
                 <section class="short">
-                    <p>Возраст: 2 года.<br>
-                        Порода: Нет.<br>
-                        Болезни: Отсутствуют.</p>
+                    <ul class="desc-list">
+                        <li>Возраст: 2 года.</li>
+                        <li>Порода: Нет.</li>
+                        <li>Болезни: Отсутствуют.</li>
+                    </ul>
                     Статус: Ищет хозяина.
                 </section>
             </section>
@@ -205,8 +227,8 @@
         <article class="cat-age">
             <section class="filter-name">Возраст</section>
             <section>
-                <input type="range" class="age-range">
-                <input type="range" class="age-range">
+                <input type="range" class="age-range" max="100" value="30">
+                <input type="range" class="age-range" max="100" value="70">
             </section>
             от 2 до 4 лет
         </article>
@@ -214,7 +236,7 @@
         <article class="cat-types">
             <label class="cat-type pers" for="pers-type">Персидская</label>
             <label class="cat-type britan" for="britan-type">Британская</label>
-            <label class="cat-type no" for="no-type">Нет</label>
+            <label class="cat-type no-type" for="no-type">Нет</label>
             <label class="cat-type all" for="no-filter">Все породы</label>
         </article>
     </aside>
