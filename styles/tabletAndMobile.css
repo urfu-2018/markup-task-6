@@ -53,6 +53,11 @@ footer .contacts
 
 @media screen and (max-width: 730px)
 {
+    body
+    {
+        grid-template-rows: 60px 1fr 125px;
+    }
+
     .cards
     {
         grid-template-columns: 1fr;
@@ -63,11 +68,15 @@ footer .contacts
 
 @media screen and (min-width: 730px)
 {
+    body
+    {
+        grid-template-rows: 60px 1fr 75px;
+    }
+
     footer
     {
         height: 70px;
         padding: 0 5px;
-        margin: 15px 0;
     }
 
     footer .copyright

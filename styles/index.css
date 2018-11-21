@@ -19,6 +19,10 @@ body
     font-family: 'PT Sans', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-areas: 'header' 'content' 'footer';
+    grid-template-columns: 1fr;
 }
 
 header > h1
@@ -42,6 +46,8 @@ header
     top: 0;
     border-bottom: 2px solid lightgray;
     margin-bottom: 5px;
+    grid-area: header;
+    z-index: 1;
 }
 
 a.name-link
@@ -59,10 +65,21 @@ footer
 {
     font-family: 'Arial', sans-serif;
     border-top: 2px solid lightgray;
+    grid-area: footer;
 }
 
 footer a
 {
     color: #4c4cd8;
     text-decoration: none;
+}
+
+html
+{
+    height: 100%;
+}
+
+main
+{
+    grid-area: content;
 }
