@@ -43,21 +43,50 @@ footer
 footer a
 {
     color: #000;
+    position: relative;
 }
 
 .company
 {
     display: inline-block;
+    margin-left: auto;
     max-width: 250px;
     position: absolute;
-    bottom: 15px;
-    right: 80px;
+    right: 70px;
+    top: 75px;
 }
 
 .contacts
 {
     display: inline-block;
     list-style-type: none;
+}
+
+.contacts > p
+{
+    display: inline-block;
+    margin: 0;
+}
+
+.contacts > p::before
+{
+    content: '✉';
+}
+
+.contacts > a
+{
+    display: inline-block;
+    color: #6a6adf;
+}
+
+.contacts > a:first-of-type::after
+{
+    content: '.';
+    font-size: 82px;
+    line-height: 15px;
+    margin-left: 8px;
+    color: #000;
+    display: inline-block;
 }
 
 main
@@ -109,15 +138,13 @@ input[type='checkbox']
 {
     max-width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 450px);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 450px));
     grid-gap: 20px;
     padding: 30px 30px 70px;
 }
 
 .info-block
 {
-    width: 440px;
-    height: 270px;
     padding: 10px;
     border: 1px solid #efefef;
 }
@@ -306,15 +333,23 @@ input[type='range']:focus::-ms-fill-upper
         margin: auto;
         width: 90%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
-        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+        grid-gap: 10px;
+    }
+
+    .content > p::before
+    {
+        content: '';
+    }
+
+    .content > a::before
+    {
+        content: '✉';
     }
 
     .info-block
     {
         display: block;
-        max-width: 350px;
-        height: 300px;
     }
 
     .info-block img
@@ -333,11 +368,46 @@ input[type='range']:focus::-ms-fill-upper
     }
 }
 
-@media screen and (max-device-width: 768px)
+@media screen and (max-width: 768px)
 {
-    .content
+    .contacts
     {
         display: block;
+        width: 150px;
+    }
+
+    .contacts > a
+    {
+        height: 30px;
+    }
+
+    .company
+    {
+        position: relative;
+        left: 2px;
+        top: 10px;
+        display: inline-block;
+    }
+
+    .contacts > p::before
+    {
+        content: '';
+    }
+
+    .contacts > a::before
+    {
+        content: '✉';
+        height: 30px;
+    }
+
+    .contacts > a::after
+    {
+        display: none;
+    }
+
+    .control-panel
+    {
+        display: none;
     }
 
     .info-block
@@ -347,6 +417,11 @@ input[type='range']:focus::-ms-fill-upper
         max-width: 750px;
         min-width: 400px;
         height: 500px;
+    }
+
+    .info-block .full-info
+    {
+        display: none;
     }
 
     .info-block img
