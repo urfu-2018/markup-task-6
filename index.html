@@ -1,9 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
 </head>
 <body>
+    <header>
+        Мурмаркет
+    </header>
+    <main>
+        <input type="checkbox" id="type1" class="cat-type1">
+        <input type="checkbox" id="type2" class="cat-type2">
+        <input type="checkbox" id="type3" class="cat-type3">
+        <input type="checkbox" id="type-all" class="cat-type-all" checked>
+        <div class="control-panel">
+            <h2>Возраст</h2>
+            <input type="range" class="age-input">
+            <p class="description">от 2 до 4 лет</p>
+            <h2>Порода</h2>
+            <div class="types">
+                <label for="type1">
+                    <span>Без породы</span>
+                </label>
+                <label for="type2">
+                    <span>Рыжик</span>
+                </label>
+                <label for="type3">
+                    <span>Sit</span>
+                </label>
+                <label for="type-all">
+                    <span>Все породы</span>
+                </label>
+            </div>
+        </div>
+        <div class="content">
+            <div class="info-block type1">
+                <img src="./assets/cat_1.jpg" alt="Lorem">
+                <section class="short-info">
+                    <h3>Lorem</h3>
+                    <ul>
+                        <li>Возраст: около 6 месяцев</li>
+                        <li>Порода: нет</li>
+                        <li>Болезни: нет</li>
+                    </ul>
+                    <p>Статус: ищет хозяина</p>
+                </section>
+                <p class="full-info">
+                    Donec porta sagittis metus, vel consectetur felis suscipit&nbsp;
+                    id. In&nbsp;sed sem in&nbsp;ipsum vehicula dignissim vel a&nbsp;
+                    metus. Curabitur varius viverra est sit amet ultrices.
+                </p>
+            </div>
+            <div class="info-block type2">
+                <img src="./assets/cat_2.jpg" alt="ipsum">
+                <section class="short-info">
+                    <h3>Ipsum</h3>
+                    <ul>
+                        <li>Возраст: 2 года</li>
+                        <li>Порода: рыжик</li>
+                        <li>Болезни: нет</li>
+                    </ul>
+                    <p>Статус: ищет хозяина</p>
+                </section>
+                <p class="full-info">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean tempus sem congue, aliquam est&nbsp;
+                    a, auctor enim. Sed congue diam purus, non tristique tellus iaculis nec.
+                    Ut&nbsp;ornare vestibulum orci at&nbsp;mollis.
+                </p>
+            </div>
+            <div class="info-block type1">
+                <img src="./assets/cat_3.jpg" alt="dolor">
+                <section class="short-info">
+                    <h3>Dolor</h3>
+                    <ul>
+                        <li>Возраст: 1 год</li>
+                        <li>Порода: нет</li>
+                        <li>Болезни: нет</li>
+                    </ul>
+                    <p>Статус: ищет хозяина</p>
+                </section>
+                <p class="full-info">
+                    Nunc gravida odio ac&nbsp;aliquam ultricies. Duis cursus leo id
+                    &nbsp;ligula iaculis tristique. Quisque in&nbsp;mi&nbsp;egestas,
+                    sodales nulla sit amet, rhoncus erat.
+                </p>
+            </div>
+            <div class="info-block type3">
+                <img src="./assets/cat_4.jpg" alt="sit">
+                <section class="short-info">
+                    <h3>Sit</h3>
+                    <ul>
+                        <li>Возраст: около 6 месяцев</li>
+                        <li>Порода: sit</li>
+                        <li>Болезни: нет</li>
+                    </ul>
+                    <p>Статус: ищет хозяина</p>
+                </section>
+                <p class="full-info">
+                    Nullam a&nbsp;lorem non lacus consequat interdum id&nbsp;
+                    eget&nbsp;mi. Integer auctor auctor nunc. Quisque non orci in
+                    &nbsp;nisi blandit faucibus.
+                </p>
+            </div>
+            <div class="info-block type2">
+                <img src="./assets/cat_5.jpg" alt="amet">
+                <section class="short-info">
+                    <h3>Amet</h3>
+                    <ul>
+                        <li>Возраст: около 6 месяцев</li>
+                        <li>Порода: рыжик</li>
+                        <li>Болезни: нет</li>
+                    </ul>
+                    <p>Статус: ищет хозяина</p>
+                </section>
+                <p class="full-info">
+                    Donec condimentum dolor sed ex&nbsp;
+                    bibendum vehicula. Aenean aliquam vitae risus eget accumsan.
+                    Donec accumsan nunc eget est semper dictum. Maecenas et&nbsp;
+                    erat ut&nbsp;ex&nbsp;gravida iaculis. Nulla quis consectetur quam,
+                    at&nbsp;molestie massa.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contacts">
+            <p>
+                Напишите нам:
+            </p>
+            <a href="#">cats@babuli.ru</a>
+            <a href="#">vnuchek@babuli.ru</a>
+        </div>
+        <div class="company">
+            &copy; 2018 ООО
+            <q><a href="#">Бабушкины котятки</a></q>
+        </div>
+    </footer>
 </body>
 </html>
