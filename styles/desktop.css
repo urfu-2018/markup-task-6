@@ -115,7 +115,7 @@ input[type='range']
     margin: 0;
     padding: 0;
     -webkit-appearance: none;
-    background: #d3d3d3;
+    background-color: #d3d3d3;
     outline: none;
 }
 
@@ -129,7 +129,7 @@ input[type='range']::-webkit-slider-thumb
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: rgb(162, 245, 165);
+    background-color: #a6faa9;
     cursor: pointer;
 }
 
@@ -221,5 +221,5 @@ input.siam:checked ~ aside .breed-labels label.siam,
 input.sweet:checked ~ aside .breed-labels label.sweet,
 input.sphynx:checked ~ aside .breed-labels label.sphynx
 {
-    background-color: rgb(162, 245, 165);
+    background-color: #a6faa9;
 }
