@@ -72,7 +72,7 @@ img:not([class='list']):hover
 {
     margin: 30px;
     width: 500px;
-    height: 370px;
+    height: 360px;
     padding-right: 1%;
     border: 1px solid #ebe7d7;
     overflow: hidden;
@@ -127,7 +127,7 @@ img:not([class='list']):hover
     color: #616060;
     font-size: 14px;
     text-align: justify;
-    width: 94%;
+    width: 99%;
     height: 100px;
 }
 
