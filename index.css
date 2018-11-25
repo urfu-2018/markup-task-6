@@ -118,6 +118,11 @@ img:not([class='list']):hover
     font-size: 16px;
 }
 
+.status
+{
+    margin-top: 16px;
+}
+
 .big-info
 {
     grid-column: span 2;
