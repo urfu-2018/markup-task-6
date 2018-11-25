@@ -8,12 +8,13 @@ header
     position: sticky;
     top: 0;
     z-index: 1;
-    background: white;
+    background: #fff;
 }
 
 header::first-letter
 {
     color: #f00;
+
 }
 
 .card
@@ -47,6 +48,17 @@ header::first-letter
 .short-info
 {
     margin: 15px 10px;
+}
+
+.short-info-item,
+.long-info-item
+{
+    display: block;
+}
+
+.status-label
+{
+    margin-top: 5%;
 }
 
 .long-info
@@ -104,9 +116,13 @@ a[href^='mailto']
     margin: 5px 0;
 }
 
-.catFilter > div
+label
 {
-    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .breed-radio
@@ -127,6 +143,7 @@ a[href^='mailto']
     padding: 10px;
     margin: 7px 0;
     border-radius: 5px;
+    position: relative;
 }
 
 .mail-icon-desktop
@@ -183,7 +200,6 @@ a[href^='mailto']
 {
     height: 100%;
     width: 100%;
-
 }
 
 .dot
@@ -241,7 +257,7 @@ a[href^='mailto']
         display: block;
         grid-column: 1 / span 2;
         grid-row: 3;
-        color: black;
+        color: #000;
         border-top: 1px solid black;
     }
 
@@ -270,7 +286,7 @@ a[href^='mailto']
     .breed-radio[value='street']:checked ~ .cat-filter .street-label,
     .breed-radio[value='none']:checked ~ .cat-filter .none-label
     {
-        background: green;
+        background: #080;
     }
 
     .breed-radio[value='british']:checked ~ .cards section:not(.british),
