@@ -1,5 +1,3 @@
-/* stylelint-disable selector-max-id  */
-
 html
 {
     height: 100%;
@@ -65,14 +63,12 @@ main
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
     padding: 8px;
-
 }
 
 .cat-main-info
 {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    
 }
 
 .cat-photo
@@ -114,7 +110,6 @@ main
 .cat-status
 {
     margin-top: 10px;
-    
 }
 
 .cat-description
@@ -137,14 +132,13 @@ main
     font-size: 20px;
 }
 
-.filter-head
+.filter-name
 {
     font-size: 25px;
-    margin: 0;
-    margin-bottom: 5px;
+    margin: 0 0 5px;
 }
 
-.lab
+.race-switch
 {
     border: 1px solid rgba(128, 126, 126, .35);
     border-radius: 3px;
@@ -159,14 +153,14 @@ main
     display: none;
 }
 
-#check-1:checked ~ aside .lab-1,
-#check-2:checked ~ aside .lab-2,
-#check-3:checked ~ aside .lab-3,
-#check-4:checked ~ aside .lab-4,
-#check-5:checked ~ aside .lab-5,
-#check-6:checked ~ aside .lab-6,
-#check-7:checked ~ aside .lab-7,
-#check-8:checked ~ aside .lab-8
+.check-1:checked ~ aside .race-switch-1,
+.check-2:checked ~ aside .race-switch-2,
+.check-3:checked ~ aside .race-switch-3,
+.check-4:checked ~ aside .race-switch-4,
+.check-5:checked ~ aside .race-switch-5,
+.check-6:checked ~ aside .race-switch-6,
+.check-7:checked ~ aside .race-switch-7,
+.check-8:checked ~ aside .race-switch-8
 {
     background-color: rgba(111, 138, 255, .82);
     color: rgb(255, 255, 255);
@@ -178,22 +172,21 @@ input[name='cat-type']:checked ~ article .cat-card
     display: none;
 }
 
-#check-1:checked ~ article .race-worker,
-#check-2:checked ~ article .race-null,
-#check-3:checked ~ article .race-siberian,
-#check-4:checked ~ article .race-american,
-#check-5:checked ~ article .race-europ,
-#check-6:checked ~ article .race-egypt,
-#check-7:checked ~ article .race-norwegian,
-#check-8:checked ~ article .race-korat
-
+.check-1:checked ~ article .race-worker,
+.check-2:checked ~ article .race-null,
+.check-3:checked ~ article .race-siberian,
+.check-4:checked ~ article .race-american,
+.check-5:checked ~ article .race-europ,
+.check-6:checked ~ article .race-egypt,
+.check-7:checked ~ article .race-norwegian,
+.check-8:checked ~ article .race-korat
 {
     display: block;
 }
 
 /* Футер */
 
-.main-footer
+.footer
 {
     position: absolute;
     width: 100%;
@@ -206,7 +199,7 @@ input[name='cat-type']:checked ~ article .cat-card
     margin: 0 5px;
 }
 
-.footer-wrap
+.footer-inside-wrap
 {
     display: flex;
     border-top: 1px solid rgba(128, 126, 126, .35);
@@ -216,10 +209,9 @@ input[name='cat-type']:checked ~ article .cat-card
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     justify-content: space-between;
-
 }
 
-.main-footer a
+.footer a
 {
     text-decoration: none;
     color: rgb(0, 0, 255);
@@ -232,7 +224,7 @@ input[name='cat-type']:checked ~ article .cat-card
     width: 100%;
     height: 2px;
 
-    background: #88bdfa;
+    background: rgb(136, 189, 250);
 }
 
 .write-us
@@ -291,7 +283,7 @@ input[name='cat-type']:checked ~ article .cat-card
 
  
 
-    .footer-wrap
+    .footer-inside-wrap
     {
         flex-direction: column;
     }
@@ -344,11 +336,18 @@ input[name='cat-type']:checked ~ article .cat-card
     {
         grid-template-columns: 1fr;
     }
+
+    .copyright
+    {
+        margin-top: 10px;
+    }
+
+  
 }
 
 @media (min-width:721px)
 {
-    .footer-wrap
+    .footer-inside-wrap
     {
         align-items: flex-end;
     }
@@ -360,5 +359,10 @@ input[name='cat-type']:checked ~ article .cat-card
     .cat-container
     {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    main
+    {
+        padding-bottom: 90px;
     }
 }
