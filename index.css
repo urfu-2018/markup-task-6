@@ -4,9 +4,13 @@
 {
     grid-area: content;
     display: flex;
-    flex-direction: column;
     flex-flow: wrap row;
     justify-content: center;
+}
+
+.only-for-big-screen
+{
+    display: none;
 }
 
 input[type='radio']
@@ -145,10 +149,16 @@ input[type='radio']
 /* для планшетов */
 @media screen and (min-width: 730px)
 {
+    .cat-card img
+    {
+        width: 100%;
+    }
+
     .cat-card
     {
-        width: 300px;
         height: 400px;
+        margin: 1%;
+        flex: 0 0 30%;
     }
 
     .content
@@ -167,8 +177,9 @@ input[type='radio']
 {
     .cat-card
     {
-        width: 500px;
         height: 350px;
+        max-width: 600px;
+        flex: 0 0 45%;
     }
 
     .cat-card .short-info
@@ -178,8 +189,9 @@ input[type='radio']
 
     .header h1
     {
-        font-weight:normal;
+        font-weight: normal;
     }
+
     .container
     {
         display: grid;
@@ -192,7 +204,6 @@ input[type='radio']
     {
         flex-flow: wrap row;
         justify-content: space-around;
-        align-items: flex-start;
     }
 
     .cat-card
@@ -227,6 +238,21 @@ input[type='radio']
     .footer .last-block
     {
         flex-grow: 1;
+    }
+
+    .only-for-big-screen
+    {
+        display: unset;
+    }
+
+    .not-for-big-screen
+    {
+        display: none;
+    }
+
+    .footer img
+    {
+        margin-left: 5px;
     }
 
     .filters
