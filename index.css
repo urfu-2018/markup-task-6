@@ -1,13 +1,11 @@
 body
 {
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0;
     overflow-x: hidden;
 }
 
 label,
 input,
-a,
 img
 {
     cursor: pointer;
@@ -16,7 +14,7 @@ img
 a
 {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .footer
@@ -33,12 +31,12 @@ a
 
 .footer a
 {
-    color: #4c4cd8;
+    color: rgb(76, 76, 216);
 }
 
 .header
 {
-    background: white;
+    background: rgb(255, 255, 255);
     position: fixed;
     max-height: 80px;
     width: 100%;
@@ -46,7 +44,6 @@ a
     text-align: center;
     font-size: 32px;
     font-family: PT SansNarrow;
-    z-index: 1;
 }
 
 .header h1
@@ -59,22 +56,30 @@ a
     color: red;
 }
 
-.header hr,
-.footer hr
+.header,
+.footer
 {
     margin: 0;
-    border: 2px solid black;
+}
+
+.header
+{
+    border-bottom: 3px solid black;
+}
+
+.footer
+{
+    border-top: 3px solid black;
 }
 
 .blog
 {
     display: flex;
     flex: auto;
-    margin: 25px;
-    margin-top: 75px;
+    margin: 75px 25px 25px;
 }
 
-.main-grid
+.blog-content
 {
     flex: 4;
     display: grid;
@@ -106,7 +111,7 @@ a
 
 .card img
 {
-    width: 100%;
+    width: 250px;
     height: 300px;
 }
 
@@ -159,7 +164,7 @@ a
 
 @media only screen and (min-width: 375px) and (max-width: 730px)
 {
-    .main-grid
+    .blog-content
     {
         grid-template-columns: 1fr;
     }
@@ -173,14 +178,22 @@ a
     .email1::before,
     .email2::before
     {
-        content: '✉';
-        color: blue;
+        content: '✉ ';
+        color: rgb(0, 0, 255);
+    }
+
+    .card img
+    {
+        width: 450px;
+        min-width: 375px;
+        height: 450px;
+        margin: auto;
     }
 }
 
 @media only screen and (min-width: 731px) and (max-width: 1200px)
 {
-    .main-grid
+    .blog-content
     {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -207,14 +220,21 @@ a
     .email1::before,
     .email2::before
     {
-        content: '✉';
-        color: blue;
+        content: '✉ ';
+        color: rgb(0, 0, 255);
+    }
+
+    .card img
+    {
+        width: 200px;
+        height: 200px;
+        margin: auto;
     }
 }
 
 @media only screen and (min-width: 1201px)
 {
-    .main-grid,
+    .blog-content,
     .card
     {
         grid-template-columns: 1fr 1fr;
@@ -245,24 +265,19 @@ a
     .email1,
     .email2
     {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin: auto 5px;
     }
 
     .copyright
     {
         margin-left: auto;
-    }
-
-    .copyright
-    {
         float: right;
     }
 
     .write-us::before
     {
-        content: '✉';
-        color: blue;
+        content: '✉ ';
+        color: rgb(0, 0, 255);
     }
 
     .email1::after
@@ -276,4 +291,9 @@ a
     {
         display: none;
     }
+}
+
+.card-description
+{
+    line-height: 35px;
 }
