@@ -24,7 +24,7 @@
 
 body
 {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     font-family: 'Segoe UI Light';
     margin: 0;
 }
@@ -78,6 +78,13 @@ body
 
     background-color: #fff;
     box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+}
+
+.card:hover
+{
+    position: relative;
+    top: -10px;
+    box-shadow: 1px 10px 10px rgba(0,0,0,.25);
 }
 
 .image
