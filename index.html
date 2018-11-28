@@ -2,6 +2,7 @@
 <html lang="eu">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задача «Мурмаркет для всех»</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
@@ -9,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <h3>Мурмаркет</h3>
+            <h1>Мурмаркет</h1>
         </header>
         <input class="radio" type="radio" name="filters" id="british">
         <input class="radio" type="radio" name="filters" id="china">
@@ -19,7 +20,7 @@
 
         <main>
             <div class="content">
-                <div class="cat-card cat-card-1">
+                <article class="cat-card cat-card-1">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat1.jpg" alt="Борис">
                         <div class="information">
@@ -37,9 +38,9 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="cat-card cat-card-2">
+                <article class="cat-card cat-card-2">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat2.jpg" alt="Жаннет">
                         <div class="information">
@@ -57,9 +58,9 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="cat-card cat-card-3">
+                <article class="cat-card cat-card-3">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat3.jpg" alt="Петька">
                         <div class="information">
@@ -77,9 +78,9 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="cat-card cat-card-4">
+                <article class="cat-card cat-card-4">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat4.jpg" alt="Лапуська">
                         <div class="information">
@@ -97,9 +98,9 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="cat-card cat-card-5">
+                <article class="cat-card cat-card-5">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat5.jpg" alt="Виктор Ларионович">
                         <div class="information">
@@ -117,9 +118,9 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="cat-card cat-card-6">
+                <article class="cat-card cat-card-6">
                     <div class="layout">
                         <img class="cat-photo" src="img/cat6.jpg" alt="Яков">
                         <div class="information">
@@ -137,13 +138,13 @@
                             Cumque iste cum quo blanditiis est, modi voluptatem necessitatibus
                             aspernatur ratione saepe nisi beatae.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </main>
         <aside>
             <div class="sidebar-container">
                 <div class="search-age">
-                        <p>Возраст</p>
+                        <h2>Возраст</h2>
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
@@ -160,22 +161,24 @@
                         </div>  
                 </div>
                 <div class="search-breed">
-                    <p>Порода</p>
-                    <div class="bread british">
-                        <label class="checkbox" for="british">Британская</label>
-                    </div>
-                    <div class="bread china">
-                        <label class="checkbox" for="china">Китайская тупорылая</label>
-                    </div>
-                    <div class="bread russian">
-                        <label class="checkbox" for="russian">Русская голубая</label>
-                    </div>
-                    <div class="bread breedless">
-                        <label class="checkbox" for="breedless">Беспородный</label>
-                    </div>
-                    <div class="bread no">
-                        <label class="checkbox" for="no">нет</label>
-                    </div>
+                    <h2>Порода</h2>
+                    <ul>
+                        <li class="bread british">
+                            <label class="checkbox" for="british">Британская</label>
+                        </li>
+                        <li class="bread china">
+                            <label class="checkbox" for="china">Китайская тупорылая</label>
+                        </li>
+                        <li class="bread russian">
+                            <label class="checkbox" for="russian">Русская голубая</label>
+                        </li>
+                        <li class="bread breedless">
+                            <label class="checkbox" for="breedless">Беспородный</label>
+                        </li>
+                        <li class="bread no">
+                            <label class="checkbox" for="no">нет</label>
+                        </li>
+                    </ul>
                 </div>
             </div>  
         </aside>
