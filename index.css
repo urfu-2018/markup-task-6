@@ -7,15 +7,15 @@ html
 header
 {
     text-align: center;
-    background: rgba(255, 255, 255, 1);
+    background: rgb(255, 255, 255);
     padding: 10px;
     font-size: 20px;
-    border-bottom: 1px solid rgba(189, 189, 189, 1);
+    border-bottom: 1px solid rgb(189, 189, 189);
 }
 
 header:first-letter
 {
-    color: rgba(255, 0, 0, 1);
+    color: rgb(255, 0, 0);
 }
 
 body
@@ -44,7 +44,7 @@ body
     flex-direction: column;
     flex: 2;
     height: 320px;
-    border: 1px solid rgba(189, 189, 189, 1);
+    border: 1px solid rgb(189, 189, 189);
     box-sizing: border-box;
     margin: 5px;
     max-width: 442px;
@@ -52,7 +52,7 @@ body
 
 .cat-item:hover
 {
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    box-shadow: 0 0 10px 5px rgb(221, 221, 221);
 }
 
 .cat-params
@@ -76,7 +76,7 @@ body
 
 .list-information
 {
-    border-top: 1px solid rgba(189, 189, 189, 1);
+    border-top: 1px solid rgb(189, 189, 189);
     margin: 0;
     height: 110px;
     padding: 10px;
@@ -90,7 +90,7 @@ footer
     justify-content: space-between;
     font: 14px Arial;
     box-sizing: border-box;
-    border-top: 1px solid rgba(189, 189, 189, 1);
+    border-top: 1px solid rgb(189, 189, 189);
 }
 
 .contact-name
@@ -118,7 +118,7 @@ footer
 {
     display: flex;
     text-decoration: none;
-    color: rgba(76, 76, 216, 1);
+    color: rgb(76, 76, 216);
 }
 
 .mail,
@@ -143,7 +143,7 @@ footer
 {
     display: flex;
     height: 30px;
-    border: 1px solid rgba(189, 189, 189, 1);
+    border: 1px solid rgb(189, 189, 189);
     border-radius: 5px;
     margin: 5px;
     padding: 5px;
@@ -154,8 +154,8 @@ input[id='no-filter']:checked ~ .filters .breed label[for='no-filter'],
 input[id='mainkyhn']:checked ~ .filters .breed label[for='mainkyhn'],
 input[id='nevskaya']:checked ~ .filters .breed label[for='nevskaya']
 {
-    background: rgba(135, 245, 168, 1);
-    border: 1px solid rgba(4, 181, 57, 1);
+    background: rgb(135, 245, 168);
+    border: 1px solid rgb(4, 181, 57);
 }
 
 input[id='no']:checked ~ .cat-items .breed-mainkyhn,
@@ -186,7 +186,7 @@ input[type='range']::-moz-range-track
     width: 98%;
     height: 1px;
     cursor: pointer;
-    background: rgba(4, 181, 57, 1);
+    background: rgb(4, 181, 57);
 }
 
 input[type='range']::-moz-range-thumb
@@ -194,7 +194,7 @@ input[type='range']::-moz-range-thumb
     height: 20px;
     width: 21px;
     border-radius: 13px;
-    background: rgba(255, 255, 255, 1);
+    background: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -236,7 +236,7 @@ input[type='range']::-moz-range-thumb
     .mail:before
     {
         content: '\2709  ';
-        color: rgba(0, 0, 0, 1);
+        color: rgb(0, 0, 0);
     }
 
     .mail
