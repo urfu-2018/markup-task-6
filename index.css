@@ -68,6 +68,8 @@ input[id='any-breed']:checked ~ .cat-cards .cat-card
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
+    list-style: none;
+    padding-left: 0;
 }
 
 .cat-card
@@ -195,7 +197,7 @@ footer a
     text-decoration: none;
 }
 
-@media (min-device-width: 375px) and (max-device-width: 730px)
+@media (min-width: 375px) and (max-width: 730px)
 {
     .grid
     {
@@ -272,7 +274,7 @@ footer a
 
 }
 
-@media (min-device-width: 730px) and (max-device-width: 1200px)
+@media (min-width: 730px) and (max-width: 1200px)
 {
     .grid
     {
