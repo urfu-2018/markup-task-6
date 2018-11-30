@@ -21,6 +21,11 @@ a
     text-decoration: none;
 }
 
+.decor-inline
+{
+    text-decoration: underline;
+}
+
 .container
 {
     display: grid;
@@ -74,25 +79,15 @@ main
     display: none;
 }
 
-.cat-photo
-{
-    max-width: 500px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-}
-
 .cat-card
 {
     border: solid #616161 5px;
-    max-width: 440px;
     padding: 0;
     margin: 15px;
     white-space: normal;
-    overflow: hidden;
     border-radius: 5px;
     font-size: 15px;
-    zoom: .9;
+    flex-basis: 0;
 }
 
 .cat-card:hover
@@ -109,15 +104,34 @@ main
 
 .cat-card > .layout
 {
-    display: flex;
+    display: inline-flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 10px;
+    width: 420px;
 }
 
 .cat-card > .layout > .cat-photo
 {
-    justify-self: flex-start;
+    margin-right: 15px;
+}
+
+.cat-photo
+{
+    max-width: 243px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+.description
+{
+    margin: 0 10px;
+}
+
+.description > p
+{
+    hyphens: auto;
 }
 
 input:checked[id='british'] ~ main .content .cat-card-2,
@@ -376,6 +390,19 @@ footer
         flex-direction: column;
     }
 
+    .cat-card > .layout > .cat-photo
+    {
+        margin: 0;
+    }
+
+    .cat-photo
+    {
+        max-width: 500px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+    }
+
     .contacts > p
     {
         display: block;
@@ -418,6 +445,12 @@ footer
         align-items: center;
     }
 
+    .cat-card > .layout
+    {
+        width: auto;
+        margin: 10px 13%;
+    }
+
     .company
     {
         align-self: inherit;
@@ -427,4 +460,5 @@ footer
     {
         height: 20px;
     }
+    
 }
