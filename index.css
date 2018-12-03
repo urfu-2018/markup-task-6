@@ -189,7 +189,24 @@ input[type='range']::-moz-range-track
     background: rgb(4, 181, 57);
 }
 
+input[type='range']
+{
+    width: 98%;
+    height: 1px;
+    cursor: pointer;
+    background: rgb(4, 181, 57);
+}
+
 input[type='range']::-moz-range-thumb
+{
+    height: 20px;
+    width: 21px;
+    border-radius: 13px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb
 {
     height: 20px;
     width: 21px;
