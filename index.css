@@ -11,6 +11,7 @@
 html,
 body
 {
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -74,7 +75,6 @@ body
 {
     display: flex;
     margin: 5px auto;
-    width: 1fr;
     border-radius: 10%;
     transition: all .5s ease;
 }
@@ -95,12 +95,63 @@ body
 {
     display: flex;
     min-height: 100vh;
-    flex-flow: column;
+    flex-direction: column;
 }
 
 .icon-dot
 {
     display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 740px)
+{
+    .head
+    {
+        font-size: 18px;
+    }
+
+    .cat
+    {
+        display: flex;
+        flex-direction: column;
+        border: 6px solid red;
+        margin: 5px auto;
+    }
+
+    .short-info
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text
+    {
+        margin: 0 auto;
+        color: red;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        bottom: 0;
+        height: auto;
+        background: #f8f8f8;
+        border-top: 1px solid #d7d7d7;
+        font-size: 9px;
+        font-family: 'Arial', serif;
+    }
+
+    .mail
+    {
+        margin: auto;
+    }
+
+    .copyright
+    {
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1200px)
@@ -258,17 +309,11 @@ body
     }
 }
 
-@media screen and (min-width: 730px) and (max-width: 1199px)
+@media screen and (min-width: 741px) and (max-width: 1199px)
 {
     .head
     {
         font-size: 24px;
-    }
-
-    .main
-    {
-        display: flex;
-        min-height: 100vh;
     }
 
     .cats
@@ -280,7 +325,7 @@ body
     .cat
     {
         display: flex;
-        border: 1px solid #d7d7d7;
+        border: 1px solid red;
         flex-direction: column;
         margin: 5px auto;
     }
@@ -303,43 +348,5 @@ body
         padding: 5px;
         flex-grow: 1;
         flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 729px)
-{
-    .head
-    {
-        font-size: 18px;
-    }
-
-    .cat
-    {
-        width: 300px;
-        border: 1px solid #d7d7d7;
-        margin: 5px auto;
-    }
-
-    .footer
-    {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        bottom: 0;
-        height: auto;
-        background: #f8f8f8;
-        border-top: 1px solid #d7d7d7;
-        font-size: 9px;
-        font-family: 'Arial', serif;
-    }
-
-    .mail
-    {
-        margin: auto;
-    }
-
-    .copyright
-    {
-        margin: auto;
     }
 }
