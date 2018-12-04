@@ -69,6 +69,7 @@ body
     text-align: center;
     border: 1px solid #d7d7d7;
     border-radius: 55px 50px;
+    cursor: pointer;
 }
 
 .img-cat
@@ -101,57 +102,6 @@ body
 .icon-dot
 {
     display: none;
-}
-
-@media screen and (min-width: 375px) and (max-width: 740px)
-{
-    .head
-    {
-        font-size: 18px;
-    }
-
-    .cat
-    {
-        display: flex;
-        flex-direction: column;
-        border: 6px solid red;
-        margin: 5px auto;
-    }
-
-    .short-info
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .text
-    {
-        margin: 0 auto;
-        color: red;
-    }
-
-    .footer
-    {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        bottom: 0;
-        height: auto;
-        background: #f8f8f8;
-        border-top: 1px solid #d7d7d7;
-        font-size: 9px;
-        font-family: 'Arial', serif;
-    }
-
-    .mail
-    {
-        margin: auto;
-    }
-
-    .copyright
-    {
-        margin: auto;
-    }
 }
 
 @media screen and (min-width: 1200px)
@@ -291,10 +241,10 @@ body
 
     .mail
     {
-        margin: 5px auto;
         display: flex;
-        flex-grow: 1;
         flex-direction: row;
+        margin: 5px auto;
+        flex-grow: 1;
     }
 
     .text-footer
@@ -304,12 +254,16 @@ body
 
     .icon-dot
     {
-        display: block;
-        margin: 26px 0;
+        display: flex;
+        background-image: url('icon/dot.png');
+        background-size: 10px;
+        width: 10px;
+        height: 10px;
+        margin: auto 10px;
     }
 }
 
-@media screen and (min-width: 741px) and (max-width: 1199px)
+@media screen and (max-width: 1200px)
 {
     .head
     {
@@ -325,7 +279,7 @@ body
     .cat
     {
         display: flex;
-        border: 1px solid red;
+        border: 1px solid #d7d7d7;
         flex-direction: column;
         margin: 5px auto;
     }
@@ -348,5 +302,57 @@ body
         padding: 5px;
         flex-grow: 1;
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 730px)
+{
+    .head
+    {
+        font-size: 18px;
+    }
+
+    .cat
+    {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #d7d7d7;
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    .short-info
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat-name,
+    .text
+    {
+        padding-left: 15px;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        bottom: 0;
+        height: auto;
+        background: #f8f8f8;
+        border-top: 1px solid #d7d7d7;
+        font-size: 9px;
+        font-family: 'Arial', serif;
+    }
+
+    .mail
+    {
+        margin: auto;
+    }
+
+    .copyright
+    {
+        margin: auto;
     }
 }
