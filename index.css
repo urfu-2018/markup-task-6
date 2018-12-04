@@ -185,6 +185,11 @@ p
     
 }
 
+.photo
+{
+    padding-top: 10px;
+}
+
 .filter
 {
     grid-area: filter;
@@ -367,15 +372,22 @@ li
         border: 1px solid #666;
         display: grid;
         grid-row-gap: 2px;
-        grid-template: 'photo' 30%
-            'information' 1fr
-            / 1fr;
+        grid-template: 'photo' 25%
+            'information' 70%
+            / 100%;
         
     }
 
+    .photo img
+    {
+        width: 210px;
+        height: 115px;
+    }
+    
     .photo
     {
         grid-area: photo;
+        box-sizing: border-box;
         display: flex;
         margin: auto;
         box-shadow: none;
