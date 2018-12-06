@@ -214,10 +214,20 @@ main
     background-color: #83b4c9;
 }
 
+.categoryFilter1:checked ~ .cardContainer > .girl
+{
+    display: none;
+}
+
 .categoryFilter2:checked ~ .filterMenu > .categoryButton:nth-child(2)
 {
     color: white;
     background-color: #c983ae;
+}
+
+.categoryFilter2:checked ~ .cardContainer > .boy
+{
+    display: none;
 }
 
 .categoryResetFilter:checked ~ .filterMenu > .categoryButton
@@ -259,3 +269,4 @@ footer .rightPart
     margin-right: 10px;
     margin-top: 40px;
 }
+
