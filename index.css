@@ -4,7 +4,7 @@ body
 {
     margin: 0;
     padding: 0;
-    color: darkgrey;
+    color: #a9a9a9;
 }
 
 .header
@@ -16,15 +16,15 @@ body
     font-weight: bold;
     text-align: center;
     background: #fff;
-    color: black;
+    color: #000;
     height: 60px;
-    border-bottom: 1px solid gray;
-    box-shadow: 0 1px 1px gray;
+    border-bottom: 1px solid #808080;
+    box-shadow: 0 1px 1px #808080;
 }
 
 .header:first-letter
 {
-    color: red;
+    color: #f00;
 }
 
 .footer
@@ -38,11 +38,11 @@ body
     font: 14px 'Arial', sans-serif;
     background: #fff;
 
-    box-shadow: 0 -1px 1px gray;
-    border-top: 1px solid gray;
+    box-shadow: 0 -1px 1px #808080;
+    border-top: 1px solid #808080;
 }
 
-.footer__a
+.footer__link
 {
     text-decoration: none;
     color: #4c4cd8;
@@ -50,50 +50,49 @@ body
 
 .footer__right
 {
-    color: black;
+    color: #000;
 }
 
 .main
 {
-    text-align: center;
     padding-bottom: 60px;
 }
 
-.main__cat__info,
-.main__cat__additional
+.cat__info,
+.cat__additional
 {
     text-align: left;
     font-size: 1.2em;
     margin-left: 10px;
 }
 
-.main__cat__info__name
+.info__name
 {
-    color: black;
+    color: #000;
 }
 
-.main__cat__info__age:before
+.info__age:before
 {
     content: 'Возраст: ';
 }
 
-.main__cat__info__breed:before
+.info__breed:before
 {
     content: 'Порода: ';
 }
 
-.main__cat__info__disease:before
+.info__disease:before
 {
     content: 'Болезни: ';
 }
 
-.main__cat__info__status:before
+.info__status:before
 {
     content: 'Статус: ';
 }
 
 .filter,
-.main__cat__additional
+.cat__additional
 {
     display: none;
 }
@@ -120,21 +119,22 @@ body
         white-space: normal;
         margin: 20px;
         padding: 10px;
+        text-align: center;
     }
 
-    .filter__age__slider
+    .filter__age-slider
     {
         -webkit-appearance: none;
         width: 100%;
         height: 20px;
         margin-top: 10px;
-        background: lightgray;
+        background: #d3d3d3;
         outline: none;
         opacity: .7;
         border-radius: 1em;
     }
 
-    .filter__age__slider::-webkit-slider-thumb
+    .filter__age-slider::-webkit-slider-thumb
     {
         -webkit-appearance: none;
         width: 25px;
@@ -149,12 +149,12 @@ body
         margin-top: 20px;
     }
 
-    .filter__breed__label
+    .filter__label
     {
         display: block;
         height: 2em;
         margin-top: 10px;
-        border: 1px solid lightgray;
+        border: 1px solid #d3d3d3;
         border-radius: .5em;
         line-height: 30px;
     }
@@ -162,23 +162,23 @@ body
     input[id='filter-breed-1']:checked ~ .filter label[for$='breed-1'],
     input[id='filter-breed-2']:checked ~ .filter label[for$='breed-2']
     {
-        background: mediumspringgreen;
-        border-color: green;
+        background: #00fa9a;
+        border-color: #008000;
     }
 
-    input[id='filter-breed-1']:checked ~ .cats .main__cat:not([class$='ed-1']),
-    input[id='filter-breed-2']:checked ~ .cats .main__cat:not([class$='ed-2'])
+    input[id='filter-breed-1']:checked ~ .cats .cat:not([class$='ed-1']),
+    input[id='filter-breed-2']:checked ~ .cats .cat:not([class$='ed-2'])
     {
         display: none;
     }
 
-    .main__cat
+    .cat
     {
         width: 450px;
         height: 350px;
         display: inline-block;
-        border: 1px solid darkgrey;
-        box-shadow: 0 0 25px gray;
+        border: 1px solid #a9a9a9;
+        box-shadow: 0 0 25px #808080;
         border-radius: .5em;
         padding: 5px;
         margin: 10px;
@@ -186,13 +186,13 @@ body
         vertical-align: top;
     }
 
-    .main__cat:hover
+    .cat:hover
     {
-        border: 1px solid black;
-        box-shadow: 0 0 20px black;
+        border: 1px solid #000;
+        box-shadow: 0 0 20px #000;
     }
 
-    .main__cat__img
+    .cat__img
     {
         width: 200px;
         height: 200px;
@@ -202,7 +202,7 @@ body
         margin: 10px;
     }
 
-    .main__cat__info
+    .cat__info
     {
         display: inline-block;
         vertical-align: top;
@@ -211,10 +211,10 @@ body
         width: 200px;
     }
 
-    .main__cat__additional
+    .cat__additional
     {
         display: block;
-        border-top: 2px solid darkgrey;
+        border-top: 2px solid #a9a9a9;
     }
 
     .footer
@@ -222,7 +222,7 @@ body
         line-height: 60px;
     }
 
-    .footer__div,
+    .footer__text,
     .footer__left,
     .footer__right
     {
@@ -235,7 +235,7 @@ body
         float: right;
     }
 
-    .footer__div:nth-child(2)::after
+    .footer__text:nth-child(2)::after
     {
         content: ' •';
     }
@@ -244,13 +244,13 @@ body
 /*tablet*/
 @media screen and (max-width: 1200px) and (min-width: 730px)
 {
-    .main__cat
+    .cat
     {
         width: 200px;
         height: 300px;
         display: inline-block;
-        border: 1px solid darkgrey;
-        box-shadow: 0 0 25px gray;
+        border: 1px solid #a9a9a9;
+        box-shadow: 0 0 25px #808080;
         border-radius: .5em;
         padding: 5px;
         margin: 10px;
@@ -258,13 +258,13 @@ body
         vertical-align: top;
     }
 
-    .main__cat:hover
+    .cat:hover
     {
-        border: 1px solid black;
-        box-shadow: 0 0 20px black;
+        border: 1px solid #000;
+        box-shadow: 0 0 20px #000;
     }
 
-    .main__cat__img
+    .cat__img
     {
         width: 150px;
         height: 150px;
@@ -274,7 +274,7 @@ body
         margin: 10px;
     }
 
-    .main__cat__info
+    .cat__info
     {
         font-size: .7em;
         display: inline-block;
@@ -310,13 +310,13 @@ body
         text-align: center;
     }
 
-    .main__cat
+    .cat
     {
         width: 500px;
         height: 350px;
         display: inline-block;
-        border: 1px solid darkgrey;
-        box-shadow: 0 0 25px gray;
+        border: 1px solid #a9a9a9;
+        box-shadow: 0 0 25px #808080;
         border-radius: .5em;
         padding: 5px;
         margin: 10px;
@@ -324,13 +324,13 @@ body
         vertical-align: top;
     }
 
-    .main__cat:hover
+    .cat:hover
     {
-        border: 1px solid black;
-        box-shadow: 0 0 20px black;
+        border: 1px solid #000;
+        box-shadow: 0 0 20px #000;
     }
 
-    .main__cat__img
+    .cat__img
     {
         width: 200px;
         height: 200px;
@@ -339,7 +339,7 @@ body
         margin: 10px;
     }
 
-    .main__cat__info
+    .cat__info
     {
         font-size: .7em;
         vertical-align: top;
