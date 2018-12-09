@@ -13,9 +13,10 @@
         </h1>
     </header>
     <div class="wrap-page">
-        <input type="radio" name="breed-filter" class="serval breed" id="serval">
-        <input type="radio" name="breed-filter" class="scottish breed" id="scottish">
-        <input type="radio" name="breed-filter" class="all breed" id="all" checked>
+        <input type="checkbox" class="breed serval" id="serval" checked>
+        <input type="checkbox" class="breed scottish" id="scottish" checked>
+        <input type="checkbox" class="breed fluffy" id="fluffy" checked>
+        <input type="checkbox" class="breed none" id="none" checked>
         <main class="cats-box">
             <article class="card serval">
                 <div class="main-part">
@@ -38,19 +39,17 @@
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Рыся&nbsp;&mdash; это на&shy;сто&shy;ящий &laquo;ко&shy;то&shy;пе&shy;сик&raquo;.
-                        Лю&shy;бит иг&shy;рать в&nbsp;&laquo;апорт&raquo; и&nbsp;при&shy;но&shy;сить
-                        хо&shy;зя&shy;ину бро&shy;шен&shy;ные им&nbsp;мя&shy;чи&shy;ки.
-                        Он&nbsp;обо&shy;жа&shy;ет по&shy;ви&shy;сеть на&nbsp;ве&shy;рев&shy;ках,
-                        шнур&shy;ках и&nbsp;про&shy;во&shy;дах. Этот про&shy;каз&shy;ник мо&shy;жет
-                        бес&shy;печ&shy;но за&shy;пус&shy;тить свою длин&shy;ную ла&shy;пу туда, где,
-                        как ему по&shy;ка&shy;жет&shy;ся, спря&shy;та&shy;но ла&shy;комст&shy;во.
-                    </div>
+                <div class="detailed-information">
+                    Рыся&nbsp;&mdash; это на&shy;сто&shy;ящий &laquo;ко&shy;то&shy;пе&shy;сик&raquo;.
+                    Лю&shy;бит иг&shy;рать в&nbsp;&laquo;апорт&raquo; и&nbsp;при&shy;но&shy;сить
+                    хо&shy;зя&shy;ину бро&shy;шен&shy;ные им&nbsp;мя&shy;чи&shy;ки.
+                    Он&nbsp;обо&shy;жа&shy;ет по&shy;ви&shy;сеть на&nbsp;ве&shy;рев&shy;ках,
+                    шнур&shy;ках и&nbsp;про&shy;во&shy;дах. Этот про&shy;каз&shy;ник мо&shy;жет
+                    бес&shy;печ&shy;но за&shy;пус&shy;тить свою длин&shy;ную ла&shy;пу туда, где,
+                    как ему по&shy;ка&shy;жет&shy;ся, спря&shy;та&shy;но ла&shy;комст&shy;во.
                 </div>
             </article>
-            <article class="card redhead">
+            <article class="card none">
                 <div class="main-part">
                     <div class="photo-box">
                             <img src="https://i.imgur.com/UXlPNki.jpg" alt="Рыжий кот Имбирь" class="photo">
@@ -71,13 +70,11 @@
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Имбирь не&shy;сет в&nbsp;се&shy;бе за&shy;ряд сол&shy;неч&shy;ной
-                        энер&shy;гии, ве&shy;се&shy;лья и&nbsp;доб&shy;ра.
-                        С&nbsp;ра&shy;дос&shy;тью бу&shy;дет си&shy;деть у&nbsp;вас на&nbsp;ко&shy;ле&shy;нях
-                        и&nbsp;до&shy;воль&shy;но мур&shy;лы&shy;кать.
-                    </div>
+                <div class="detailed-information">
+                    Имбирь не&shy;сет в&nbsp;се&shy;бе за&shy;ряд сол&shy;неч&shy;ной
+                    энер&shy;гии, ве&shy;се&shy;лья и&nbsp;доб&shy;ра.
+                    С&nbsp;ра&shy;дос&shy;тью бу&shy;дет си&shy;деть у&nbsp;вас на&nbsp;ко&shy;ле&shy;нях
+                    и&nbsp;до&shy;воль&shy;но мур&shy;лы&shy;кать.
                 </div>
             </article>
             <article class="card scottish">
@@ -101,124 +98,271 @@
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Калм об&shy;рёл спо&shy;койст&shy;вие и&nbsp;дос&shy;тиг
-                        нир&shy;ва&shy;ны. Он&nbsp;не&nbsp;под&shy;да&shy;ет&shy;ся
-                        эмо&shy;ци&shy;ональ&shy;ным вол&shy;нам и&nbsp;ко&shy;ша&shy;чьей ис&shy;те&shy;рии.
-                    </div>
+                <div class="detailed-information">
+                    Калм об&shy;рёл спо&shy;койст&shy;вие и&nbsp;дос&shy;тиг
+                    нир&shy;ва&shy;ны. Он&nbsp;не&nbsp;под&shy;да&shy;ет&shy;ся
+                    эмо&shy;ци&shy;ональ&shy;ным вол&shy;нам и&nbsp;ко&shy;ша&shy;чьей ис&shy;те&shy;рии.
                 </div>
             </article>
-            <article class="card serval">
+            <article class="card fluffy">
                 <div class="main-part">
                     <div class="photo-box">
-                        <img src="https://i.imgur.com/K6XWKY9.jpg" alt="Котенок Рыся" class="photo">
+                        <img src="https://i.imgur.com/xIDH2KH.jpg" alt="Котик Роджер" class="photo">
                     </div>
                     <section class="main-inforamation">
                         <h2>
                             <a href="#" class="cat-name">
-                                Рыся
+                                Роджер
                             </a>
                         </h2>     
                         <div class="brief-information">
                             <ul class="cat-features">
-                                <li class="cat-age">Возраст: 5 месяцев</li>
-                                <li class="cat-breed">Порода: сервал</li>
+                                <li class="cat-age">Возраст: 6 лет</li>
+                                <li class="cat-breed">Порода: пушистый</li>
                                 <li class="cat-disease">Болезни: нет</li>
                             </ul>
                             <div class="cat-status">Статус: ищет хозяина</div>
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Рыся&nbsp;&mdash; это на&shy;сто&shy;ящий &laquo;ко&shy;то&shy;пе&shy;сик&raquo;.
-                        Лю&shy;бит иг&shy;рать в&nbsp;&laquo;апорт&raquo; и&nbsp;при&shy;но&shy;сить
-                        хо&shy;зя&shy;ину бро&shy;шен&shy;ные им&nbsp;мя&shy;чи&shy;ки.
-                        Он&nbsp;обо&shy;жа&shy;ет по&shy;ви&shy;сеть на&nbsp;ве&shy;рев&shy;ках,
-                        шнур&shy;ках и&nbsp;про&shy;во&shy;дах. Этот про&shy;каз&shy;ник мо&shy;жет
-                        бес&shy;печ&shy;но за&shy;пус&shy;тить свою длин&shy;ную ла&shy;пу туда, где,
-                        как ему по&shy;ка&shy;жет&shy;ся, спря&shy;та&shy;но ла&shy;комст&shy;во.
-                    </div>
+                <div class="detailed-information">
+                    Роджер иг&shy;рив и&nbsp;ак&shy;ти&shy;вен,
+                    но&nbsp;в&nbsp;ме&shy;ру.
+                    Тем&shy;пе&shy;ра&shy;мент у&nbsp;не&shy;го
+                    не&nbsp;до&shy;пус&shy;ка&shy;ет
+                    из&shy;ли&shy;шеств. Упорст&shy;ва и&nbsp;упрямст&shy;ва
+                    этому ко&shy;ту
+                    не&nbsp;за&shy;ни&shy;мать, так что иногда вам
+                    при&shy;дет&shy;ся по&shy;ка&shy;зать,
+                    что в&nbsp;вас упрямст&shy;ва боль&shy;ше.
                 </div>
             </article>
-            <article class="card serval">
+            <article class="card none">
                 <div class="main-part">
                     <div class="photo-box">
-                        <img src="https://i.imgur.com/K6XWKY9.jpg" alt="Котенок Рыся" class="photo">
+                        <img src="https://i.imgur.com/f6u8Rip.jpg" alt="Кот Пледик" class="photo">
                     </div>
                     <section class="main-inforamation">
                         <h2>
                             <a href="#" class="cat-name">
-                                Рыся
+                                Пледик
                             </a>
                         </h2>     
                         <div class="brief-information">
                             <ul class="cat-features">
-                                <li class="cat-age">Возраст: 5 месяцев</li>
-                                <li class="cat-breed">Порода: сервал</li>
+                                <li class="cat-age">Возраст: 1 год</li>
+                                <li class="cat-breed">Порода: нет</li>
                                 <li class="cat-disease">Болезни: нет</li>
                             </ul>
                             <div class="cat-status">Статус: ищет хозяина</div>
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Рыся&nbsp;&mdash; это на&shy;сто&shy;ящий &laquo;ко&shy;то&shy;пе&shy;сик&raquo;.
-                        Лю&shy;бит иг&shy;рать в&nbsp;&laquo;апорт&raquo; и&nbsp;при&shy;но&shy;сить
-                        хо&shy;зя&shy;ину бро&shy;шен&shy;ные им&nbsp;мя&shy;чи&shy;ки.
-                        Он&nbsp;обо&shy;жа&shy;ет по&shy;ви&shy;сеть на&nbsp;ве&shy;рев&shy;ках,
-                        шнур&shy;ках и&nbsp;про&shy;во&shy;дах. Этот про&shy;каз&shy;ник мо&shy;жет
-                        бес&shy;печ&shy;но за&shy;пус&shy;тить свою длин&shy;ную ла&shy;пу туда, где,
-                        как ему по&shy;ка&shy;жет&shy;ся, спря&shy;та&shy;но ла&shy;комст&shy;во.
-                    </div>
+                <div class="detailed-information">
+                    Пледик сдер&shy;жан, но&nbsp;не&nbsp;рав&shy;но&shy;ду&shy;шен,
+                    де&shy;ли&shy;ка&shy;тен, у&shy;лыб&shy;чив, не&nbsp;шум&shy;ный
+                    и&nbsp;при этом не&shy;ве&shy;ро&shy;ят&shy;но от&shy;ва&shy;жен.
+                    Он&nbsp;ко&nbsp;все&shy;му
+                    от&shy;но&shy;сит&shy;ся спо&shy;кой&shy;но
+                    и&nbsp;пред&shy;поч&shy;тет быть на&shy;блю&shy;да&shy;те&shy;лем,
+                    не&shy;же&shy;ли сме&shy;лым ре&shy;фор&shy;ма&shy;то&shy;ром.
+                    Из&nbsp;всех за&shy;ня&shy;тий боль&shy;ше
+                    все&shy;го лю&shy;бит спать.
                 </div>
             </article>
-            <article class="card serval">
+            <article class="card fluffy">
                 <div class="main-part">
                     <div class="photo-box">
-                        <img src="https://i.imgur.com/K6XWKY9.jpg" alt="Котенок Рыся" class="photo">
+                        <img src="https://i.imgur.com/AYr2A3M.jpg" alt="Кот Ричард" class="photo">
                     </div>
                     <section class="main-inforamation">
-                        <h2>
+                        <h2 title="Ричард Джордж Фридерих фон дем Теодор Гурион Младший">
                             <a href="#" class="cat-name">
-                                Рыся
+                                Ричард Джордж Фридерих фон дем Теодор Гурион Младший
                             </a>
                         </h2>     
                         <div class="brief-information">
                             <ul class="cat-features">
-                                <li class="cat-age">Возраст: 5 месяцев</li>
-                                <li class="cat-breed">Порода: сервал</li>
+                                <li class="cat-age">Возраст: 3 года</li>
+                                <li class="cat-breed">Порода: пушистый</li>
                                 <li class="cat-disease">Болезни: нет</li>
                             </ul>
                             <div class="cat-status">Статус: ищет хозяина</div>
                         </div>
                     </section> 
                 </div>
-                <div class="additional-part">
-                    <div class="detailed-information">
-                        Рыся&nbsp;&mdash; это на&shy;сто&shy;ящий &laquo;ко&shy;то&shy;пе&shy;сик&raquo;.
-                        Лю&shy;бит иг&shy;рать в&nbsp;&laquo;апорт&raquo; и&nbsp;при&shy;но&shy;сить
-                        хо&shy;зя&shy;ину бро&shy;шен&shy;ные им&nbsp;мя&shy;чи&shy;ки.
-                        Он&nbsp;обо&shy;жа&shy;ет по&shy;ви&shy;сеть на&nbsp;ве&shy;рев&shy;ках,
-                        шнур&shy;ках и&nbsp;про&shy;во&shy;дах. Этот про&shy;каз&shy;ник мо&shy;жет
-                        бес&shy;печ&shy;но за&shy;пус&shy;тить свою длин&shy;ную ла&shy;пу туда, где,
-                        как ему по&shy;ка&shy;жет&shy;ся, спря&shy;та&shy;но ла&shy;комст&shy;во.
+                <div class="detailed-information">
+                    На&shy;сто&shy;ящ&shy;ий а&shy;ри&shy;сто&shy;крат.
+                    В&nbsp;нем по&shy;ра&shy;зи&shy;тель&shy;но
+                    со&shy;че&shy;та&shy;ют&shy;ся мощь
+                    и&nbsp;сила со&nbsp;сли&shy;воч&shy;ным ха&shy;рак&shy;те&shy;ром,
+                    взгляд ди&shy;ко&shy;го зве&shy;ря
+                    с&nbsp;неж&shy;ным мур&shy;лы&shy;кань&shy;ем.
+                    Ричард очень ум&shy;ный и&nbsp;бла&shy;го&shy;род&shy;ный кот,
+                    кра&shy;со&shy;та
+                    ко&shy;то&shy;ро&shy;го бу&shy;дет ра&shy;до&shy;вать вас, как все
+                    со&shy;вер&shy;шен&shy;ное. Ха&shy;рак&shy;тер у&nbsp;Ричарда Джорджа
+                    мно&shy;го&shy;гран&shy;ный, ко&shy;то&shy;рый
+                    по&nbsp;на&shy;сто&shy;ящ&shy;ему
+                    мож&shy;но рас&shy;крыть только жи&shy;вя
+                    с&nbsp;ним ру&shy;ка об&nbsp;ру&shy;ку каж&shy;дый день.
+                </div>
+            </article>
+            <article class="card scottish">
+                <div class="main-part">
+                    <div class="photo-box">
+                        <img src="https://i.imgur.com/BAbPybD.jpg" alt="Кот Брюс" class="photo">
                     </div>
+                    <section class="main-inforamation">
+                        <h2>
+                            <a href="#" class="cat-name">
+                                Брюс Уэйн
+                            </a>
+                        </h2>     
+                        <div class="brief-information">
+                            <ul class="cat-features">
+                                <li class="cat-age">Возраст: 3 года</li>
+                                <li class="cat-breed">Порода: британская короткошерстная</li>
+                                <li class="cat-disease">Болезни: нет</li>
+                            </ul>
+                            <div class="cat-status">Статус: ищет хозяина</div>
+                        </div>
+                    </section> 
+                </div>
+                <div class="detailed-information">
+                    Брюс спа&shy;сет мир без особых уси&shy;лий!
+                    Все его дви&shy;же&shy;ния
+                    очень точ&shy;ны, гра&shy;ци&shy;оз&shy;ны
+                    и&nbsp;стре&shy;ми&shy;тель&shy;ны.
+                    Вра&shy;ги тре&shy;пе&shy;щут пе&shy;ред его мощью.
+                </div>
+            </article>
+            <article class="card fluffy">
+                <div class="main-part">
+                    <div class="photo-box">
+                        <img src="https://i.imgur.com/veWlnH1.jpg" alt="Кошка Клауди" class="photo">
+                    </div>
+                    <section class="main-inforamation">
+                        <h2>
+                            <a href="#" class="cat-name">
+                                Клауди
+                            </a>
+                        </h2>     
+                        <div class="brief-information">
+                            <ul class="cat-features">
+                                <li class="cat-age">Возраст: 2 года</li>
+                                <li class="cat-breed">Порода: пушистый</li>
+                                <li class="cat-disease">Болезни: нет</li>
+                            </ul>
+                            <div class="cat-status">Статус: ищет хозяина</div>
+                        </div>
+                    </section> 
+                </div>
+                <div class="detailed-information">
+                    Клауди неж&shy;ная и&nbsp;меч&shy;та&shy;тель&shy;ная.
+                    Ха&shy;риз&shy;ма и&nbsp;внеш&shy;нее
+                    оча&shy;ро&shy;ва&shy;ние этого
+                    соз&shy;да&shy;ния яв&shy;ля&shy;ют&shy;ся
+                    под&shy;лин&shy;ным
+                    вы&shy;ра&shy;же&shy;нием ее&nbsp;крот&shy;кой
+                    и&nbsp;дру&shy;же&shy;люб&shy;ной на&shy;ту&shy;ры.
+                    Она соз&shy;да&shy;на
+                    ис&shy;клю&shy;чи&shy;тель&shy;но для люб&shy;ви.
+                </div>
+            </article>
+            <article class="card none">
+                <div class="main-part">
+                    <div class="photo-box">
+                        <img src="https://i.imgur.com/xqxaIVC.jpg" alt="Лапик-царапик" class="photo">
+                    </div>
+                    <section class="main-inforamation">
+                        <h2>
+                            <a href="#" class="cat-name">
+                                Лапик-царапик
+                            </a>
+                        </h2>     
+                        <div class="brief-information">
+                            <ul class="cat-features">
+                                <li class="cat-age">Возраст: 1 год</li>
+                                <li class="cat-breed">Порода: нет</li>
+                                <li class="cat-disease">Болезни: нет</li>
+                            </ul>
+                            <div class="cat-status">Статус: ищет хозяина</div>
+                        </div>
+                    </section> 
+                </div>
+                <div class="detailed-information">
+                    Об&shy;ла&shy;да&shy;ет вы&shy;ра&shy;зи&shy;тель&shy;ной
+                    внеш&shy;ность и ве&shy;се&shy;лым до&shy;бро&shy;душ&shy;ным
+                    ха&shy;рак&shy;те&shy;ром.
+                    Ак&shy;тив&shy;ный и ком&shy;па&shy;нейский,
+                    не лю&shy;бит пре&shy;бы&shy;вать
+                    в оди&shy;но&shy;чест&shy;ве.
+                </div>
+            </article>
+            <article class="card fluffy">
+                <div class="main-part">
+                    <div class="photo-box">
+                        <img src="https://i.imgur.com/RNudkiK.jpg" alt="Кошка Мерфи" class="photo">
+                    </div>
+                    <section class="main-inforamation">
+                        <h2>
+                            <a href="#" class="cat-name">
+                                Мерфи
+                            </a>
+                        </h2>     
+                        <div class="brief-information">
+                            <ul class="cat-features">
+                                <li class="cat-age">Возраст: 3 года</li>
+                                <li class="cat-breed">Порода: пушистый</li>
+                                <li class="cat-disease">Болезни: нет</li>
+                            </ul>
+                            <div class="cat-status">Статус: ищет хозяина</div>
+                        </div>
+                    </section> 
+                </div>
+                <div class="detailed-information">
+                    В&nbsp;Мерфи с&nbsp;рож&shy;денья за&shy;ло&shy;же&shy;ны
+                    хо&shy;ро&shy;шие ма&shy;не&shy;ры.
+                    Она об&shy;ла&shy;да&shy;ет спо&shy;кой&shy;ным нра&shy;вом,
+                    ми&shy;лым ха&shy;рак&shy;те&shy;ром,
+                    со&shy;об&shy;ра&shy;зи&shy;тель&shy;ностью,
+                    иногда да&shy;же че&shy;рес&shy;чур,
+                    и&nbsp;ин&shy;тел&shy;ли&shy;гентной
+                    важ&shy;ностью. Не&shy;за&shy;ви&shy;си&shy;ма,
+                    аристо&shy;кра&shy;тич&shy;на
+                    и&nbsp;не&shy;воз&shy;му&shy;ти&shy;мо
+                    спо&shy;койна в&nbsp;лю&shy;бых
+                    си&shy;туациях. До&shy;воль&shy;но упря&shy;ма.
                 </div>
             </article>
         </main>
         <aside class="filters">
-            <div class="filter-breeds">
+            <div class="filter-age">
                 <p class="filter-type">Возраст</p>
-                <input type="range" min="0" max="10" step="1" value="3">
-                
-                <p>от <span class="value-min"></span> до <span class="value-max"></span> лет</p>
+                <div class="range-scale">
+                    <div class="scale left-limit"></div>
+                    <div class="circle"></div>
+                    <div class="scale target"></div>
+                    <div class="circle"></div>
+                    <div class="scale right-limit"></div>
+                </div>
+                <p>от <span class="value-min">2</span> до <span class="value-max">4</span> лет</p>
+            </div>
+            <div class="filter-breeds">
                 <p class="filter-type">Порода</p>
-                <label for="serval" class="breed serval">сервал</label>
-                <label for="scottish" class="breed scottish">шотландские</label>
-                <label for="all" class="breed all">все котики</label>
+                <label for="serval" class="breed serval">
+                    сервалы
+                </label>
+                <label for="scottish" class="breed scottish">
+                    шотландские
+                </label>
+                <label for="fluffy" class="breed fluffy">
+                    пушистые
+                </label>
+                <label for="none" class="breed none">
+                    нет
+                </label>
             </div>
         </aside>
     </div>

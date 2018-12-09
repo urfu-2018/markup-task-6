@@ -2,8 +2,15 @@ html,
 body
 {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+html
+{
+    position: absolute;
+    overflow: hidden;
 }
 
 body
@@ -11,9 +18,34 @@ body
     display: flex;
     flex-direction: column;
     font: 16px 'Arial', sans-serif;
+    overflow: auto;
     min-width: 375px;
 }
 
+.market-header
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    text-align: center;
+    z-index: 1000;
+}
+
+.market-header h1
+{
+    font: 32px 'PT Sans Narrow', sans-serif;
+    margin: 0;
+}
+
+.market-header h1::first-letter
+{
+    color: #fc1b27;
+}
+
+input.breed,
 .filters,
 .detailed-information
 {
@@ -22,37 +54,15 @@ body
 
 .wrap-page
 {
+    padding: 45px 20px 10px;
     flex: 1 0 auto;
-}
-
-.market-header
-{
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-    background: #fff;
-
-}
-
-.market-header h1
-{
-    font: 32px 'PT Sans Narrow', sans-serif;
-    margin: 0;
-    vertical-align: center;
-}
-
-.market-header h1::first-letter
-{
-    color: #fc1b27;
 }
 
 .cats-box
 {
     display: flex;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 30px;
     align-content: stretch;
     justify-content: center;
 }
@@ -60,13 +70,30 @@ body
 .card
 {
     border: 1px solid #ddd;
-    margin: 0 20px 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 15px #a8a8a8;
 }
 
 .cat-name
 {
+    display: block;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     text-decoration: none;
     color: #3e3e3e;
+    font-size: 1em;
+}
+
+.cat-name:hover
+{
+    color: #fc1b27;
 }
 
 .photo-box
@@ -93,6 +120,100 @@ body
 {
     padding: 0 20px 20px;
     color: #a8a8a8;
+}
+
+.detailed-information
+{
+    border-top: 1px solid #ddd;
+    color: #a8a8a8;
+    padding: 20px;
+    height: 120px;
+    overflow: auto;
+}
+
+.filters
+{
+    flex-direction: column;
+    width: 250px;
+    margin-top: 10px;
+    padding: 30px 15px 20px;
+    flex: 0 0;
+    color: #a8a8a8;
+}
+
+.filter-type
+{
+    font-size: 18px;
+    margin-top: 0;
+}
+
+label.breed
+{
+    display: block;
+    width: 200px;
+    height: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input.serval:checked ~ .filters label.serval,
+input.scottish:checked ~ .filters label.scottish,
+input.fluffy:checked ~ .filters label.fluffy,
+input.none:checked ~ .filters label.none
+{
+    background: #e9ffd0;
+    border-color: #c5ed9a;
+}
+
+input.serval:not(:checked) ~ .cats-box .serval,
+input.scottish:not(:checked) ~ .cats-box .scottish,
+input.fluffy:not(:checked) ~ .cats-box .fluffy,
+input.none:not(:checked) ~ .cats-box .none
+{
+    display: none;
+}
+
+.range-scale
+{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.scale
+{
+    height: 2px;
+    background-color: #ddd;
+}
+
+.left-limit
+{
+    width: 30px;
+}
+
+.target
+{
+    width: 80px;
+    background: #9ec9fc;
+}
+
+.right-limit
+{
+    width: 70px;
+}
+
+.circle
+{
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #a8a8a8;
+    align-self: center;
+    cursor: pointer;
 }
 
 footer
@@ -153,11 +274,7 @@ footer a
     .card
     {
         width: 300px;
-    }
-
-    .card:hover
-    {
-        box-shadow: 0 0 15px #a8a8a8;
+        margin: 10px;
     }
 
     footer
@@ -175,21 +292,6 @@ footer a
 
 @media screen and (min-width: 1200px)
 {
-    .cats-box
-    {
-        flex: 1 0 80%;
-        justify-content: space-between;
-    }
-
-    .filters
-    {
-        display: flex;
-        width: 250px;
-        padding: 70px 15px 20px;
-        flex: 0 0 calc( 20% - 30px );
-        color: #a8a8a8;
-    }
-
     .wrap-page
     {
         display: flex;
@@ -198,27 +300,31 @@ footer a
         align-items: flex-start;
     }
 
+    .cats-box
+    {
+        flex: 1 0 80%;
+    }
+
+    .filters
+    {
+        display: flex;
+    }
+
     .card
     {
-        width: calc(50% - 50px);
+        width: 47%;
         display: flex;
         flex-direction: column;
-        align-content: space-between;
+        justify-content: space-between;
     }
 
     .main-part
     {
         display: flex;
         flex-direction: row;
-        box-sizing: border-box;
-        border-bottom: 1px solid #ddd;
-        padding: 20px;
         align-items: stretch;
-    }
-
-    .main-inforamation
-    {
-        padding: 0 20px;
+        padding: 20px;
+        
     }
 
     .main-inforamation h2
@@ -229,8 +335,6 @@ footer a
     .detailed-information
     {
         display: block;
-        color: #a8a8a8;
-        padding: 20px;
     }
 
     .photo
@@ -243,7 +347,7 @@ footer a
     {
         content: '\25cf';
         color: #565656;
-        margin-right: 15px;
+        margin-right: 20px;
         line-height: 14px;
     }
 
@@ -267,65 +371,5 @@ footer a
     .contact-information a
     {
         margin: 0 10px;
-    }
-
-    .filter-type
-    {
-        font-size: 18px;
-    }
-
-    input.breed
-    {
-        display: none;
-    }
-
-    label.breed
-    {
-        display: block;
-        width: 200px;
-        height: 20px;
-        margin-bottom: 10px;
-        border: 1px solid #a8a8a8;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-        /* text-align: center; */
-    }
-
-    input.serval:checked ~ .filters label.serval,
-    input.scottish:checked ~ .filters label.scottish,
-    input.all:checked ~ .filters label.all
-    {
-        background: #e9ffd0;
-        border-color: #c5ed9a;
-    }
-
-    input.serval:checked ~ .cats-box .card:not(.serval),
-    input.scottish:checked ~ .cats-box .card:not(.scottish)
-    {
-        display: none;
-    }
-
-    input[type='range']
-    {
-        display: block;
-        -webkit-appearance: none;
-        background-color: #a8a8a8;
-        width: 200px;
-        height: 2px;
-        border-radius: 1px;
-        margin: 0 auto;
-        outline: 0;
-    }
-
-    input[type='range']::-webkit-slider-thumb
-    {
-        -webkit-appearance: none;
-        background-color: #fff;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        box-shadow: 0 0 5px #a8a8a8;
-        cursor: pointer;
     }
 }
