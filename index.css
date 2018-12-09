@@ -16,6 +16,33 @@ body
     grid-template-rows: 50px auto 50px;
 }
 
+.double-range
+{
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.circle
+{
+    position: absolute;
+    bottom: -8px;
+    width: 20px;
+    height: 20px;
+    background: #9de3e2;
+    border-radius: 10px;
+}
+
+.circle-1
+{
+    left: 20px;
+}
+
+.circle-2
+{
+    left: 80px;
+}
+
 input[type='checkbox']
 {
     display: none;
@@ -24,7 +51,7 @@ input[type='checkbox']
 
 .header
 {
-    color: white;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +62,7 @@ input[type='checkbox']
 .menu
 {
     grid-column: 2;
-    color: white;
+    color: #fff;
     display: flex;
     flex-flow: column wrap;
     grid-row: 1;
@@ -51,7 +78,7 @@ input[type='checkbox']
 .content
 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 200px;
     min-height: calc(100vh - 100px);
 }
 
@@ -61,13 +88,13 @@ input[type='checkbox']
     font-size: .8em;
     padding-top: 5px;
     grid-row: 3;
-    color: white;
+    color: #fff;
     border-top: 1px solid rgba(255, 255, 255, .46);
 }
 
 .footer a
 {
-    color: white;
+    color: #fff;
 }
 
 .left_footer
@@ -91,10 +118,10 @@ input[type='checkbox']
 
 }
 
-input[id='no']:checked ~ .cats > .no,
-input[id='scotland']:checked ~ .cats > .scotland,
-input[id='kornish']:checked ~ .cats > .kornish,
-input[id='siam']:checked ~ .cats > .siam
+input[id='no']:checked ~ .cats > .cat_breed_no,
+input[id='scotland']:checked ~ .cats > .cat_breed_scotland,
+input[id='kornish']:checked ~ .cats > .cat_breed_kornish,
+input[id='siam']:checked ~ .cats > .cat_breed_siam
 {
     grid-column: 1;
     grid-row: span 5;
@@ -105,10 +132,10 @@ input[id='siam']:checked ~ .cats > .siam
     width: 350px;
     height: 350px;
     margin: 10px;
-    border: 1px solid lightgrey;
-    color: dimgray;
+    border: 1px solid #d3d3d3;
+    color: #696969;
     border-radius: 8px;
-    background: rgb(157, 227, 226);
+    background: #9de3e2;
 }
 
 input[id='no']:checked ~ .menu > label[for='no'],
@@ -116,27 +143,27 @@ input[id='scotland']:checked ~ .menu > label[for='scotland'],
 input[id='kornish']:checked ~ .menu > label[for='kornish'],
 input[id='siam']:checked ~ .menu > label[for='siam']
 {
-    color: rgb(157, 227, 226);
+    color: #9de3e2;
 }
 
-input[id='no']:not(:checked) ~ .cats > .no,
-input[id='scotland']:not(:checked) ~ .cats > .scotland,
-input[id='kornish']:not(:checked) ~ .cats > .kornish,
-input[id='siam']:not(:checked) ~ .cats > .siam
+input[id='no']:not(:checked) ~ .cats > .cat_breed_no,
+input[id='scotland']:not(:checked) ~ .cats > .cat_breed_scotland,
+input[id='kornish']:not(:checked) ~ .cats > .cat_breed_kornish,
+input[id='siam']:not(:checked) ~ .cats > .cat_breed_siam
 {
     display: none;
 }
 
 .cat:hover
 {
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px #fff;
 }
 
 .info a
 {
     grid-column: 2;
     grid-row: 1;
-    color: black;
+    color: #000;
     font-size: 1.5em;
     padding: 5px;
 }
@@ -233,11 +260,6 @@ input[id='siam']:not(:checked) ~ .cats > .siam
     background-image: url(https://pp.userapi.com/c824601/v824601025/12b2b0/OAvXl7REasI.jpg);
 }
 
-.img_range
-{
-    width: 150px;
-}
-
 @media screen and (min-device-width: 375px) and (max-device-width: 730px)
 {
     .menu
@@ -257,10 +279,10 @@ input[id='siam']:not(:checked) ~ .cats > .siam
         margin: auto;
     }
 
-    input[id='no']:not(:checked) ~ .cats > .no,
-    input[id='scotland']:not(:checked) ~ .cats > .scotland,
-    input[id='kornish']:not(:checked) ~ .cats > .kornish,
-    input[id='siam']:not(:checked) ~ .cats > .siam
+    input[id='no']:not(:checked) ~ .cats > .cat_breed_no,
+    input[id='scotland']:not(:checked) ~ .cats > .cat_breed_scotland,
+    input[id='kornish']:not(:checked) ~ .cats > .cat_breed_kornish,
+    input[id='siam']:not(:checked) ~ .cats > .cat_breed_siam
     {
         margin: 10px;
         display: flex;
@@ -268,16 +290,17 @@ input[id='siam']:not(:checked) ~ .cats > .siam
         justify-content: center;
         width: 700px;
         height: 500px;
-        border: 1px solid lightgrey;
-        color: dimgray;
+        border: 1px solid #d3d3d3;
+        color: #696969;
         border-radius: 8px;
-        background: rgb(157, 227, 226);
+        background: #9de3e2;
     }
 
     .info
     {
         display: flex;
         flex-flow: column;
+        margin: 10px;
     }
 
     .img_center
@@ -312,10 +335,10 @@ input[id='siam']:not(:checked) ~ .cats > .siam
         margin: auto;
     }
 
-    input[id='no']:not(:checked) ~ .cats > .no,
-    input[id='scotland']:not(:checked) ~ .cats > .scotland,
-    input[id='kornish']:not(:checked) ~ .cats > .kornish,
-    input[id='siam']:not(:checked) ~ .cats > .siam
+    input[id='no']:not(:checked) ~ .cats > .cat_breed_no,
+    input[id='scotland']:not(:checked) ~ .cats > .cat_breed_scotland,
+    input[id='kornish']:not(:checked) ~ .cats > .cat_breed_kornish,
+    input[id='siam']:not(:checked) ~ .cats > .cat_breed_siam
     {
         margin: 10px;
         display: flex;
@@ -323,10 +346,10 @@ input[id='siam']:not(:checked) ~ .cats > .siam
         justify-content: center;
         width: 30%;
         height: 350px;
-        border: 1px solid lightgrey;
-        color: dimgray;
+        border: 1px solid #d3d3d3;
+        color: #696969;
         border-radius: 8px;
-        background: rgb(157, 227, 226);
+        background: #9de3e2;
     }
 
     .info
