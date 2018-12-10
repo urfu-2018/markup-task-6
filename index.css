@@ -172,14 +172,14 @@ input[name='cat-type']:checked ~ article .cat-card
     display: none;
 }
 
-.check-1:checked ~ article .race-worker,
-.check-2:checked ~ article .race-null,
-.check-3:checked ~ article .race-siberian,
-.check-4:checked ~ article .race-american,
-.check-5:checked ~ article .race-europ,
-.check-6:checked ~ article .race-egypt,
-.check-7:checked ~ article .race-norwegian,
-.check-8:checked ~ article .race-korat
+input[id='check-1']:checked ~ article .race-worker,
+input[id='check-2']:checked ~ article .race-null,
+input[id='check-3']:checked ~ article .race-siberian,
+input[id='check-4']:checked ~ article .race-american,
+input[id='check-5']:checked ~ article .race-europ,
+input[id='check-6']:checked ~ article .race-egypt,
+input[id='check-7']:checked ~ article .race-norwegian,
+input[id='check-8']:checked ~ article .race-korat
 {
     display: block;
 }
