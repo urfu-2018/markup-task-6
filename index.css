@@ -31,13 +31,10 @@ img
 
 footer
 {
+    position: relative;
     width: 100%;
     background: white;
-    border: 1px solid black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    border-top: 1px solid black;
 }
 
 footer a 
@@ -59,7 +56,7 @@ div.contacts > a::before
     color: black;
 }
 
-div.cats
+.cats
 {
     border: 1px solid black;
     display: grid;
@@ -232,7 +229,7 @@ label
     main
     {
         display: grid;
-        grid-template: 1fr 1fr 1fr 1fr 1fr/2fr 2fr 1fr;
+        grid-template: 1fr/2fr 2fr 1fr;
         grid-template-areas: '. . panel' '. . panel'
             '. . panel' '. . panel' '. . panel';
         grid-gap: 1%;
@@ -310,6 +307,7 @@ label
     
     input[type='range']
     {
+        position: absolute;
         -webkit-appearance: none;
     }
     
@@ -323,6 +321,8 @@ label
     
     input[type='range']::-webkit-slider-thumb
     {
+        position: relative;
+        z-index: 1;
         -webkit-appearance: none;
         background: white;
         width: 20px;
@@ -350,6 +350,20 @@ label
     input[id='no_breed']:checked ~ .no_breed
     {
         display: grid;
+    }
+
+    .cat_1:hover,
+    .cat_2:hover,
+    .cat_3:hover,
+    .cat_4:hover,
+    .cat_5:hover,
+    .cat_6:hover,
+    .cat_7:hover,
+    .cat_8:hover,
+    .cat_9:hover,
+    .cat_10:hover
+    {
+        box-shadow: 0 0 10px black;
     }
 
     nav
