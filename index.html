@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
@@ -10,134 +11,141 @@
 <header>
     <h1 class="header">Мурмаркет</h1>
 </header>
-<main>
-    <input type="radio" name="breed" id="all" checked>
-    <input type="radio" name="breed" id="persian">
-    <input type="radio" name="breed" id="siberian">
-    <input type="radio" name="breed" id="siamese">
-    <input type="radio" name="breed" id="abyssinian">
-    <div class="cards">
-        <div class="card breed-persian">
+<main class="main">
+    <input type="checkbox" name="breed" id="all" checked>
+    <input type="checkbox" name="breed" id="persian">
+    <input type="checkbox" name="breed" id="siberian">
+    <input type="checkbox" name="breed" id="siamese">
+    <input type="checkbox" name="breed" id="abyssinian">
+    <section class="cards">
+        <article class="card breed-persian">
             <img class="card-img" src="./images/1.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Барсик</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Очень ласковый и общительный котик. Отличный сосед для пенсионеров.</p>
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Очень ласковый и общительный котик.
+                    Отличный сосед для пенсионеров.</p>
             </div>
-        </div>
-        <div class="card breed-siberian">
+        </article>
+        <article class="card breed-siberian">
             <img class="card-img" src="./images/3.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Семен</h2>
-                <p>Возраст: 1 год</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: 1 год</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Самый жизнерадостный кот, при любой возможности начинает резвиться</p>
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Самый жизнерадостный кот, при любой
+                    возможности начинает резвиться</p>
             </div>
-        </div>
-        <div class="card breed-siberian">
+        </article>
+        <article class="card breed-siberian">
             <img class="card-img" src="./images/7.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Громовая лань</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Попала к бабушка от соседки аллергика. Не смотря на пышную шевилюру, не линяет.</p>
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Попала к бабушка от соседки аллергика.
+                    Не смотря на пышную шевилюру, не линяет.</p>
             </div>
-        </div>
-        <div class="card breed-siamese">
+        </article>
+        <article class="card breed-siamese">
             <img class="card-img" src="./images/4.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Каспер</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Каспер не зря носит имя белого приведения, ведь ночью он как призрак
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Каспер не зря носит имя белого приведения,
+                    ведь ночью он как призрак
                     может находиться в десяти местах одновременно</p>
             </div>
-        </div>
-        <div class="card breed-siamese">
+        </article>
+        <article class="card breed-siamese">
             <img class="card-img" src="./images/8.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Пельмень</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Пельмень. Что тут еще сказать? Ласковый. Любит покушать</p>
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Пельмень. Что тут еще сказать? Ласковый. Любит покушать</p>
             </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
             <img class="card-img" src="./images/10.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Рон</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Бабушка является ярой фанаткой Рон Перлман, а это значит,
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Бабушка является ярой фанаткой Рон Перлман, а это значит,
                     что Мейн-кун не мог не оказаться в ее доме</p>
             </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
             <img class="card-img" src="./images/6.jpg" alt="кот1">
             <div class="card-info">
                 <h2 class="card-name">Анджела</h2>
-                <p>Возраст: около 6 месяцев</p>
-                <p>Порода: нет</p>
-                <p>Болезни: нет</p>
+                <span class="card-info-value">Возраст: около 6 месяцев</span>
+                <span class="card-info-value">Порода: нет</span>
+                <span class="card-info-value">Болезни: нет</span>
                 <span class="card-status">
                     Статус: ищет хозяина
                 </span>
             </div>
             <div class="card-description">
-                <p>Двужелюбный, ласковый, ручной</p>
-                <p>Самая умная и спокойная бабушкина кошечка. Большую часть времени лижит и спит.
+                <p class="card-description-value">Двужелюбный, ласковый, ручной</p>
+                <p class="card-description-value">Самая умная и спокойная бабушкина кошечка.
+                    Большую часть времени лижит и спит.
                     По ночам выходит на охоту и приносит добычку.</p>
             </div>
-        </div>
-
-    </div>
+        </article>
+    </section>
     <div class="controls blue">
         <div class="age-control">
             <h3 class="center">Возраст</h3>
-            <input type="range" min="0" max="50" value="5" class="range-slider">
+            <div class="range-selector">
+                <input type="range" min="0" max="50" value="5" class="range-slider range-slider-min">
+                <input type="range" min="0" max="50" value="30" class="range-slider range-slider-max">
+            </div>
             <p>от <span id="min-age-value">2</span> до <span id="max-age-value">4</span> лет</p>
         </div>
         <div class="breed-control">
@@ -153,14 +161,14 @@
         </div>
     </div>
 </main>
-<footer>
+<footer class="footer">
     <div class="contacts">
-        <span class="gray">Напишите нам:</span>
-        <span class="mail"><a href="#">cats@babuli.ru</a></span>
-        <span class="mail"><a href="#">vnuchek@babuli.ru</a></span>
+        <span class="contacts-value gray">Напишите нам:</span>
+        <span class="contacts-value mail"><a class="link" href="#">cats@babuli.ru</a></span>
+        <span class="contacts-value mail"><a class="link" href="#">vnuchek@babuli.ru</a></span>
     </div>
     <div class="site-info">
-        <p>&copy; 2018 ООО «<a href="#">Бабушкины котятки</a>»</p>
+        <span>&copy; 2018 ООО «<a class="link" href="#">Бабушкины котятки</a>»</span>
     </div>
 </footer>
 </body>
