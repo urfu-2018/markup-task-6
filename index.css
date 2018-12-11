@@ -5,6 +5,14 @@ body
     margin: 0;
 }
 
+.age2::-webkit-slider-runnable-track,
+.age2::-moz-range-track
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
 header
 {
     font: 32px 'PT SansNarrow';
@@ -315,7 +323,7 @@ a
         -webkit-appearance: none;
         -moz-appearance: none;
         width: 40px;
-        }
+    }
 
     .age-slider label
     {
