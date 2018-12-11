@@ -141,7 +141,9 @@ body
 
     .wrapper
     {
-        grid-template: 'header header header' 'main main main' 'footer footer footer';
+        grid-template: 'header header header'
+            'main main main'
+            'footer footer footer';
     }
 
     .main
@@ -155,6 +157,7 @@ body
     {
         flex: 1 1 25%;
         margin-right: 10px;
+        max-width: 400px;
         margin-bottom: 10px;
     }
 
@@ -198,7 +201,9 @@ body
     .wrapper
     {
 
-        grid-template: 'header header header' 'main main aside' 'footer footer footer';
+        grid-template: 'header header header'
+            'main main aside'
+            'footer footer footer';
         grid-template-rows: auto auto auto;
         grid-template-columns: 1fr 1fr 400px;
     }
