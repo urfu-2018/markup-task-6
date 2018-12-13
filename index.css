@@ -257,7 +257,7 @@ input[name='cats-breeds']
         height: 4px;
         background-color: #000;
         border-radius: 2px;
-        border: 1px black solid;
+        border: 1px #000 solid;
     }
 
     .age-bar-middle
@@ -280,7 +280,7 @@ input[name='cats-breeds']
         border-radius: 75%;
         top: -6px;
         z-index: 2;
-        border: 1px black solid;
+        border: 1px #000 solid;
     }
 
     .age-dot:first-child
