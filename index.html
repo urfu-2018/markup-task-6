@@ -4,295 +4,312 @@
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,
-    initial-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body class="cats-market-body">
-    <input type="radio" id="species_1" class="species-switch" name="species-switch">
-    <input type="radio" id="species_2" class="species-switch" name="species-switch">
-    <input type="radio" id="species_3" class="species-switch" name="species-switch">
-    <input type="radio" id="species_4" class="species-switch" name="species-switch">
-    <input type="radio" id="species_no" class="species-switch" name="species-switch" checked>
+<body>
+    <input type="radio" id="species_1" class="species-1" name="species">
+    <input type="radio" id="species_2" class="species-2" name="species">
+    <input type="radio" id="species_3" class="species-3" name="species">
+    <input type="radio" id="species_4" class="species-4" name="species">
+    <input type="radio" id="species_no" class="species-no" name="species" checked>
     <main class="general-layout">
-        <header class="site-header">
-            <div class="logo-layout">
+        <header class="header">
+            <div class="header__logo">
                 <img src="pictures/logo.png" alt="logo" width="220" height="60">
             </div>
         </header>
-        <aside class="cats-filters">
-            <div class="cats-filters-wrapper">
-                <div class="label-caption">Возраст</div>
-                <div class="input-cat-age">
-                    <input type="range" id="age" name="age" class="cat-age-range" 
-                    min="0" max="8" value="2" step="0.2">
-                </div>
-                <div class="label-caption age-range-text">от 2 до 4 лет</div>
-                <div class="label-caption">Категория</div>
-                <label for="species_1" class="species_label">
-                    <span class="label-text">Красавчики</span>
-                </label>
-                <label for="species_2" class="species_label">
-                    <span class="label-text">Необычные</span>
-                </label>
-                <label for="species_3" class="species_label">
-                    <span class="label-text">Маленькие</span>
-                </label>
-                <label for="species_4" class="species_label">
-                    <span class="label-text">Рыжие</span>
-                </label>
-                <label for="species_no" class="species_label">
-                    <span class="label-text">Нет</span>
-                </label>
+        <aside class="filters">
+            <div class="filters__layout">
+                <ul class="list captions">
+                    <li class="list__item captions__item">Возраст</li>
+                    <li class="list__item cat-age">
+                        <input type="range" id="age" name="age" class="cat-age__input" 
+                        min="0" max="8" value="2" step="0.2">
+                    </li>
+                    <li class="list__item captions__item age-range-text">от 2 до 4 лет</li>
+                    <li class="list__item captions__item">Категория</li>
+                </ul>
+                <ul class="list labels">
+                    <li class="list__item labels__item">
+                        <label for="species_1" class="species-label">
+                            <span class="species-label__text">Красавчики</span>
+                        </label>
+                    </li>
+                    <li class="list__item labels__item">
+                        <label for="species_2" class="species-label">
+                            <span class="species-label__text">Необычные</span>
+                        </label>
+                    </li>
+                    <li class="list__item labels__item">
+                        <label for="species_3" class="species-label">
+                            <span class="species-label__text">Маленькие</span>
+                        </label>
+                    </li>
+                    <li class="list__item labels__item">
+                        <label for="species_4" class="species-label">
+                            <span class="species-label__text">Рыжие</span>
+                        </label>
+                    </li>
+                    <li class="list__item labels__item">
+                        <label for="species_no" class="species-label">
+                            <span class="species-label__text">Нет</span>
+                        </label>
+                    </li>   
+                </ul>
             </div>
         </aside>
-        <section class="main-part">
-            <article class="article-about-cat handsome-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_1.jpg" alt="Уолтер" width="245" height="180">
+        <div class="cats__wrapper">
+            <section class="cats">
+                <article class="cats__item cat cat-1">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_1.jpg" alt="Уолтер" width="245" height="180">
+                        </div>
                     </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Уолтер</a></h2>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Уолтер</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 1.5 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Этот кот&nbsp;&mdash; настоящий граф. Любят когда 
+                            на&nbsp;него обращают внимание, но&nbsp;ничего не&nbsp;хочет делать для этого.
+                        </p>
                     </div>
-                    <p class="cat-age">Возраст: ~ 1.5 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
+                </article>
+                <article class="cats__item cat cat-2">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_2.jpg" alt="Каспер" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Каспер</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 3&nbsp;месяца</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Удивительно красивый мальчик, с&nbsp;очень выразительным 
+                            взглядом и&nbsp;нежной шкуркой. Ласковый. любит играть и&nbsp;много кушает.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-3">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_3.jpg" alt="Морган" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Морган</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 1 год</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Настоящий котоненавистник, очень любит людей, 
+                            но&nbsp;совершенно ненавидит других котов и&nbsp;кошек.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-4">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_4.jpg" alt="Уильям" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Уильям</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 4 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Обожает цветы и&nbsp;позировать на&nbsp;камеру. Как только 
+                            учует фотоаппарат сразу мчится туда.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-5">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_5.jpg" alt="Монти" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Монти</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 3,5 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Обожает цветы и&nbsp;позировать на&nbsp;камеру. Как только 
+                            учует фотоаппарат сразу мчится туда.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-6">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_6.jpg" alt="Рыжик" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Рыжик</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 4 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Рыжая бестия, шарахается от&nbsp;любого шороха, очень 
+                            пугливый. Но&nbsp;если привыкнет&nbsp;&mdash; лучшый кот.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-7">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_7.jpg" alt="Леопольд" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Леопольд</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 5 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Очень умный и&nbsp;талантливый кот. По&nbsp;ночам иногда 
+                            читает сказки.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-8">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_8.jpg" alt="Лукас" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Лукас</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 4 месяца</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Любишь маленьких котят&nbsp;&mdash; ставь лукас. Вот 
+                            так его и&nbsp;назвали.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-9">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_9.jpg" alt="Грустняга" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Грустняга</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 3 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Грутно-кэт. Грустит всегда: утром, днем и&nbsp;вечером.
+                            Также любит погрустить в&nbsp;выходные.
+                        </p>
+                    </div>
+                </article>
+                <article class="cats__item cat cat-10">
+                    <div class="cat-photo__wrapper">
+                        <div class="cat__photo cat-photo">
+                            <img src="pictures/cat_10.jpg" alt="Коперник" width="245" height="180">
+                        </div>
+                    </div>
+                    <ul class="list cat__information">
+                        <li class="list__item cat-name__wrapper">
+                            <h2><a href="#" class="cat__name cat-name">Коперник</a></h2>
+                        </li>
+                        <li class="list__item cat__age">Возраст: ~ 2 года</li>
+                        <li class="list__item cat__breed">Порода: нет</li>
+                        <li class="list__item cat__disease">Болезни: нет</li>
+                        <li class="list__item cat__status">Статус: Ищет хозяина</li>
+                    </ul>
+                    <div class="cat__add-information">
+                        <hr>
+                        <p>
+                            Подробная информация: Котэ-удивляка. Любит удивляться по&nbsp;любому поводу. 
+                            В&nbsp;эти моменты особенно шикарен.
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="footer__wrapper">
+            <footer class="footer">
+                <div class="footer__left-part">
+                    <p>Напишите нам:</p>    
                     <p>
-                        Подробная информация: Этот кот&nbsp;&mdash; настоящий граф. Любят когда на&nbsp;него 
-                        обращают внимание, но&nbsp;ничего не&nbsp;хочет делать для этого.
+                        <span class="envelope">✉</span>
+                        <a href="#">cats@babuli.ru</a>
+                    </p>
+                    <p>
+                        <span class="envelope">✉</span>
+                        <a href="#">vnuchek@babuli.ru</a><br>
                     </p>
                 </div>
-            </article>
-            <article class="article-about-cat little-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_2.jpg" alt="Каспер" width="245" height="180">
-                    </div>
+                <div class="footer__right-part">
+                    <p>&copy;&nbsp;2018&nbsp;ООО &quot;<a href="#">Бабушкины котятки</a>&quot;</p>
                 </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Каспер</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 3&nbsp;месяца</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Удивительно красивый мальчик, с&nbsp;очень выразительным 
-                        взглядом и&nbsp;нежной шкуркой. Ласковый. любит играть и&nbsp;много кушает.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat readhead-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_3.jpg" alt="Морган" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Морган</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 1 год</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Настоящий котоненавистник, очень любит людей, 
-                        но&nbsp;совершенно ненавидит других котов и&nbsp;кошек.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat handsome-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_4.jpg" alt="Уильям" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Уильям</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 4 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Обожает цветы и&nbsp;позировать на&nbsp;камеру. Как только 
-                        учует фотоаппарат сразу мчится туда.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat handsome-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_5.jpg" alt="Монти" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Монти</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 3,5 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Настоящая королева. Любит томно наблюдать за&nbsp;людьми в 
-                        квартире, лежа на&nbsp;краю дивана.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat readhead-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_6.jpg" alt="Рыжик" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Рыжик</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 4 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Рыжая бестия, шарахается от&nbsp;любого шороха, очень пугливый.
-                        Но&nbsp;если привыкнет&nbsp;&mdash; лучшый кот.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat unusual-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_7.jpg" alt="Леопольд" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Леопольд</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 5 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Очень умный и&nbsp;талантливый кот. По&nbsp;ночам иногда 
-                        читает сказки.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat little-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_8.jpg" alt="Лукас" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Лукас</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 4 месяца</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Любишь маленьких котят&nbsp;&mdash; ставь лукас. Вот так его 
-                        и&nbsp;назвали.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat unusual-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_9.jpg" alt="Грустняга" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Грустняга</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 3 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Грутно-кэт. Грустит всегда: утром, днем и&nbsp;вечером.
-                        Также любит погрустить в&nbsp;выходные.
-                    </p>
-                </div>
-            </article>
-            <article class="article-about-cat unusual-cat">
-                <div class="cat-photo-layout">
-                    <div class="cat-photo-wrapper">
-                        <img src="pictures/cat_10.jpg" alt="Коперник" width="245" height="180">
-                    </div>
-                </div>
-                <div class="text-about-cat">
-                    <div class="cat-name-wrapper">
-                        <h2><a href="#" class="cat-name">Коперник</a></h2>
-                    </div>
-                    <p class="cat-age">Возраст: ~ 2 года</p>
-                    <p class="cat-breed">Порода: нет</p>
-                    <p class="cat-disease">Болезни: нет</p>
-                    <p class="cat-status">Статус: Ищет хозяина</p>
-                </div>
-                <div class="additional-information">
-                    <hr>
-                    <p>
-                        Подробная информация: Котэ-удивляка. Любит удивляться по&nbsp;любому поводу. 
-                        В&nbsp;эти моменты особенно шикарен.
-                    </p>
-                </div>
-            </article>
-        </section>
-        <footer class="site-footer">
-            <div class="footer-left-part">
-                <p>Напишите нам:</p>    
-                <p>
-                    <img src="pictures/letter.png" alt="letter" width="14" height="14">
-                    <a href="#">cats@babuli.ru</a>
-                </p>
-                <p>
-                    <img src="pictures/letter.png" alt="letter" width="14" height="14">
-                    <a href="#">vnuchek@babuli.ru</a><br>
-                </p>
-            </div>
-            <div class="footer-right-part">
-                <p>&copy;&nbsp;2018&nbsp;ООО &quot;<a href="#">Бабушкины котятки</a>&quot;</p>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </main>
 </body>
 </html>
