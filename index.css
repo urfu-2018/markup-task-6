@@ -258,7 +258,15 @@ body
 
     .links p
     {
+        width: 15%;
+    }
+
+    .link
+    {
+        top: 5px;
         width: 20%;
+        display: block;
+        margin: 1em;
     }
 
 }
