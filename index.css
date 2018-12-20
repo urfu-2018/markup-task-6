@@ -89,7 +89,7 @@ body
     color: #707070;
 }
 
-.short-info 
+.short-info
 {
     padding: 0;
     margin: 2%;
@@ -121,7 +121,7 @@ body
     margin: 10px 20px 15px;
 }
 
-.footer .footer-element a
+.footer .footer-element .ref
 {
     color: #4c4cd8;
     text-decoration: none;
@@ -150,7 +150,7 @@ body
     justify-content: left;
 }
 
-@media screen and (min-width: 730px)    
+@media screen and (min-width: 730px)
 {
     .header
     {
@@ -158,7 +158,7 @@ body
         top: 0;
         left: 0;
     }
-    
+
     .header-spacer
     {
         display: block;
@@ -264,6 +264,24 @@ body
         font-size: 20px;
         text-align: center;
         font-weight: normal;
+    }
+
+    .filter-age
+    {
+        padding-left: 120px;
+    }
+
+    .slider
+    {
+        position: relative;
+    }
+
+    .slider-line
+    {
+        height: 1px;
+        background-color: #2d2d2d;
+        width: 70%;
+        margin: 0 0 0 10px;
     }
 
     .cats-shop
