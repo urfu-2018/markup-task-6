@@ -70,9 +70,15 @@ main
     flex-direction: row-reverse;
 }
 
+.pictureofCat
+{
+    overflow: hidden;
+    width: 300px;
+}
+
 .pictureofCat img
 {
-    width: 300px;
+    max-width: 300px;
     height: 300px;
 }
 
@@ -217,7 +223,7 @@ label
     border-radius: 50%;
     background: gainsboro;
     position: relative;
-    top: 2.1%;
+    top: 6%;
     left: 80%;
 }
 
@@ -296,6 +302,7 @@ label
     .info
     {
         line-height: 80%;
+        text-align: center;
     }
 
 }
@@ -323,9 +330,20 @@ label
         margin-bottom: 130px;
     }
 
-    footer .ooo
+    footer .copyright
     {
         float: left;
         margin-top: 3%;
+    }
+
+    .pictureofCat
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info
+    {
+        text-align: center;
     }
 }
