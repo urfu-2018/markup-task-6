@@ -1,0 +1,94 @@
+.cat
+{
+    break-inside: avoid-column;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: .8em;
+}
+
+.cat section
+{
+    padding: 5px;
+}
+
+.cat p
+{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    color: #555;
+}
+
+.cat:hover
+{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.cat img
+{
+    width: 100%;
+    /*object-position: top;*/
+}
+
+.toggle:checked ~ main .cat img
+{
+    height: auto;
+    max-width: 100%;
+}
+
+.cat h3
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cat a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.header
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-bottom: solid 1px gray;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+}
+
+.header h1
+{
+    margin: 0;
+}
+
+.header:first-letter
+{
+    color: red;
+}
+
+@media screen and (min-width: 0px) and (max-width: 730px){
+    .cats
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .info
+    {
+        display: none;
+    }
+}
