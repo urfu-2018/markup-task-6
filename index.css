@@ -1,3 +1,8 @@
+body
+{
+    font-family: sans-serif;
+}
+
 .cat
 {
     break-inside: avoid-column;
@@ -57,9 +62,8 @@
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     border-bottom: solid 1px gray;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    z-index: 10;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     position: fixed;
     width: 100%;
     background: white;
@@ -75,6 +79,37 @@
 .header:first-letter
 {
     color: red;
+}
+
+.footer
+{
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid gray;
+    margin-top: 5px;
+}
+
+.contacts
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts p
+{
+    margin: 0;
+}
+
+.contacts a
+{
+    text-decoration: none;
+}
+
+.contacts a:before
+{
+    content: '📧';
 }
 
 @media screen and (min-width: 0px) and (max-width: 730px){
