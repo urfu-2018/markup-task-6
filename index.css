@@ -4,18 +4,12 @@
     src: url('fonts/PTN57F.ttf');
 }
 
-@font-face
-{
-    font-family: Arial;
-    src: local(arial);
-}
-
 body
 {
     background-color: snow;
 }
 
-.cite-name
+.site-name
 {
     font-size: 32px;
     font-family: 'PT SansNarrow', sans-serif;
@@ -31,14 +25,14 @@ body
     left: 0;
 }
 
-.cite-name::first-letter
+.site-name::first-letter
 {
     color: red;
 }
 
 .all
 {
-    text-align: center;
+    text-align: left;
     margin-top: 40px;
 }
 
@@ -271,6 +265,11 @@ body
 
 }
 
+@media screen and (max-width: 1200px) and (min-width: 730px)
+{
+
+}
+
 @media screen and (max-width: 730px) and (min-width: 375px)
 {
     .max-info
@@ -290,7 +289,7 @@ body
         display: block;
         float: left;
     }
-    
+
     .rights
     {
         width: 90%;
@@ -298,7 +297,7 @@ body
         display: block;
         margin-left: 10px;
     }
-    
+
     .link
     {
         display: block;
