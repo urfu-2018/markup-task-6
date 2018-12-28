@@ -265,11 +265,6 @@ body
 
 }
 
-@media screen and (max-width: 1200px) and (min-width: 730px)
-{
-
-}
-
 @media screen and (max-width: 730px) and (min-width: 375px)
 {
     .max-info
