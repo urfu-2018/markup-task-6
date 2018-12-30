@@ -34,10 +34,9 @@ body
 .cat img
 {
     width: 100%;
-    /*object-position: top;*/
 }
 
-.toggle:checked ~ main .cat img
+.toggle:checked ~ .cats .cat img
 {
     height: auto;
     max-width: 100%;
@@ -76,7 +75,7 @@ body
     margin: 0;
 }
 
-.header:first-letter
+.header h1:first-letter
 {
     color: red;
 }
@@ -112,7 +111,8 @@ body
     content: '📧';
 }
 
-@media screen and (min-width: 0px) and (max-width: 730px){
+@media screen and (max-width: 730px)
+{
     .cats
     {
         display: flex;
@@ -121,9 +121,177 @@ body
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px)
+{
     .info
     {
         display: none;
+    }
+
+    .filters
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 730px)
+{
+    .cats
+    {
+        display: grid;
+    }
+
+    .cat img
+    {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px)
+{
+    .cats
+    {
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 5%;
+    }
+
+    .cat img
+    {
+        max-height: 150px;
+    }
+
+    .footer
+    {
+        align-items: flex-end;
+    }
+
+    .copy
+    {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .page
+    {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .filters
+    {
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    .breed-filter
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .age-filter input
+    {
+        width: 90%;
+    }
+
+    .footer
+    {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contacts
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contacts a
+    {
+        margin-left: 1em;
+    }
+
+    .cats
+    {
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+    }
+
+    .cat img
+    {
+        max-height: 350px;
+    }
+
+    .cat
+    {
+        display: none;
+    }
+
+    input[name='breed']
+    {
+        display: none;
+    }
+
+    input.sphynx:checked ~ .cats article.sphynx,
+    input.persian:checked ~ .cats article.persian,
+    input.siamese:checked ~ .cats article.siamese,
+    input.abyssinian:checked ~ .cats article.abyssinian,
+    input.siberian:checked ~ .cats article.siberian,
+    input.none:checked ~ .cats article.cat
+    {
+        display: block;
+    }
+
+    input.sphynx:checked ~ aside label[for='sphynx'],
+    input.persian:checked ~ aside label[for='persian'],
+    input.siamese:checked ~ aside label[for='siamese'],
+    input.abyssinian:checked ~ aside label[for='abyssinian'],
+    input.siberian:checked ~ aside label[for='siberian'],
+    input.none:checked ~ aside label[for='none']
+    {
+        background-color: lightgreen;
+    }
+
+    .filters
+    {
+        position: sticky;
+        top: 50px;
+        height: 500px;
+    }
+
+    .breed-filter label
+    {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .breed-filter label:hover
+    {
+        border: 1px solid lightgreen;
+    }
+
+    .breed-filter label:checked
+    {
+        background-color: lightgreen;
     }
 }
