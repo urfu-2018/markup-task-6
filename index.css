@@ -9,7 +9,6 @@ body
 
 html
 {
-    position: absolute;
     overflow: hidden;
 }
 
@@ -17,7 +16,7 @@ body
 {
     display: flex;
     flex-direction: column;
-    font: 16px 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     overflow: auto;
     min-width: 375px;
 }
@@ -45,7 +44,7 @@ body
     color: #fc1b27;
 }
 
-input.breed,
+.breed,
 .filters,
 .detailed-information
 {
@@ -64,7 +63,6 @@ input.breed,
     flex-direction: column;
     padding-top: 30px;
     align-content: stretch;
-    justify-content: center;
 }
 
 .card
@@ -82,13 +80,12 @@ input.breed,
 .cat-name
 {
     display: block;
-    width: 200px;
+    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     text-decoration: none;
     color: #3e3e3e;
-    font-size: 1em;
 }
 
 .cat-name:hover
@@ -98,12 +95,12 @@ input.breed,
 
 .photo-box
 {
-    text-align: center;
+    overflow: hidden;
 }
 
 .photo
 {
-    height: 300px;
+    width: 100%;
 }
 
 .cat-features
@@ -128,14 +125,14 @@ input.breed,
     color: #a8a8a8;
     padding: 20px;
     height: 120px;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .filters
 {
     flex-direction: column;
     width: 250px;
-    margin-top: 10px;
+    margin: 0 10px;
     padding: 30px 15px 20px;
     flex: 0 0;
     color: #a8a8a8;
@@ -159,19 +156,19 @@ label.breed
     cursor: pointer;
 }
 
-input.serval:checked ~ .filters label.serval,
-input.scottish:checked ~ .filters label.scottish,
-input.fluffy:checked ~ .filters label.fluffy,
-input.none:checked ~ .filters label.none
+.serval:checked ~ .filters label.serval,
+.scottish:checked ~ .filters label.scottish,
+.fluffy:checked ~ .filters label.fluffy,
+.none:checked ~ .filters label.none
 {
     background: #e9ffd0;
     border-color: #c5ed9a;
 }
 
-input.serval:not(:checked) ~ .cats-box .serval,
-input.scottish:not(:checked) ~ .cats-box .scottish,
-input.fluffy:not(:checked) ~ .cats-box .fluffy,
-input.none:not(:checked) ~ .cats-box .none
+.serval:not(:checked) ~ .cats-box .serval,
+.scottish:not(:checked) ~ .cats-box .scottish,
+.fluffy:not(:checked) ~ .cats-box .fluffy,
+.none:not(:checked) ~ .cats-box .none
 {
     display: none;
 }
@@ -269,12 +266,24 @@ footer a
     .cats-box
     {
         flex-flow: row wrap;
+        justify-content: space-between;
     }
 
     .card
     {
-        width: 300px;
-        margin: 10px;
+        width: 30%;
+    }
+
+    .photo-box
+    {
+        height: 300px;
+        text-align: center;
+    }
+
+    .photo
+    {
+        height: 100%;
+        width: auto;
     }
 
     footer
@@ -295,14 +304,22 @@ footer a
     .wrap-page
     {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
     }
 
     .cats-box
     {
         flex: 1 0 80%;
+    }
+
+    .photo-box
+    {
+        text-align: left;
+    }
+
+    .photo-box,
+    .photo
+    {
+        height: 100%;
     }
 
     .filters
@@ -312,7 +329,7 @@ footer a
 
     .card
     {
-        width: 47%;
+        width: 49%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -321,10 +338,7 @@ footer a
     .main-part
     {
         display: flex;
-        flex-direction: row;
-        align-items: stretch;
         padding: 20px;
-        
     }
 
     .main-inforamation h2
@@ -340,6 +354,11 @@ footer a
     .photo
     {
         height: auto;
+        width: 200px;
+    }
+
+    .cat-name
+    {
         width: 200px;
     }
 
