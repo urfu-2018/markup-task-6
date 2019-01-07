@@ -1,188 +1,195 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>Задача «Мурмаркет для всех»</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Задача «Мурмаркет для всех»</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-</head>
-
-<body>
-    <header>Мурмаркет</header>
-    <input type="radio" name="breed" id="breed1">
-    <input type="radio" name="breed" id="breed2">
-    <input type="radio" name="breed" id="breed3">
-    <input type="radio" name="breed" id="breed4">
-    <input type="radio" name="breed" id="breed5" checked>
-    <div class="grid">
-        <div class="filters">
-            <h2>Возраст</h2>
-            <div class="slidecontainer">
-                <input type="range" min="0" max="20" value="10" class="slider">
-                <p>От 2 до 4 лет</p>
+    <body>
+        <input type="radio" name="breed" id="breed1">
+        <input type="radio" name="breed" id="breed2">
+        <input type="radio" name="breed" id="breed3">
+        <input type="radio" name="breed" id="breed4">
+        <input type="radio" name="breed" id="breed5" checked>
+        <div class="grid">
+            <header>Мурмаркет</header>
+            <div class="content">
+                <div class="filters">
+                    <h2>Возраст</h2>
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="20" value="10" class="slider">
+                        <p>От 2 до 4 лет</p>
+                    </div>
+                    <h2>Порода</h2>
+                    <label for="breed1">
+                        <span class="breed">Пушистый</span>
+                    </label>
+                    <label for="breed2">
+                        <span class="breed">Рыжий</span>
+                    </label>
+                    <label for="breed3">
+                        <span class="breed">Красавчик</span>
+                    </label>
+                    <label for="breed4">
+                        <span class="breed">Серый</span>
+                    </label>
+                    <label for="breed5"> <span class="breed">Нет</span> </label>
+                </div>
+                <div class="cat-box pretty">
+                    <img src="img/img1.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Шоко</a></h3>
+                        <p>Возраст: 2&nbsp;года</p>
+                        <p>Порода: красавчик</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Дружелюбный, ласковый, ручной<br>
+                            С&nbsp;другими котами в&nbsp;приятных отношениях,
+                            не&nbsp;любит детей
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box fluffy">
+                    <img src="img/img2.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Малыш</a></h3>
+                        <p>Возраст: 4&nbsp;месяца</p>
+                        <p>Порода: пушистик</p>
+                        <p>Статус: ищет друзей</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Душа компании<br>
+                            Любит людей и&nbsp;цветочки. Готов быть любимым
+                            котом.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box pretty">
+                    <img src="img/img3.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Лимончик</a></h3>
+                        <p>Возраст: 2&nbsp;месяца</p>
+                        <p>Порода: красавчик</p>
+                        <p>Статус: ищет семью</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Нежный, ласковый<br>
+                            Любит всё живое, готов дружить. Любит будить по
+                            утрам.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box redhead">
+                    <img src="img/img4.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Рыжик</a></h3>
+                        <p>Возраст: 3&nbsp;месяца</p>
+                        <p>Порода: рыжий</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Рыжий и&nbsp;хочет дружить<br>
+                            Готов полюбить новых хозяев. Играет с веревочкой.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box gray">
+                    <img src="img/img5.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Барон</a></h3>
+                        <p>Возраст: 3&nbsp;года</p>
+                        <p>Порода: серый</p>
+                        <p>Статус: ищет единомышленников</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Красив и&nbsp;в&nbsp;меру упитан<br>
+                            Имеет здоровый аппетит. Любит рыбу и круассаны.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box redhead">
+                    <img src="img/img6.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Мастер</a></h3>
+                        <p>Возраст: 7&nbsp;месяцев</p>
+                        <p>Порода: рыжий</p>
+                        <p>Статус: ищет заботу</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Готов любить и&nbsp;быть любимым<br>
+                            Активный, спортивный, готов гулять с&nbsp;детьми.
+                            Предпочитает отдыхать на природе.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box redhead">
+                    <img src="img/img7.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Дартаньян Михайлович</a></h3>
+                        <p>Возраст: 7&nbsp;лет</p>
+                        <p>Порода: рыжий</p>
+                        <p>Статус: ищет спокойствия</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Своенравный, но&nbsp;преданный<br>
+                            Ищет взрослого, уравновешенного хозяина. Не любит
+                            много внимания.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box gray">
+                    <img src="img/img8.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Бусинка</a></h3>
+                        <p>Возраст: 4&nbsp;месяца</p>
+                        <p>Порода: серый</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Еще совсем малышка<br>
+                            Любит людей и&nbsp;мурчать.
+                        </p>
+                    </div>
+                </div>
+                <div class="cat-box fluffy">
+                    <img src="img/img9.jpg" alt="котик">
+                    <div class="small-note">
+                        <h3><a href="#">Пушок</a></h3>
+                        <p>Возраст: 2&nbsp;года</p>
+                        <p>Порода: пушистый</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="large-note">
+                        <p>
+                            Дружелюбный и&nbsp;отзывчивый<br>
+                            С&nbsp;другими котами в&nbsp;приятных отношениях
+                        </p>
+                    </div>
+                </div>
             </div>
-            <h2>Порода</h2>
-            <label for="breed1">
-                <span class="breed">Пушистый</span>
-            </label>
-            <label for="breed2">
-                <span class="breed">Рыжий</span>
-            </label>
-            <label for="breed3">
-                <span class="breed">Красавчик</span>
-            </label>
-            <label for="breed4">
-                <span class="breed">Серый</span>
-            </label>
-            <label for="breed5">
-                <span class="breed">Нет</span>
-            </label>
+            <footer>
+                <div class="footer-flex">
+                    <p>Напишите нам:</p>
+                    <p><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
+                    <p>
+                        <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+                    </p>
+                    <p>
+                        2018 OOO &laquo;<a href="#">Бабушкины котята</a>&raquo;
+                    </p>
+                </div>
+            </footer>
         </div>
-        <div class="cat-box pretty">
-            <img src="img/img1.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Шоко</a></h3>
-                <p>Возраст: 2&nbsp;года</p>
-                <p>Порода: красавчик</p>
-                <p>Статус: ищет хозяина</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Дружелюбный, ласковый, ручной<br>
-                    С&nbsp;другими котами в&nbsp;приятных отношениях, не&nbsp;любит детей
-                </p>
-            </div>
-        </div>
-        <div class="cat-box fluffy">
-            <img src="img/img2.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Малыш</a></h3>
-                <p>Возраст: 4&nbsp;месяца</p>
-                <p>Порода: пушистик</p>
-                <p>Статус: ищет друзей</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Душа компании<br>
-                    Любит людей и&nbsp;цветочки. Готов быть любимым котом.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box pretty">
-            <img src="img/img3.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Лимончик</a></h3>
-                <p>Возраст: 2&nbsp;месяца</p>
-                <p>Порода: красавчик</p>
-                <p>Статус: ищет семью</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Нежный, ласковый<br>
-                    Любит всё живое, готов дружить. Любит будить по утрам.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box redhead">
-            <img src="img/img4.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Рыжик</a></h3>
-                <p>Возраст: 3&nbsp;месяца</p>
-                <p>Порода: рыжий</p>
-                <p>Статус: ищет хозяина</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Рыжий и&nbsp;хочет дружить<br>
-                    Готов полюбить новых хозяев. Играет с веревочкой.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box gray">
-            <img src="img/img5.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Барон</a></h3>
-                <p>Возраст: 3&nbsp;года</p>
-                <p>Порода: серый</p>
-                <p>Статус: ищет единомышленников</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Красив и&nbsp;в&nbsp;меру упитан<br>
-                    Имеет здоровый аппетит. Любит рыбу и круассаны.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box redhead">
-            <img src="img/img6.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Мастер</a></h3>
-                <p>Возраст: 7&nbsp;месяцев</p>
-                <p>Порода: рыжий</p>
-                <p>Статус: ищет заботу</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Готов любить и&nbsp;быть любимым<br>
-                    Активный, спортивный, готов гулять с&nbsp;детьми. Предпочитает отдыхать на природе.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box redhead">
-            <img src="img/img7.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Дартаньян Михайлович</a></h3>
-                <p>Возраст: 7&nbsp;лет</p>
-                <p>Порода: рыжий</p>
-                <p>Статус: ищет спокойствия</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Своенравный, но&nbsp;преданный<br>
-                    Ищет взрослого, уравновешенного хозяина. Не любит много внимания.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box gray">
-            <img src="img/img8.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Бусинка</a></h3>
-                <p>Возраст: 4&nbsp;месяца</p>
-                <p>Порода: серый</p>
-                <p>Статус: ищет хозяина</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Еще совсем малышка<br>
-                    Любит людей и&nbsp;мурчать.
-                </p>
-            </div>
-        </div>
-        <div class="cat-box fluffy">
-            <img src="img/img9.jpg" alt="котик">
-            <div class="small-note">
-                <h3><a href="#">Пушок</a></h3>
-                <p>Возраст: 2&nbsp;года</p>
-                <p>Порода: пушистый</p>
-                <p>Статус: ищет хозяина</p>
-            </div>
-            <div class="large-note">
-                <p>
-                    Дружелюбный и&nbsp;отзывчивый<br>
-                    С&nbsp;другими котами в&nbsp;приятных отношениях
-                </p>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-flex">
-            <p>Напишите нам:</p>
-            <p><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
-            <p><a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></p>
-            <p>2018 OOO &laquo;<a href="#">Бабушкины котята</a>&raquo;</p>
-        </div>
-    </footer>
-</body>
-
+    </body>
 </html>
