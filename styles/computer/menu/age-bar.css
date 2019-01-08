@@ -1,0 +1,38 @@
+.age-bar
+{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.slider
+{
+    height: 2px;
+    background: lightgray;
+}
+
+.bar-circle
+{
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: black 1px solid;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.selected-slice > .bar-circle
+{
+    transform: translateY(-5px);
+}
+
+.selected-slice
+{
+    transform: translateX(80%);
+    width: 30%;
+    background: blue;
+}
+
+.bar-circle > .bar-circle
+{
+    transform: translateX(50px) translateY(-1.5px);
+}

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/computer/body.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/footer.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/main.css" media="(min-width: 1200px)">
+    <link rel="stylesheet" href="styles/computer/menu/age-bar.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/markup.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/facets.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/logic.css" media="(min-width: 1200px)">
@@ -260,9 +261,14 @@
 <aside class="menu" hidden>
     <article class="age-range">
         <header>Возраст</header>
-        <label class="menu-age">
-            <input type="range" min="0" max="20">
-        </label>
+        <div class="age-bar slider">
+            <div class="selected-slice slider">
+                <div class="bar-circle">
+                    <div class="bar-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div>От 2 до 4 лет</div>
     </article>
     <article class="breed-buttons">
         <header>Порода</header>
@@ -289,7 +295,8 @@
 
     <section class="footer-copyright">
         &copy; 2018 ООО <a href=".">"Бабушкины котятки"</a>
-    </section>checkbox
+    </section>
+    checkbox
 </footer>
 
 </body>
