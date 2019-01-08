@@ -21,6 +21,11 @@
     grid-column: span 11;
 }
 
+.thumbnail label
+{
+    text-decoration: underline;
+}
+
 .details
 {
     display: unset;
