@@ -1,0 +1,36 @@
+.presentation
+{
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cat-card
+{
+    border: 1px solid lightgrey;
+    padding: 2px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail
+{
+    padding-right: 5px;
+}
+
+.details
+{
+    display: none;
+}
+
+.cat-card img
+{
+    width: 100%;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 15px gray;
+}

@@ -4,13 +4,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/general.css">
 
+    <link rel="stylesheet" href="styles/mobile/body.css" media="(max-width: 729px)">
+    <link rel="stylesheet" href="styles/mobile/footer.css" media="(max-width: 729px)">
+    <link rel="stylesheet" href="styles/mobile/main.css" media="(max-width: 729px)">
+
+    <link rel="stylesheet" href="styles/tablet/body.css" media="(min-width: 730px) and (max-width: 1199px)">
+    <link rel="stylesheet" href="styles/tablet/footer.css" media="(min-width: 730px) and (max-width: 1199px)">
+    <link rel="stylesheet" href="styles/tablet/main.css" media="(min-width: 730px) and (max-width: 1199px)">
+
     <link rel="stylesheet" href="styles/computer/body.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/footer.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/main.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/markup.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/facets.css" media="(min-width: 1200px)">
     <link rel="stylesheet" href="styles/computer/menu/logic.css" media="(min-width: 1200px)">
-    <title>Тут снова есть котейки :3</title>
+    <title>МяуМаркет</title>
 </head>
 <body>
 
@@ -26,27 +34,6 @@
 <input type="radio" id="ragdoll" name="breed" hidden>
 <input type="radio" id="somalian" name="breed" hidden>
 <input type="radio" id="any" name="breed" hidden>
-
-<aside class="menu" hidden>
-    <article class="age-range">
-        <header>Возраст</header>
-        <label class="menu-age">
-            <input type="range" min="0" max="20">
-        </label>
-    </article>
-    <article class="breed-buttons">
-        <header>Порода</header>
-        <label for="siberian">Сибирская</label>
-        <label for="meyn-kuhns">Кот Мейн-Куна</label>
-        <label for="european-cat">Европейская</label>
-        <label for="american-curl">Американский кёрл</label>
-        <label for="burmylla">Бурмилла</label>
-        <label for="ragdoll">Рэгдолл</label>
-        <label for="somalian">Сомалайская</label>
-        <label for="any">Все</label>
-    </article>
-
-</aside>
 
 <main class="presentation">
     <section class="cat-card siberian">
@@ -265,6 +252,26 @@
         </p>
     </section>
 </main>
+
+<aside class="menu" hidden>
+    <article class="age-range">
+        <header>Возраст</header>
+        <label class="menu-age">
+            <input type="range" min="0" max="20">
+        </label>
+    </article>
+    <article class="breed-buttons">
+        <header>Порода</header>
+        <label for="siberian">Сибирская</label>
+        <label for="meyn-kuhns">Кот Мейн-Куна</label>
+        <label for="european-cat">Европейская</label>
+        <label for="american-curl">Американский кёрл</label>
+        <label for="burmylla">Бурмилла</label>
+        <label for="ragdoll">Рэгдолл</label>
+        <label for="somalian">Сомалайская</label>
+        <label for="any">Все</label>
+    </article>
+</aside>
 
 <footer class="presentation-footer">
     <section class="footer-info">

@@ -10,7 +10,7 @@
 .cat-card
 {
     border: 1px solid lightblue;
-    max-height: 250px;
+    height: 275px;
 
     display: grid;
     grid-column-gap: 20px;
@@ -32,6 +32,7 @@
 
 .cat-card img
 {
+    width: 225px;
     padding-left: 5px;
     grid-column: span 9;
     margin: auto;

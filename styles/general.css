@@ -1,7 +1,7 @@
 /*noinspection CssUnknownTarget*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
 
-body
+html
 {
     min-width: 375px;
 }
