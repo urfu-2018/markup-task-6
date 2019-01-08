@@ -12,3 +12,14 @@
 {
     margin-top: 20px;
 }
+
+.footer-info a::before
+{
+    display: inline-block;
+    background-image: url('../../icons/mail.png');
+    background-size: 24px 14px;
+    content: '';
+    height: 14px;
+    width: 24px;
+    margin-right: 10px;
+}
