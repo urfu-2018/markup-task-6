@@ -1,0 +1,25 @@
+.cat-card
+{
+    border: 1px solid grey;
+}
+
+.thumbnail
+{
+    padding-right: 5px;
+}
+
+.details
+{
+    display: none;
+    height: 35px;
+}
+
+.cat-card img
+{
+    width: 100%;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 15px gray;
+}

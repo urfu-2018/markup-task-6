@@ -9,7 +9,6 @@
 
 .cat-card
 {
-    border: 1px solid lightblue;
     height: 275px;
 
     display: grid;
@@ -19,12 +18,12 @@
 
 .thumbnail
 {
-    padding-right: 5px;
     grid-column: span 11;
 }
 
 .details
 {
+    display: unset;
     padding: 5px;
     grid-column: span 20;
     border-top: 1px solid grey;
@@ -36,11 +35,6 @@
     padding-left: 5px;
     grid-column: span 9;
     margin: auto;
-}
-
-.cat-card:hover
-{
-    box-shadow: 0 0 15px gray;
 }
 
 .cat-card img:hover

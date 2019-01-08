@@ -1,34 +1,4 @@
-.presentation-footer,
-.footer-info
+.bullet-image
 {
-    display: flex;
-    flex-flow: row;
-}
-
-.presentation-footer
-{
-    background: white;
-    padding: 10px 20px;
-    bottom: 0;
-    font: 14px Arial;
-
-    border-top: 1px solid grey;
-
-    justify-content: space-between;
-}
-
-.footer-info :first-child
-{
-    margin-right: 30px;
-}
-
-.footer-info :not(:first-child):not(:last-child)
-{
-    margin-right: 10px;
-}
-
-.presentation-footer img
-{
-    width: 14px;
-    height: 14px;
+    display: unset;
 }

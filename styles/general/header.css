@@ -1,11 +1,6 @@
 /*noinspection CssUnknownTarget*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
 
-html
-{
-    min-width: 375px;
-}
-
 .presentation-header
 {
     background: white;
@@ -19,9 +14,4 @@ html
 .presentation-header::first-letter
 {
     color: red;
-}
-
-.menu
-{
-    display: none;
 }

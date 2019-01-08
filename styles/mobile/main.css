@@ -7,7 +7,6 @@
 
 .cat-card
 {
-    border: 1px solid lightgrey;
     padding: 2px;
 
     display: flex;
@@ -17,24 +16,4 @@
 .cat-card:not(:last-child)
 {
     margin-bottom: 20px;
-}
-
-.thumbnail
-{
-    padding-right: 5px;
-}
-
-.details
-{
-    display: none;
-}
-
-.cat-card img
-{
-    width: 100%;
-}
-
-.cat-card:hover
-{
-    box-shadow: 0 0 15px gray;
 }

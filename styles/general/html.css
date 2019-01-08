@@ -1,0 +1,9 @@
+html
+{
+    min-width: 375px;
+}
+
+.menu
+{
+    display: none;
+}

@@ -1,0 +1,18 @@
+img
+{
+    width: 100%;
+}
+
+body
+{
+    font: 14px Arial;
+    color: darkslategrey;
+    overflow-y: scroll;
+
+    border: darkgrey solid 1px;
+}
+
+body:hover
+{
+    box-shadow: 0 0 15px gray;
+}
