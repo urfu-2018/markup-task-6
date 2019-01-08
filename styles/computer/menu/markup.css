@@ -1,0 +1,33 @@
+.menu,
+.breed-buttons
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='range']
+{
+    width: 100%;
+}
+
+.menu
+{
+    width: 200px;
+    margin: 10px;
+}
+
+.menu header
+{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.breed-buttons header
+{
+    margin: 20px 0;
+}
+
+.breed-buttons label:not(:last-child)
+{
+    margin-bottom: 5px;
+}

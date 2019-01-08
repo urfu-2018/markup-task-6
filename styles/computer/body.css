@@ -1,0 +1,38 @@
+img
+{
+    width: 100%;
+}
+
+body
+{
+    font: 14px Arial;
+    color: darkslategrey;
+    overflow-y: scroll;
+
+    border: darkgrey solid 1px;
+    display: grid;
+    grid-template: 'header header' auto
+        'menu presentation' auto
+        'footer footer' auto;
+}
+
+.presentation-header,
+.presentation-footer
+{
+    grid-column: span 3;
+}
+
+.menu
+{
+    grid-column: span 1;
+}
+
+.presentation
+{
+    grid-column: span 2;
+}
+
+body:hover
+{
+    box-shadow: 0 0 15px gray;
+}

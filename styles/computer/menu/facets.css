@@ -1,0 +1,19 @@
+.breed-buttons label
+{
+    border: darkslategrey 1px solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+input[id='siberian']:checked ~ .menu label[for='siberian'],
+input[id='meyn-kuhns']:checked ~ .menu label[for='meyn-kuhns'],
+input[id='european-cat']:checked ~ .menu label[for='european-cat'],
+input[id='american-curl']:checked ~ .menu label[for='american-curl'],
+input[id='burmylla']:checked ~ .menu label[for='burmylla'],
+input[id='ragdoll']:checked ~ .menu label[for='ragdoll'],
+input[id='somalian']:checked ~ .menu label[for='somalian'],
+input[id='any']:checked ~ .menu label[for='any']
+{
+    border-color: yellowgreen;
+    background: lightgreen;
+}

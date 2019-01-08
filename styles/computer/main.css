@@ -1,0 +1,48 @@
+.presentation
+{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    margin: 10px;
+}
+
+.cat-card
+{
+    border: 1px solid lightblue;
+    max-height: 250px;
+
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template: 'image thumbnail' auto 'details details' auto / auto;
+}
+
+.thumbnail
+{
+    padding-right: 5px;
+    grid-column: span 11;
+}
+
+.details
+{
+    padding: 5px;
+    grid-column: span 20;
+    border-top: 1px solid grey;
+}
+
+.cat-card img
+{
+    padding-left: 5px;
+    grid-column: span 9;
+    margin: auto;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 15px gray;
+}
+
+.cat-card img:hover
+{
+    box-shadow: 0 0 10px darkgray;
+}

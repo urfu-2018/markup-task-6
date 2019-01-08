@@ -1,0 +1,21 @@
+input[id='siberian']:checked ~ .presentation .cat-card.siberian,
+input[id='meyn-kuhns']:checked ~ .presentation .cat-card.meyn-kuhns,
+input[id='european-cat']:checked ~ .presentation .cat-card.european-cat,
+input[id='american-curl']:checked ~ .presentation .cat-card.american-curl,
+input[id='burmylla']:checked ~ .presentation .cat-card.burmilla,
+input[id='ragdoll']:checked ~ .presentation .cat-card.ragdoll,
+input[id='somalian']:checked ~ .presentation .cat-card.somalian
+{
+    display: grid;
+}
+
+input[id='siberian']:checked ~ .presentation .cat-card:not(.siberian),
+input[id='meyn-kuhns']:checked ~ .presentation .cat-card:not(.meyn-kuhns),
+input[id='european-cat']:checked ~ .presentation .cat-card:not(.european-cat),
+input[id='american-curl']:checked ~ .presentation .cat-card:not(.american-curl),
+input[id='burmylla']:checked ~ .presentation .cat-card:not(.burmilla),
+input[id='ragdoll']:checked ~ .presentation .cat-card:not(.ragdoll),
+input[id='somalian']:checked ~ .presentation .cat-card:not(.somalian)
+{
+    display: none;
+}

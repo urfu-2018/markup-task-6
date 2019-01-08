@@ -1,0 +1,27 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
+
+body
+{
+    min-width: 375px;
+}
+
+.presentation-header
+{
+    background: white;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    font: 32px 'PT Sans Narrow';
+    border-bottom: 1px solid darkgrey;
+}
+
+.presentation-header::first-letter
+{
+    color: red;
+}
+
+.menu
+{
+    display: none;
+}
