@@ -1,0 +1,49 @@
+.footer-info img[title='bullet']
+{
+    display: none;
+}
+
+.presentation-footer,
+.footer-info
+{
+    display: flex;
+}
+
+.footer-info
+{
+    flex-direction: column;
+}
+
+.presentation-footer
+{
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    padding: 10px 20px;
+    bottom: 0;
+    font: 14px Arial;
+
+    border-top: 1px solid grey;
+}
+
+.footer-info :first-child
+{
+    margin-right: 30px;
+}
+
+.footer-info :not(:first-child):not(:last-child)
+{
+    margin-right: 10px;
+}
+
+.presentation-footer img
+{
+    width: 14px;
+    height: 14px;
+}
+
+.footer-copyright
+{
+    margin-top: 20px;
+}
