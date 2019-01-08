@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 body
 {
     font-family: sans-serif;
@@ -58,7 +60,7 @@ body
 
 .header
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial Narrow', sans-serif;
     text-align: center;
     border-bottom: solid 1px gray;
     margin-bottom: 5px;
