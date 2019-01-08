@@ -91,6 +91,9 @@ body
     width: 100%;
     border-top: 1px solid gray;
     margin-top: 5px;
+    margin-left: -10px;
+    margin-right: 10px;
+    padding: 10px 15px;
 }
 
 .contacts
@@ -104,14 +107,9 @@ body
     margin: 0;
 }
 
-.contacts a
+.footer a
 {
     text-decoration: none;
-}
-
-.contacts a:before
-{
-    content: '📧';
 }
 
 input[name='breed']
@@ -139,6 +137,19 @@ input[name='breed']
     .filters
     {
         display: none;
+    }
+
+    .contacts ul
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contacts li:before
+    {
+        content: '\2709'; /*'✉'*/
+        margin-right: .3em;
     }
 }
 
@@ -240,6 +251,28 @@ input[name='breed']
         margin-left: 1em;
     }
 
+    .contacts p:first-child:before
+    {
+        content: '\2709'; /*'✉'*/
+        margin-right: .3em;
+    }
+
+    .contacts ul
+    {
+        margin: 0;
+    }
+
+    .contacts li
+    {
+        display: inline-block;
+    }
+
+    .contacts li:nth-child(2):before
+    {
+        content: '\2022';
+        margin-left: 1em;
+    }
+
     .cats
     {
         grid-template-columns: 49% 49%;
@@ -256,22 +289,22 @@ input[name='breed']
         display: none;
     }
 
-    input.sphynx:checked ~ .cats article.sphynx,
-    input.persian:checked ~ .cats article.persian,
-    input.siamese:checked ~ .cats article.siamese,
-    input.abyssinian:checked ~ .cats article.abyssinian,
-    input.siberian:checked ~ .cats article.siberian,
-    input.none:checked ~ .cats article.cat
+    .sphynx:checked ~ .cats article.sphynx,
+    .persian:checked ~ .cats article.persian,
+    .siamese:checked ~ .cats article.siamese,
+    .abyssinian:checked ~ .cats article.abyssinian,
+    .siberian:checked ~ .cats article.siberian,
+    .none:checked ~ .cats article.cat
     {
         display: block;
     }
 
-    input.sphynx:checked ~ aside label[for='sphynx'],
-    input.persian:checked ~ aside label[for='persian'],
-    input.siamese:checked ~ aside label[for='siamese'],
-    input.abyssinian:checked ~ aside label[for='abyssinian'],
-    input.siberian:checked ~ aside label[for='siberian'],
-    input.none:checked ~ aside label[for='none']
+    .sphynx:checked ~ aside label[for='sphynx'],
+    .persian:checked ~ aside label[for='persian'],
+    .siamese:checked ~ aside label[for='siamese'],
+    .abyssinian:checked ~ aside label[for='abyssinian'],
+    .siberian:checked ~ aside label[for='siberian'],
+    .none:checked ~ aside label[for='none']
     {
         background-color: lightgreen;
     }
