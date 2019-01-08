@@ -3,6 +3,7 @@
 body
 {
     font-family: sans-serif;
+    margin-top: 4em;
 }
 
 .cat
@@ -113,6 +114,11 @@ body
     content: '📧';
 }
 
+input[name='breed']
+{
+    display: none;
+}
+
 @media screen and (max-width: 730px)
 {
     .cats
@@ -202,6 +208,8 @@ body
     {
         margin-top: 40px;
         margin-left: 10px;
+        top: 50px;
+        height: 500px;
     }
 
     .breed-filter
@@ -248,11 +256,6 @@ body
         display: none;
     }
 
-    input[name='breed']
-    {
-        display: none;
-    }
-
     input.sphynx:checked ~ .cats article.sphynx,
     input.persian:checked ~ .cats article.persian,
     input.siamese:checked ~ .cats article.siamese,
@@ -271,13 +274,6 @@ body
     input.none:checked ~ aside label[for='none']
     {
         background-color: lightgreen;
-    }
-
-    .filters
-    {
-        position: sticky;
-        top: 50px;
-        height: 500px;
     }
 
     .breed-filter label
