@@ -13,10 +13,11 @@
         </h1>
     </header>
     <div class="wrap-page">
-        <input type="checkbox" class="breed serval" id="serval" checked>
-        <input type="checkbox" class="breed scottish" id="scottish" checked>
-        <input type="checkbox" class="breed fluffy" id="fluffy" checked>
-        <input type="checkbox" class="breed none" id="none" checked>
+        <input type="radio" name="breed-switch" class="breed no-filters" id="no-filters" checked>
+        <input type="radio" name="breed-switch" class="breed serval" id="serval">
+        <input type="radio" name="breed-switch" class="breed scottish" id="scottish">
+        <input type="radio" name="breed-switch" class="breed fluffy" id="fluffy">
+        <input type="radio" name="breed-switch" class="breed none" id="none">
         <main class="cats-box">
             <article class="card serval">
                 <div class="main-part">
@@ -351,6 +352,9 @@
             </div>
             <div class="filter-breeds">
                 <p class="filter-type">Порода</p>
+                <label for="no-filters" class="breed no-filters">
+                    без фильтра
+                </label>
                 <label for="serval" class="breed serval">
                     сервалы
                 </label>
@@ -361,7 +365,7 @@
                     пушистые
                 </label>
                 <label for="none" class="breed none">
-                    нет
+                    беспородные
                 </label>
             </div>
         </aside>

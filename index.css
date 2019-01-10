@@ -156,6 +156,7 @@ label.breed
     cursor: pointer;
 }
 
+.no-filters:checked ~ .filters label.no-filters,
 .serval:checked ~ .filters label.serval,
 .scottish:checked ~ .filters label.scottish,
 .fluffy:checked ~ .filters label.fluffy,
@@ -165,10 +166,10 @@ label.breed
     border-color: #c5ed9a;
 }
 
-.serval:not(:checked) ~ .cats-box .serval,
-.scottish:not(:checked) ~ .cats-box .scottish,
-.fluffy:not(:checked) ~ .cats-box .fluffy,
-.none:not(:checked) ~ .cats-box .none
+.serval:checked ~ .cats-box .card:not(.serval),
+.scottish:checked ~ .cats-box .card:not(.scottish),
+.fluffy:checked ~ .cats-box .card:not(.fluffy),
+.none:checked ~ .cats-box .card:not(.none)
 {
     display: none;
 }
