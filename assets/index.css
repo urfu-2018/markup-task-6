@@ -6,13 +6,16 @@ body
 .murmarket
 {
     display: grid;
-    grid-template-rows: 80px 1fr 40px;
+    grid-template-rows: 80px 1fr auto;
 }
 
 .murmarket__header
 {
-    border: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__name
@@ -20,14 +23,11 @@ body
     font-weight: 200;
     font-size: 32px;
     margin: 0;
-    display: flex;
-    align-content: center; /* не понимаю почему он не опускается в центр*/
-    justify-content: center;
 }
 
 .header__name::first-letter
 {
-    color: #eb5757; /* не понимаю почему цвет не меняется*/
+    color: #eb5757;
 }
 
 .cat-cards
@@ -61,6 +61,7 @@ body
 {
     text-decoration: none;
     color: #000;
+    font-weight: 400;
 }
 
 .cat-short-description__info-line,
@@ -70,12 +71,14 @@ body
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #8a8a8a;
 }
 
 .cat-description__info-line
 {
     margin: 0 20px;
     hyphens: auto;
+    color: #8a8a8a;
 }
 
 .cat-status
@@ -85,9 +88,10 @@ body
 
 .murmarket__footer
 {
-    padding: 20px; /* не понимаю почему падинги так странно себя ведут!*/
+    padding: 20px;
     border-top: 1px solid #e5e5e5;
     display: grid;
+    padding-left: 40px;
 }
 
 .footer__text
@@ -95,15 +99,38 @@ body
     margin: 0;
 }
 
-.footer__contact
+.footer__contact-list
 {
+    padding: 0;
     margin: 0;
+}
+
+.contact-list__contact
+{
+    margin-top: 4px;
+    display: flex;
+}
+
+.footer__text
+{
+    color: #8a8a8a;
+}
+
+.contact__icon
+{
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.footer__signature
+{
+    margin: 30px 0 0;
 }
 
 @media only screen and (max-width: 730px)
 {
-    /* без понятия как сделать чтобы все норм работало */
-
     .cat-cards
     {
         grid-template-columns: 100%;
@@ -147,6 +174,26 @@ body
     .cat-description__info-line
     {
         display: none;
+    }
+
+    .murmarket__footer
+    {
+        grid-template-columns: 50% 50%;
+    }
+
+    .footer__contact-list
+    {
+        grid-column-start: 1;
+        grid-row-start: 2 / 3;
+    }
+
+    .footer__signature
+    {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        text-align: right;
+        margin: 0;
+        padding-top: 30px;
     }
 }
 
@@ -206,4 +253,47 @@ body
         width: 250px;
         height: 160px;
     }
+
+    .murmarket__footer
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__text
+    {
+        margin-right: 20px;
+    }
+
+    .contact-list__contact .contact-list__contact::before
+    {
+        content: '♥ '; /* почему то не работает*/
+    }
+
+    .contact-list__contact
+    {
+        display: inline;
+    }
+
+    .contact__icon
+    {
+        display: block;
+    }
+
+    .contact-list__contact .contact__icon
+    {
+        display: none;
+    }
+
+    .contact__link
+    {
+        margin-right: 20px;
+    }
+
+    .footer__signature
+    {
+        margin: 0;
+        justify-self: flex-end; /* почему то не рабоатет*/
+    }
+
 }
