@@ -32,40 +32,24 @@ body
 
 .cat-cards
 {
-    padding: 20px 0 0 20px;
+    padding: 20px;
     display: grid;
+    grid-gap: 20px;
 }
 
 .cat-card
 {
-    width: 300px;
-    margin: 0 20px 20px 0;
-    background: #f7d5d5;
+    /*width: 300px;*/
+    /*margin: 0 20px 20px 0;*/
     padding-bottom: 30px;
-}
-
-.cat-card:hover
-{
-    box-shadow: 0 0 20px #f89595;
-    background: #fff;
-}
-
-.cat-card:first-child:hover
-{
-    background: radial-gradient(50% 30%, #f89595, #fff);
+    border: 1px solid #e5e5e5;
 }
 
 .cat-card__photo
 {
-    width: 300px;
-    height: 200px;
+    /*width: 300px;
+    height: 200px;*/
     object-fit: cover;
-}
-
-.cat-card__photo:hover
-{
-    outline: 3px dashed #f89595;
-    outline-offset: -10px;
 }
 
 .cat-card__name
@@ -75,16 +59,6 @@ body
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-
-.cat-card__name:hover
-{
-    background-size: 100% 2px;
 }
 
 .cat-card__link
@@ -113,73 +87,127 @@ body
     margin: 20px 20px 0;
 }
 
-.chk-btn
+.murmarket__footer
 {
-    display: none;
-    opacity: 0;
-    z-index: -1;
+    padding: 20px; /* не понимаю почему падинги так странно себя ведут!*/
+    border-top: 1px solid #e5e5e5;
+    display: grid;
 }
 
-.chk-btn + label,
-.chk-btn:checked:hover + label
+.footer__text
 {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    box-sizing: border-box;
-    text-indent: -999px;
-    overflow: hidden;
-    border: 1px solid #f89595;
-    cursor: pointer;
+    margin: 0;
 }
 
-.chk-btn:hover + label,
-.chk-btn:checked + label
+.footer__contact
 {
-    border-left: 10px solid #f89595;
-    border-right: 10px solid #f89595;
-    background: #fff;
-    transition: .3s ease all;
+    margin: 0;
 }
 
-.chk-btn + label
+@media only screen and (max-width: 730px)
 {
-    margin: 20px 0 0 20px;
+    /* без понятия как сделать чтобы все норм работало */
+
+    .cat-cards
+    {
+        grid-template-columns: 100%;
+        position: relative;
+    }
+
+    .cat-card
+    {
+        width: 100% - 20px;
+    }
+
+    .cat-card__photo
+    {
+        width: 100%;
+    }
+
+    .cat-description__info-line
+    {
+        display: none;
+    }
 }
 
-.chk-btn:checked + label
+@media only screen and (min-width: 730px) and (max-width: 1000px)
 {
-    width: 100px;
-    margin-left: calc((100vw - 600px) / 2 - 11px);
-    display: block;
+    .cat-cards
+    {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cat-card
+    {
+        width: 100%;
+    }
+
+    .cat-card__photo
+    {
+        width: 100%;
+        height: 250px;
+    }
+
+    .cat-description__info-line
+    {
+        display: none;
+    }
 }
 
-.chk-btn:not(:checked) ~ .cat-cards .cat-card
+@media only screen and (min-width: 1000px)
 {
-    display: inline-block;
-}
+    .cat-cards
+    {
+        grid-template-columns: 40% 40%;
+    }
 
-.chk-btn:checked ~ .cat-cards .cat-short-description__info-line,
-.chk-btn:checked ~ .cat-cards .cat-short-description__status
-{
-    display: none;
-}
+    .cat-card
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 150px 100px;
+        grid-auto-flow: dense;
+    }
 
-.chk-btn:not(:checked) ~ .cat-cards .cat-description__info-line
-{
-    display: none;
-}
+    .cat-card__description
+    {
+        padding-top: 20px;
+        grid-row-start: 3;
+        grid-column: 1 / 3;
+        overflow: hidden;
+        border-top: 1px solid #e5e5e5;
+    }
 
-.chk-btn:checked ~ .cat-cards .cat-card
-{
-    display: block;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .cat-card__name
+    {
+        padding: 20px 0 0 20px;
+        border-left: 1px solid #e5e5e5;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        margin: 0;
+    }
 
-.chk-btn:checked ~ .cat-cards .cat-card__photo
-{
-    width: 600px;
-    height: auto;
+    .cat-card__short-description
+    {
+        padding-left: 20px;
+        border-left: 1px solid #e5e5e5;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+        overflow: hidden;
+    }
+
+    .cat-short-description__info-line,
+    .cat-short-description__status
+    {
+        margin-left: 0;
+    }
+
+    .cat-card__photo
+    {
+        padding: 20px;
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+        width: 250px;
+        height: 160px;
+    }
 }
