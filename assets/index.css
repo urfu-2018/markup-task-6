@@ -1,0 +1,185 @@
+body
+{
+    margin: 0;
+}
+
+.murmarket
+{
+    display: grid;
+    grid-template-rows: 80px 1fr 40px;
+}
+
+.murmarket__header
+{
+    border: 1px solid #e5e5e5;
+    padding: 0;
+}
+
+.header__name
+{
+    font-weight: 200;
+    font-size: 32px;
+    margin: 0;
+    display: flex;
+    align-content: center; /* не понимаю почему он не опускается в центр*/
+    justify-content: center;
+}
+
+.header__name::first-letter
+{
+    color: #eb5757; /* не понимаю почему цвет не меняется*/
+}
+
+.cat-cards
+{
+    padding: 20px 0 0 20px;
+    display: grid;
+}
+
+.cat-card
+{
+    width: 300px;
+    margin: 0 20px 20px 0;
+    background: #f7d5d5;
+    padding-bottom: 30px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 20px #f89595;
+    background: #fff;
+}
+
+.cat-card:first-child:hover
+{
+    background: radial-gradient(50% 30%, #f89595, #fff);
+}
+
+.cat-card__photo
+{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cat-card__photo:hover
+{
+    outline: 3px dashed #f89595;
+    outline-offset: -10px;
+}
+
+.cat-card__name
+{
+    margin: 14px 20px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.cat-card__name:hover
+{
+    background-size: 100% 2px;
+}
+
+.cat-card__link
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.cat-short-description__info-line,
+.cat-short-description__status
+{
+    margin: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-description__info-line
+{
+    margin: 0 20px;
+    hyphens: auto;
+}
+
+.cat-status
+{
+    margin: 20px 20px 0;
+}
+
+.chk-btn
+{
+    display: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.chk-btn + label,
+.chk-btn:checked:hover + label
+{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-indent: -999px;
+    overflow: hidden;
+    border: 1px solid #f89595;
+    cursor: pointer;
+}
+
+.chk-btn:hover + label,
+.chk-btn:checked + label
+{
+    border-left: 10px solid #f89595;
+    border-right: 10px solid #f89595;
+    background: #fff;
+    transition: .3s ease all;
+}
+
+.chk-btn + label
+{
+    margin: 20px 0 0 20px;
+}
+
+.chk-btn:checked + label
+{
+    width: 100px;
+    margin-left: calc((100vw - 600px) / 2 - 11px);
+    display: block;
+}
+
+.chk-btn:not(:checked) ~ .cat-cards .cat-card
+{
+    display: inline-block;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-short-description__info-line,
+.chk-btn:checked ~ .cat-cards .cat-short-description__status
+{
+    display: none;
+}
+
+.chk-btn:not(:checked) ~ .cat-cards .cat-description__info-line
+{
+    display: none;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-card
+{
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-card__photo
+{
+    width: 600px;
+    height: auto;
+}
