@@ -39,16 +39,12 @@ body
 
 .cat-card
 {
-    /*width: 300px;*/
-    /*margin: 0 20px 20px 0;*/
     padding-bottom: 30px;
     border: 1px solid #e5e5e5;
 }
 
 .cat-card__photo
 {
-    /*width: 300px;
-    height: 200px;*/
     object-fit: cover;
 }
 
