@@ -30,11 +30,15 @@ body
     color: #eb5757;
 }
 
-.cat-cards
+.murmarket__content
 {
-    padding: 20px;
     display: grid;
     grid-gap: 20px;
+}
+
+.cat-cards
+{
+    padding: 20px; /* почему в маленьких экранах он пропал?*/
 }
 
 .cat-card
@@ -157,6 +161,8 @@ body
 {
     .cat-cards
     {
+        display: grid;
+        grid-gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
@@ -199,9 +205,18 @@ body
 
 @media only screen and (min-width: 1000px)
 {
+    .murmarket__content
+    {
+        display: grid;
+        grid-template-columns: 40% 40% auto;
+        grid-gap: 20px;
+    }
+
     .cat-cards
     {
-        grid-template-columns: 40% 40%;
+        grid-row-start: 1;
+        grid-column: 1 / 3; /* не понимаю как сделать чтобы было по
+        2 котика в ряд */
     }
 
     .cat-card
@@ -296,4 +311,118 @@ body
         justify-self: flex-end; /* почему то не рабоатет*/
     }
 
+    .murmarket__menu
+    {
+        display: block;
+        grid-column: 3;
+    }
+
+    .category__items
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .category__item-name
+    {
+        padding: 20px;
+        border: 1px solid #e5e5e5;
+        width: 160px;
+    }
+
+    .category__item-name:hover
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_scotch:checked + .murmarket__menu .breed_scotch /* почему
+    то не рабоатет */
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_scotch:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_scotch:checked ~ .cat-cards .breed_scotch
+    {
+        display: grid;
+    }
+
+    .breed_maine-coon:checked + .murmarket__menu .breed_maine-coon
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_maine-coon:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_maine-coon:checked ~ .cat-cards .breed_maine-coon
+    {
+        display: grid;
+    }
+
+    .breed_scottish_straight:checked + .murmarket__menu .breed_scottish_straight
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_scottish_straight:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_scottish_straight:checked ~ .cat-cards .breed_scottish_straight
+    {
+        display: grid;
+    }
+
+    .breed_curl:checked + .murmarket__menu .breed_curl
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_curl:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_curl:checked ~ .cat-cards .breed_curl
+    {
+        display: grid;
+    }
+
+    .breed_bengali:checked + .murmarket__menu .breed_bengali
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_bengali:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_bengali:checked ~ .cat-cards .breed_bengali
+    {
+        display: grid;
+    }
+
+    .breed_none:checked + .murmarket__menu .breed_none
+    {
+        box-shadow: 0 0 40px #e5e5e5 inset;
+    }
+
+    .breed_none:checked ~ .cat-cards .cat-card
+    {
+        display: none;
+    }
+
+    .breed_none:checked ~ .cat-cards .breed_none
+    {
+        display: grid;
+    }
 }

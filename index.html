@@ -14,306 +14,326 @@
         <div class="murmarket__header header">
             <h2 class="header__name">Мурмаркет</h2>
         </div>
-        <div class="murmarket__content cat-cards">
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-1.jpg" alt="Фотография Хьюго">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Хьюго</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 2 года" class="cat-short-description__info-line">
-                        Возраст: 2 года
-                    </p>
-                    <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
+        <div class="murmarket__content">
+            <input type="checkbox" class="category__item breed_scotch" value="#0000ff" id="breed_scotch" hidden/>
+            <input type="checkbox" class="category__item breed_maine-coon" value="#0000ff" id="breed_maine-coon" hidden/>
+            <input type="checkbox" class="category__item breed_scottish_straight" value="#0000ff" id="breed_scottish_straight" hidden/>
+            <input type="checkbox" class="category__item breed_curl" value="#0000ff" id="breed_curl" hidden/>
+            <input type="checkbox" class="category__item breed_bengali" value="#0000ff" id="breed_bengali" hidden/>
+            <input type="checkbox" class="category__item breed_none" value="#0000ff" id="breed_none" hidden/>
+            <div hidden class="murmarket__menu menu">
+                <h3 class="menu__caption">Возраст</h3>
+                <h3 class="menu__caption category">Порода</h3>
+                <div class="category__items">
+                    <label for="breed_scotch" class="category__item-name breed_scotch">Шотландцы</label>
+                    <label for="breed_maine-coon" class="category__item-name breed_maine-coon">Мейн-куны</label>
+                    <label for="breed_scottish_straight" class="category__item-name breed_scottish_straight">Помесь скотиш-страйт</label>
+                    <label for="breed_curl" class="category__item-name breed_curl">Кёрлы</label>
+                    <label for="breed_bengali" class="category__item-name breed_bengali">Бенгальские</label>
+                    <label for="breed_none" class="category__item-name breed_none">Нет</label>
+                </div>
+            </div>
+            <div class="cat-cards">
+                <article class="cat-card breed_none">
+                    <img class="cat-card__photo" src="assets/images/cat-1.jpg" alt="Фотография Хьюго">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Хьюго</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 2 года" class="cat-short-description__info-line">
+                            Возраст: 2 года
+                        </p>
+                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-descrption">
+                        <p class="cat-description__info-line">
+                            Активный малыш, для компании и&nbsp;игр!
+                        </p>
+                        <p class="cat-description__info-line">
+                            Сообразительный, ловкий, очень ласковый и&nbsp;ручной. Не&nbsp;смотрите,
+                            что он&nbsp;&laquo;обычной&raquo; внешности&nbsp;&mdash; в&nbsp;нем есть
+                            все, чтобы стать самым классным и&nbsp;идеальным котом, которого
+                            невозможно не&nbsp;любить.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_none">
+                    <img class="cat-card__photo" src="assets/images/cat-2.jpg" alt="Фотография Добряша">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Добряш</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 4 года" class="cat-short-description__info-line">
+                            Возраст: 4 года
+                        </p>
+                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
+                        <p title="Болезни: излишняя доброта" class="cat-short-description__info-line">
+                            Болезни: излишняя доброта
+                        </p>
+                        <p
+                            title="Статус: выбирает между несколькими хозяевами"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: выбирает между несколькими хозяевами
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Обладатель нескончаемой харизмы и&nbsp;шарма!
+                        </p>
+                        <p class="cat-description__info-line">
+                            В&nbsp;меру любопытный,
+                            он&nbsp;знает свое место в&nbsp;доме. Не&nbsp;лезет, куда не&nbsp;разрешено.
+                            Любит, когда ему чешут щечки&nbsp;&mdash; мурчит, подставляя то&nbsp;один
+                            бок, то другой. К&nbsp;лапкам не&nbsp;любит прикосновения.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_scotch">
+                    <img class="cat-card__photo" src="assets/images/cat-3.jpg" alt="Фотография Людвига">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Людвиг</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
+                            Возраст: 4 месяца
+                        </p>
+                        <p title="Порода: шотладнцы" class="cat-short-description__info-line">
+                            Порода: шотландцы
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Мальчику 4&nbsp;мес.
+                        </p>
+                        <p class="cat-description__info-line">
+                            Проглистогонен, привит, чистоплотный, ходит только в&nbsp;лоток. Этот
+                            котёнок принесёт в&nbsp;дом невероятные эмоции. Очень любит играть.
+                            И&nbsp;спать на&nbsp;кровати, считая себя хозяином дома.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_maine-coon">
+                    <img class="cat-card__photo" src="assets/images/cat-4.jpg" alt="Фотография Бориса">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Борис</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 2 года" class="cat-short-description__info-line">
+                            Возраст: 2 года
+                        </p>
+                        <p title="Порода: мейн-куны" class="cat-short-description__info-line">
+                            Порода: мейн-куны
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Окрас&nbsp;&mdash; яркий чёрный мрамор. Дата рождения 08.11.2016.
+                        </p>
+                        <p class="cat-description__info-line">
+                            Дико красив и&nbsp;до&nbsp;очарования нежен.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_scottish_straight">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-5.jpg"
+                        alt="Фотография Франчески"
                     >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-descrption">
-                    <p class="cat-description__info-line">
-                        Активный малыш, для компании и&nbsp;игр!
-                    </p>
-                    <p class="cat-description__info-line">
-                        Сообразительный, ловкий, очень ласковый и&nbsp;ручной. Не&nbsp;смотрите,
-                        что он&nbsp;&laquo;обычной&raquo; внешности&nbsp;&mdash; в&nbsp;нем есть
-                        все, чтобы стать самым классным и&nbsp;идеальным котом, которого
-                        невозможно не&nbsp;любить.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-2.jpg" alt="Фотография Добряша">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Добряш</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 4 года" class="cat-short-description__info-line">
-                        Возраст: 4 года
-                    </p>
-                    <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
-                    <p title="Болезни: излишняя доброта" class="cat-short-description__info-line">
-                        Болезни: излишняя доброта
-                    </p>
-                    <p
-                        title="Статус: выбирает между несколькими хозяевами"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: выбирает между несколькими хозяевами
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Обладатель нескончаемой харизмы и&nbsp;шарма!
-                    </p>
-                    <p class="cat-description__info-line">
-                        В&nbsp;меру любопытный,
-                        он&nbsp;знает свое место в&nbsp;доме. Не&nbsp;лезет, куда не&nbsp;разрешено.
-                        Любит, когда ему чешут щечки&nbsp;&mdash; мурчит, подставляя то&nbsp;один
-                        бок, то другой. К&nbsp;лапкам не&nbsp;любит прикосновения.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-3.jpg" alt="Фотография Людвига">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Людвиг</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
-                        Возраст: 4 месяца
-                    </p>
-                    <p title="Порода: шотладнцы" class="cat-short-description__info-line">
-                        Порода: шотландцы
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Мальчику 4&nbsp;мес.
-                    </p>
-                    <p class="cat-description__info-line">
-                        Проглистогонен, привит, чистоплотный, ходит только в&nbsp;лоток. Этот
-                        котёнок принесёт в&nbsp;дом невероятные эмоции. Очень любит играть.
-                        И&nbsp;спать на&nbsp;кровати, считая себя хозяином дома.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-4.jpg" alt="Фотография Бориса">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Борис</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 2 года" class="cat-short-description__info-line">
-                        Возраст: 2 года
-                    </p>
-                    <p title="Порода: мейн-куны" class="cat-short-description__info-line">
-                        Порода: мейн-куны
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Окрас&nbsp;&mdash; яркий чёрный мрамор. Дата рождения 08.11.2016.
-                    </p>
-                    <p class="cat-description__info-line">
-                        Дико красив и&nbsp;до&nbsp;очарования нежен.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img
-                    class="cat-card__photo"
-                    src="assets/images/cat-5.jpg"
-                    alt="Фотография Франчески"
-                >
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Франческа</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 8 месяцев" class="cat-short-description__info-line">
-                        Возраст: 8 месяцев
-                    </p>
-                    <p
-                        title="Порода: помесь скотиш-страйт"
-                        class="cat-short-description__info-line"
-                    >
-                        Порода: помесь скотиш-страйт
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Франческа прибилась к&nbsp;частному дому в&nbsp;коллективном саду.
-                        Откуда появилась кошечка, никто не&nbsp;знает.
-                    </p>
-                    <p class="cat-description__info-line">
-                        Франческа&nbsp;&mdash; ласковая, спокойная и&nbsp;умная кошка. Возможно,
-                        она потерялась, а&nbsp;может быть, стала не&nbsp;нужна своему хозяину.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-6.jpg" alt="Фотография Селены">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Селена</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 6 месяцев" class="cat-short-description__info-line">
-                        Возраст: 6 месяцев
-                    </p>
-                    <p title="Порода: кёрлы" class="cat-short-description__info-line">
-                        Порода: кёрлы
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Окрас голубой мраморный с&nbsp;белым. Проставлен полный курс прививок.
-                        Котенок социализирован, выращен в&nbsp;семье с&nbsp;детьми и&nbsp;другими
-                        кошками.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-7.jpg" alt="Фотография Вишенки">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Вишенка</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
-                        Возраст: 4 месяца
-                    </p>
-                    <p title="Порода: бенгальские" class="cat-short-description__info-line">
-                        Порода: бенгальские
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Вишенка обитала на&nbsp;вокзале нашего города. Её&nbsp;увидел наш сосед
-                        и&nbsp;сразу принёс в&nbsp;дом. Как такое милое существо оказалось
-                        на&nbsp;улице никто, никогда не&nbsp;узнает.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-8.jpg" alt="Фотография Воланда">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Воланд</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 3 года" class="cat-short-description__info-line">
-                        Возраст: 3 года
-                    </p>
-                    <p title="Порода: мейн-куны" class="cat-short-description__info-line">
-                        Порода: мейн-куны
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Веселый, красивый, привязан к&nbsp;людям и&nbsp;очень предан.
-                    </p>
-                    <p class="cat-description__info-line">
-                        Есть все прививки, документы о&nbsp;происхождении и&nbsp;результатах
-                        экспертизы.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-9.jpg" alt="Фотография Черныша">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Черныш</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 10 месяцев" class="cat-short-description__info-line">
-                        Возраст: 10 месяцев
-                    </p>
-                    <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Ласковый и&nbsp;добрый, первое время будет труслив, но&nbsp;когда привыкнет
-                        к&nbsp;хозяину, перестает бояться. Трогательный мальчишка.
-                    </p>
-                    <p class="cat-description__info-line">
-                        Кастрирован и&nbsp;обработан. Лоток знает на&nbsp;отлично.
-                    </p>
-                </div>
-            </article>
-            <article class="cat-card">
-                <img class="cat-card__photo" src="assets/images/cat-10.jpg" alt="Фотография Генри">
-                <h2 class="cat-card__name"><a class="cat-card__link" href="#">Генри</a></h2>
-                <div class="cat-card__short-description cat-short-description">
-                    <p title="Возраст: 1 год" class="cat-short-description__info-line">
-                        Возраст: 1 год
-                    </p>
-                    <p title="Порода: мейн-куны" class="cat-short-description__info-line">
-                        Порода: мейн-куны
-                    </p>
-                    <p title="Болезни: нет" class="cat-short-description__info-line">
-                        Болезни: нет
-                    </p>
-                    <p
-                        title="Статус: ищет хозяина"
-                        class="cat-status cat-short-description__status"
-                    >
-                        Статус: ищет хозяина
-                    </p>
-                </div>
-                <div class="cat-card__description cat-description">
-                    <p class="cat-description__info-line">
-                        Рослый, воспитанный, аккуратный, ласковый кот ищет заботливые ручки. Привит
-                        по&nbsp;возрасту. Есть ветеринарный паспорт.
-                    </p>
-                </div>
-            </article>
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Франческа</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 8 месяцев" class="cat-short-description__info-line">
+                            Возраст: 8 месяцев
+                        </p>
+                        <p
+                            title="Порода: помесь скотиш-страйт"
+                            class="cat-short-description__info-line"
+                        >
+                            Порода: помесь скотиш-страйт
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Франческа прибилась к&nbsp;частному дому в&nbsp;коллективном саду.
+                            Откуда появилась кошечка, никто не&nbsp;знает.
+                        </p>
+                        <p class="cat-description__info-line">
+                            Франческа&nbsp;&mdash; ласковая, спокойная и&nbsp;умная кошка. Возможно,
+                            она потерялась, а&nbsp;может быть, стала не&nbsp;нужна своему хозяину.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_curl">
+                    <img class="cat-card__photo" src="assets/images/cat-6.jpg" alt="Фотография Селены">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Селена</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 6 месяцев" class="cat-short-description__info-line">
+                            Возраст: 6 месяцев
+                        </p>
+                        <p title="Порода: кёрлы" class="cat-short-description__info-line">
+                            Порода: кёрлы
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Окрас голубой мраморный с&nbsp;белым. Проставлен полный курс прививок.
+                            Котенок социализирован, выращен в&nbsp;семье с&nbsp;детьми и&nbsp;другими
+                            кошками.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_bengali">
+                    <img class="cat-card__photo" src="assets/images/cat-7.jpg" alt="Фотография Вишенки">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Вишенка</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
+                            Возраст: 4 месяца
+                        </p>
+                        <p title="Порода: бенгальские" class="cat-short-description__info-line">
+                            Порода: бенгальские
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Вишенка обитала на&nbsp;вокзале нашего города. Её&nbsp;увидел наш сосед
+                            и&nbsp;сразу принёс в&nbsp;дом. Как такое милое существо оказалось
+                            на&nbsp;улице никто, никогда не&nbsp;узнает.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_maine-coon">
+                    <img class="cat-card__photo" src="assets/images/cat-8.jpg" alt="Фотография Воланда">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Воланд</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 3 года" class="cat-short-description__info-line">
+                            Возраст: 3 года
+                        </p>
+                        <p title="Порода: мейн-куны" class="cat-short-description__info-line">
+                            Порода: мейн-куны
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Веселый, красивый, привязан к&nbsp;людям и&nbsp;очень предан.
+                        </p>
+                        <p class="cat-description__info-line">
+                            Есть все прививки, документы о&nbsp;происхождении и&nbsp;результатах
+                            экспертизы.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_none">
+                    <img class="cat-card__photo" src="assets/images/cat-9.jpg" alt="Фотография Черныша">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Черныш</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 10 месяцев" class="cat-short-description__info-line">
+                            Возраст: 10 месяцев
+                        </p>
+                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Ласковый и&nbsp;добрый, первое время будет труслив, но&nbsp;когда привыкнет
+                            к&nbsp;хозяину, перестает бояться. Трогательный мальчишка.
+                        </p>
+                        <p class="cat-description__info-line">
+                            Кастрирован и&nbsp;обработан. Лоток знает на&nbsp;отлично.
+                        </p>
+                    </div>
+                </article>
+                <article class="cat-card breed_maine-coon">
+                    <img class="cat-card__photo" src="assets/images/cat-10.jpg" alt="Фотография Генри">
+                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Генри</a></h2>
+                    <div class="cat-card__short-description cat-short-description">
+                        <p title="Возраст: 1 год" class="cat-short-description__info-line">
+                            Возраст: 1 год
+                        </p>
+                        <p title="Порода: мейн-куны" class="cat-short-description__info-line">
+                            Порода: мейн-куны
+                        </p>
+                        <p title="Болезни: нет" class="cat-short-description__info-line">
+                            Болезни: нет
+                        </p>
+                        <p
+                            title="Статус: ищет хозяина"
+                            class="cat-status cat-short-description__status"
+                        >
+                            Статус: ищет хозяина
+                        </p>
+                    </div>
+                    <div class="cat-card__description cat-description">
+                        <p class="cat-description__info-line">
+                            Рослый, воспитанный, аккуратный, ласковый кот ищет заботливые ручки. Привит
+                            по&nbsp;возрасту. Есть ветеринарный паспорт.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="murmarket__footer footer">
             <img hidden class="contact__icon" src="assets/images/icon-letter.png" alt="Иконка письма">
@@ -329,12 +349,6 @@
                 </li>
             </ul>
             <p class="footer__signature">&copy; 2018 ООО&laquo;<a href="#">Бабушкины котятки</a>&raquo;</p>
-        </div>
-        <div class="murmarket__menu menu">
-            <h3 class="menu__caption">Возраст</h3>
-            <h3 class="menu__caption">Категория</h3>
-            <input type="radio" name="color" value="#0000ff" id="blue"/>
-            <label for="blue" class="blue"></label>
         </div>
     </section>
 </body>
