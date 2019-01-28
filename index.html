@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет для всех»</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="./assets/fonts.css">
     <link rel="stylesheet" href="./assets/index.css">
 </head>
@@ -15,33 +16,152 @@
             <h2 class="header__name">Мурмаркет</h2>
         </div>
         <div class="murmarket__content">
-            <input type="checkbox" class="category__item breed_scotch" value="#0000ff" id="breed_scotch" hidden/>
-            <input type="checkbox" class="category__item breed_maine-coon" value="#0000ff" id="breed_maine-coon" hidden/>
-            <input type="checkbox" class="category__item breed_scottish_straight" value="#0000ff" id="breed_scottish_straight" hidden/>
-            <input type="checkbox" class="category__item breed_curl" value="#0000ff" id="breed_curl" hidden/>
-            <input type="checkbox" class="category__item breed_bengali" value="#0000ff" id="breed_bengali" hidden/>
-            <input type="checkbox" class="category__item breed_none" value="#0000ff" id="breed_none" hidden/>
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_scotch"
+                value="#0000ff"
+                id="breed_scotch"
+                hidden
+            />
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_maine-coon"
+                value="#0000ff"
+                id="breed_maine-coon"
+                hidden
+            />
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_scottish_straight"
+                value="#0000ff"
+                id="breed_scottish_straight"
+                hidden
+            />
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_curl"
+                value="#0000ff"
+                id="breed_curl"
+                hidden
+            />
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_bengali"
+                value="#0000ff"
+                id="breed_bengali"
+                hidden
+            />
+            <input
+                type="radio"
+                name="breed"
+                class="category__item breed_none"
+                value="#0000ff"
+                id="breed_none"
+                hidden
+            />
+            <input
+                type="radio"
+                name="age-from"
+                value="0"
+                id="age-from-0"
+                hidden
+                checked
+            />
+            <input
+                type="radio"
+                name="age-from"
+                value="1"
+                id="age-from-1"
+                hidden
+            />
+            <input
+                type="radio"
+                name="age-from"
+                value="2"
+                id="age-from-2"
+                hidden
+            />
+            <input
+                type="radio"
+                name="age-to"
+                value="3"
+                id="age-to-3"
+                hidden
+            />
+            <input
+                type="radio"
+                name="age-to"
+                value="4"
+                id="age-to-4"
+                hidden
+            />
+            <input
+                type="radio"
+                name="age-to"
+                value="5"
+                id="age-to-5"
+                hidden
+                checked
+            />
             <div hidden class="murmarket__menu menu">
                 <h3 class="menu__caption">Возраст</h3>
+                <div class="menu__slider slider">
+                    <span class="slider__control"></span>
+                    <label class="slider__label" for="age-from-0"></label>
+                    <label class="slider__label" for="age-from-1"></label>
+                    <label class="slider__label" for="age-from-2"></label>
+                    <label class="slider__label" for="age-to-3"></label>
+                    <label class="slider__label" for="age-to-4"></label>
+                    <label class="slider__label" for="age-to-5"></label>
+                </div>
+                <div class="menu__slider-captions slider-captions">
+                    <label class="slider-captions__item" for="age-from-0">0</label>
+                    <label class="slider-captions__item" for="age-from-1">1</label>
+                    <label class="slider-captions__item" for="age-from-2">2</label>
+                    <label class="slider-captions__item" for="age-to-3">3</label>
+                    <label class="slider-captions__item" for="age-to-4">4</label>
+                    <label class="slider-captions__item" for="age-to-5">5</label>
+                </div>
                 <h3 class="menu__caption category">Порода</h3>
                 <div class="category__items">
-                    <label for="breed_scotch" class="category__item-name breed_scotch">Шотландцы</label>
-                    <label for="breed_maine-coon" class="category__item-name breed_maine-coon">Мейн-куны</label>
-                    <label for="breed_scottish_straight" class="category__item-name breed_scottish_straight">Помесь скотиш-страйт</label>
+                    <label for="breed_scotch" class="category__item-name breed_scotch">
+                        Шотландцы
+                    </label>
+                    <label for="breed_maine-coon" class="category__item-name breed_maine-coon">
+                        Мейн-куны
+                    </label>
+                    <label
+                        for="breed_scottish_straight"
+                        class="category__item-name breed_scottish_straight">
+                        Помесь скотиш-страйт
+                    </label>
                     <label for="breed_curl" class="category__item-name breed_curl">Кёрлы</label>
-                    <label for="breed_bengali" class="category__item-name breed_bengali">Бенгальские</label>
+                    <label for="breed_bengali" class="category__item-name breed_bengali">
+                        Бенгальские
+                    </label>
                     <label for="breed_none" class="category__item-name breed_none">Нет</label>
                 </div>
             </div>
             <div class="cat-cards">
                 <article class="cat-card breed_none">
-                    <img class="cat-card__photo" src="assets/images/cat-1.jpg" alt="Фотография Хьюго">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-1.jpg"
+                        alt="Фотография Хьюго"
+                    >
                     <h2 class="cat-card__name"><a class="cat-card__link" href="#">Хьюго</a></h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 2 года" class="cat-short-description__info-line">
                             Возраст: 2 года
                         </p>
-                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
+                        <p title="Порода: нет" class="cat-short-description__info-line">
+                            Порода: нет
+                        </p>
                         <p title="Болезни: нет" class="cat-short-description__info-line">
                             Болезни: нет
                         </p>
@@ -65,14 +185,22 @@
                     </div>
                 </article>
                 <article class="cat-card breed_none">
-                    <img class="cat-card__photo" src="assets/images/cat-2.jpg" alt="Фотография Добряша">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-2.jpg"
+                        alt="Фотография Добряша"
+                    >
                     <h2 class="cat-card__name"><a class="cat-card__link" href="#">Добряш</a></h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 4 года" class="cat-short-description__info-line">
                             Возраст: 4 года
                         </p>
-                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
-                        <p title="Болезни: излишняя доброта" class="cat-short-description__info-line">
+                        <p title="Порода: нет" class="cat-short-description__info-line">
+                            Порода: нет
+                        </p>
+                        <p
+                            title="Болезни: излишняя доброта"
+                            class="cat-short-description__info-line">
                             Болезни: излишняя доброта
                         </p>
                         <p
@@ -88,14 +216,19 @@
                         </p>
                         <p class="cat-description__info-line">
                             В&nbsp;меру любопытный,
-                            он&nbsp;знает свое место в&nbsp;доме. Не&nbsp;лезет, куда не&nbsp;разрешено.
-                            Любит, когда ему чешут щечки&nbsp;&mdash; мурчит, подставляя то&nbsp;один
-                            бок, то другой. К&nbsp;лапкам не&nbsp;любит прикосновения.
+                            он&nbsp;знает свое место в&nbsp;доме. Не&nbsp;лезет, куда
+                            не&nbsp;разрешено. Любит, когда ему чешут щечки&nbsp;&mdash; мурчит,
+                            подставляя то&nbsp;один бок, то другой. К&nbsp;лапкам не&nbsp;любит
+                            прикосновения.
                         </p>
                     </div>
                 </article>
                 <article class="cat-card breed_scotch">
-                    <img class="cat-card__photo" src="assets/images/cat-3.jpg" alt="Фотография Людвига">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-3.jpg"
+                        alt="Фотография Людвига"
+                    >
                     <h2 class="cat-card__name"><a class="cat-card__link" href="#">Людвиг</a></h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
@@ -126,7 +259,11 @@
                     </div>
                 </article>
                 <article class="cat-card breed_maine-coon">
-                    <img class="cat-card__photo" src="assets/images/cat-4.jpg" alt="Фотография Бориса">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-4.jpg"
+                        alt="Фотография Бориса"
+                    >
                     <h2 class="cat-card__name"><a class="cat-card__link" href="#">Борис</a></h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 2 года" class="cat-short-description__info-line">
@@ -160,7 +297,9 @@
                         src="assets/images/cat-5.jpg"
                         alt="Фотография Франчески"
                     >
-                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Франческа</a></h2>
+                    <h2 class="cat-card__name">
+                        <a class="cat-card__link" href="#">Франческа</a>
+                    </h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 8 месяцев" class="cat-short-description__info-line">
                             Возраст: 8 месяцев
@@ -193,7 +332,11 @@
                     </div>
                 </article>
                 <article class="cat-card breed_curl">
-                    <img class="cat-card__photo" src="assets/images/cat-6.jpg" alt="Фотография Селены">
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-6.jpg"
+                        alt="Фотография Селены"
+                    >
                     <h2 class="cat-card__name"><a class="cat-card__link" href="#">Селена</a></h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 6 месяцев" class="cat-short-description__info-line">
@@ -215,14 +358,20 @@
                     <div class="cat-card__description cat-description">
                         <p class="cat-description__info-line">
                             Окрас голубой мраморный с&nbsp;белым. Проставлен полный курс прививок.
-                            Котенок социализирован, выращен в&nbsp;семье с&nbsp;детьми и&nbsp;другими
-                            кошками.
+                            Котенок социализирован, выращен в&nbsp;семье с&nbsp;детьми
+                            и&nbsp;другими кошками.
                         </p>
                     </div>
                 </article>
                 <article class="cat-card breed_bengali">
-                    <img class="cat-card__photo" src="assets/images/cat-7.jpg" alt="Фотография Вишенки">
-                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Вишенка</a></h2>
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-7.jpg"
+                        alt="Фотография Вишенки"
+                    >
+                    <h2 class="cat-card__name">
+                        <a class="cat-card__link" href="#">Вишенка</a>
+                    </h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 4 месяца" class="cat-short-description__info-line">
                             Возраст: 4 месяца
@@ -249,8 +398,14 @@
                     </div>
                 </article>
                 <article class="cat-card breed_maine-coon">
-                    <img class="cat-card__photo" src="assets/images/cat-8.jpg" alt="Фотография Воланда">
-                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Воланд</a></h2>
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-8.jpg"
+                        alt="Фотография Воланда"
+                    >
+                    <h2 class="cat-card__name">
+                        <a class="cat-card__link" href="#">Воланд</a>
+                    </h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 3 года" class="cat-short-description__info-line">
                             Возраст: 3 года
@@ -279,13 +434,21 @@
                     </div>
                 </article>
                 <article class="cat-card breed_none">
-                    <img class="cat-card__photo" src="assets/images/cat-9.jpg" alt="Фотография Черныша">
-                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Черныш</a></h2>
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-9.jpg"
+                        alt="Фотография Черныша"
+                    >
+                    <h2 class="cat-card__name">
+                        <a class="cat-card__link" href="#">Черныш</a>
+                    </h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 10 месяцев" class="cat-short-description__info-line">
                             Возраст: 10 месяцев
                         </p>
-                        <p title="Порода: нет" class="cat-short-description__info-line">Порода: нет</p>
+                        <p title="Порода: нет" class="cat-short-description__info-line">
+                            Порода: нет
+                        </p>
                         <p title="Болезни: нет" class="cat-short-description__info-line">
                             Болезни: нет
                         </p>
@@ -298,8 +461,8 @@
                     </div>
                     <div class="cat-card__description cat-description">
                         <p class="cat-description__info-line">
-                            Ласковый и&nbsp;добрый, первое время будет труслив, но&nbsp;когда привыкнет
-                            к&nbsp;хозяину, перестает бояться. Трогательный мальчишка.
+                            Ласковый и&nbsp;добрый, первое время будет труслив, но&nbsp;когда
+                            привыкнет к&nbsp;хозяину, перестает бояться. Трогательный мальчишка.
                         </p>
                         <p class="cat-description__info-line">
                             Кастрирован и&nbsp;обработан. Лоток знает на&nbsp;отлично.
@@ -307,8 +470,14 @@
                     </div>
                 </article>
                 <article class="cat-card breed_maine-coon">
-                    <img class="cat-card__photo" src="assets/images/cat-10.jpg" alt="Фотография Генри">
-                    <h2 class="cat-card__name"><a class="cat-card__link" href="#">Генри</a></h2>
+                    <img
+                        class="cat-card__photo"
+                        src="assets/images/cat-10.jpg"
+                        alt="Фотография Генри"
+                    >
+                    <h2 class="cat-card__name">
+                        <a class="cat-card__link" href="#">Генри</a>
+                    </h2>
                     <div class="cat-card__short-description cat-short-description">
                         <p title="Возраст: 1 год" class="cat-short-description__info-line">
                             Возраст: 1 год
@@ -328,27 +497,42 @@
                     </div>
                     <div class="cat-card__description cat-description">
                         <p class="cat-description__info-line">
-                            Рослый, воспитанный, аккуратный, ласковый кот ищет заботливые ручки. Привит
-                            по&nbsp;возрасту. Есть ветеринарный паспорт.
+                            Рослый, воспитанный, аккуратный, ласковый кот ищет заботливые ручки.
+                            Привит по&nbsp;возрасту. Есть ветеринарный паспорт.
                         </p>
                     </div>
                 </article>
             </div>
         </div>
         <div class="murmarket__footer footer">
-            <img hidden class="contact__icon" src="assets/images/icon-letter.png" alt="Иконка письма">
+            <img
+                hidden
+                class="footer__mail-icon"
+                src="assets/images/icon-letter.png"
+                alt="Иконка письма"
+            >
             <p class="footer__text">Напишите нам:</p>
             <ul class="footer__contact-list contact-list">
                 <li class="contact-list__contact contact">
-                    <img class="contact__icon" src="assets/images/icon-letter.png" alt="Иконка письма">
+                    <img
+                        class="contact__icon"
+                        src="assets/images/icon-letter.png"
+                        alt="Иконка письма"
+                    >
                     <a class="contact__link" href="#">cats@babuli.ru</a>
                 </li>
                 <li class="contact-list__contact contact">
-                    <img class="contact__icon" src="assets/images/icon-letter.png" alt="Иконка письма">
+                    <img
+                        class="contact__icon"
+                        src="assets/images/icon-letter.png"
+                        alt="Иконка письма"
+                    >
                     <a class="contact__link" href="#">vnuchek@babuli.ru</a>
                 </li>
             </ul>
-            <p class="footer__signature">&copy; 2018 ООО&laquo;<a href="#">Бабушкины котятки</a>&raquo;</p>
+            <p class="footer__signature">
+                &copy; 2018 ООО&nbsp;&laquo;<a href="#">Бабушкины котятки</a>&raquo;
+            </p>
         </div>
     </section>
 </body>

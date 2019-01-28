@@ -6,7 +6,7 @@ body
 .murmarket
 {
     display: grid;
-    grid-template-rows: 80px 1fr auto;
+    grid-template-rows: 80px auto auto;
 }
 
 .murmarket__header
@@ -38,7 +38,7 @@ body
 
 .cat-cards
 {
-    padding: 20px; /* почему в маленьких экранах он пропал?*/
+    padding: 30px 20px;
 }
 
 .cat-card
@@ -92,10 +92,9 @@ body
 
 .murmarket__footer
 {
-    padding: 20px;
-    border-top: 1px solid #e5e5e5;
     display: grid;
-    padding-left: 40px;
+    padding: 20px 40px;
+    border-top: 1px solid #e5e5e5;
 }
 
 .footer__text
@@ -120,12 +119,22 @@ body
     color: #8a8a8a;
 }
 
+.contact
+{
+    display: flex;
+    align-items: center;
+}
+
 .contact__icon
 {
     width: 22px;
     height: 22px;
-    align-items: center;
     margin-right: 5px;
+}
+
+.contact__link
+{
+    line-height: 22px;
 }
 
 .footer__signature
@@ -135,15 +144,9 @@ body
 
 @media only screen and (max-width: 730px)
 {
-    .cat-cards
+    .cat-card + .cat-card
     {
-        grid-template-columns: 100%;
-        position: relative;
-    }
-
-    .cat-card
-    {
-        width: 100% - 20px;
+        margin-top: 20px;
     }
 
     .cat-card__photo
@@ -205,18 +208,86 @@ body
 
 @media only screen and (min-width: 1000px)
 {
+    .murmarket
+    {
+        grid-template-rows: 80px auto 65px;
+    }
+
     .murmarket__content
     {
         display: grid;
         grid-template-columns: 40% 40% auto;
         grid-gap: 20px;
+        min-height: calc(100vh - 80px);
+    }
+
+    .menu__slider
+    {
+        margin-top: 30px;
+    }
+
+    .slider
+    {
+        width: 188px;
+        height: 2px;
+        display: flex;
+        background-color: #81b5fb;
+    }
+
+    .slider__label
+    {
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid #999;
+    }
+
+    .slider__label + .slider__label
+    {
+        margin-left: 16px;
+    }
+
+    input[id='age-from-0']:checked ~ .menu .slider__label[for='age-from-0'],
+    input[id='age-from-1']:checked ~ .menu .slider__label[for='age-from-1'],
+    input[id='age-from-2']:checked ~ .menu .slider__label[for='age-from-2'],
+    input[id='age-to-3']:checked ~ .menu .slider__label[for='age-to-3'],
+    input[id='age-to-4']:checked ~ .menu .slider__label[for='age-to-4'],
+    input[id='age-to-5']:checked ~ .menu .slider__label[for='age-to-5']
+    {
+        transform: scale(1.4);
+        border: 1px solid #e33f46;
+    }
+
+    .menu__slider-captions
+    {
+        margin-top: 14px;
+    }
+
+    .slider-captions__item
+    {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+        width: 18px;
+    }
+
+    .slider-captions__item + .slider-captions__item
+    {
+        margin-left: 13px;
     }
 
     .cat-cards
     {
         grid-row-start: 1;
-        grid-column: 1 / 3; /* не понимаю как сделать чтобы было по
-        2 котика в ряд */
+        grid-column: 1 / 3;
+        display: grid;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-auto-rows: 332px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cat-card
@@ -275,46 +346,57 @@ body
         align-items: center;
     }
 
+    .footer__mail-icon
+    {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+    }
+
     .footer__text
     {
         margin-right: 20px;
     }
 
-    .contact-list__contact .contact-list__contact::before
-    {
-        content: '♥ '; /* почему то не работает*/
-    }
-
     .contact-list__contact
     {
-        display: inline;
+        margin-top: 2px;
+        position: relative;
+        display: inline-flex;
+    }
+
+    .contact-list__contact + .contact-list__contact
+    {
+        margin-left: 30px;
+    }
+
+    .contact-list__contact + .contact-list__contact::before
+    {
+        content: '♥';
+        position: absolute;
+        left: -24px;
     }
 
     .contact__icon
     {
-        display: block;
-    }
-
-    .contact-list__contact .contact__icon
-    {
         display: none;
-    }
-
-    .contact__link
-    {
-        margin-right: 20px;
     }
 
     .footer__signature
     {
-        margin: 0;
-        justify-self: flex-end; /* почему то не рабоатет*/
+        margin: 0 0 0 auto;
     }
 
     .murmarket__menu
     {
         display: block;
         grid-column: 3;
+    }
+
+    .menu__caption
+    {
+        margin-top: 30px;
     }
 
     .category__items
@@ -335,8 +417,7 @@ body
         box-shadow: 0 0 40px #e5e5e5 inset;
     }
 
-    .breed_scotch:checked + .murmarket__menu .breed_scotch /* почему
-    то не рабоатет */
+    .breed_scotch:checked + .murmarket__menu .breed_scotch
     {
         box-shadow: 0 0 40px #e5e5e5 inset;
     }
